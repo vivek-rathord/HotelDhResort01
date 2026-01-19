@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Blog | Stories & Travel Tips</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#b45309;
+      --dark:#0f172a;
+      --muted:#64748b;
+      --light:#f8fafc;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#fff;color:var(--dark);line-height:1.7;}
+    a{text-decoration:none;color:inherit;}
+
+    /* HERO */
+    .blog-hero{
+      height:70vh;
+      background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210b0') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      padding:20px;
+    }
+    .blog-hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:700;}
+    .blog-hero p{max-width:700px;margin:15px auto 0;font-size:1.05rem;}
+
+    /* SECTION */
+    section{padding:90px 8%;}
+
+    /* FILTER */
+    .filter-bar{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-bottom:50px;
+    }
+    .filter-bar button{
+      padding:10px 24px;
+      border-radius:50px;
+      border:1px solid #e5e7eb;
+      background:#fff;
+      cursor:pointer;
+      font-size:.9rem;
+      transition:.3s;
+    }
+    .filter-bar button.active,
+    .filter-bar button:hover{
+      background:var(--primary);
+      color:#fff;
+      border-color:var(--primary);
+    }
+
+    /* BLOG GRID */
+    .blog-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:35px;
+    }
+    .blog-card{
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 15px 40px rgba(0,0,0,.08);
+      transition:.4s;
+    }
+    .blog-card:hover{transform:translateY(-10px);}
+    .blog-card img{width:100%;height:220px;object-fit:cover;}
+    .blog-content{padding:25px;}
+    .tag{
+      display:inline-block;
+      font-size:.75rem;
+      padding:4px 12px;
+      background:var(--light);
+      color:var(--primary);
+      border-radius:50px;
+      margin-bottom:10px;
+      font-weight:500;
+    }
+    .blog-content h3{font-size:1.25rem;margin-bottom:10px;}
+    .blog-content p{color:var(--muted);font-size:.95rem;margin-bottom:15px;}
+    .meta{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:.8rem;
+      color:#94a3b8;
+    }
+    .read-more{
+      font-weight:500;
+      color:var(--primary);
+    }
+
+    /* CTA */
+    .blog-cta{
+      margin-top:90px;
+      background:linear-gradient(135deg,#92400e,var(--primary));
+      color:#fff;
+      padding:80px 30px;
+      border-radius:30px;
+      text-align:center;
+    }
+    .blog-cta h2{font-size:2.1rem;margin-bottom:15px;}
+    .blog-cta p{max-width:600px;margin:0 auto 25px;}
+    .blog-cta a{
+      display:inline-block;
+      padding:14px 34px;
+      background:#fff;
+      color:var(--primary);
+      border-radius:50px;
+      font-weight:600;
+    }
+
+    footer{
+      background:#020617;
+      color:#94a3b8;
+      text-align:center;
+      padding:30px 20px;
+      margin-top:80px;
+    }
+
+    @media(max-width:768px){
+      section{padding:70px 6%;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="blog-hero">
+    <div>
+      <h1>Our Stories & Travel Journal</h1>
+      <p>Discover hotel experiences, travel inspiration, local culture, and luxury stays.</p>
+    </div>
+  </div>
+
+  <!-- BLOG SECTION -->
+  <section>
+
+    <!-- FILTER -->
+    <div class="filter-bar">
+      <button class="active" onclick="filterPosts('all')">All</button>
+      <button onclick="filterPosts('travel')">Travel</button>
+      <button onclick="filterPosts('hotel')">Hotel Life</button>
+      <button onclick="filterPosts('food')">Food & Dining</button>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid">
+
+      <div class="blog-card" data-category="travel">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+        <div class="blog-content">
+          <span class="tag">Travel</span>
+          <h3>Top Places to Explore Near Our Hotel</h3>
+          <p>Discover hidden gems, scenic routes, and must visit destinations nearby.</p>
+          <div class="meta">
+            <span>Jan 12, 2026</span>
+            <a class="read-more" href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-category="hotel">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" />
+        <div class="blog-content">
+          <span class="tag">Hotel Life</span>
+          <h3>Behind the Scenes of Luxury Hospitality</h3>
+          <p>Experience what goes into creating unforgettable guest experiences.</p>
+          <div class="meta">
+            <span>Jan 08, 2026</span>
+            <a class="read-more" href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-category="food">
+        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2" />
+        <div class="blog-content">
+          <span class="tag">Food</span>
+          <h3>Signature Dishes Crafted by Our Chefs</h3>
+          <p>A culinary journey through flavors inspired by local traditions.</p>
+          <div class="meta">
+            <span>Jan 02, 2026</span>
+            <a class="read-more" href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-category="travel">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" />
+        <div class="blog-content">
+          <span class="tag">Travel</span>
+          <h3>Best Time to Visit for a Perfect Stay</h3>
+          <p>Plan your trip with seasonal insights and travel tips.</p>
+          <div class="meta">
+            <span>Dec 22, 2025</span>
+            <a class="read-more" href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="blog-cta">
+      <h2>Plan Your Stay With Us</h2>
+      <p>Turn inspiration into reality. Book your luxury experience today.</p>
+      <a href="#">Book Now</a>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Luxury Hotel. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function filterPosts(category){
+      const cards=document.querySelectorAll('.blog-card');
+      const buttons=document.querySelectorAll('.filter-bar button');
+
+      buttons.forEach(btn=>btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card=>{
+        if(category==='all' || card.dataset.category===category){
+          card.style.display='block';
+        }else{
+          card.style.display='none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

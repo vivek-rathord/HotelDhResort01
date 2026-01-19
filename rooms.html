@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet linked here -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- google fonts linked here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@0..60&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- cdn linked here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+          <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <title>Hotel Dhauladhar</title>
+</head>
+<body>
+   <!-- navbar -->
+  <div class="navbar scrolled">
+    <div class="logo">
+      <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhlogo">
+    </div>
+    <div class="navlinks">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+
+        <!-- EVENTS DROPDOWN -->
+        <li class="dropdown">
+          <a href="/events.html">Events <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/destination-wedding.html">Destination Wedding</a></li>
+            <li><a href="/corporate-events.html">Corporate Events</a></li>
+          </ul>
+        </li>
+
+        <!-- BLOG DROPDOWN -->
+        <li class="dropdown">
+          <a href="/blog.html">Blog <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/blog-details.html">Blog Details</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="navbtns">
+      <button class="rect-btn">Booking Online</button>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars open-icon"></i>
+        <i class="fa-solid fa-xmark close-icon"></i>
+      </div>
+    </div>
+
+  </div>
+
+    <!----------------------- hero section ---------------------->
+    <div class="common-hero">
+        <h1>Rooms</h1>
+        <div class="hero-links">
+            <a href="/index.html">Home</a>
+            <a href="#">/  Find room</a>
+        </div>
+    </div>
+
+    <!-- ------------------Avaliablity section------------------- -->
+     <section class="availability">
+  <h2>CHECK AVAILABILITY</h2>
+
+  <div class="availability-box">
+
+    <!-- Check In -->
+    <div class="field">
+      <label>Check In</label>
+      <input type="date">
+    </div>
+
+    <!-- Check Out -->
+    <div class="field">
+      <label>Check Out</label>
+      <input type="date">
+    </div>
+
+    <!-- Rooms -->
+    <div class="field dropdown" id="roomBox">
+      <label>Rooms</label>
+      <div class="value" onclick="toggleDropdown('roomsDrop')">
+        <span id="roomText">3 Room</span>
+        <span class="arrow">▾</span>
+      </div>
+
+      <div class="dropdown-menu" id="roomsDrop">
+        <span>Rooms</span>
+        <div class="counter">
+          <button onclick="changeCount('rooms',-1)">−</button>
+          <span id="rooms">3</span>
+          <button onclick="changeCount('rooms',1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guests -->
+    <div class="field dropdown" id="guestBox">
+      <label>Guests</label>
+      <div class="value" onclick="toggleDropdown('guestsDrop')">
+        <span id="guestText">1 Adult, 0 Child</span>
+        <span class="arrow">▾</span>
+      </div>
+
+      <div class="dropdown-menu" id="guestsDrop">
+        <div class="row">
+          <span>Adult</span>
+          <div class="counter">
+            <button onclick="changeCount('adult',-1)">−</button>
+            <span id="adult">1</span>
+            <button onclick="changeCount('adult',1)">+</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <span>Child</span>
+          <div class="counter">
+            <button onclick="changeCount('child',-1)">−</button>
+            <span id="child">0</span>
+            <button onclick="changeCount('child',1)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="hero-btn cta-btn">Checkout Now</button>
+
+  </div>
+</section>
+
+
+<!-- ----------------rooms------------------- -->
+    <section class="rooms-section">
+        <div class="room-grid">
+
+            <!-- CARD -->
+            <article class="room-card">
+                <div class="image-box">
+                    <span class="price">$560 | Night</span>
+                    <a href="#" class="view-btn">View Details →</a>
+                </div>
+
+                <div class="content">
+                    <span class="tag">Luxury Room</span>
+                    <h3>Double Suite Rooms</h3>
+                    <p>1500 SQ.FT / Rooms</p>
+
+                    <div class="bottom">
+                        <span><i class="fa-solid fa-bed"></i> 2 King Bed</span>
+                        <span class="stars"><i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i></span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Duplicate card -->
+            <article class="room-card">
+                <div class="image-box">
+                    <span class="price">$560 | Night</span>
+                    <a href="#" class="view-btn">View Details →</a>
+                </div>
+
+                <div class="content">
+                    <span class="tag">Luxury Room</span>
+                    <h3>Deluxe Family Rooms</h3>
+                    <p>1500 SQ.FT / Rooms</p>
+
+                    <div class="bottom">
+                        <span><i class="fa-solid fa-bed"></i> 2 King Bed</span>
+                        <span class="stars"><i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i></span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="room-card">
+                <div class="image-box">
+                    <span class="price">$560 | Night</span>
+                    <a href="#" class="view-btn">View Details →</a>
+                </div>
+
+                <div class="content">
+                    <span class="tag">Luxury Room</span>
+                    <h3>Suprior Bed Rooms</h3>
+                    <p>1500 SQ.FT / Rooms</p>
+
+                    <div class="bottom">
+                        <span><i class="fa-solid fa-bed"></i> 2 King Bed</span>
+                        <span class="stars"><i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i></span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ------------------contact form ------------------ -->
+     <section class="contact-section">
+  <div class="contact-wrapper">
+
+    <!-- LEFT CONTENT -->
+    <div class="contact-information">
+      <span class="tag">CONTACT US</span>
+      <h2>CONTACT WITH US</h2>
+
+      <p>
+        Rapidiously myocardinate cross-platform intellectual capital after the
+        model. Appropriately create interactive infrastructures after
+        maintenance. Holistically facilitate stand-alone
+      </p>
+
+      <div class="info-box">
+        <span><i class="fa-solid fa-phone"></i></span>
+        <div>
+          <small>Call Us Now</small>
+          <strong>+980 123 (4567) 890</strong>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <span><i class="fa-solid fa-message"></i></span>
+        <div>
+          <small>Send Email</small>
+          <strong>example@gmail.com</strong>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <span><i class="fa-solid fa-location-crosshairs"></i></span>
+        <div>
+          <small>Our Locations</small>
+          <strong>New elephant Road, Dhanmondi<br>Dhaka - 1212</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form">
+      <h3>GET IN TOUCH</h3>
+
+      <form id="contactForm">
+        <input type="text" name="user_name" placeholder="Your Name" required />
+        <input type="email" name="user_email" placeholder="Enter your mail" required />
+
+        <select name="subject">
+          <option>Subject One</option>
+          <option>Subject Two</option>
+          <option>Subject Three</option>
+        </select>
+
+        <textarea name="message" placeholder="Write Message:" required></textarea>
+
+        <button type="submit" class="rect-btn">SEND MESSAGE</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

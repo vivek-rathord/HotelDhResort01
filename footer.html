@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+:root{
+  --secondary-color:#c9a46b;
+  --white-color:#ffffff;
+  --dark-bg:#1c1c1c;
+}
+
+/* ================= FOOTER BASE ================= */
+.footer{
+  background:#1c1c1c;
+  color:#fff;
+  position:relative;
+  font-family:"Georgia", serif;
+  overflow:hidden;
+}
+
+/* ================= TOP STRIP ================= */
+.footer-top{
+  background:var(--secondary-color);
+  padding:clamp(16px,3vw,22px) clamp(30px,6vw,80px);
+}
+
+.footer-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:clamp(20px,5vw,60px);
+}
+
+.footer-nav img{
+  height:clamp(42px,5vw,55px);
+  opacity:.95;
+}
+
+/* ================= MAIN GRID (AUTO RESPONSIVE) ================= */
+.footer-main{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+  gap:clamp(40px,6vw,70px);
+  padding:
+    clamp(70px,8vw,100px)
+    clamp(40px,8vw,120px)
+    0;
+}
+
+/* ================= COMMON HEADINGS ================= */
+.footer-column h3{
+  font-size:clamp(18px,2vw,22px);
+  font-weight:400;
+  margin-bottom:28px;
+  position:relative;
+}
+
+.footer-column h3::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  width:36px;
+  height:1px;
+  background:var(--secondary-color);
+}
+
+/* ================= CONTACT INFO (OVERLAP CARD) ================= */
+.contact-info{
+  background:#2a2a2a;
+  padding:clamp(30px,5vw,50px);
+  position:relative;
+  top:clamp(-120px,-10vw,-160px);
+  margin-bottom:0;
+}
+
+.footer-logo img{
+  height:clamp(60px,7vw,75px);
+  margin-bottom:35px;
+}
+
+.contact-info p{
+  color:#ddd;
+  margin-bottom:18px;
+  line-height:1.7;
+}
+
+.contact-info i{
+  color:var(--secondary-color);
+  margin-right:12px;
+}
+
+/* ================= SOCIAL ICONS ================= */
+.social-icons{
+  margin-top:clamp(50px,8vw,80px);
+}
+
+.social-icons a{
+  width:40px;
+  height:40px;
+  border:1px solid #555;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#aaa;
+  margin-right:10px;
+  transition:.3s;
+}
+
+.social-icons a:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* ================= USEFUL LINKS ================= */
+.useful-links ul{
+  padding:0;
+  margin:0;
+}
+
+.useful-links li{
+  list-style:none;
+  margin:14px 0;
+}
+
+.useful-links a{
+  color:#ccc;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.useful-links a:hover{
+  color:var(--secondary-color);
+  transform:translateX(6px);
+}
+
+/* ================= GALLERY ================= */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(80px,1fr));
+  gap:12px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:clamp(70px,10vw,85px);
+  object-fit:cover;
+}
+
+/* ================= NEWSLETTER ================= */
+.newsletter p{
+  color:#ccc;
+  margin-bottom:15px;
+}
+
+.newsletter input{
+  width:100%;
+  padding:14px;
+  text-align:center;
+  border:none;
+  margin-bottom:18px;
+}
+
+.newsletter button{
+  width:100%;
+  padding:14px;
+  background:var(--secondary-color);
+  border:none;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* ================= COPYRIGHT (TOUCH CONTACT INFO) ================= */
+.copywrite-info{
+  background:#000;
+  padding:clamp(22px,3vw,28px);
+  text-align:center;
+  margin-top:clamp(-90px,-8vw,-120px); /* TOUCHES CONTACT CARD */
+  position:relative;
+  z-index:1;
+}
+
+    </style>
+</head>
+<body>
+    <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-nav">
+      <img src="./Images/dhr_logo_full_white_720.png" alt="">
+      <img src="./Images/dhr_logo_full_white_720.png" alt="">
+      <img src="./Images/dhr_logo_full_white_720.png" alt="">
+    </div>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-column contact-info">
+      <div class="footer-logo">
+        <img src="./Images/dhr_logo_full_white_720.png" alt="">
+      </div>
+
+      <h3>CONTACT INFO</h3>
+
+      <p><i class="fa fa-phone"></i> +980 (1234) 567 220</p>
+      <p><i class="fa fa-envelope"></i> example@yahoo.com</p>
+      <p><i class="fa fa-map-marker"></i> 102/B New Elephant Rd<br>Dhaka - 1212</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column useful-links">
+      <h3>USEFUL LINKS</h3>
+      <ul>
+        <li><a href="#">About Hotel</a></li>
+        <li><a href="#">Rooms & Suites</a></li>
+        <li><a href="#">Reservations</a></li>
+        <li><a href="#">News & Blogs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column gallery">
+      <h3>GALLERY</h3>
+      <div class="gallery-grid">
+        <img src="./Images/hero-bg2.jpg">
+        <img src="./Images/hero-bg2.jpg">
+        <img src="./Images/hero-bg2.jpg">
+        <img src="./Images/hero-bg2.jpg">
+        <img src="./Images/hero-bg2.jpg">
+        <img src="./Images/hero-bg2.jpg">
+      </div>
+    </div>
+
+    <div class="footer-column newsletter">
+      <h3>NEWSLETTER</h3>
+      <p>Subscribe our Newsletter</p>
+      <input type="email" placeholder="Enter Email">
+      <button>SUBSCRIBE NOW</button>
+    </div>
+  </div>
+
+  <div class="copywrite-info">
+    <p>© 2026 , Hotel Dh. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

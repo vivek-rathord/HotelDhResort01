@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheet linked here -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- google fonts linked here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@0..60&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- cdn linked here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hotel Dhauladhar</title>
+</head>
+
+<body>
+    
+     <!-- navbar -->
+  <div class="navbar scrolled">
+    <div class="logo">
+      <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhlogo">
+    </div>
+    <div class="navlinks">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+
+        <!-- EVENTS DROPDOWN -->
+        <li class="dropdown">
+          <a href="/events.html">Events <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/destination-wedding.html">Destination Wedding</a></li>
+            <li><a href="/corporate-events.html">Corporate Events</a></li>
+          </ul>
+        </li>
+
+        <!-- BLOG DROPDOWN -->
+        <li class="dropdown">
+          <a href="/blog.html">Blog <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/blog-details.html">Blog Details</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="navbtns">
+      <button class="rect-btn">Booking Online</button>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars open-icon"></i>
+        <i class="fa-solid fa-xmark close-icon"></i>
+      </div>
+    </div>
+
+  </div>
+
+    <!-- hero section -->
+    <div class="hero-container">
+        <div class="startrating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <p>Luxury Hotels ansd resorts</p>
+        <h1>this best luxury hotels in srilanka</h1>
+        <div class="hero-btn">
+            Discover More
+        </div>
+
+        <div class="crausal-btns">
+            <button><i class="fa-solid fa-less-than"></i></button>
+            <button><i class="fa-solid fa-greater-than"></i></button>
+        </div>
+
+        <div class="Number">+1234567898</div>
+    </div>
+
+
+    <!---------------------rooms section------------------ -->
+    <section class="rooms-section">
+
+        <section class="title-section">
+            <div class="bg-logo"></div>
+
+            <div class="title-wrapper">
+                <span class="line"></span>
+
+                <div class="logo-circle">
+                    <img src="/images/dhr_logo_icon.png" alt="logo">
+                </div>
+
+                <span class="line"></span>
+            </div>
+
+            <h2>ROYELLA’S ROOMS & SUITES</h2>
+            <p>
+                Proactively morph optimal infomediaries rather than accurate expertise.
+                Intrinsically progressive resources rather than resource-leveling
+            </p>
+        </section>
+
+
+        <div class="room-grid">
+
+            <!-- CARD -->
+            <article class="room-card">
+                <div class="image-box">
+                    <span class="price">$560 | Night</span>
+                    <a href="#" class="view-btn">View Details →</a>
+                </div>
+
+                <div class="content">
+                    <span class="tag">Luxury Room</span>
+                    <h3>Double Suite Rooms</h3>
+                    <p>1500 SQ.FT / Rooms</p>
+
+                    <div class="bottom">
+                        <span><i class="fa-solid fa-bed"></i> 2 King Bed</span>
+                        <span class="stars"><i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i></span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Duplicate card -->
+            <article class="room-card">
+                <div class="image-box">
+                    <span class="price">$560 | Night</span>
+                    <a href="#" class="view-btn">View Details →</a>
+                </div>
+
+                <div class="content">
+                    <span class="tag">Luxury Room</span>
+                    <h3>Deluxe Family Rooms</h3>
+                    <p>1500 SQ.FT / Rooms</p>
+
+                    <div class="bottom">
+                        <span><i class="fa-solid fa-bed"></i> 2 King Bed</span>
+                        <span class="stars"><i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i></span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="room-card">
+                <div class="image-box">
+                    <span class="price">$560 | Night</span>
+                    <a href="#" class="view-btn">View Details →</a>
+                </div>
+
+                <div class="content">
+                    <span class="tag">Luxury Room</span>
+                    <h3>Suprior Bed Rooms</h3>
+                    <p>1500 SQ.FT / Rooms</p>
+
+                    <div class="bottom">
+                        <span><i class="fa-solid fa-bed"></i> 2 King Bed</span>
+                        <span class="stars"><i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i>
+                            <i class="fa-solid fa-star" style="color: #c5a268;"></i></span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- next ------------------------------------ -->
+    <section class="split-section">
+        <div class="split-wrapper">
+
+            <!-- LEFT IMAGE -->
+            <div class="split-image">
+                <span class="gold-strip"></span>
+                <img src="/images/Hotel1.jpg" alt="Luxury Room">
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="split-content">
+                <span class="tag">LUXURY HOTEL AND RESORT</span>
+
+                <h2 class="title">
+                    LUXURY BEST HOTEL IN CITY<br>
+                    CALIFORNIA, USA
+                </h2>
+
+                <p class="description">
+                    Rapidiously myocardinate cross-platform intellectual capital after marketing
+                    model. Appropriately create interactive infrastructures after maintainable are.
+                </p>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>250+</h3>
+                        <p>Luxury Rooms</p>
+                    </div>
+
+                    <div class="stat-item">
+                        <h3>4.9</h3>
+                        <p>Customer Ratings</p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <button class="hero-btn">MORE ABOUT</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!----------------------------Hotel facility-------------------------  -->
+    <div class="hotel-Utilities">
+        <section class="title-section">
+            <div class="bg-logo"></div>
+
+            <div class="title-wrapper">
+                <span class="line"></span>
+
+                <div class="logo-circle">
+                    <img src="/images/dhr_logo_icon.png" alt="logo">
+                </div>
+
+                <span class="line"></span>
+            </div>
+
+            <h2>HOTEL’S FACILITIES</h2>
+            <p class="utilitesp">
+                Proactively morph optimal infomediaries rather than accurate expertise. Intrinsicly progressive
+                resources rather than resource-leveling
+            </p>
+        </section>
+
+        <div class="UtilitesBoxeds">
+            <div class="card1">1</div>
+            <div class="card1">2</div>
+            <div class="card1">3</div>
+            <div class="card1">4</div>
+            <div class="card1">5</div>
+            <div class="card1">6</div>
+        </div>
+    </div>
+
+    <!-- pending -->
+    <!----------------------  luxury hotel and room ------------------- -->
+    <section class="split-section two">
+        <div class="split-wrapper">
+
+            <!-- LEFT IMAGE -->
+            <div class="split-image">
+                <span class="gold-strip"></span>
+                <img src="/action-img.png" alt="Luxury Room">
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="split-content">
+                <span class="tag">MANAGER</span>
+
+                <h2 class="title">
+                    LUXURY BEST HOTEL IN CITY CALIFORNIA, USA
+                </h2>
+
+                <p class="description">
+                    Rapidiously myocardinate cross-platform intellectual capital after model. Appropriately create
+                    interactive infrastructures after main Holisticly facilitate stand-alone inframe
+                </p>
+                <p class="description u">“ Model. Appropriately create interactive infrastructures after main Holisticly
+                    facilitate stand-alone inframe of the world ”</p>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <!-- <h3>250+</h3>
+          <p>Luxury Rooms</p> -->
+                    </div>
+
+                    <div class="stat-item">
+                        <!-- <h3>4.9</h3>
+          <p>Customer Ratings</p> -->
+                    </div>
+                </div>
+
+
+                <!-- <button class="hero-btn">MORE ABOUT</button> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Card -->
+    <div class="facilitytitle">
+        <div>
+            <span class="tag">FACILITIES</span>
+            <h2>ENJOY COMPLETE & BEST QUALITY FACILITIES</h2>
+        </div>
+        <div><button class="rect-btn">View More Item</button></div>
+    </div>
+    <div class="facility-card">
+        <div class="facility-image">
+            <img src="./Images/facilities-1.png" alt="Gym Training Grounds">
+        </div>
+        <div class="facility-content">
+            <span class="facility-number">01</span>
+            <h4 class="facility-category">Fitness</h4>
+            <h3 class="facility-title">Gym Training Grounds</h3>
+            <p class="facility-desc">
+                Rapidiously myocardinate cross-platform intellectual capital after model. Appropriately create
+                interactive infrastructures after are Holisticly facilitate stand-alone
+            </p>
+            <a href="#" class="facility-link">→</a>
+        </div>
+    </div>
+
+    <!-- card -2 -->
+    <div class="facility-card rowreverse">
+        <div class="facility-image">
+            <img src="./Images/facilities-1.png" alt="Gym Training Grounds">
+        </div>
+        <div class="facility-content">
+            <span class="facility-number">02</span>
+            <h4 class="facility-category">Fitness</h4>
+            <h3 class="facility-title">Indoor Swimming Pool</h3>
+            <p class="facility-desc">
+                Rapidiously myocardinate cross-platform intellectual capital after model. Appropriately create
+                interactive infrastructures after are Holisticly facilitate stand-alone
+            </p>
+            <a href="#" class="facility-link">→</a>
+        </div>
+    </div>
+    <!-- card -3 -->
+    <div class="facility-card">
+        <div class="facility-image">
+            <img src="./Images/facilities-1.png" alt="Gym Training Grounds">
+        </div>
+        <div class="facility-content">
+            <span class="facility-number">03</span>
+            <h4 class="facility-category">FOODS
+            </h4>
+            <h3 class="facility-title">IThe Restaurant Center</h3>
+            <p class="facility-desc">
+                Rapidiously myocardinate cross-platform intellectual capital after model. Appropriately create
+                interactive infrastructures after are Holisticly facilitate stand-alone
+            </p>
+            <a href="#" class="facility-link">→</a>
+        </div>
+    </div>
+
+    <!-- card -4 -->
+    <div class="facility-card rowreverse">
+        <div class="facility-image">
+            <img src="./Images/facilities-1.png" alt="Gym Training Grounds">
+        </div>
+        <div class="facility-content">
+            <span class="facility-number">04</span>
+            <h4 class="facility-category">EXPERIENCE</h4>
+            <h3 class="facility-title">Gym Training Grounds</h3>
+            <p class="facility-desc">
+                Rapidiously myocardinate cross-platform intellectual capital after model. Appropriately create
+                interactive infrastructures after are Holisticly facilitate stand-alone
+            </p>
+            <a href="#" class="facility-link">→</a>
+        </div>
+    </div>
+
+
+    <!----------------------------------- Offers Sections----------------------- -->
+    <!-- <div class="specialOffers">
+        <h4 class="tag">OFFERS</h4>
+        <h2>ROYELLA’S LIMITED PERIOD BEST OFFERS</h2>
+
+        <div class="offerscards">
+            <div class="cardone"><button class="offer-badge">25%off</button></div>
+            <div class="cardone"><button class="offer-badge">24%off</button></div>
+            <div class="cardone"><button class="offer-badge">26%off</button></div>
+            <div class="cardone"><button class="offer-badge">22%off</button></div>
+        </div>
+    </div> -->
+
+    <!--------------------------------- blog section---------------------------- -->
+    <section class="blog-section">
+        <section class="title-section">
+            <div class="bg-logo"></div>
+
+            <div class="title-wrapper">
+                <span class="line"></span>
+
+                <div class="logo-circle">
+                    <img src="/images/dhr_logo_icon.png" alt="logo">
+                </div>
+
+                <span class="line"></span>
+            </div>
+
+            <h2>LATEST POST FROM BLOG</h2>
+            <p class="utilitesp">
+                Proactively morph optimal infomediaries rather than accurate expertise. Intrinsicly progressive
+                resources rather than resource-leveling
+            </p>
+        </section>
+        <div class="blog-grid">
+            <!-- CARD -->
+            <article class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="blog-1">
+                </div>
+
+                <div class="blog-content">
+                    <div class="meta">
+                        <span>August 10, 2023</span>
+                        <span>Interior</span>
+                    </div>
+
+                    <h3>
+                        Luxury Hotel for Traveling Spot<br>
+                        USA, California
+                    </h3>
+                </div>
+
+                <div class="blog-footer">
+                    <a href="#">Read More</a>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <!-- CARD -->
+            <article class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="blog-1">
+                </div>
+
+                <div class="blog-content">
+                    <div class="meta">
+                        <span>August 10, 2023</span>
+                        <span>Interior</span>
+                    </div>
+
+                    <h3>
+                        Luxury Hotel for Traveling Spot<br>
+                        USA, California
+                    </h3>
+                </div>
+
+                <div class="blog-footer active">
+                    <a href="#">Read More</a>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <!-- CARD -->
+            <article class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="blog-1">
+                </div>
+
+                <div class="blog-content">
+                    <div class="meta">
+                        <span>August 10, 2023</span>
+                        <span>Interior</span>
+                    </div>
+
+                    <h3>
+                        Luxury Hotel for Traveling Spot<br>
+                        USA, California
+                    </h3>
+                </div>
+
+                <div class="blog-footer">
+                    <a href="#">Read More</a>
+                    <span>→</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!----------------------------------footer---------------------- -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-nav">
+                <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhauladhar">
+                <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhauladhar">
+                <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhauladhar">
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-column contact-info">
+                <div class="footer-logo">
+                    <img src="./Images/dhr_logo_full_white_720.png" alt="ROYELLA Logo">
+                </div>
+                <h3>CONTACT INFO</h3>
+
+                <p><i class="fa fa-phone"></i> +980 (1234) 567 220</p>
+                <p><i class="fa fa-envelope"></i> example@yahoo.com</p>
+                <p><i class="fa fa-map-marker"></i> 102/B New Elephant Rd, Dhaka - 1212</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column useful-links">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="#">About Hotel</a></li>
+                    <li><a href="#">Rooms & Suites</a></li>
+                    <li><a href="#">Reservations</a></li>
+                    <li> <a href="#">News & Blogs</a></li>
+                    <li> <a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column gallery">
+                <h3>GALLERY</h3>
+                <div class="gallery-grid">
+                    <img src="./Images/hero-bg2.jpg" alt="">
+                    <img src="./Images/hero-bg2.jpg" alt="">
+                    <img src="./Images/hero-bg2.jpg" alt="">
+                    <img src="./Images/hero-bg2.jpg" alt="">
+                    <img src="./Images/hero-bg2.jpg" alt="">
+                    <img src="./Images/hero-bg2.jpg" alt="">
+
+                </div>
+            </div>
+
+            <div class="footer-column newsletter">
+                <h3>NEWSLETTER</h3>
+                <p>Subscribe our Newsletter</p>
+                <input type="email" placeholder="Enter Email">
+                <button>SUBSCRIBE NOW</button>
+            </div>
+        </div>
+
+        <div class="copywrite-info">
+            <p>© 2026 , Hotel Dh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- stylesheet linked here -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- google fonts linked here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@0..60&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- cdn linked here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <title>Hotel Dhauladhar</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="navbar scrolled">
+    <div class="logo">
+      <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhlogo">
+    </div>
+    <div class="navlinks">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+
+        <!-- EVENTS DROPDOWN -->
+        <li class="dropdown">
+          <a href="/events.html">Events <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/destination-wedding.html">Destination Wedding</a></li>
+            <li><a href="/corporate-events.html">Corporate Events</a></li>
+          </ul>
+        </li>
+
+        <!-- BLOG DROPDOWN -->
+        <li class="dropdown">
+          <a href="/blog.html">Blog <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/blog-details.html">Blog Details</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="navbtns">
+      <button class="rect-btn">Booking Online</button>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars open-icon"></i>
+        <i class="fa-solid fa-xmark close-icon"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <!----------------------- hero section ---------------------->
+  <div class="common-hero Weedinghero">
+    <h1>Destination Weeding</h1>
+    <div class="hero-links">
+      <a href="/index.html">Home</a>
+      <a href="/destinationweeding.html">/ Destination Weeding</a>
+    </div>
+  </div>
+
+  <!-- ------------------ -->
+  <section class="title-section">
+    <div class="bg-logo"></div>
+
+    <div class="title-wrapper">
+      <span class="line"></span>
+
+      <div class="logo-circle">
+        <img src="/images/dhr_logo_icon.png" alt="logo">
+      </div>
+
+      <span class="line"></span>
+    </div>
+
+    <h2>Making Your Wedding
+      Dreams Come True</h2>
+    <p>
+      For generations, weddings at Taj Hotels are synonymous with cherished memories. Embark on a journey of
+      timeless romance as our dedicated experts ensure that every detail is a reflection of your dream
+      celebratio...gold-more-icon
+    </p>
+    <section class="section">
+
+      <div class="slider-wrap">
+
+        <!-- LEFT -->
+        <div class="side left">
+          <div class="side-img"></div>
+          <div class="side-text" id="leftText"></div>
+          <button class="btn" onclick="prev()">‹</button>
+        </div>
+
+        <!-- CENTER -->
+        <div>
+          <div class="slider">
+            <img class="slide" id="current">
+            <img class="slide" id="next">
+          </div>
+
+          <div class="caption">
+            <h3 id="title"></h3>
+            <p id="desc"></p>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="side right">
+          <div class="side-img"></div>
+          <div class="side-text" id="rightText"></div>
+          <button class="btn" onclick="next()">›</button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+    <!-- --------------------------------Weesing Festivals------------------------- -->
+    <div class="weddingfestivalcontainer">
+      <section class="title-section">
+        <div class="bg-logo"></div>
+
+        <div class="title-wrapper">
+          <span class="line"></span>
+
+          <div class="logo-circle">
+            <img src="/images/dhr_logo_icon.png" alt="logo">
+          </div>
+          <span class="line"></span>
+        </div>
+
+        <h2>Wedding Festivities </h2>
+        <p class="utilitesp">
+          Unfold a tapestry of love and celebrations with intimate gatherings or grand receptions. From bridal showers
+          and
+          haldi ceremonies to mehndi and glitzy cocktail soirées, begin your journey of joy with Hotel Dh.
+        </p>
+      </section>
+
+      <div class="container">
+        <div class="slide">
+          <div class="item"
+            style="background:  url('https://www.stroudsmoorweddings.com/wp-content/uploads/2025/03/Terraview_Ceremony-overlay.jpg'); background-size: cover; background-position: center top;">
+            <div class="content">
+              <div class="name">Honeymoons</div>
+              <div class="description">Ignite warmth and love with dream-like honeymoon experiences such as moon lit
+                beach
+                strolls, candle dinners, starry nights.</div>
+            </div>
+          </div>
+
+          <div class="item"
+            style="background: url('./images/slide1.webp'); background-size: cover; background-position: center top;">
+            <div class="content">
+              <div class="name">Bridal Shower</div>
+              <div class="description">Embrace joy with your loved ones at our thoughtfully designed venues for an
+                unforgettable and personalised bridal shower.</div>
+            </div>
+          </div>
+
+          <div class="item"
+            style="background: url('./images/mehndi2.jpg'); background-size: cover; background-position: center;">
+            <div class="content">
+              <div class="name">Mehndi</div>
+              <div class="description">Indulge in lively mehndi celebrations replete with vibrant colours, love, joyful
+                music, laughter and the intricate art of henna.</div>
+            </div>
+          </div>
+
+          <div class="item"
+            style="background: url('/images/slide1.webp'); background-size: cover; background-position: center top;">
+            <div class="content">
+              <div class="name">Haldi</div>
+              <div class="description">Bask in the golden glow of joy and blessings amid fragrant blooms and colourful
+                settings during your memorable haldi ceremony.</div>
+            </div>
+          </div>
+
+          <div class="item"
+            style="background: url('/images/outdoor-wedding-venues-in-mumbai-1.jpg'); background-size: cover; background-position: center;">
+            <div class="content">
+              <div class="name">Sangeet</div>
+              <div class="description">Dance to the rhythm of love in an evening filled with enchanting melodies,
+                graceful
+                moves and sparkling festivities for your sange.</div>
+            </div>
+          </div>
+
+          <div class="item"
+            style="background: url('/images/proposal.jpg'); background-size: cover; background-position:center;">
+            <div class="content">
+              <div class="name">Proposals</div>
+              <div class="description">Craft a bespoke proposal with us, from sweeping romantic gestures to private
+                moments and set the stage for a lifetime of togethern.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button">
+          <button class="prev" id-><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------Destination weeding places------------------------------ -->
+
+    <div class="weedingplaces">
+      <section class="title-section">
+        <div class="bg-logo"></div>
+
+        <div class="title-wrapper">
+          <span class="line"></span>
+
+          <div class="logo-circle">
+            <img src="/images/dhr_logo_icon.png" alt="logo">
+          </div>
+          <span class="line"></span>
+        </div>
+
+        <h2>Our Wedding Venues</h2>
+        <p class="utilitesp">
+          Unfold a tapestry of love and celebrations with intimate gatherings or grand receptions. From bridal showers
+          and
+          haldi ceremonies to mehndi and glitzy cocktail soirées, begin your journey of joy with Hotel Dh.
+        </p>
+      </section>
+      <div class="blog-grid">
+        <!-- CARD -->
+        <article class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="blog-1">
+          </div>
+
+          <div class="blog-content">
+            <div class="meta">
+              <span>August 10, 2023</span>
+              <span>Interior</span>
+            </div>
+
+            <h3>
+              Luxury Hotel for Traveling Spot<br>
+              USA, California
+            </h3>
+          </div>
+
+          <div class="blog-footer">
+            <a href="#">Read More</a>
+            <span>→</span>
+          </div>
+        </article>
+
+        <!-- CARD -->
+        <article class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="blog-1">
+          </div>
+
+          <div class="blog-content">
+            <div class="meta">
+              <span>August 10, 2023</span>
+              <span>Interior</span>
+            </div>
+
+            <h3>
+              Luxury Hotel for Traveling Spot<br>
+              USA, California
+            </h3>
+          </div>
+
+          <div class="blog-footer active">
+            <a href="#">Read More</a>
+            <span>→</span>
+          </div>
+        </article>
+
+        <!-- CARD -->
+        <article class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="blog-1">
+          </div>
+
+          <div class="blog-content">
+            <div class="meta">
+              <span>August 10, 2023</span>
+              <span>Interior</span>
+            </div>
+
+            <h3>
+              Luxury Hotel for Traveling Spot<br>
+              USA, California
+            </h3>
+          </div>
+
+          <div class="blog-footer">
+            <a href="#">Read More</a>
+            <span>→</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

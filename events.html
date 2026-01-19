@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | Dhauladhar Heights & Resort</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="navbar scrolled">
+    <div class="logo">
+      <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhlogo">
+    </div>
+    <div class="navlinks">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+
+        <!-- EVENTS DROPDOWN -->
+        <li class="dropdown">
+          <a href="/events.html">Events <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/destination-wedding.html">Destination Wedding</a></li>
+            <li><a href="/corporate-events.html">Corporate Events</a></li>
+          </ul>
+        </li>
+
+        <!-- BLOG DROPDOWN -->
+        <li class="dropdown">
+          <a href="/blog.html">Blog <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/blog-details.html">Blog Details</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="navbtns">
+      <button class="rect-btn">Booking Online</button>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars open-icon"></i>
+        <i class="fa-solid fa-xmark close-icon"></i>
+      </div>
+    </div>
+
+  </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Elevated Events<br>in the Heart of Dhauladhar</h1>
+      <p>Dhauladhar Heights & Resort offers contemporary event experiences surrounded by serene Himalayan views. Designed for weddings, corporate retreats, and exclusive celebrations.</p>
+      <div class="hero-actions">
+        <a href="#enquiry" class="btn-primary">Plan an Event</a>
+        <a href="#spaces" class="btn-outline">Explore Spaces</a>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Event at resort">
+    </div>
+  </section>
+
+  <!-- EVENT TYPES -->
+  <section id="spaces">
+    <div class="event-types">
+      <div class="event-type">
+        <h3>Destination Weddings</h3>
+        <p>Minimalist luxury venues with dramatic mountain backdrops and curated wedding services.</p>
+      </div>
+      <div class="event-type">
+        <h3>Corporate Retreats</h3>
+        <p>Private, distraction free spaces ideal for leadership meets and team offsites.</p>
+      </div>
+      <div class="event-type">
+        <h3>Social Celebrations</h3>
+        <p>Stylish indoor and outdoor locations for intimate and grand celebrations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT FEATURE -->
+  <section class="split">
+    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="Luxury venue">
+    <div>
+      <h2>Designed for Memorable Gatherings</h2>
+      <p>Every space at Dhauladhar Heights is crafted to balance luxury, comfort, and natural beauty.</p>
+      <ul class="points">
+        <li>• Panoramic mountain facing venues</li>
+        <li>• Custom decor & gourmet catering</li>
+        <li>• Dedicated event concierge</li>
+        <li>• Premium stay for guests</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed" />
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0" />
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" />
+    </div>
+  </section>
+
+  <!-- CTA FORM -->
+  <section id="enquiry">
+    <div class="cta">
+      <h2>Let’s Create Something Exceptional</h2>
+      <p>Share your event vision and our team will take care of the rest.</p>
+      <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <select required>
+          <option value="">Event Type</option>
+          <option>Wedding</option>
+          <option>Corporate Retreat</option>
+          <option>Private Celebration</option>
+        </select>
+        <input type="date" required>
+        <textarea placeholder="Tell us about your event"></textarea>
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function submitForm(e){
+      e.preventDefault();
+      alert('Thank you! Our events team will contact you shortly.');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
