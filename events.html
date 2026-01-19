@@ -1,11 +1,215 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@0..60&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <title>Hotel Dhauladhar</title>
+</head>
+<body>
+    <div class="navbar scrolled">
+        <div class="logo">
+            <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhlogo">
+        </div>
+        <div class="navlinks">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="/events.html">Events</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbtns">
+            <button class="rect-btn">Booking Online</button>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars open-icon"></i>
+                <i class="fa-solid fa-xmark close-icon"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="common-hero events">
+        <h1>Events We Host</h1>
+        <div class="hero-links">
+            <a href="/index.html">Home</a>
+            <a href="/blog.html">/  Events</a>
+        </div>
+    </div>
+  
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html> --><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Events | Dhauladhar Heights & Resort</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --card:#111827;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --accent:#22c55e;
+      --accent-soft:rgba(34,197,94,.15);
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+    body{background:var(--bg);color:var(--text);line-height:1.6;}
+    a{text-decoration:none;color:inherit;}
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:60px;
+      padding:120px 8% 80px;
+      background:radial-gradient(circle at top left,rgba(34,197,94,.15),transparent 45%),
+                 radial-gradient(circle at bottom right,rgba(34,197,94,.12),transparent 40%);
+    }
+    .hero-content h1{
+      font-size:clamp(2.8rem,5vw,4.2rem);
+      font-weight:800;
+      line-height:1.1;
+    }
+    .hero-content p{
+      color:var(--muted);
+      max-width:560px;
+      margin:25px 0 35px;
+      font-size:1.05rem;
+    }
+    .hero-actions a{
+      display:inline-block;
+      padding:14px 34px;
+      border-radius:14px;
+      font-weight:600;
+      margin-right:15px;
+    }
+    .btn-primary{background:var(--accent);color:#020617;}
+    .btn-outline{border:1px solid var(--accent);color:var(--accent);}
+
+    .hero-media{
+      position:relative;
+      border-radius:26px;
+      overflow:hidden;
+      box-shadow:0 40px 80px rgba(0,0,0,.5);
+    }
+    .hero-media img{width:100%;height:100%;object-fit:cover;}
+    .hero-media::after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,transparent,rgba(0,0,0,.6));
+    }
+
+    section{padding:110px 8%;}
+
+    /* EVENT TYPES */
+    .event-types{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:35px;
+    }
+    .event-type{
+      background:linear-gradient(180deg,var(--card),#020617);
+      border-radius:26px;
+      padding:40px 35px;
+      position:relative;
+      overflow:hidden;
+    }
+    .event-type::before{
+      content:"";
+      position:absolute;top:-40%;right:-40%;
+      width:220px;height:220px;
+      background:var(--accent-soft);
+      border-radius:50%;
+    }
+    .event-type h3{font-size:1.4rem;margin-bottom:12px;}
+    .event-type p{color:var(--muted);font-size:.95rem;}
+
+    /* SPLIT FEATURE */
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:70px;
+      align-items:center;
+    }
+    .split img{
+      width:100%;
+      border-radius:30px;
+      box-shadow:0 30px 70px rgba(0,0,0,.45);
+    }
+    .split h2{font-size:2.3rem;margin-bottom:20px;}
+    .split p{color:var(--muted);margin-bottom:15px;}
+    .points{margin-top:25px;}
+    .points li{margin-bottom:12px;color:#d1d5db;}
+
+    /* HORIZONTAL GALLERY */
+    .gallery{
+      display:grid;
+      grid-auto-flow:column;
+      grid-auto-columns:320px;
+      gap:25px;
+      overflow-x:auto;
+      padding-bottom:10px;
+    }
+    .gallery::-webkit-scrollbar{height:6px;}
+    .gallery::-webkit-scrollbar-thumb{background:var(--accent);border-radius:10px;}
+    .gallery img{
+      width:100%;height:420px;object-fit:cover;border-radius:28px;
+    }
+
+    /* FORM */
+    .cta{
+      background:linear-gradient(135deg,#020617,var(--card));
+      border-radius:40px;
+      padding:90px 40px;
+      text-align:center;
+    }
+    .cta h2{font-size:2.4rem;margin-bottom:10px;}
+    .cta p{color:var(--muted);margin-bottom:45px;}
+    form{
+      max-width:900px;margin:0 auto;
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;
+    }
+    input,select,textarea{
+      padding:16px 18px;border-radius:14px;border:none;
+      background:#020617;color:#fff;font-size:.95rem;
+    }
+    textarea{grid-column:1/-1;height:130px;resize:none;}
+    button{
+      grid-column:1/-1;padding:16px;border:none;border-radius:16px;
+      background:var(--accent);font-size:1rem;font-weight:600;cursor:pointer;
+    }
+
+    footer{
+      text-align:center;color:var(--muted);padding:40px 20px 60px;
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .split{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 <body>
  <div class="navbar scrolled">
@@ -128,6 +332,10 @@
       </form>
     </div>
   </section>
+
+  <footer>
+    © 2026 Dhauladhar Heights & Resort. Crafted for modern hospitality.
+  </footer>
 
   <script>
     function submitForm(e){
