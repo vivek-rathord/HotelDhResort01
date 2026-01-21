@@ -1,4 +1,23 @@
+const header = document.querySelector(".site-header");
+const menuBtn = document.querySelector(".site-menu-toggle");
+const nav = document.querySelector(".site-nav");
+const closeBtn = document.querySelector(".site-close-btn");
 
+window.addEventListener("scroll", () => {
+  header.classList.toggle("is-scrolled", window.scrollY > 50);
+});
+
+menuBtn.onclick = () => nav.classList.add("is-active");
+closeBtn.onclick = () => nav.classList.remove("is-active");
+
+document.querySelectorAll(".site-dropdown > a").forEach(link => {
+  link.addEventListener("click", e => {
+    if (window.innerWidth <= 1024) {
+      e.preventDefault();
+      link.parentElement.classList.toggle("is-active");
+    }
+  });
+});
   // BOOK ONLINE DROPDOWN
   let rooms = 3, adult = 1, child = 0;
   window.toggleDropdown = function(id) {
@@ -110,30 +129,6 @@ eventPrev.addEventListener("click", () => {
   eventSlide.prepend(items[items.length - 1]);
 });
 
-
-
-
-
-const header = document.querySelector(".site-header");
-const menuBtn = document.querySelector(".site-menu-toggle");
-const nav = document.querySelector(".site-nav");
-const closeBtn = document.querySelector(".site-close-btn");
-
-window.addEventListener("scroll", () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 50);
-});
-
-menuBtn.onclick = () => nav.classList.add("is-active");
-closeBtn.onclick = () => nav.classList.remove("is-active");
-
-document.querySelectorAll(".site-dropdown > a").forEach(link => {
-  link.addEventListener("click", e => {
-    if (window.innerWidth <= 1024) {
-      e.preventDefault();
-      link.parentElement.classList.toggle("is-active");
-    }
-  });
-});
 
 
 

@@ -1841,7 +1841,9 @@ h3 {
   color:var(--white-color);
   outline: none;
 }
-
+select>option{
+  color: #000;
+}
 .contact-form textarea {
   min-height: 120px;
   resize: none;
@@ -2393,6 +2395,8 @@ margin: 60px 0px;
 
   .contact-section {
     padding: 0px;
+    /* contact form */
+    border: none;
   }
 
   .contact-wrapper {
@@ -2414,9 +2418,6 @@ margin: 60px 0px;
       grid-template-columns: 1fr;
     }
   }
-
-
-  
 
   .card1 {
     width: 200px;
