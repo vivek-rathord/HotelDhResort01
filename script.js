@@ -1,27 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // NAVBAR SCROLL
-  const navbar = document.querySelector(".navbar");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 30) navbar.classList.add("scrolled");
-    else navbar.classList.remove("scrolled");
-  });
-document.querySelectorAll(".dropdown > a").forEach(link => {
-  link.addEventListener("click", e => {
-    if (window.innerWidth <= 991) {
-      e.preventDefault();
-      link.nextElementSibling.classList.toggle("show");
-    }
-  });
-});
-
-
-  // HAMBURGER MENU
-  const hamburger = document.querySelector(".hamburger");
-  const navlinks = document.querySelector(".navlinks");
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navlinks.classList.toggle("active");
-  });
 
   // BOOK ONLINE DROPDOWN
   let rooms = 3, adult = 1, child = 0;
@@ -133,4 +109,49 @@ eventPrev.addEventListener("click", () => {
   const items = eventSlide.querySelectorAll(".item");
   eventSlide.prepend(items[items.length - 1]);
 });
+
+
+
+
+
+const header = document.querySelector(".site-header");
+const menuBtn = document.querySelector(".site-menu-toggle");
+const nav = document.querySelector(".site-nav");
+const closeBtn = document.querySelector(".site-close-btn");
+
+window.addEventListener("scroll", () => {
+  header.classList.toggle("is-scrolled", window.scrollY > 50);
 });
+
+menuBtn.onclick = () => nav.classList.add("is-active");
+closeBtn.onclick = () => nav.classList.remove("is-active");
+
+document.querySelectorAll(".site-dropdown > a").forEach(link => {
+  link.addEventListener("click", e => {
+    if (window.innerWidth <= 1024) {
+      e.preventDefault();
+      link.parentElement.classList.toggle("is-active");
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -27,46 +27,51 @@
 <body>
 
   <!-- navbar -->
-  <div class="navbar scrolled">
-    <div class="logo">
-      <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhlogo">
-    </div>
-    <div class="navlinks">
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="rooms.html">Rooms</a></li>
+  <header class="site-header">
+    <div class="site-nav-wrap">
 
-        <!-- EVENTS DROPDOWN -->
-        <li class="dropdown">
-          <a href="/events.html">Events <i class="fa-solid fa-angle-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="/destination-wedding.html">Destination Wedding</a></li>
-            <li><a href="/corporate-events.html">Corporate Events</a></li>
-          </ul>
-        </li>
-
-        <!-- BLOG DROPDOWN -->
-        <li class="dropdown">
-          <a href="/blog.html">Blog <i class="fa-solid fa-angle-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/blog-details.html">Blog Details</a></li>
-          </ul>
-        </li>
-        
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="navbtns">
-      <button class="rect-btn">Booking Online</button>
-      <div class="hamburger">
-        <i class="fa-solid fa-bars open-icon"></i>
-        <i class="fa-solid fa-xmark close-icon"></i>
+      <div class="site-logo">
+        <img src="/images/dhr_logo_full_white.png" alt="logo">
       </div>
-    </div>
 
-  </div>
+      <nav class="site-nav">
+        <span class="site-close-btn">&times;</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+
+
+          <li class="site-dropdown">
+            <a href="#">Events</a>
+            <ul class="site-dropdown-menu">
+              <ol>
+                <li><a href="destination-weeding.html">Destination Wedding</a></li>
+                <li><a href="corporate-events.html">Corporate Events</a></li>
+              </ol>
+            </ul>
+          </li>
+
+          <li class="site-dropdown">
+            <a href="#">Blog</a>
+            <ol class="site-dropdown-menu">
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="#">Blog Details</a></li>
+            </ol>
+          </li>
+
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-menu-toggle">&#9776;</div>
+
+      <div class="site-cta">
+        <a href="/contact.html">Discover More</a>
+      </div>
+
+    </div>
+  </header>
   <!----------------------- hero section ---------------------->
   <div class="common-hero">
     <h1>About Us</h1>
@@ -139,68 +144,80 @@
         Intrinsically progressive resources rather than resource-leveling
       </p>
     </section>
-    <div class="team-grid">
-      <!-- card 1 -->
-      <div class="team-card">
-        <div class="hover-bg"></div>
+    <!-- team  -->
+    <div class="team-wrapper">
+      <div class="profile-card">
+        <div class="expansion-bg"></div>
+        <div class="content-layer">
+          <div class="image-box">
+            <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg" alt="Member">
+          </div>
 
-        <div class="img-box">
-          <img src="/images/member-2.jpg" alt="member2">
+          <div class="text-area">
+            <div class="info-default">
+              <h3 class="name">Valentina Kerry</h3>
+              <p class="role">General Manager</p>
+            </div>
+
+            <div class="info-hover">
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              </div>
+              <p class="email">example@gmail.com</p>
+            </div>
+          </div>
         </div>
-
-        <div class="content">
-          <h3>Leary Mart</h3>
-          <p>Product Manager</p>
-
-          <div class="social">
-            <a href="#">f</a>
-            <a href="#">in</a>
-            <a href="#">@</a>
-            
+      </div>
+      <div class="profile-card">
+        <div class="expansion-bg"></div>
+        <div class="content-layer">
+          <div class="image-box">
+            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Member">
+          </div>
+          <div class="text-area">
+            <div class="info-default">
+              <h3 class="name">Jane Doe</h3>
+              <p class="role">General Manager</p>
+            </div>
+            <div class="info-hover">
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              </div>
+              <p class="email">example@gmail.com</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- card 2 -->
-      <div class="team-card">
-        <div class="hover-bg"></div>
-
-        <div class="img-box">
-          <img src="/images/member-2.jpg" alt="member2">
-        </div>
-
-        <div class="content">
-          <h3>Samantha Shen</h3>
-          <p>General Manager</p>
-
-          <div class="social">
-            <a href="#">f</a>
-            <a href="#">in</a>
-            <a href="#">@</a>
+      <div class="profile-card">
+        <div class="expansion-bg"></div>
+        <div class="content-layer">
+          <div class="image-box">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Member">
+          </div>
+          <div class="text-area">
+            <div class="info-default">
+              <h3 class="name">Samantha Shen</h3>
+              <p class="role">General Manager</p>
+            </div>
+            <div class="info-hover">
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              </div>
+              <p class="email">example@gmail.com</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- card 3-->
-      <div class="team-card">
-        <div class="hover-bg"></div>
-
-        <div class="img-box">
-          <img src="/images/member-2.jpg" alt="member2">
-        </div>
-
-        <div class="content">
-          <h3>Samantha Shen</h3>
-          <p>General Manager</p>
-
-          <div class="social">
-            <a href="#">f</a>
-            <a href="#">in</a>
-            <a href="#">@</a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 
@@ -396,6 +413,84 @@
 
 
 
+
+
+  <footer class="hf-footer">
+
+    <!-- TOP IMAGE NAV -->
+    <div class="hf-top">
+      <div class="hf-brand-bar">
+        <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhauladhar">
+        <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhauladhar">
+        <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhauladhar">
+      </div>
+    </div>
+
+    <!-- MAIN FOOTER -->
+    <div class="hf-main">
+
+      <!-- CONTACT -->
+      <div class="hf-col hf-contact hf-overlay">
+        <div class="overlayfooter-logo">
+          <img src="./Images/dhr_logo_full_white_720.png" alt="ROYELLA Logo">
+        </div>
+        <h3>CONTACT INFO</h3>
+
+        <ul>
+          <li><i class="fas fa-phone"></i> +980 (1234) 567 220</li>
+          <li><i class="fas fa-envelope"></i> example@yahoo.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> 102/B New Elephant Rd<br>Dhaka - 1212</li>
+        </ul>
+
+        <div class="hf-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <!-- LINKS -->
+      <div class="hf-col hf-links">
+        <h3>USEFUL LINKS</h3>
+        <ul>
+          <li><a class="is-active" href="#">About Hotel</a></li>
+          <li><a href="#">Rooms & Suites</a></li>
+          <li><a href="#">Reservations</a></li>
+          <li><a href="#">News & Blogs</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="hf-col hf-gallery">
+        <h3>GALLERY</h3>
+        <div class="hf-gallery-grid">
+          <img src="https://picsum.photos/200/200?1">
+          <img src="https://picsum.photos/200/200?2">
+          <img src="https://picsum.photos/200/200?3">
+          <img src="https://picsum.photos/200/200?4">
+          <img src="https://picsum.photos/200/200?5">
+          <img src="https://picsum.photos/200/200?6">
+        </div>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="hf-col hf-newsletter">
+        <h3>NEWSLETTER</h3>
+        <p>Subscribe our Newsletter</p>
+        <input type="email" placeholder="Enter Email">
+        <button>SUBSCRIBE NOW</button>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="hf-bottom">
+      © 2026, Hotel Dhauladhar. All Rights Reserved.
+    </div>
+
+  </footer>
 
 
   <script src="script.js"></script>
