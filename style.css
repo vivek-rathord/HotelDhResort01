@@ -14,6 +14,7 @@
 
 body {
   font-family: "inter", serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -49,13 +50,13 @@ h2 {
   top:0;
   width:100%;
   z-index:999;
-  background:black;
+  background:tra;
   transition:0.4s ease;
 }
 .site-header.is-scrolled{background:#000;}
 
 .site-nav-wrap{
-  max-width:1400px;
+  /* max-width:1400px; */
   margin:auto;
   padding:15px 30px;
   display:flex;
@@ -126,13 +127,13 @@ h2 {
 /* ===== MOBILE ===== */
 .site-menu-toggle{
   display:none;
-  color:#fff;
+  color:var(--white-color);
   font-size:28px;
   cursor:pointer;
 }
 .site-close-btn{display:none;}
 
-@media(max-width:1024px){
+@media(max-width:991px){
   .site-menu-toggle{display:block;}
   .site-cta{display:none;}
 
@@ -182,6 +183,8 @@ h2 {
     max-height:300px;
   }
 }
+
+
 /* slider */
 .luxury-slider{
   position:relative;
@@ -235,15 +238,6 @@ h2 {
   text-align: center;
 }
 
-.primary-btn{
-  padding:14px 34px;
-  background:#d4af37;
-  color:#000;
-  text-decoration:none;
-  display:inline-block;
-  font-weight: 500;
-  transition: 0.3s;
-}
 
 
 
@@ -328,11 +322,6 @@ h2 {
 .rect-btn:hover {
   color: #000;
 }
-/* 
-.hamburger {
-  display: none;
-} */
-/*  */
 
 /* ================= HERO SECTION ================= */
 
@@ -484,70 +473,76 @@ h2 {
 }
 
 /*------------------------------- Rooms section--------------------------- */
-.title-section {
-  position: relative;
-  padding: 100px 20px;
-  text-align: center;
-  overflow: hidden;
-}
+ /* ===== MAIN SECTION ===== */
+        .title-section {
+            position: relative;
+            min-height: 200px;             
+            /* padding: 200px 20px; */
+            text-align: center;
+            overflow: hidden;
+        }
 
-/* ================= FADED BACKGROUND LOGO ================= */
-.bg-logo {
-  position: absolute;
-  inset: 0;
-  background: url("logo-big.png") center/contain no-repeat;
-  opacity: 0.06;
-  z-index: 0;
-}
+        /* ===== BACKGROUND LOGO ===== */
+        .bg-logo {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            background-image: url("/images/dhr_logo_icon.png");
+            background-repeat: no-repeat;
+            background-position: center;
+              background-size: 600px auto; 
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+            max-width: 1200px;
+            max-height: 400px;
+        }
 
-/*  CENTER LOGO + LINES  */
-.title-wrapper {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 10px;
-}
+        /* ===== CONTENT ABOVE LOGO ===== */
+        .title-wrapper,
+        h2,
+        p {
+            position: relative;
+            z-index: 1;
+        }
 
-.line {
-  width: 120px;
-  height: 1px;
-  background: rgb(56, 66, 87);
-}
+        /* ===== TITLE LINE + SMALL LOGO ===== */
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-/* - LOGO CIRCLE -*/
-.logo-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+        .line {
+            width: 100px;
+            height: 1px;
+            background-color:var(--primary-color);
+            margin: 0 15px;
+        }
 
-.logo-circle img {
-  min-width: 100%;
-  transform: scale(2);
-}
+        .logo-circle img {
+            height: 50px;
+            width: auto;
+            transform: scale(2);
 
-/* ================= TEXT ================= */
-.title-section h2 {
-  font-size: clamp(26px, 4vw, 2.1px);
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-  position: relative;
-  z-index: 1;
-}
+        }
 
-.title-section p {
-  max-width: 700px;
-  margin: auto;
-  line-height: 1.6;
-}
+        /* ===== TEXT ===== */
+        h2 {
+            font-size: 32px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
 
-
+        p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 15px;
+            line-height: 1.6;
+        }
 /*----- Rooms CARD --------*/
    /* GRID */
     .roomCardGrid {
@@ -1493,48 +1488,6 @@ h3 {
       section{padding:70px 6%;}
     }
 
-
-
-
-
-
-/* -----------------------------footer -------------------- */
-
-
-/* h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 40px;
-  height: 1px;
-  background: var(--secondary-color);
-} */
-
-
-/* social icons */
-/* .contact-info .social-icons {
-  margin-top: 90px;
-} */
-/* 
-.contact-info .social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid #555;
-  border-radius: 50%;
-  margin-right: 10px;
-  color: #555;
-  transition: 0.3s;
-}
-
-.contact-info .social-icons a:hover {
-  background: var(--white-color);
-  color: #000;
-} */
-
 /* ================= USEFUL LINKS ================= */
 .useful-links a {
   display: block;
@@ -1578,16 +1531,12 @@ h3 {
   }
 }
 /* ---------------------------footr started here */
+
 .hf-footer{
+    display: block !important;
   background:var(--tertiory-color);
   color:var(--white-color);
   position:relative;
-}
-
-/* TOP BAR */
-.hf-top{
-  background:var(--secondary-color);
-  padding:15px 0;
 }
 
 .hf-brand-bar{
@@ -1605,26 +1554,24 @@ h3 {
 
 /* MAIN FOOTER */
 .hf-main{
-  
-  max-width:1400px;
   margin:auto;
   padding:120px 30px 60px;
   display:flex;
-  gap:60px;
-  flex-wrap:wrap;
+   gap: clamp(20px, 2.5vw, 36px);
+   justify-content:space-between;
+   flex-wrap: wrap;
 }
 
 /* COLUMNS */
 .hf-col{
-  flex:1 1 250px;
+    flex: 0 0 300px;
   text-align: start;
-  
 }
 
 /* HEADINGS */
 .hf-footer h3{
   color:#fff;
-  margin-bottom:25px;
+  margin-bottom:35px;
   position:relative;
 }
 
@@ -1638,30 +1585,33 @@ h3 {
   bottom:-10px;
 }
 
-/* OVERLAY BOX */
-.hf-overlay{
-  background:#353333;
-  color:#fff;
-  padding:15px 40px;
-  transform:translateY(-180px);
-}
 .overlayfooter-logo{
-  margin-bottom: 40px;
+  img{
+    width: 100px;
+  }
+  margin-bottom: 20px;
 }
 /* CONTACT */
+.hf-contact{
+  /* padding: 30px; */
+ transform: translateY(-10px);
+}
 .hf-contact ul{
   list-style:none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .hf-contact li{
-  margin-bottom:15px;
+  margin-bottom:5px;
   display:flex;
   gap:12px;
 }
 
 /* SOCIAL */
 .hf-social{
-  margin-top:20px;
+  margin-top:40px;
   display:flex;
   gap:15px;
 }
@@ -1755,16 +1705,6 @@ h3 {
   background:#000;
   padding:30px;
 }
-
-
-/* footer---------- end */
-
-
-
-
-
-
-
 /* ---------contact form--- */
 
 .contact-section {
@@ -1993,22 +1933,6 @@ select>option{
 .feedback-header h2 {
   font-size: clamp(28px, 4vw, 48px);
   margin-top: 10px;
-}
-
-/* .nav-btns {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: flex;
-  gap: 12px;
-}
-
-.nav-btns button {
-  width: 45px;
-  height: 45px;
-  border: 1px solid #ccc;
-  background: transparent;
-  cursor: pointer;
 }
 
 /* -- Cards -- */
@@ -2302,74 +2226,9 @@ margin: 60px 0px;
 
 /* all Media */
 @media (max-width: 448px) {
-  /* .navbar {
-    padding: 16px 20px;
-    background: var(--secondary-color);
-  }
-
-  .navbar.scrolled {
-    padding: 10px 10px;
-  }
-
-  .navbar img {
-    height: 56px;
-    max-width: 180px;
-  }
-
-  .rect-btn {
-    display: none;
-  } */
-
-  /* hamburger visible */
-  /* .hamburger {
-    display: block;
-    position: relative;
-    font-size: 20px;
-    cursor: pointer;
-  }
-
-  .hamburger .close-icon {
-    display: none;
-  }
-
-  .navlinks {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--white-color);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-  }
-
-  .navlinks.active {
-    max-height: 360px;
-  }
-
-  .navlinks ul {
-    flex-direction: column;
-    gap: 20px;
-    padding: 22px 20px;
-  }
-
-  .navlinks a {
-    font-size: 1.1rem;
-    color: var(--primary-color);
-  }
-
-  .hamburger.active .open-icon {
-    display: none;
-  }
-
-  .hamburger.active .close-icon {
-    display: block;
-  }
-
-  .navbtns i {
-    font-size: 20px;
-  } */
-
+.slider-controls{
+  display: none;
+}
   .rooms-section {
     .room-grid {
       grid-template-columns: 1fr;
@@ -2413,6 +2272,9 @@ margin: 60px 0px;
 }
 
 @media (min-width: 449px) and (max-width: 567px) {
+  .slider-controls{
+    display: none;
+  }
   .rooms-section {
     .room-grid {
       grid-template-columns: 1fr;
@@ -2453,6 +2315,9 @@ margin: 60px 0px;
 }
 
 @media (min-width: 568px) and (max-width: 767px) {
+  .slider-controls{
+    display: none;
+  }
   .rooms-section {
     .room-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -2486,7 +2351,9 @@ margin: 60px 0px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
+.slider-controls{
+  display: none;
+}
   .split-wrapper {
     grid-template-columns: 1fr;
   }
@@ -2535,5 +2402,34 @@ margin: 60px 0px;
     font-size: 1.5rem;
     left: 50%;
   }
+.hf-col{
+  /* flex:1 1 260px; */
+    flex: 1;
+  text-align: start;
+}
+  .hf-main {
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
 }
 
+@media (min-width: 1200px) {
+  .hf-main {
+    flex-wrap: nowrap; /* ensure all 4 columns stay in one row */
+  }
+
+  .hf-col {
+    flex: 1; 
+  }
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Desktop / Laptop: NO WRAP */
+@media (min-width: 992px) {
+  * {
+    flex-wrap: nowrap !important;
+  }
+}
