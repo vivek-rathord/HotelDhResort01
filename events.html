@@ -1,310 +1,370 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- stylesheet linked here -->
+  <link rel="stylesheet" href="./style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@0..60&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+  <!-- google fonts linked here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@0..60&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- cdn linked here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <title>Hotel Dhauladhar</title>
+
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Hotel Dhauladhar</title>
 </head>
+
 <body>
-    <div class="navbar scrolled">
-        <div class="logo">
-            <img src="./Images/dhr_logo_full_white_720.png" alt="Hotel Dhlogo">
-        </div>
-        <div class="navlinks">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="rooms.html">Rooms</a></li>
-                <li><a href="/events.html">Events</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="navbtns">
-            <button class="rect-btn">Booking Online</button>
-            <div class="hamburger">
-                <i class="fa-solid fa-bars open-icon"></i>
-                <i class="fa-solid fa-xmark close-icon"></i>
+     <!-- navbar -->
+    <header class="site-header">
+        <div class="site-nav-wrap">
+
+            <div class="site-logo">
+                <img src="/images/dhr_logo_full_white.png" alt="logo">
             </div>
-        </div>
 
+            <nav class="site-nav">
+                <span class="site-close-btn">&times;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+
+
+                    <li class="site-dropdown">
+                        <a href="#">Events</a>
+                        <ul class="site-dropdown-menu">
+                            <ol>
+                                <li><a href="destination-weeding.html">Destination Wedding</a></li>
+                                <li><a href="events.html"> Events</a></li>
+                            </ol>
+                        </ul>
+                    </li>
+
+                    <li class="site-dropdown">
+                        <a href="#">Blog</a>
+                        <ol class="site-dropdown-menu">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="#">Blog Details</a></li>
+                        </ol>
+                    </li>
+
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-menu-toggle">&#9776;</div>
+
+            <div class="site-cta">
+                <a href="/contact.html">Discover More</a>
+            </div>
+
+        </div>
+    </header>
+
+
+  <!----------------------- hero section ---------------------->
+  <div class="common-hero Weedinghero">
+    <h1 data-aos="fade-down" data-aos-duration="1200">Meetings & Conferences</h1>
+    <div class="hero-links" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+      <a href="/index.html">Home</a>
+      <a href="/events.html">/  Events</a>
+    </div>
+  </div>
+
+  <!-- ------------------ -->
+  <section class="title-section">
+    <div class="bg-logo"></div>
+
+    <div class="title-wrapper">
+      <span class="line"  data-aos="fade-up" data-aos-duration="3000"></span>
+
+      <div class="logo-circle" data-aos="fade-up" data-aos-duration="3000">
+        <img src="/images/dhr_logo_icon.png" alt="logo">
+      </div>
+
+      <span class="line" data-aos="fade-up" data-aos-duration="3000"></span>
     </div>
 
-    <div class="common-hero events">
-        <h1>Events We Host</h1>
-        <div class="hero-links">
-            <a href="/index.html">Home</a>
-            <a href="/blog.html">/  Events</a>
+    <h2 data-aos="fade-up" data-aos-duration="3000">BOARDROOMS AND <br>
+EXCEPTIONAL VENUES</h2>
+    <p data-aos="fade-up" data-aos-duration="3000">
+    Step into a realm of remarkable possibilities and explore a curated selection of versatile meeting and conference venues. From client conclaves, strategic think tank meets and grand conferences, discover spaces that offer a harmon..
+    </p>
+    </section>
+   
+      <div class="facility-card" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <div class="facility-image">
+            <img src="./Images/facilities-1.png" alt="Gym Training Grounds">
+        </div>
+        <div class="facility-content">
+            <h4 class="facility-category">Plan Your Event With Us</h4>
+          
+            <p class="facility-desc">
+               Discover a seamless blend of elegance, versatility, and unmatched hospitality with meetings and events at Taj. Our team ..
+            </p>
+         <button class=" hero-btn rect-btn"> Enquire Now</button>
         </div>
     </div>
-  
+    
+     <!-- --------commitment---------- -->
+  <section class="title-section">
+    <div class="bg-logo"></div>
+
+    <div class="title-wrapper">
+      <span class="line" data-aos="fade-up" data-aos-duration="3000"></span>
+
+      <div class="logo-circle" data-aos="fade-up" data-aos-duration="3000">
+        <img src="/images/dhr_logo_icon.png" alt="logo">
+      </div>
+
+      <span class="line" data-aos="fade-up" data-aos-duration="3000"></span>
+    </div>
+
+    <h2 data-aos="fade-up" data-aos-duration="3000">Our Commitment</h2>
+    <p data-aos="fade-up" data-aos-duration="3000">
+At Hotel Dh, our commitment to innovation and personalised elegance is unwavering. As our experts craft your meetings
+    </p>
+    </section>
+
+    <!--------------------------------- events slider -------------------------------->
+    <section class="event-slider"   data-aos="fade-up"
+  data-aos-duration="2000">
+
+  <!-- DESKTOP ARROWS -->
+  <button class="event-arrow event-prev desktop-control">&#10094;</button>
+
+  <div class="event-slider-viewport">
+    <div class="event-slider-track">
+
+      <div class="event-slide">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+        <h4>PERSONALISED EVENT CURATION</h4>
+        <p>Your personal point of contact ensures swift responses.</p>
+      </div>
+
+      <div class="event-slide">
+        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330">
+        <h4>DIVERSE DINING EXPERIENCES</h4>
+        <p>Savour gourmet delights with curated dining.</p>
+      </div>
+
+      <div class="event-slide">
+        <img src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe">
+        <h4>STATE-OF-THE-ART FACILITIES</h4>
+        <p>Modern AV & conferencing solutions.</p>
+      </div>
+
+      <div class="event-slide">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+        <h4>LUXURY INTERIORS</h4>
+        <p>Premium ambience crafted for excellence.</p>
+      </div>
+
+      <div class="event-slide">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
+        <h4>EXPERT SERVICE</h4>
+        <p>Professional execution guaranteed.</p>
+      </div>
+
+      <div class="event-slide">
+        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1">
+        <h4>CUSTOM EXPERIENCES</h4>
+        <p>Tailor-made solutions for every event.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="event-arrow event-next desktop-control">&#10095;</button>
+
+  <!-- MOBILE CONTROLS -->
+  <div class="event-mobile-controls">
+    <button class="event-arrow event-prev">&#10094;</button>
+    <button class="event-arrow event-next">&#10095;</button>
+  </div>
+
+</section>
 
 
 
+     <!-- --------Meeting and Confrences---------- -->
+  <section class="title-section">
+    <div class="bg-logo"></div>
 
+    <div class="title-wrapper">
+      <span class="line"  data-aos="fade-up" data-aos-duration="3000"></span>
+
+      <div class="logo-circle"  data-aos="fade-up" data-aos-duration="3000">
+        <img src="/images/dhr_logo_icon.png" alt="logo">
+      </div>
+
+      <span class="line"  data-aos="fade-up" data-aos-duration="3000"></span>
+    </div>
+
+    <h2  data-aos="fade-up" data-aos-duration="3000">Meeting And Conference Venues</h2>
+    <p  data-aos="fade-up" data-aos-duration="3000">
+    Step into a realm of remarkable possibilities and explore a curated selection of versatile meeting and conference venues. From client conclaves, strategic think tank meets and grand conferences, discover spaces that offer a harmon..
+    </p>
+    </section>
+   
+    <section class="venue-section">
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar" data-aos="fade-down">
+    <select id="eventType">
+      <option value="">Event Type</option>
+      <option value="wedding">Wedding</option>
+      <option value="conference">Conference</option>
+      <option value="corporate">Corporate</option>
+    </select>
+
+    <select id="seatingStyle">
+      <option value="">Seating Style</option>
+      <option value="boardroom">Boardroom</option>
+      <option value="boardroom-double">Boardroom Double Seating</option>
+      <option value="circular">Circular</option>
+      <option value="classroom">Classroom</option>
+      <option value="cocktail">Cocktail</option>
+      <option value="u-shaped">U-Shaped</option>
+    </select>
+
+    <select id="capacity">
+      <option value="">Capacity</option>
+      <option value="50">Up to 50</option>
+      <option value="100">50 – 100</option>
+      <option value="300">100 – 300</option>
+      <option value="500">300+</option>
+    </select>
+  </div>
+
+  <!-- CARDS -->
+  <div class="venue-cards" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="venue-card"
+      data-event="wedding"
+      data-seating="cocktail"
+      data-capacity="500">
+
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+      <h3>CELEBRATION LAWNS</h3>
+      <p class="location">Jai Mahal Palace, Jaipur</p>
+      <p class="desc">Perfect for grand weddings and large celebrations.</p>
+      <button class="enquire-btn">Enquire Now</button>
+    </div>
+
+    <div class="venue-card"
+      data-event="conference"
+      data-seating="circular"
+      data-capacity="300" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461">
+      <h3>LOTUS POND</h3>
+      <p class="location">Jai Mahal Palace, Jaipur</p>
+      <p class="desc">Ideal for premium corporate events and cocktail meets.</p>
+      <button class="enquire-btn">Enquire Now</button>
+    </div>
+
+    <div class="venue-card"
+      data-event="corporate"
+      data-seating="boardroom"
+      data-capacity="50" data-aos="fade-up" data-aos-delay="300">
+
+      <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461">
+      <h3>SILVER OAK</h3>
+      <p class="location">Jai Mahal Palace, Jaipur</p>
+      <p class="desc">Executive boardroom for meetings and discussions.</p>
+      <button class="enquire-btn">Enquire Now</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!----------------------------------footer---------------------- -->
+    <footer class="hf-footer">
+
+        <!-- MAIN FOOTER -->
+        <div class="hf-main">
+
+            <!-- CONTACT -->
+            <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
+                <div class="overlayfooter-logo">
+                    <!-- <img src="./Images/dhr_logo_full_white_720.png" alt="ROYELLA Logo"> -->
+                </div>
+                <h3>CONTACT INFO</h3>
+
+                <ul>
+                    <li><i class="fas fa-phone"></i> +980 (1234) 567 220</li>
+                    <li><i class="fas fa-envelope"></i> example@yahoo.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 102/B New Elephant Rd<br>Dhaka - 1212</li>
+                </ul>
+
+                <div class="hf-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <!-- LINKS -->
+            <div class="hf-col hf-links" data-aos="fade-up" data-aos-delay="100">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a class="is-active" href="/about.html">About Hotel</a></li>
+                    <li><a href="/rooms.html">Rooms & Suites</a></li>
+                    <li><a href="#">Reservations</a></li>
+                    <li><a href="./blog.html">News & Blogs</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- GALLERY -->
+            <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
+                <h3>GALLERY</h3>
+                <div class="hf-gallery-grid">
+                    <img src="https://picsum.photos/200/200?1">
+                    <img src="https://picsum.photos/200/200?2">
+                    <img src="https://picsum.photos/200/200?3">
+                    <img src="https://picsum.photos/200/200?4">
+                    <img src="https://picsum.photos/200/200?5">
+                    <img src="https://picsum.photos/200/200?6">
+                </div>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="hf-col hf-newsletter" data-aos="fade-left" data-aos-delay="300">
+                <h3>NEWSLETTER</h3>
+                <p>Subscribe our Newsletter</p>
+                <input type="email" placeholder="Enter Email">
+                <button>SUBSCRIBE NOW</button>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="hf-bottom">
+            © 2026, Hotel Dhauladhar. All Rights Reserved.
+        </div>
+
+    </footer>
+
+<!-- AOS JS  -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
-</html> --><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events | Dhauladhar Heights & Resort</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0f1a;
-      --card:#111827;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --accent:#22c55e;
-      --accent-soft:rgba(34,197,94,.15);
-    }
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-    body{background:var(--bg);color:var(--text);line-height:1.6;}
-    a{text-decoration:none;color:inherit;}
 
-    /* HERO */
-    .hero{
-      min-height:100vh;
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:60px;
-      padding:120px 8% 80px;
-      background:radial-gradient(circle at top left,rgba(34,197,94,.15),transparent 45%),
-                 radial-gradient(circle at bottom right,rgba(34,197,94,.12),transparent 40%);
-    }
-    .hero-content h1{
-      font-size:clamp(2.8rem,5vw,4.2rem);
-      font-weight:800;
-      line-height:1.1;
-    }
-    .hero-content p{
-      color:var(--muted);
-      max-width:560px;
-      margin:25px 0 35px;
-      font-size:1.05rem;
-    }
-    .hero-actions a{
-      display:inline-block;
-      padding:14px 34px;
-      border-radius:14px;
-      font-weight:600;
-      margin-right:15px;
-    }
-    .btn-primary{background:var(--accent);color:#020617;}
-    .btn-outline{border:1px solid var(--accent);color:var(--accent);}
-
-    .hero-media{
-      position:relative;
-      border-radius:26px;
-      overflow:hidden;
-      box-shadow:0 40px 80px rgba(0,0,0,.5);
-    }
-    .hero-media img{width:100%;height:100%;object-fit:cover;}
-    .hero-media::after{
-      content:"";
-      position:absolute;inset:0;
-      background:linear-gradient(180deg,transparent,rgba(0,0,0,.6));
-    }
-
-    section{padding:110px 8%;}
-
-    /* EVENT TYPES */
-    .event-types{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:35px;
-    }
-    .event-type{
-      background:linear-gradient(180deg,var(--card),#020617);
-      border-radius:26px;
-      padding:40px 35px;
-      position:relative;
-      overflow:hidden;
-    }
-    .event-type::before{
-      content:"";
-      position:absolute;top:-40%;right:-40%;
-      width:220px;height:220px;
-      background:var(--accent-soft);
-      border-radius:50%;
-    }
-    .event-type h3{font-size:1.4rem;margin-bottom:12px;}
-    .event-type p{color:var(--muted);font-size:.95rem;}
-
-    /* SPLIT FEATURE */
-    .split{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:70px;
-      align-items:center;
-    }
-    .split img{
-      width:100%;
-      border-radius:30px;
-      box-shadow:0 30px 70px rgba(0,0,0,.45);
-    }
-    .split h2{font-size:2.3rem;margin-bottom:20px;}
-    .split p{color:var(--muted);margin-bottom:15px;}
-    .points{margin-top:25px;}
-    .points li{margin-bottom:12px;color:#d1d5db;}
-
-    /* HORIZONTAL GALLERY */
-    .gallery{
-      display:grid;
-      grid-auto-flow:column;
-      grid-auto-columns:320px;
-      gap:25px;
-      overflow-x:auto;
-      padding-bottom:10px;
-    }
-    .gallery::-webkit-scrollbar{height:6px;}
-    .gallery::-webkit-scrollbar-thumb{background:var(--accent);border-radius:10px;}
-    .gallery img{
-      width:100%;height:420px;object-fit:cover;border-radius:28px;
-    }
-
-    /* FORM */
-    .cta{
-      background:linear-gradient(135deg,#020617,var(--card));
-      border-radius:40px;
-      padding:90px 40px;
-      text-align:center;
-    }
-    .cta h2{font-size:2.4rem;margin-bottom:10px;}
-    .cta p{color:var(--muted);margin-bottom:45px;}
-    form{
-      max-width:900px;margin:0 auto;
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;
-    }
-    input,select,textarea{
-      padding:16px 18px;border-radius:14px;border:none;
-      background:#020617;color:#fff;font-size:.95rem;
-    }
-    textarea{grid-column:1/-1;height:130px;resize:none;}
-    button{
-      grid-column:1/-1;padding:16px;border:none;border-radius:16px;
-      background:var(--accent);font-size:1rem;font-weight:600;cursor:pointer;
-    }
-
-    footer{
-      text-align:center;color:var(--muted);padding:40px 20px 60px;
-    }
-
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr;}
-      .split{grid-template-columns:1fr;}
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Elevated Events<br>in the Heart of Dhauladhar</h1>
-      <p>Dhauladhar Heights & Resort offers contemporary event experiences surrounded by serene Himalayan views. Designed for weddings, corporate retreats, and exclusive celebrations.</p>
-      <div class="hero-actions">
-        <a href="#enquiry" class="btn-primary">Plan an Event</a>
-        <a href="#spaces" class="btn-outline">Explore Spaces</a>
-      </div>
-    </div>
-
-    <div class="hero-media">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Event at resort">
-    </div>
-  </section>
-
-  <!-- EVENT TYPES -->
-  <section id="spaces">
-    <div class="event-types">
-      <div class="event-type">
-        <h3>Destination Weddings</h3>
-        <p>Minimalist luxury venues with dramatic mountain backdrops and curated wedding services.</p>
-      </div>
-      <div class="event-type">
-        <h3>Corporate Retreats</h3>
-        <p>Private, distraction free spaces ideal for leadership meets and team offsites.</p>
-      </div>
-      <div class="event-type">
-        <h3>Social Celebrations</h3>
-        <p>Stylish indoor and outdoor locations for intimate and grand celebrations.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SPLIT FEATURE -->
-  <section class="split">
-    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="Luxury venue">
-    <div>
-      <h2>Designed for Memorable Gatherings</h2>
-      <p>Every space at Dhauladhar Heights is crafted to balance luxury, comfort, and natural beauty.</p>
-      <ul class="points">
-        <li>• Panoramic mountain facing venues</li>
-        <li>• Custom decor & gourmet catering</li>
-        <li>• Dedicated event concierge</li>
-        <li>• Premium stay for guests</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed" />
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
-      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0" />
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" />
-    </div>
-  </section>
-
-  <!-- CTA FORM -->
-  <section id="enquiry">
-    <div class="cta">
-      <h2>Let’s Create Something Exceptional</h2>
-      <p>Share your event vision and our team will take care of the rest.</p>
-      <form onsubmit="submitForm(event)">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <select required>
-          <option value="">Event Type</option>
-          <option>Wedding</option>
-          <option>Corporate Retreat</option>
-          <option>Private Celebration</option>
-        </select>
-        <input type="date" required>
-        <textarea placeholder="Tell us about your event"></textarea>
-        <button type="submit">Submit Enquiry</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Dhauladhar Heights & Resort. Crafted for modern hospitality.
-  </footer>
-
-  <script>
-    function submitForm(e){
-      e.preventDefault();
-      alert('Thank you! Our events team will contact you shortly.');
-      e.target.reset();
-    }
-  </script>
-
-</body>
 </html>
