@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- stylesheet linked here -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- google fonts linked here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@0..60&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- cdn linked here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="site-header">
+        <div class="site-nav-wrap">
+
+            <div class="site-logo">
+                <img src="/images/dhr_logo_full_white.png" alt="logo">
+            </div>
+
+            <nav class="site-nav">
+                <span class="site-close-btn">&times;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+
+
+                    <li class="site-dropdown">
+                        <a href="#">Events</a>
+                        <ul class="site-dropdown-menu">
+                            <ol>
+                                <li><a href="destination-weeding.html">Destination Wedding</a></li>
+                                <li><a href="events.html"> Events</a></li>
+                            </ol>
+                        </ul>
+                    </li>
+                    <li> <a href="blog.html">Blog</a></li>
+
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-menu-toggle">&#9776;</div>
+
+            <div class="site-cta">
+                <a href="/contact.html">Discover More</a>
+            </div>
+
+        </div>
+    </header>
+         <!----------------------- hero section ---------------------->
+  <div class="common-hero about-hero">
+    <h1 data-aos="fade-down" data-aos-duration="1200">Our Hotel Gallery</h1>
+    <div class="hero-links"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+      <a href="/index.html">Home</a>
+      <a href="/gallery.html">/ Gallery</a>
+    </div>
+  </div>
+<section class="gallery-section">
+
+
+  <h1 class="gallery-title"></h1>
+
+  <!-- FILTER BUTTONS -->
+  <div class="gallery-filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="room">Rooms</button>
+    <button data-filter="wedding">Wedding</button>
+    <button data-filter="resort">Resort</button>
+  </div>
+
+  <!-- GALLERY GRID -->
+  <div class="gallery-grid">
+
+    <!-- ROOMS (4) -->
+    <div class="gallery-item room">
+      <img src="./images/DSC00496-HDR-Enhanced-NR-Edit.jpg" alt="gallery">
+    </div>
+
+    <div class="gallery-item room">
+      <img src="./images/DSC03289.jpg" alt="gallery">
+    </div>
+
+    <div class="gallery-item room">
+      <img src="./images/DSC00176-Edit.jpg">
+    </div>
+
+    <div class="gallery-item room">
+      <img src="./images/Bridalshower.jpg" alt="gallery">
+    </div>
+
+    <!-- WEDDING (2) -->
+    <div class="gallery-item wedding">
+      <img src="./images/weedingimg2.jpg" alt="gallery">
+    </div>
+
+    <div class="gallery-item wedding">
+      <img src="./images/mehndi.jpeg" alt="gallery">
+    </div>
+
+    <!-- RESORT (2) -->
+    <div class="gallery-item resort">
+      <img src="images/DSC00176-Edit.jpg" alt="gallery">
+    </div>
+
+    <div class="gallery-item resort">
+      <img src="./images/IMG_7427.JPG" alt="gallery">
+    </div>
+
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-img">
+</div>
+
+
+    <!----------------------------------footer---------------------- -->
+    <footer class="hf-footer">
+
+        <!-- MAIN FOOTER -->
+        <div class="hf-main">
+
+            <!-- CONTACT -->
+            <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
+
+                <h3>CONTACT INFO</h3>
+
+                <ul>
+                    <li><i class="fas fa-phone"></i> +980 (1234) 567 220</li>
+                    <li><i class="fas fa-envelope"></i> example@yahoo.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 102/B New Elephant Rd<br>Dhaka - 1212</li>
+                </ul>
+
+                <div class="hf-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <!-- LINKS -->
+            <div class="hf-col hf-links" data-aos="fade-up" data-aos-delay="100">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a class="is-active" href="/about.html">About Hotel</a></li>
+                    <li><a href="/rooms.html">Rooms & Suites</a></li>
+                    <li><a href="contact.html">Reservations</a></li>
+                    <li><a href="./blog.html">News & Blogs</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- GALLERY -->
+            <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
+                <h3>GALLERY</h3>
+                <a href="gallery.html">
+                    <div class="hf-gallery-grid">
+
+                        <img src="./images/mehndi.jpeg" alt="gallery">
+                        <img src="./images/sangeet1.jpeg" alt="gallery">
+                        <img src="./images/lawns.jpg" alt="gallery">
+                        <img src="./images/weedingimg1.jpg" alt="gallery">
+                        <img src="./images/weedingimg2.jpg" alt="gallery">
+                        <img src="./images/proposals.jpg" alt="gallery">
+                    </div>
+                </a>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="hf-col hf-newsletter" data-aos="fade-left" data-aos-delay="300">
+                <h3>NEWSLETTER</h3>
+                <p>Subscribe our Newsletter</p>
+                <input type="email" placeholder="Enter Email">
+                <button>SUBSCRIBE NOW</button>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="hf-bottom">
+            © 2026, Hotel Dhauladhar. All Rights Reserved.
+        </div>
+
+    </footer>
+
+<!-- aos -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- javascript -->
+<script src="script.js"></script>
+</body>
+</html>

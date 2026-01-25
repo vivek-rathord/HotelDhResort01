@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ------------------------------- DESTINATION WEDDING SLIDER -------------------------------
   const weddingSlidesData = [
-    { img: "./images/slide1.webp", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
-    { img: "./images/w2.jpeg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
+    { img: "./images/weedingimg1.jpg", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
+    { img: "./images/weedingimg2.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
     { img: "./images/w1.jpg", title: "MOUNTAIN WEDDING VOWS", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
   ];
 
@@ -225,51 +225,88 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// venuue
+// document.addEventListener("DOMContentLoaded", () => {
+//   const eventType = document.getElementById('eventType');
+//   const seatingStyle = document.getElementById('seatingStyle');
+//   const capacity = document.getElementById('capacity');
+//   const cards = document.querySelectorAll('.venue-card');
+
+//   if (eventType && seatingStyle && capacity && cards.length) {
+
+//     function filterVenues() {
+//       const eventValue = eventType.value;
+//       const seatingValue = seatingStyle.value;
+//       const capacityValue = capacity.value ? Number(capacity.value) : null;
+
+//       cards.forEach(card => {
+//         const cardEvent = card.dataset.event;
+//         const cardSeating = card.dataset.seating;
+//         const cardCapacity = Number(card.dataset.capacity);
+
+//         let match = true;
+
+//         // Event filter
+//         if (eventValue && cardEvent !== eventValue) match = false;
+
+//         // Seating filter
+//         if (seatingValue && cardSeating !== seatingValue) match = false;
+
+//         // Capacity filter with ranges
+//         if (capacityValue) {
+//           if (capacityValue === 50 && cardCapacity > 50) match = false;
+//           else if (capacityValue === 100 && (cardCapacity < 50 || cardCapacity > 100)) match = false;
+//           else if (capacityValue === 300 && (cardCapacity < 100 || cardCapacity > 300)) match = false;
+//           else if (capacityValue === 500 && cardCapacity < 300) match = false;
+//         }
+
+//         card.style.display = match ? "flex" : "none";
+//       });
+//     }
+
+//     eventType.addEventListener('change', filterVenues);
+//     seatingStyle.addEventListener('change', filterVenues);
+//     capacity.addEventListener('change', filterVenues);
+
+//     filterVenues(); // initial filter
+//   }
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const eventType = document.getElementById('eventType');
-  const seatingStyle = document.getElementById('seatingStyle');
-  const capacity = document.getElementById('capacity');
-  const cards = document.querySelectorAll('.venue-card');
+  const eventType = document.getElementById("eventType");
+  const seatingStyle = document.getElementById("seatingStyle");
+  const capacity = document.getElementById("capacity");
+  const cards = document.querySelectorAll(".venue-card");
 
-  if (eventType && seatingStyle && capacity && cards.length) {
+  function filterVenues() {
+    const eventVal = eventType.value;
+    const seatingVal = seatingStyle.value;
+    const capacityVal = capacity.value;
 
-    function filterVenues() {
-      const eventValue = eventType.value;
-      const seatingValue = seatingStyle.value;
-      const capacityValue = capacity.value ? Number(capacity.value) : null;
+    cards.forEach(card => {
+      const cardEvent = card.dataset.event;
+      const cardSeating = card.dataset.seating;
+      const cardCapacity = Number(card.dataset.capacity);
 
-      cards.forEach(card => {
-        const cardEvent = card.dataset.event;
-        const cardSeating = card.dataset.seating;
-        const cardCapacity = Number(card.dataset.capacity);
+      let match = true;
 
-        let match = true;
+      if (eventVal && cardEvent !== eventVal) match = false;
+      if (seatingVal && cardSeating !== seatingVal) match = false;
 
-        // Event filter
-        if (eventValue && cardEvent !== eventValue) match = false;
+      if (capacityVal) {
+        if (capacityVal === "50" && cardCapacity > 50) match = false;
+        if (capacityVal === "100" && (cardCapacity < 50 || cardCapacity > 100)) match = false;
+        if (capacityVal === "300" && (cardCapacity < 100 || cardCapacity > 300)) match = false;
+        if (capacityVal === "500" && cardCapacity < 300) match = false;
+      }
 
-        // Seating filter
-        if (seatingValue && cardSeating !== seatingValue) match = false;
-
-        // Capacity filter with ranges
-        if (capacityValue) {
-          if (capacityValue === 50 && cardCapacity > 50) match = false;
-          else if (capacityValue === 100 && (cardCapacity < 50 || cardCapacity > 100)) match = false;
-          else if (capacityValue === 300 && (cardCapacity < 100 || cardCapacity > 300)) match = false;
-          else if (capacityValue === 500 && cardCapacity < 300) match = false;
-        }
-
-        card.style.display = match ? "flex" : "none";
-      });
-    }
-
-    eventType.addEventListener('change', filterVenues);
-    seatingStyle.addEventListener('change', filterVenues);
-    capacity.addEventListener('change', filterVenues);
-
-    filterVenues(); // initial filter
+      card.classList.toggle("hide", !match);
+    });
   }
+
+  eventType.addEventListener("change", filterVenues);
+  seatingStyle.addEventListener("change", filterVenues);
+  capacity.addEventListener("change", filterVenues);
 });
 
 // event slider// ================= EVENT SLIDER (NO CONFLICT) =================
@@ -346,8 +383,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSlider();
 });
 
-
-// blog details
 /* ================= BLOG DATA ================= */
 
 const blogs = {
@@ -455,3 +490,145 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("blogContent").innerHTML = blog.content;
 
 });
+
+
+// ROOM DETAILS
+// ================= ROOM DETAILS (SAFE VERSION) =================
+document.addEventListener("DOMContentLoaded", () => {
+
+  const roomTitle = document.getElementById("roomTitle");
+  const slideImage = document.getElementById("slideImage");
+
+  // ❗ Agar room-details page nahi hai → exit
+  if (!roomTitle || !slideImage) return;
+
+  const roomsData = {
+    "double-suite-room": {
+      title: "Double Suite Room",
+      images: [
+        "./images/DSC03289.jpg",
+        "./images/DSC00176-Edit.jpg",
+        "./images/DSC03083 copy.jpg"
+      ],
+      description: "Luxury double suite room with king bed, balcony and premium amenities.",
+      price: "$560 / Night"
+    },
+
+    "delux-family-room": {
+      title: "Delux Family Room",
+      images: [
+        "./images/DSC00176-Edit.jpg",
+        "./images/DSC03289.jpg",
+        "./images/DSC03289.jpg"
+      ],
+      description: "Spacious family room with 2 king beds, perfect for families.",
+      price: "$560 / Night"
+    },
+
+    "superior-bed-room": {
+      title: "Superior Bed Room",
+      images: [
+        "./images/DSC03083 copy.jpg",
+        "./images/DSC03289.jpg",
+        "./images/DSC03289.jpg"
+      ],
+      description: "Elegant superior room with modern interiors and comfort.",
+      price: "$560 / Night"
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const roomSlug = params.get("room");
+
+  // ❗ slug check
+  if (!roomSlug || !roomsData[roomSlug]) {
+    roomTitle.innerText = "Room not found";
+    return;
+  }
+
+  const room = roomsData[roomSlug];
+
+  // TEXT
+  roomTitle.innerText = room.title;
+  document.getElementById("roomDescription").innerText = room.description;
+  document.getElementById("roomPrice").innerText = room.price;
+
+  // SLIDER
+  let currentIndex = 0;
+  slideImage.src = room.images[currentIndex];
+
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+
+  if (nextBtn && prevBtn) {
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % room.images.length;
+      slideImage.src = room.images[currentIndex];
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + room.images.length) % room.images.length;
+      slideImage.src = room.images[currentIndex];
+    });
+  }
+});
+
+// ================= GALLERY PAGE (SAFE) =================
+document.addEventListener("DOMContentLoaded", () => {
+
+  const buttons = document.querySelectorAll(".gallery-filters button");
+  const items = document.querySelectorAll(".gallery-item");
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const closeBtn = document.querySelector(".close");
+
+  // ❗ Agar gallery page nahi hai → exit
+  if (!buttons.length || !items.length || !lightbox) return;
+
+  // FILTERS
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.dataset.filter;
+
+      items.forEach(item => {
+        item.style.display =
+          filter === "all" || item.classList.contains(filter)
+            ? "block"
+            : "none";
+      });
+    });
+  });
+
+  // LIGHTBOX OPEN
+  items.forEach(item => {
+    item.addEventListener("click", () => {
+      lightboxImg.src = item.querySelector("img").src;
+      lightbox.style.display = "flex";
+    });
+  });
+
+  // CLOSE BUTTON
+  closeBtn?.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  // CLICK OUTSIDE
+  lightbox.addEventListener("click", e => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = "none";
+    }
+  });
+
+  // ESC KEY
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      lightbox.style.display = "none";
+    }
+  });
+
+});
+

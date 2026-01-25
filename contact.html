@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +19,15 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-          <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-  <!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <title>Hotel Dhauladhar</title>
 </head>
+
 <body>
-      <!-- navbar -->
     <header class="site-header">
         <div class="site-nav-wrap">
 
@@ -51,14 +52,7 @@
                             </ol>
                         </ul>
                     </li>
-
-                    <li class="site-dropdown">
-                        <a href="#">Blog</a>
-                        <ol class="site-dropdown-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="#">Blog Details</a></li>
-                        </ol>
-                    </li>
+                    <li> <a href="blog.html">Blog</a></li>
 
                     <li><a href="/contact.html">Contact</a></li>
                 </ul>
@@ -72,91 +66,87 @@
 
         </div>
     </header>
-
     <!----------------------- hero section ---------------------->
-    <div class="common-hero">
-        <h1  data-aos="fade-down" data-aos-duration="1200">Contact</h1>
-        <div class="hero-links"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+    <div class="common-hero contact-hero">
+        <h1 data-aos="fade-down" data-aos-duration="1200">Contact</h1>
+        <div class="hero-links" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
             <a href="/index.html">Home</a>
-            <a href="/book-online.html">/  Contact</a>
+            <a href="/contact.html">/ Contact</a>
         </div>
     </div>
     <!-- ------------------contact form ------------------ -->
-     <section class="contact-section contactpage">
-  <div class="contact-wrapper">
+    <section class="contact-section contactpage">
+        <div class="contact-wrapper">
 
-    <!-- LEFT CONTENT -->
-    <div class="contact-information" data-aos="zoom-in" data-aos-duration="1000">
-      <span class="tag">CONTACT US</span>
-      <h2>CONTACT WITH US</h2>
+            <!-- LEFT CONTENT -->
+            <div class="contact-information" data-aos="zoom-in" data-aos-duration="1000">
+                <span class="tag">CONTACT US</span>
+                <h2>CONTACT WITH US</h2>
 
-      <p>
-        Rapidiously myocardinate cross-platform intellectual capital after the
-        model. Appropriately create interactive infrastructures after
-        maintenance. Holistically facilitate stand-alone
-      </p>
+                <p>
+                    Rapidiously myocardinate cross-platform intellectual capital after the
+                    model. Appropriately create interactive infrastructures after
+                    maintenance. Holistically facilitate stand-alone
+                </p>
 
-      <div class="info-box">
-        <span><i class="fa-solid fa-phone"></i></span>
-        <div>
-          <small>Call Us Now</small>
-          <strong>+980 123 (4567) 890</strong>
+                <div class="info-box">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <div>
+                        <small>Call Us Now</small>
+                        <strong>+980 123 (4567) 890</strong>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <span><i class="fa-solid fa-message"></i></span>
+                    <div>
+                        <small>Send Email</small>
+                        <strong>example@gmail.com</strong>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <span><i class="fa-solid fa-location-crosshairs"></i></span>
+                    <div>
+                        <small>Our Locations</small>
+                        <strong>New elephant Road, Dhanmondi<br>Dhaka - 1212</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="contact-form" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                <h3>GET IN TOUCH</h3>
+
+                <form id="contactForm">
+                    <input type="text" name="user_name" placeholder="Your Name" required />
+                    <input type="email" name="user_email" placeholder="Enter your mail" required />
+
+                    <select name="subject">
+                        <option>Subject One</option>
+                        <option>Subject Two</option>
+                        <option>Subject Three</option>
+                    </select>
+
+                    <textarea name="message" placeholder="Write Message:" required></textarea>
+
+                    <button type="submit" class="rect-btn">SEND MESSAGE</button>
+                </form>
+            </div>
+
         </div>
-      </div>
+    </section>
 
-      <div class="info-box">
-        <span><i class="fa-solid fa-message"></i></span>
-        <div>
-          <small>Send Email</small>
-          <strong>example@gmail.com</strong>
-        </div>
-      </div>
+    <!------------------------------------- google map--------------------------- -->
+    <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps?q=New%20Delhi&output=embed" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
 
-      <div class="info-box">
-        <span><i class="fa-solid fa-location-crosshairs"></i></span>
-        <div>
-          <small>Our Locations</small>
-          <strong>New elephant Road, Dhanmondi<br>Dhaka - 1212</strong>
-        </div>
-      </div>
+
     </div>
 
-    <!-- RIGHT FORM -->
-    <div class="contact-form"  data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-      <h3>GET IN TOUCH</h3>
-
-      <form id="contactForm">
-        <input type="text" name="user_name" placeholder="Your Name" required />
-        <input type="email" name="user_email" placeholder="Enter your mail" required />
-
-        <select name="subject">
-          <option>Subject One</option>
-          <option>Subject Two</option>
-          <option>Subject Three</option>
-        </select>
-
-        <textarea name="message" placeholder="Write Message:" required></textarea>
-
-        <button type="submit" class="rect-btn">SEND MESSAGE</button>
-      </form>
-    </div>
-
-  </div>
-</section>
-
-<!------------------------------------- google map--------------------------- -->
-<div class="map-wrapper">
-  <iframe
-    src="https://www.google.com/maps?q=New%20Delhi&output=embed"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-
- 
-</div>
-
-
-<!----------------------------------footer---------------------- -->
+    <!----------------------------------footer---------------------- -->
     <footer class="hf-footer">
 
         <!-- MAIN FOOTER -->
@@ -164,9 +154,7 @@
 
             <!-- CONTACT -->
             <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
-                <div class="overlayfooter-logo">
-                    <!-- <img src="./Images/dhr_logo_full_white_720.png" alt="ROYELLA Logo"> -->
-                </div>
+
                 <h3>CONTACT INFO</h3>
 
                 <ul>
@@ -189,7 +177,7 @@
                 <ul>
                     <li><a class="is-active" href="/about.html">About Hotel</a></li>
                     <li><a href="/rooms.html">Rooms & Suites</a></li>
-                    <li><a href="#">Reservations</a></li>
+                    <li><a href="contact.html">Reservations</a></li>
                     <li><a href="./blog.html">News & Blogs</a></li>
                     <li><a href="./contact.html">Contact Us</a></li>
                 </ul>
@@ -198,14 +186,17 @@
             <!-- GALLERY -->
             <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
                 <h3>GALLERY</h3>
-                <div class="hf-gallery-grid">
-                    <img src="https://picsum.photos/200/200?1">
-                    <img src="https://picsum.photos/200/200?2">
-                    <img src="https://picsum.photos/200/200?3">
-                    <img src="https://picsum.photos/200/200?4">
-                    <img src="https://picsum.photos/200/200?5">
-                    <img src="https://picsum.photos/200/200?6">
-                </div>
+                <a href="gallery.html">
+                    <div class="hf-gallery-grid">
+
+                        <img src="./images/mehndi.jpeg" alt="gallery">
+                        <img src="./images/sangeet1.jpeg" alt="gallery">
+                        <img src="./images/lawns.jpg" alt="gallery">
+                        <img src="./images/weedingimg1.jpg" alt="gallery">
+                        <img src="./images/weedingimg2.jpg" alt="gallery">
+                        <img src="./images/proposals.jpg" alt="gallery">
+                    </div>
+                </a>
             </div>
 
             <!-- NEWSLETTER -->
@@ -225,9 +216,9 @@
 
     </footer>
 
-
-<!-- AOS JS  -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- AOS JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

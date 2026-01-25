@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet linked here -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- google fonts linked here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@0..60&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- cdn linked here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <title>Hotel Dhauladhar room details</title>
+</head>
+
+<body>
+      <!-- navbar -->
+    <header class="site-header">
+        <div class="site-nav-wrap">
+
+            <div class="site-logo">
+                <img src="/images/dhr_logo_full_white.png" alt="logo">
+            </div>
+
+            <nav class="site-nav">
+                <span class="site-close-btn">&times;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+
+
+                    <li class="site-dropdown">
+                        <a href="#">Events</a>
+                        <ul class="site-dropdown-menu">
+                            <ol>
+                                <li><a href="destination-weeding.html">Destination Wedding</a></li>
+                                <li><a href="events.html"> Events</a></li>
+                            </ol>
+                        </ul>
+                    </li>
+                    <li> <a href="blog.html">Blog</a></li>
+
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-menu-toggle">&#9776;</div>
+
+            <div class="site-cta">
+                <a href="/contact.html">Discover More</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- room, weeding ,resort, boquet -->
+
+
+    <!----------------------- hero section ---------------------->
+    <div class="common-hero">
+        <h1 data-aos="fade-down" data-aos-duration="1200">Room Details</h1>
+        <div class="hero-links" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+            <a href="/index.html">Home</a>
+            <a href="#">/ Room Details</a>
+        </div>
+    </div>
+
+
+
+    <!-- ROOM DETAILS PAGE -->
+
+    <div class="room-details-wrapper">
+
+        <!-- IMAGE SLIDER -->
+        <div class="room-slider">
+            <button class="slider-btn prev">←</button>
+
+            <div class="slider-images">
+                <img id="slideImage" src="" alt="Room Image">
+            </div>
+
+            <button class="slider-btn next">→</button>
+        </div>
+
+        
+        <!-- ROOM CONTENT -->
+        <div class="roomdetails">
+            <span class="tag">LUXURY ROOM</span>
+            <h1 id="roomTitle"></h1>
+            <p id="roomDescription"></p>
+            <p id="roomPrice"></p>
+        </div>
+
+    </div>
+
+     <!-- ------------------Avaliablity section------------------- -->
+  <section class="availability">
+    <h2>CHECK AVAILABILITY</h2>
+
+    <div class="availability-box" data-aos="zoom-in">
+
+      <!-- Check In -->
+      <div class="field">
+        <label>Check In</label>
+        <input type="date">
+      </div>
+
+      <!-- Check Out -->
+      <div class="field">
+        <label>Check Out</label>
+        <input type="date">
+      </div>
+
+      <!-- Rooms -->
+      <div class="field dropdown" id="roomBox">
+        <label>Rooms</label>
+        <div class="value" onclick="toggleDropdown('roomsDrop')">
+          <span id="roomText">3 Room</span>
+          <span class="arrow">▾</span>
+        </div>
+
+        <div class="dropdown-menu" id="roomsDrop">
+          <span>Rooms</span>
+          <div class="counter">
+            <button onclick="changeCount('rooms',-1)">−</button>
+            <span id="rooms">3</span>
+            <button onclick="changeCount('rooms',1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guests -->
+      <div class="field dropdown" id="guestBox">
+        <label>Guests</label>
+        <div class="value" onclick="toggleDropdown('guestsDrop')">
+          <span id="guestText">1 Adult, 0 Child</span>
+          <span class="arrow">▾</span>
+        </div>
+
+        <div class="dropdown-menu" id="guestsDrop">
+          <div class="row">
+            <span>Adult</span>
+            <div class="counter">
+              <button onclick="changeCount('adult',-1)">−</button>
+              <span id="adult">1</span>
+              <button onclick="changeCount('adult',1)">+</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <span>Child</span>
+            <div class="counter">
+              <button onclick="changeCount('child',-1)">−</button>
+              <span id="child">0</span>
+              <button onclick="changeCount('child',1)">+</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="hero-btn cta-btn">Checkout Now</button>
+
+    </div>
+  </section>
+    <div class="room-details-layout new">
+
+        <!-- LEFT CONTENT -->
+        <div class="room-left">
+
+            <span class="tag">LUXURY ROOM</span>
+            <h1 id="roomTitle"></h1>
+
+            <p id="roomDescriptions"></p>
+            <p class="roomExtraText">
+                Conveniently fashion pandemic potentialities for team driven
+                technologies. Proactively orchestrate robust systems rather than
+                user-centric vortals.
+            </p>
+
+            <!-- CHECK IN / OUT -->
+            <div class="check-wrapper">
+
+                <div class="check-box">
+                    <h3 class="tag"> ← Check In</h3>
+                    <ul>
+                        <li>Check-in from 9:00 AM - anytime</li>
+                        <li>Early check-in subject to availability</li>
+                    </ul>
+                </div>
+
+                <div class="check-box">
+                    <h3 class="tag">→ Check Out</h3>
+                    <ul>
+                        <li>Check-out before noon</li>
+                        <li>Check-out from 9:00 AM - anytime</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- HOUSE RULES -->
+            <h2 class="section-title">House Rules</h2>
+
+        </div>
+
+        <!-- RIGHT AMENITIES -->
+        <div class="room-right">
+
+
+            <div class="amenities-box">
+                <h3>Amenities</h3>
+
+                <ul>
+                    <li><i class="fa-solid fa-user"></i> 2 - 5 Persons</li>
+                    <li><i class="fa-solid fa-wifi"></i> Free WiFi Available</li>
+                    <li><i class="fa-solid fa-person-swimming"></i> Swimming Pools</li>
+                    <li><i class="fa-solid fa-mug-hot"></i> Breakfast</li>
+                    <li>  <i class="fa-solid fa-bed"></i> 250 SQFT Rooms</li>
+                    <li><i class="fa-solid fa-dumbbell"></i> Gym facilities</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!----------------------------------footer---------------------- -->
+   <!----------------------------------footer---------------------- -->
+  <footer class="hf-footer">
+
+    <!-- MAIN FOOTER -->
+    <div class="hf-main">
+
+      <!-- CONTACT -->
+      <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
+
+        <h3>CONTACT INFO</h3>
+
+        <ul>
+          <li><i class="fas fa-phone"></i> +980 (1234) 567 220</li>
+          <li><i class="fas fa-envelope"></i> example@yahoo.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> 102/B New Elephant Rd<br>Dhaka - 1212</li>
+        </ul>
+
+        <div class="hf-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <!-- LINKS -->
+      <div class="hf-col hf-links" data-aos="fade-up" data-aos-delay="100">
+        <h3>USEFUL LINKS</h3>
+        <ul>
+          <li><a class="is-active" href="/about.html">About Hotel</a></li>
+          <li><a href="/rooms.html">Rooms & Suites</a></li>
+          <li><a href="contact.html">Reservations</a></li>
+          <li><a href="./blog.html">News & Blogs</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
+        <h3>GALLERY</h3>
+        <a href="gallery.html">
+          <div class="hf-gallery-grid">
+
+            <img src="./images/mehndi.jpeg" alt="gallery">
+            <img src="./images/sangeet1.jpeg" alt="gallery">
+            <img src="./images/lawns.jpg" alt="gallery">
+            <img src="./images/weedingimg1.jpg" alt="gallery">
+            <img src="./images/weedingimg2.jpg" alt="gallery">
+            <img src="./images/proposals.jpg" alt="gallery">
+          </div>
+        </a>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="hf-col hf-newsletter" data-aos="fade-left" data-aos-delay="300">
+        <h3>NEWSLETTER</h3>
+        <p>Subscribe our Newsletter</p>
+        <input type="email" placeholder="Enter Email">
+        <button>SUBSCRIBE NOW</button>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="hf-bottom">
+      © 2026, Hotel Dhauladhar. All Rights Reserved.
+    </div>
+
+  </footer>
+
+    <!-- AOS JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
