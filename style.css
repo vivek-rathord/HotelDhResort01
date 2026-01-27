@@ -332,14 +332,6 @@ h2 {
   background-position: top center;
 }
 
-/* .common-hero.Weedinghero {
-  height: 100vh;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("./Images/weeding.jpg") center/cover no-repeat;
-  align-items: center;
-  padding-top: 60px;
-} */
  .common-hero.Weedinghero {
   height: 100vh;
   background:
@@ -542,6 +534,7 @@ background-image: url(./images/0P7A6306.jpg);
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
+            
         }
 
         .line {
@@ -565,7 +558,7 @@ background-image: url(./images/0P7A6306.jpg);
             margin-bottom: 15px;
         }
 
-        p {
+      .utilitesp {
             max-width: 700px;
             margin: 0 auto;
             font-size: 15px;
@@ -722,21 +715,21 @@ background-image: url(./images/0P7A6306.jpg);
 }
 
 /* SLIDER BUTTONS */
-.slider-btn {
+.rooms-slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: #fff;
   border: none;
+  border: 1px solid var(--secondary-color);
   padding: 12px 16px;
   font-size: 22px;
   cursor: pointer;
-  border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.slider-btn.prev { left: 20px; }
-.slider-btn.next { right: 20px; }
+.rooms-slider-btn.prev { left: 20px; }
+.rooms-slider-btn.next { right: 20px; }
 
 /* ROOM CONTENT */
 .roomdetails {
@@ -1263,6 +1256,7 @@ h3 {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 10px;
+    text-align: center;
   }
 }
 
@@ -1277,6 +1271,7 @@ h3 {
 }
 .contact-hero{
   background-image: url(./images/Copy\ of\ DSC09939.jpg);
+
 }
 /* ----------------------avalibility section------ */
 .availability {
@@ -2061,7 +2056,10 @@ select>option{
 
 /* -----------------------------------------------about page------------------------------------------- */
 .about-hero {
-  background-image: url('./images/aboutbanner.jpg');
+  /* background-image: url('./images/aboutbanner.jpg'); */
+  background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("./images/aboutbanner.jpg") center/cover no-repeat;
+
+
 }
 /* ourt team */
 .team-wrapper {
@@ -2291,7 +2289,6 @@ select>option{
 .venue-card {
   flex: 1 1 calc(50% - 20px); 
   display: flex;
-  flex-wrap: ;
   flex-direction: column;
   min-width: 0; 
   border: 1px solid rgb(198, 193, 193);
@@ -2521,7 +2518,6 @@ select>option{
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  background: #fff;
 }
 
 /* RESPONSIVE */
@@ -2765,6 +2761,65 @@ margin: 60px 0px;
     height: 50px;
     font-size: 20px;
   }
+
+
+  /*  */
+   /* GRID → single column */
+  .slider-wrap {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* HIDE SIDE PANELS */
+  .side {
+    display: none;
+  }
+
+  /* SLIDER HEIGHT ADJUST */
+  .slider {
+    height: 320px;
+  }
+
+  /* CENTER SLIDE */
+  .slide {
+    object-fit: cover;
+  }
+
+  /* CAPTION SPACING */
+  .caption {
+    padding: 15px;
+  }
+
+  .caption h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .caption p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* BUTTONS → BOTTOM CENTER */
+  .btn {
+    position: absolute;
+    bottom: -65px;
+    top: auto;
+    transform: none;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  /* PREV & NEXT POSITION */
+  .left .btn {
+    left: 40%;
+    right: auto;
+  }
+
+  .right .btn {
+    left: 55%;
+  }
 }
 
 @media (min-width: 449px) and (max-width: 567px) {
@@ -2956,3 +3011,4 @@ html, body {
   }
   
 }
+
