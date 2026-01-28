@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const weddingSlidesData = [
     { img: "./images/weedingimg1.jpg", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
     { img: "./images/weedingimg2.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
-    { img: "./images/w1.jpg", title: "MOUNTAIN WEDDING VOWS", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
+    { img: "./images/DSC09132.jpg", title: "MOUNTAIN WEDDING VOWS", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
   ];
 
   let index = 0;
@@ -389,7 +389,7 @@ const blogs = {
   "indian-wedding-malta": {
     title: "Indian Wedding In Malta",
     date: "March 12, 2026",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    image: "./images/DSC09810.jpg",
     content: `
       <p>Malta is one of the most beautiful destinations for Indian weddings.</p>
       <p>Luxury venues, sea views, and heritage locations make it unforgettable.</p>
@@ -399,7 +399,7 @@ const blogs = {
   "indian-wedding-barcelona": {
     title: "Indian Wedding Venues In Barcelona",
     date: "March 18, 2026",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552",
+    image: "/images/DSC00496-HDR-Enhanced-NR-Edit.jpg",
     content: `
       <p>Barcelona offers a blend of modern architecture and rich traditions.</p>
       <p>Indian weddings here are vibrant and colorful.</p>
@@ -409,7 +409,7 @@ const blogs = {
   "indian-wedding-switzerland": {
     title: "Indian Wedding In Switzerland",
     date: "March 25, 2026",
-    image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9",
+    image: "./images/hs.jpg",
     content: `
       <p>Switzerland offers snow-clad mountains and fairy-tale venues.</p>
       <p>Perfect for luxury Indian destination weddings.</p>
@@ -573,6 +573,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+// room booking
+ document.addEventListener("DOMContentLoaded", () => {
+    const checkIn = document.getElementById("checkin");
+    const checkOut = document.getElementById("checkout");
+
+    const today = new Date().toISOString().split("T")[0];
+
+    // Set minimum date for both
+    checkIn.min = today;
+    checkOut.min = today;
+
+    // When check-in changes
+    checkIn.addEventListener("change", () => {
+      checkOut.min = checkIn.value;
+
+      // Auto-fix checkout if earlier than check-in
+      if (checkOut.value && checkOut.value < checkIn.value) {
+        checkOut.value = checkIn.value;
+      }
+    });
+
+    // Optional: validate on checkout change
+    checkOut.addEventListener("change", () => {
+      if (checkOut.value < checkIn.value) {
+        alert("Check-out date cannot be before Check-in date");
+        checkOut.value = "";
+      }
+    });
+  });
 // ================= GALLERY PAGE (SAFE) =================
 document.addEventListener("DOMContentLoaded", () => {
 
