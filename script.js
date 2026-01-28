@@ -226,49 +226,111 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // venuue
-document.addEventListener("DOMContentLoaded", () => {
-  const eventType = document.getElementById('eventType');
-  const seatingStyle = document.getElementById('seatingStyle');
-  const capacity = document.getElementById('capacity');
-  const cards = document.querySelectorAll('.venue-card');
+// document.addEventListener("DOMContentLoaded", () => {
+//   const eventType = document.getElementById('eventType');
+//   const seatingStyle = document.getElementById('seatingStyle');
+//   const capacity = document.getElementById('capacity');
+//   const cards = document.querySelectorAll('.venue-card');
 
-  if (eventType && seatingStyle && capacity && cards.length) {
+//   if (eventType && seatingStyle && capacity && cards.length) {
+
+//     function filterVenues() {
+//       const eventValue = eventType.value;
+//       const seatingValue = seatingStyle.value;
+//       const capacityValue = capacity.value ? Number(capacity.value) : null;
+
+//       cards.forEach(card => {
+//         const cardEvent = card.dataset.event;
+//         const cardSeating = card.dataset.seating;
+//         const cardCapacity = Number(card.dataset.capacity);
+
+//         let match = true;
+
+//         // Event filter
+//         if (eventValue && cardEvent !== eventValue) match = false;
+
+//         // Seating filter
+//         if (seatingValue && cardSeating !== seatingValue) match = false;
+
+//         // Capacity filter with ranges
+//         if (capacityValue) {
+//           if (capacityValue === 50 && cardCapacity > 50) match = false;
+//           else if (capacityValue === 100 && (cardCapacity < 50 || cardCapacity > 100)) match = false;
+//           else if (capacityValue === 300 && (cardCapacity < 100 || cardCapacity > 300)) match = false;
+//           else if (capacityValue === 500 && cardCapacity < 300) match = false;
+//         }
+
+//         card.style.display = match ? "flex" : "none";
+//       });
+//     }
+
+//     eventType.addEventListener('change', filterVenues);
+//     seatingStyle.addEventListener('change', filterVenues);
+//     capacity.addEventListener('change', filterVenues);
+
+//     filterVenues(); // initial filter
+//   }
+// });
+// code   by sahil
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const eventType = document.getElementById('eventType');
+  const capacity = document.getElementById('capacity');
+  const venueCards = document.querySelectorAll('.venue-image-card');
+  const enquireBtns = document.querySelectorAll('.enquire-btn');
+
+  if (eventType && capacity && venueCards.length) {
 
     function filterVenues() {
       const eventValue = eventType.value;
-      const seatingValue = seatingStyle.value;
       const capacityValue = capacity.value ? Number(capacity.value) : null;
 
-      cards.forEach(card => {
-        const cardEvent = card.dataset.event;
-        const cardSeating = card.dataset.seating;
+      venueCards.forEach(card => {
+        const cardEvents = card.dataset.event.split(' ');
         const cardCapacity = Number(card.dataset.capacity);
 
-        let match = true;
+        let eventMatch = true;
+        let capacityMatch = true;
 
-        // Event filter
-        if (eventValue && cardEvent !== eventValue) match = false;
-
-        // Seating filter
-        if (seatingValue && cardSeating !== seatingValue) match = false;
-
-        // Capacity filter with ranges
-        if (capacityValue) {
-          if (capacityValue === 50 && cardCapacity > 50) match = false;
-          else if (capacityValue === 100 && (cardCapacity < 50 || cardCapacity > 100)) match = false;
-          else if (capacityValue === 300 && (cardCapacity < 100 || cardCapacity > 300)) match = false;
-          else if (capacityValue === 500 && cardCapacity < 300) match = false;
+        // Event filter (can have multiple events)
+        if (eventValue && !cardEvents.includes(eventValue)) {
+          eventMatch = false;
         }
 
-        card.style.display = match ? "flex" : "none";
+        // Capacity filter (less than or equal to selected capacity)
+        if (capacityValue && cardCapacity > capacityValue) {
+          capacityMatch = false;
+        }
+
+        // Show/hide card based on both filters
+        if (eventMatch && capacityMatch) {
+          card.style.display = "block";
+          setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          }, 10);
+        } else {
+          card.style.display = "none";
+        }
       });
     }
 
+    // Event listeners for filters
     eventType.addEventListener('change', filterVenues);
-    seatingStyle.addEventListener('change', filterVenues);
     capacity.addEventListener('change', filterVenues);
 
-    filterVenues(); // initial filter
+    // Event listener for Enquire buttons
+    enquireBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const venueName = this.closest('.venue-image-card').querySelector('h3').textContent;
+        alert(`Enquiry sent for: ${venueName}\nWe will contact you shortly!`);
+      });
+    });
+
+    // Initial filter
+    filterVenues();
   }
 });
 
@@ -308,6 +370,8 @@ document.addEventListener("DOMContentLoaded", () => {
   seatingStyle.addEventListener("change", filterVenues);
   capacity.addEventListener("change", filterVenues);
 });
+
+
 
 // event slider// ================= EVENT SLIDER (NO CONFLICT) =================
 document.addEventListener("DOMContentLoaded", () => {

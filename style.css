@@ -700,7 +700,7 @@ background-image: url(./images/0P7A6306.jpg);
 .room-details-flex {
   display: flex;
   gap: 40px;
-  align-items: stretch; /* 🔥 height balance fix */
+  align-items: stretch; 
 }
 
 /* ================= SLIDER ================= */
@@ -709,7 +709,7 @@ background-image: url(./images/0P7A6306.jpg);
   position: relative;
   flex: 1.6;
   width: 100%;
-  aspect-ratio: 16 / 10;   /* 🔥 responsive height */
+  aspect-ratio: 16 / 10;   
   overflow: hidden;
   border-radius: 12px;
 }
@@ -3391,4 +3391,77 @@ html, body {
   .desktop-title {
     display: block;
   }
+}
+
+
+/*  udpate code  by sahil */
+
+.venue-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.venue-image-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+
+.venue-image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.venue-image-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.venue-info {
+  padding: 20px;
+}
+
+.venue-info h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.venue-info .specs {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.venue-info .desc {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.enquire-btn {  
+  background: rgb(0, 174, 239);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.enquire-btn:hover {
+  background:rgb(0, 174, 239);
 }

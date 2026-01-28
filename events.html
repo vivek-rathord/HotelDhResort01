@@ -220,7 +220,8 @@
     </p>
   </section>
 
-  <section class="venue-section">
+ <!-- update code by sahil -->
+     <section class="venue-section">
 
     <!-- FILTER BAR -->
     <div class="filter-bar" data-aos="fade-down">
@@ -231,59 +232,102 @@
         <option value="corporate">Corporate</option>
       </select>
 
-      <select id="seatingStyle">
-        <option value="">Seating Style</option>
-        <option value="circular">Circular</option>
-        <option value="classroom">Classroom</option>
-        <option value="cocktail">Cocktail</option>
-        <option value="boardroom">Boardroom</option>
-        <option value="u-shaped">U-Shaped</option>
-      </select>
-
-
       <select id="capacity">
         <option value="">Capacity</option>
-        <option value="50">Up to 50</option>
-        <option value="100">50 – 100</option>
-        <option value="300">100 – 300</option>
-        <option value="500">300+</option>
+        <option value="10">Up to 10 guests</option>
+        <option value="40">Up to 40 guests</option>
+        <option value="80">Up to 80 guests</option>
+        <option value="100">Up to 100 guests</option>
+        <option value="150">Up to 150 guests</option>
+        <option value="200">Up to 200 guests</option>
+        <option value="600">Up to 600 guests</option>
       </select>
     </div>
 
-    <!-- CARDS -->
-    <div class="venue-cards" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="venue-card" data-event="wedding" data-seating="cocktail" data-capacity="500">
-
-        <img src="./images/IMG_8721.JPG">
-        <h3>CELEBRATION LAWNS</h3>
-        <p class="location">Jai Mahal Palace, Jaipur</p>
-        <p class="desc">Perfect for grand weddings and large celebrations.</p>
-        <button class="enquire-btn">Enquire Now</button>
+    <!-- VENUE IMAGES DISPLAY -->
+    <div class="venue-images" data-aos="fade-up" data-aos-delay="100">
+       <div class="venue-image-card" data-event="wedding corporate" data-capacity="600">
+        <img src="./images/DSC_4130.JPG" alt="Amaltas Hall">
+        <div class="venue-info">
+          <h3>AMALTAS HALL</h3>
+          <p class="specs">Indoor | 20000 Sq. Ft | Capacity: 600 guests</p>
+          <p class="desc">Grand indoor hall perfect for weddings and large corporate events</p>
+          <button class="enquire-btn">Enquire Now</button>
+        </div>
       </div>
 
-      <div class="venue-card" data-event="conference" data-seating="circular" data-capacity="300" data-aos="fade-up"
-        data-aos-delay="200">
-        <img src="./images/hs.jpg">
-        <h3>LOTUS POND</h3>
-        <p class="location">Jai Mahal Palace, Jaipur</p>
-        <p class="desc">Ideal for premium corporate events and cocktail meets.</p>
-        <button class="enquire-btn">Enquire Now</button>
+      <div class="venue-image-card" data-event="corporate conference" data-capacity="200">
+        <img src="./images/hall.jpeg" alt="Gulmohar Hall">
+        <div class="venue-info">
+          <h3>GULMOHAR HALL</h3>
+          <p class="specs">Indoor | 8000 Sq. Ft | Capacity: 200 guests</p>
+          <p class="desc">Versatile hall for conferences and corporate events</p>
+          <button class="enquire-btn">Enquire Now</button>
+        </div>
       </div>
 
-      <div class="venue-card" data-event="corporate" data-seating="boardroom" data-capacity="50" data-aos="fade-up"
-        data-aos-delay="300">
-
-        <img src="./images/DSC_4130.JPG">
-        <h3>SILVER OAK</h3>
-        <p class="location">Jai Mahal Palace, Jaipur</p>
-        <p class="desc">Executive boardroom for meetings and discussions.</p>
-        <button class="enquire-btn">Enquire Now</button>
+      <div class="venue-image-card" data-event="wedding corporate" data-capacity="150">
+        <img src="./images/_VIS7453.JPG" alt="Nargis Hall">
+        <div class="venue-info">
+          <h3>NARGIS HALL</h3>
+          <p class="specs">Indoor | 7000 Sq. Ft | Capacity: 150 guests</p>
+          <p class="desc">Elegant hall for medium-sized weddings and corporate gatherings</p>
+          <button class="enquire-btn">Enquire Now</button>
+        </div>
       </div>
 
+      <div class="venue-image-card" data-event="corporate conference" data-capacity="40">
+        <img src="./images/IMG_7267.JPG" alt="Meeting Room">
+        <div class="venue-info">
+          <h3>MEETING ROOM</h3>
+          <p class="specs">Indoor | 600 Sq. Ft | Capacity: 40 guests</p>
+          <p class="desc">Professional space for meetings and small conferences</p>
+          <button class="enquire-btn">Enquire Now</button>
+        </div>
+      </div>
+
+      <div class="venue-image-card" data-event="corporate" data-capacity="10">
+        <img src="./images/Banquet.jpeg" alt="Board Room">
+        <div class="venue-info">
+          <h3>BOARD ROOM</h3>
+          <p class="specs">Indoor | 200 Sq. Ft | Capacity: 10 guests</p>
+          <p class="desc">Executive boardroom for high-level meetings</p>
+          <button class="enquire-btn">Enquire Now</button>
+        </div>
+      </div>
+
+      <!-- Outdoor Venues -->
+      <div class="venue-image-card" data-event="wedding" data-capacity="200">
+        <img src="./images//DSC09149.jpg  " alt="Garden Green Lawn 1">
+        <div class="venue-info">
+          <h3>GARDEN GREEN LAWN 1</h3>
+          <p class="specs">Outdoor | 6000 Sq. Ft | Capacity: 200 guests</p>
+          <p class="desc">Beautiful outdoor lawn perfect for garden weddings</p>
+          <button class="enquire-btn">Enquire Now</button>
+        </div>
+      </div>
+
+      <div class="venue-image-card" data-event="wedding" data-capacity="80">
+        <img src="./images/DSC09631.jpg" alt="Garden Green Lawn 2">
+        <div class="venue-info">
+          <h3>GARDEN GREEN LAWN 2</h3>
+          <p class="specs">Outdoor | 2000 Sq. Ft | Capacity: 80 guests</p>
+          <p class="desc">Intimate outdoor space for smaller gatherings</p>
+          <button class="enquire-btn">Enquire Now</button>
+        </div>
+      </div>
+
+      <div class="venue-image-card" data-event="wedding corporate" data-capacity="100">
+        <img src="./images/outdoor-wedding-venues-in-mumbai-1.jpg" alt="Open Air Terrace">
+        <div class="venue-info">
+          <h3>OPEN AIR TERRACE</h3>
+          <p class="specs">Outdoor | 2500 Sq. Ft | Capacity: 100 guests</p>
+          <p class="desc">Scenic rooftop terrace for events with a view</p>
+          <button class="enquire-btn">Enquire Now</button>
+        </div>
+      </div>
     </div>
   </section>
-
   <!----------------------------------footer---------------------- -->
   <footer class="hf-footer">
 
