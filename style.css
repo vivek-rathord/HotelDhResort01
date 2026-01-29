@@ -1,10 +1,11 @@
 :root {
-  --primary-color: rgb(0, 26, 84);
+  --primary-color: #1D285C;
   --secondary-color: rgb(0, 174, 239);
   --tertiory-color: rgb(8, 8, 10);
   --white-color: rgb(255, 255, 255);
-  --paragraph-color: #666;
-   --base-line-height: 1.5;
+  --paragraph-color: #404650;
+--subheading-color:#0B162C;
+   --base-line-height: 1.4;
 }
 
 * {
@@ -14,8 +15,6 @@
 }
 
 body {
-  /* font-family: "inter", serif; */
-  /* font-family: Cinzel, Palatino Linotype, sans-serif; */
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
@@ -37,18 +36,19 @@ a {
 
 /* universal styling */
 h2 {
-  font-size: 2.1rem;
-  font-weight: 500;
-  font-family: Cinzel, Palatino Linotype, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+   font-family: "Cormorant Garamond", serif;
   color: var(--primary-color);
 }
 
 .tag {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--secondary-color);
   letter-spacing: 1px;
+   font-family: "Montserrat", sans-serif;
 }
 
 /* ===== HEADER ===== */
@@ -531,7 +531,6 @@ h2 {
   text-align: center;
   overflow: hidden;
   padding: 60px 0px;
-  /* background-color: #000; */
 }
 
 /* ===== BACKGROUND LOGO ===== */
@@ -559,7 +558,9 @@ p {
   position: relative;
   z-index: 1;
 }
-
+.title-wrapper .utilitesp{
+  color: var(--subheading-color);
+}
 /* ===== TITLE LINE + SMALL LOGO ===== */
 .title-wrapper {
   display: flex;
@@ -595,7 +596,7 @@ h2 {
   font-size: 15px;
   line-height: 1.6;
   padding: 0px 20px;
-  color: var(--paragraph-color);
+  color: var(--subheading-color);
 }
 
 /*----- Rooms CARD --------*/
@@ -642,8 +643,8 @@ h2 {
   position: absolute;
   top: 18px;
   right: 18px;
-  background: var(--secondary-color);
-  color: #fff;
+  background: var(--white-color);
+  color: var(--subheading-color);
   padding: 10px 18px;
   font-size: 14px;
   font-weight: 500;
@@ -844,9 +845,9 @@ h2 {
   transition: 0.3s;
 }
 
-.confirm-booking:hover {
-  /* background: #b08952; */
-}
+/* .confirm-booking:hover {
+  background: #b08952;
+} */
 
 /* ================= RESPONSIVE ================= */
 
@@ -984,6 +985,7 @@ h2 {
   gap: 60px;
   align-items: center;
   padding: 0px 10px;
+  background-color: ;
 }
 .split-wrapper .splitbtn{
   margin-top: 22px;
@@ -1028,8 +1030,8 @@ h2 {
 }
 
 .split-content .title {
-  font-size: 2.2rem;
-  font-weight: 500;
+  font-size: 2.3rem;
+  font-weight: 700;
   line-height: 1.25;
   margin-bottom: 10px;
 }
@@ -1242,8 +1244,8 @@ h2 {
 }
 
 .facility-card .facility-title {
-  font-size: 1.7rem;
-  font-weight: 600;
+  font-size: 2.3rem;
+  font-weight: 700;
   padding-bottom: 30px; 
   position: relative;
   text-align: center;
@@ -1400,9 +1402,9 @@ h3 {
   font-size: 14px;
   letter-spacing: 1px;
 
-  &:hover {
-    /* text-decoration: underline; */
-  }
+  /* &:hover {
+    text-decoration: underline;
+  } */
 }
 
 .blog-footer span {
@@ -1872,9 +1874,9 @@ h3 {
 /* .hero p{max-width:700px;margin:20px auto;font-size:1.05rem;} */
 
 /* SECTION COMMON */
-section {
-  /* padding: 90px 8%; */
-}
+/* section {
+  padding: 90px 8%;
+} */
 
 .section-title {
   text-align: center;
@@ -3512,4 +3514,4 @@ body {
 
 .enquire-btn:hover {
   background: rgb(0, 174, 239);
-}
+} 
