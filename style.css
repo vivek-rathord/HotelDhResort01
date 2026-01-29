@@ -1322,7 +1322,7 @@ h2 {
 /* ------------------------blog card--------------------- */
 /* SECTION */
 .blog-section {
-  padding: 0px 0px;
+  padding: 0px 20px;
   padding-bottom: 70px;
 }
 
@@ -2269,7 +2269,8 @@ button:hover {
 /* ---------contact form--- */
 
 .contact-section {
-  width: 1400px;
+  width: 90%;
+  /* width: 1400px; */
   margin: 50px auto;
   border: 1px solid rgb(213, 207, 207);
   padding: 80px 80px;
@@ -3109,7 +3110,9 @@ margin-bottom: 70px;
     display: none;
     border: none;
   }
-
+.hf-main{
+  padding: 0px 20px;
+}
 }
 
 @media (min-width: 449px) and (max-width: 567px) {
