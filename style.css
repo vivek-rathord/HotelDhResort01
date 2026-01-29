@@ -595,6 +595,7 @@ h2 {
   font-size: 15px;
   line-height: 1.6;
   padding: 0px 20px;
+  color: var(--paragraph-color);
 }
 
 /*----- Rooms CARD --------*/
@@ -946,7 +947,7 @@ h2 {
 }
 
 .ulcont {
-  color: #666;
+  color: var(--paragraph-color);
   padding: 20px 0px;
 }
 
@@ -965,7 +966,7 @@ h2 {
   padding: 18px 0;
   border-bottom: 1px solid #ddd;
   font-size: 16px;
-  color: #666;
+  color: var(--paragraph-color);
 }
 
 .amenities-box i {
@@ -3476,13 +3477,13 @@ body {
 
 .venue-info h3 {
   margin: 0 0 10px 0;
-  color: #333;
+  color: var(--paragraph-color);
   font-size: 1.4rem;
   font-weight: 600;
 }
 
 .venue-info .specs {
-  color: #666;
+  color: var(--paragraph-color);
   font-size: 0.9rem;
   margin-bottom: 15px;
   padding-bottom: 15px;
@@ -3490,7 +3491,7 @@ body {
 }
 
 .venue-info .desc {
-  color: #555;
+  color: var(--paragraph-color);
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 15px;
