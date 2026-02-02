@@ -620,19 +620,15 @@ document.addEventListener("DOMContentLoaded", () => {
 // ================= GALLERY PAGE (SAFE) =================
 document.addEventListener("DOMContentLoaded", () => {
 
-  const buttons = document.querySelectorAll(".gallery-filters button");
-  const items = document.querySelectorAll(".gallery-item");
+  const buttons = document.querySelectorAll(".editorial-filters button");
+  const items = document.querySelectorAll(".editorial-item");
   const lightbox = document.querySelector(".lightbox");
   const lightboxImg = document.querySelector(".lightbox-img");
   const closeBtn = document.querySelector(".close");
 
-  // ❗ Agar gallery page nahi hai → exit
-  if (!buttons.length || !items.length || !lightbox) return;
-
   // FILTERS
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-
       buttons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
@@ -647,34 +643,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // LIGHTBOX OPEN
+  // IMAGE LIGHTBOX
   items.forEach(item => {
     item.addEventListener("click", () => {
-      lightboxImg.src = item.querySelector("img").src;
+      const img = item.querySelector("img");
+      if (!img) return;
+
+      lightboxImg.src = img.src;
       lightbox.style.display = "flex";
     });
   });
 
   // CLOSE BUTTON
-  closeBtn?.addEventListener("click", () => {
+  closeBtn.addEventListener("click", () => {
     lightbox.style.display = "none";
   });
 
-  // CLICK OUTSIDE
+  // CLOSE ON BACKGROUND CLICK
   lightbox.addEventListener("click", e => {
-    if (e.target !== lightboxImg) {
-      lightbox.style.display = "none";
-    }
-  });
-
-  // ESC KEY
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
+    if (e.target === lightbox) {
       lightbox.style.display = "none";
     }
   });
 
 });
+
+
 
 
 // rooms detail auto play slider 
@@ -732,34 +726,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const roomData = {
     "executive-room": {
-      title: "EXECUTIVE ROOM WITH BALCONY & VIEW",
+      title: "Executive Room with Modern Comforts",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
-      desc: "Luxury awaits in the Executive Room with stunning balcony views, modern interiors, LED TV, high-speed WiFi, and climate control for premium comfort.",
+      desc: "A perfect blend of comfort and functionality, our Executive Rooms are ideal for business and leisure travelers. Enjoy modern interiors, premium amenities, and a relaxing atmosphere after a day exploring Dharamshala.",
       image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
     },
     "executive-suite": {
-      title: "EXECUTIVE SUITE WITH BALCONY & VIEW",
+      title: "Executive Suite with Spacious Living Area",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
-      desc: "Spacious executive suite offering refined luxury, elegant décor, private balcony views, and thoughtfully curated amenities.",
-      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+      desc: "Designed for those who prefer extra space and luxury, the Executive Suite offers a separate living area, elegant décor, and scenic views, making your stay both comfortable and memorable.",
+      image: "./images/DSC00176-Edit.jpg"
     },
     "presidential-suite": {
-      title: "PRESIDENTIAL SUITE WITH BALCONY & VIEW",
+      title: "Presidential Suite Offering Ultimate Luxury Stay",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
-      desc: "Our most luxurious suite with panoramic views, premium furnishings, exclusive amenities, and unmatched comfort.",
-      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+      desc: "Experience the finest luxury in Dharamshala with our Presidential Suite. Featuring spacious living areas, premium furnishings, and unmatched comfort, it’s perfect for guests seeking an exclusive and indulgent stay.",
+      image: "./images/luxuryRoom.jpg"
     },
     "twin-bed": {
-      title: "TWIN BED ROOM WITH BALCONY & VIEW",
+      title: "Twin Bedded Room for Comfortable Shared Stay",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
-      desc: "Perfect for families or friends, featuring twin beds, scenic balcony views, and modern conveniences.",
-      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+      desc: "Our Twin Bedded Rooms are ideal for friends or colleagues traveling together. With two comfortable beds, modern amenities, and a peaceful ambiance, these rooms ensure a restful stay.",
+      image: "./images/DSC03083 copy.jpg"
     },
     "deluxe-room": {
-      title: "DELUXE ROOM WITH BALCONY & VIEW",
+      title: "Deluxe Room with Elegant Interior Design",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
-      desc: "A blend of comfort and elegance with tasteful interiors, balcony views, and premium hospitality services.",
-      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+      desc: "Relax in style in our Deluxe Rooms, thoughtfully designed with warm interiors and modern comforts. Perfect for couples and families, these rooms offer a cozy retreat with beautiful surroundings.",
+      image: "./images/DSC03289.jpg"
     }
   };
 
