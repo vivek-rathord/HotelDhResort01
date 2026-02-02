@@ -223,58 +223,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
-
 // venuue
-// document.addEventListener("DOMContentLoaded", () => {
-//   const eventType = document.getElementById('eventType');
-//   const seatingStyle = document.getElementById('seatingStyle');
-//   const capacity = document.getElementById('capacity');
-//   const cards = document.querySelectorAll('.venue-card');
-
-//   if (eventType && seatingStyle && capacity && cards.length) {
-
-//     function filterVenues() {
-//       const eventValue = eventType.value;
-//       const seatingValue = seatingStyle.value;
-//       const capacityValue = capacity.value ? Number(capacity.value) : null;
-
-//       cards.forEach(card => {
-//         const cardEvent = card.dataset.event;
-//         const cardSeating = card.dataset.seating;
-//         const cardCapacity = Number(card.dataset.capacity);
-
-//         let match = true;
-
-//         // Event filter
-//         if (eventValue && cardEvent !== eventValue) match = false;
-
-//         // Seating filter
-//         if (seatingValue && cardSeating !== seatingValue) match = false;
-
-//         // Capacity filter with ranges
-//         if (capacityValue) {
-//           if (capacityValue === 50 && cardCapacity > 50) match = false;
-//           else if (capacityValue === 100 && (cardCapacity < 50 || cardCapacity > 100)) match = false;
-//           else if (capacityValue === 300 && (cardCapacity < 100 || cardCapacity > 300)) match = false;
-//           else if (capacityValue === 500 && cardCapacity < 300) match = false;
-//         }
-
-//         card.style.display = match ? "flex" : "none";
-//       });
-//     }
-
-//     eventType.addEventListener('change', filterVenues);
-//     seatingStyle.addEventListener('change', filterVenues);
-//     capacity.addEventListener('change', filterVenues);
-
-//     filterVenues(); // initial filter
-//   }
-// });
 // code   by sahil
-
-
-
   document.addEventListener("DOMContentLoaded", () => {
   const eventType = document.getElementById('eventType');
   const capacity = document.getElementById('capacity');
@@ -726,3 +676,234 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+// rooms detail auto play slider 
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".room-slide");
+  const dotsContainer = document.querySelector(".slider-dots");
+  let currentSlide = 0;
+  let slideInterval;
+
+  // Create dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement("span");
+    if (index === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+      resetAutoplay();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".slider-dots span");
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+  }
+
+  function startAutoplay() {
+    slideInterval = setInterval(nextSlide, 4000);
+  }
+
+  function resetAutoplay() {
+    clearInterval(slideInterval);
+    startAutoplay();
+  }
+
+  startAutoplay();
+});
+
+//  selected rooms
+document.addEventListener("DOMContentLoaded", function () {
+
+  const roomData = {
+    "executive-room": {
+      title: "EXECUTIVE ROOM WITH BALCONY & VIEW",
+      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      desc: "Luxury awaits in the Executive Room with stunning balcony views, modern interiors, LED TV, high-speed WiFi, and climate control for premium comfort.",
+      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+    },
+    "executive-suite": {
+      title: "EXECUTIVE SUITE WITH BALCONY & VIEW",
+      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      desc: "Spacious executive suite offering refined luxury, elegant décor, private balcony views, and thoughtfully curated amenities.",
+      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+    },
+    "presidential-suite": {
+      title: "PRESIDENTIAL SUITE WITH BALCONY & VIEW",
+      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      desc: "Our most luxurious suite with panoramic views, premium furnishings, exclusive amenities, and unmatched comfort.",
+      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+    },
+    "twin-bed": {
+      title: "TWIN BED ROOM WITH BALCONY & VIEW",
+      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      desc: "Perfect for families or friends, featuring twin beds, scenic balcony views, and modern conveniences.",
+      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+    },
+    "deluxe-room": {
+      title: "DELUXE ROOM WITH BALCONY & VIEW",
+      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      desc: "A blend of comfort and elegance with tasteful interiors, balcony views, and premium hospitality services.",
+      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const roomKey = params.get("room");
+  const room = roomData[roomKey];
+
+  if (!room) return;
+
+  const roomDetails = document.getElementById("roomDetails");
+
+  roomDetails.innerHTML = `
+    <div class="room-content" data-aos="fade-up">
+      <h2 class="room-heading">${room.title}</h2>
+
+      <ul class="room-features">
+        <li>${room.features}</li>
+      </ul>
+
+      <p class="room-description">${room.desc}</p>
+
+      <a href="rooms.html" class="discover-button rect-btn">
+        Back to Rooms
+      </a>
+    </div>
+
+    <div class="room-image">
+      <div class="image-overlay-text">
+        <img src="${room.image}" alt="${room.title}">
+      </div>
+    </div>
+  `;
+});
+// if user select btns for rooms
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("room-btn")) {
+    const roomKey = e.target.dataset.room;
+    window.location.href = `room-details.html?room=${roomKey}`;
+  }
+});
+
+// selected room images slides
+document.addEventListener("DOMContentLoaded", function () {
+
+  let slideIndex = 0;
+  let autoplayInterval;
+
+  /* ROOM IMAGES DATA */
+  const roomImages = {
+    "executive-room": [
+      // 1600 × 900 px image size
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+    ],
+    "executive-suite": [
+      "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f",
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+    ],
+    "presidential-suite": [
+      "https://images.unsplash.com/photo-1505691723518-36a5ac3b2b8f",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f"
+    ],
+    "twin-bed": [
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f",
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+    ],
+    "deluxe-room": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f"
+    ]
+  };
+
+  /* LOAD SLIDER */
+  function loadSelectedRoomSlider(roomKey) {
+    const slider = document.querySelector(".selectedroomslider");
+    if (!slider) return;
+
+    const slidesEl = slider.querySelector(".slides");
+    const dotsEl = slider.querySelector(".slider-dots");
+
+    slidesEl.innerHTML = "";
+    dotsEl.innerHTML = "";
+
+    roomImages[roomKey].forEach(() => {
+      dotsEl.innerHTML += `<span></span>`;
+    });
+
+    roomImages[roomKey].forEach(img => {
+      slidesEl.innerHTML += `
+        <div class="slide">
+          <img src="${img}" alt="">
+        </div>
+      `;
+    });
+
+    slideIndex = 0;
+    updateSlider();
+    startAutoplay();
+  }
+
+  /* UPDATE SLIDER */
+  function updateSlider() {
+    const slides = document.querySelector(".selectedroomslider .slides");
+    const dots = document.querySelectorAll(".selectedroomslider .slider-dots span");
+
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === slideIndex));
+  }
+
+  /* AUTOPLAY */
+  function startAutoplay() {
+    clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(() => {
+      const totalSlides = document.querySelectorAll(".selectedroomslider .slide").length;
+      slideIndex = (slideIndex + 1) % totalSlides;
+      updateSlider();
+    }, 3000);
+  }
+
+  /* ROOM BUTTON CLICK EVENT */
+  document.querySelectorAll(".room-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+
+      document
+        .querySelectorAll(".room-btn")
+        .forEach(b => b.classList.remove("selectedroom"));
+
+      this.classList.add("selectedroom");
+
+      const roomKey = this.dataset.room;
+      loadSelectedRoomSlider(roomKey);
+    });
+  });
+
+  /* INITIAL LOAD */
+  const defaultRoom =
+    document.querySelector(".room-btn.selectedroom")?.dataset.room ||
+    "executive-room";
+
+  loadSelectedRoomSlider(defaultRoom);
+
+});

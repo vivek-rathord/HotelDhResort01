@@ -30,46 +30,46 @@
 
 <body>
 
- 
-   <!-- navbar -->
-    <header class="site-header">
-        <div class="site-nav-wrap">
 
-            <div class="site-logo">
-                <img src="/images/dhr_logo_full_white.png" alt="logo">
-            </div>
+  <!-- navbar -->
+  <header class="site-header">
+    <div class="site-nav-wrap">
 
-            <nav class="site-nav">
-                <span class="site-close-btn">&times;</span>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="rooms.html">Rooms</a></li>
+      <div class="site-logo">
+        <img src="/images/dhr_logo_full_white.png" alt="logo">
+      </div>
+
+      <nav class="site-nav">
+        <span class="site-close-btn">&times;</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
 
 
-                    <li class="site-dropdown">
-                        <a href="#">Events</a>
-                        <ul class="site-dropdown-menu">
-                            <ol>
-                                <li><a href="destination-weeding.html">Destination Wedding</a></li>
-                                <li><a href="events.html">Event Venues</a></li>
-                            </ol>
-                        </ul>
-                    </li>
-                    <li> <a href="blog.html">Blog</a></li>
+          <li class="site-dropdown">
+            <a href="#">Events</a>
+            <ul class="site-dropdown-menu">
+              <ol>
+                <li><a href="destination-weeding.html">Destination Wedding</a></li>
+                <li><a href="events.html">Event Venues</a></li>
+              </ol>
+            </ul>
+          </li>
+          <li> <a href="blog.html">Blog</a></li>
 
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </nav>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-            <div class="site-menu-toggle">&#9776;</div>
+      <div class="site-menu-toggle">&#9776;</div>
 
-                 <button class="site-cta rect-btn">
-                <a href="https://www.dhauladharheightsresort.com/">Book A Stay</a>
-                </button>
+      <button class="site-cta rect-btn">
+        <a href="https://www.dhauladharheightsresort.com/">Book A Stay</a>
+      </button>
 
-        </div>
-    </header>
+    </div>
+  </header>
 
   <!-- room, weeding ,resort, boquet -->
 
@@ -83,161 +83,243 @@
     </div>
   </div>
 
-  <!-- main container -->
-  <div class="room-details-wrapper">
 
-    <div class="room-details-flex">
 
-      <!-- IMAGE SLIDER -->
-      <div class="room-slider">
-        <button class="rooms-slider-btn prev">←</button>
+  <section class="title-section">
+    <!-- <div class="bg-logo"></div> -->
 
-        <div class="slider-images">
-          <img id="slideImage" src="" alt="Room Image">
-        </div>
+    <div class="title-wrapper">
+      <span class="line" data-aos="fade-up" data-aos-duration="3000"></span>
 
-        <button class="rooms-slider-btn next">→</button>
+      <div class="logo-circle" data-aos="fade-up" data-aos-duration="3000">
+        <img src="/images/dhr_logo_icon.png" alt="logo">
       </div>
 
-      <!-- room booking -->
-      <div class="room-booking">
-        <h3 class="booking-title">Booking</h3>
-
-        <form class="booking-card">
-
-          <div class="booking-field">
-            <label>Check In</label>
-            <input type="date" id="checkin" required>
-          </div>
-
-          <div class="booking-field">
-            <label>Check Out</label>
-            <input type="date" id="checkout" required>
-          </div>
-
-          <div class="booking-field">
-            <label>Adult</label>
-            <select>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-            </select>
-          </div>
-
-          <div class="booking-field">
-            <label>Children</label>
-            <select>
-              <option>00</option>
-              <option>01</option>
-              <option>02</option>
-            </select>
-          </div>
-
-          <div class="booking-field">
-            <label>Rooms</label>
-            <select>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-            </select>
-          </div>
-
-          <button type="submit" class="confirm-booking">
-            Confirm Booking
-          </button>
-
-        </form>
-      </div>
-
-
+      <span class="line" data-aos="fade-up" data-aos-duration="3000"></span>
     </div>
-    <!-- ROOM CONTENT -->
-    <div class="roomdetails">
-      <span class="tag">LUXURY ROOM</span>
-      <h2 id="roomTitle"></h2>
-      <p id="roomDescription"></p>
-      <p id="roomPrice"></p>
-    </div>
+
+    <h2 data-aos="fade-up" data-aos-duration="3000">Room Details</h2>
+    <p class="utilitesp" data-aos="fade-up" data-aos-duration="3000">
+      Stay in comfort and style at DH Hotel, with rooms offering stunning Dhauladhar mountain views, modern amenities,
+      and cozy interiors. Perfect for couples, families, or solo travelers, each room ensures a relaxing and memorable
+      stay in Dharamshala.
+    </p>
+  </section>
+
+
+  <!-- ROOMS BTNS -->
+  <div class="room-buttons">
+      <div class="room-button" data-room="executive-room"> <a href="room-details.html?room=executive-room">Executive Room</a></div>
+  <div class="room-button" data-room="executive-suite"> <a href="room-details.html?room=executive-suite">Executive Suite</a></div>
+  <div class="room-button" data-room="presidential-suite">    <a href="room-details.html?room=presidential-suite">Presidential Suite</a></div>
+  <div class="room-button" data-room="twin-bed"> <a href="room-details.html?room=twin-bed">Twin Bed</a></div>
+  <div class="room-button" data-room="deluxe-room"><a href="room-details.html?room=deluxe-room">Deluxe Room</a></div>
   </div>
 
 
-  <!--  -->
+  <!-- selected rooms -->
+   <div class="roomscontainer">
+  <section class="room-section" id="roomDetails">
+  </section>
+</div>
 
-  </div>
+  
 
-
-  <div class="room-details-layout new">
+   <!--room aminities -->
+   <section class="roomaminities">
+  <div class="roomaminities-wrapper">
 
     <!-- LEFT CONTENT -->
-    <div class="room-left">
+    <div class="roomaminities-content">
+      <span class="roomaminities-subtitle">AMENITIES</span>
+      <h2 class="roomaminities-title">
+        What's <br /> Included
+      </h2>
 
-
-
-      <p id="roomDescriptions"></p>
-      <p class="roomExtraText">
-        Conveniently fashion pandemic potentialities for team driven
-        technologies. Proactively orchestrate robust systems rather than
-        user-centric vortals.
-      </p>
-
-      <!-- CHECK IN / OUT -->
-      <div class="check-wrapper">
-
-        <div class="check-box">
-          <h3 class="tag"> ← Check In</h3>
-          <ul>
-            <li>Check-in from 9:00 AM - anytime</li>
-            <li>Early check-in subject to availability</li>
-          </ul>
-        </div>
-
-        <div class="check-box">
-          <h3 class="tag">→ Check Out</h3>
-          <ul>
-            <li>Check-out before noon</li>
-            <li>Check-out from 9:00 AM - anytime</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- HOUSE RULES -->
-      <h2 class="roomheading">House Rules</h2>
-      <p> deliver fully researched scenarios with turnkey communities. Competently unleash empowered
-      applications without seamless data. Uniquely underwhelm quality outsourcing before transparent relationships.
-      Efficiently enhance diverse relationships whereas leveraged </p>
-
-      <h2 class="roomheading">Childreen & Extra Beds</h2>
-      <div class="ulcont">
-        <li>Uniquely restore turnkey paradigms</li>
-        <li>Interactively cultivate visionary platforms</li>
-        Energistically envisioneer resource
-        <li>Quickly generate bricks-and-clicks</li>
-      </div>
+      <ul class="roomaminities-list">
+        <li>Centralised Heating & Cooling</li>
+        <li>Tea Coffee Maker</li>
+        <li>Mini Bar</li>
+        <li>Balcony</li>
+        <li>Safety locker</li>
+        <li>Cubical Shower</li>
+      </ul>
     </div>
 
 
-    <!-- RIGHT AMENITIES -->
-    <div class="room-right">
+    <!-- i want to add the exact div here which user clicks -->
 
 
-      <div class="amenities-box">
-        <h2>Amenities</h2>
-
-        <ul>
-          <li><i class="fa-solid fa-user"></i> 2 - 5 Persons</li>
-          <li><i class="fa-solid fa-wifi"></i> Free WiFi Available</li>
-          <li><i class="fa-solid fa-person-swimming"></i> Swimming Pools</li>
-          <li><i class="fa-solid fa-mug-hot"></i> Breakfast</li>
-          <li> <i class="fa-solid fa-bed"></i> 250 SQFT Rooms</li>
-          <li><i class="fa-solid fa-dumbbell"></i> Gym facilities</li>
-        </ul>
-      </div>
-
+    
+    <!-- RIGHT IMAGE -->
+    <div class="roomaminities-image">
+      <img src="./images/DSC00176-Edit.jpg"alt="Room Interior">
     </div>
 
   </div>
+</section>
+
+
+<!-- selected room slides -->
+ <!-- ROOM IMAGE SLIDER -->
+<div class="selectedroomslider">
+  <div class="slides"></div>
+  <div class="slider-dots"></div>
+</div>
+
+
+  <!--------------- rooms slider------------- -->
+  <div class="rooms-slider">
+    <div class="rooms-track">
+
+      <!-- SLIDE 1 -->
+      <div class="room-slide active">
+        <div class="roomscontainer">
+          <section class="room-section rowreverse">
+            <div class="room-content" data-aos="fade-left">
+              <h2 class="room-heading"> 1 EXECUTIVE ROOM WITH BALCONY & VIEW</h2>
+
+              <ul class="room-features">
+                <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
+              </ul>
+
+              <p class="room-description">
+                Luxury awaits in the Rohtang Panorama Room with balcony views. Lockers required for security, plus LED
+                TV, WiFi, and climate control for comfort. Enjoy lavish amenities for an extraordinary stay.
+              </p>
+
+             <a href="room-details.html?room=executive-room" class="discover-button rect-btn">
+                    Discover More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="room-image">
+              <div class="image-overlay-text">
+                <img
+                  src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'"
+                  alt="">
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="room-slide">
+        <div class="roomscontainer">
+          <section class="room-section rowreverse">
+            <section class="room-section rowreverse">
+              <div class="room-content" data-aos="fade-left">
+                <h2 class="room-heading">PRESIDENTIAL ROOMS WITH BALCONY & VIEW</h2>
+
+                <ul class="room-features">
+                  <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
+                </ul>
+
+                <p class="room-description">
+                  Luxury awaits in the Rohtang Panorama Room with balcony views. Lockers required for security, plus LED
+                  TV, WiFi, and climate control for comfort. Enjoy lavish amenities for an extraordinary stay.
+                </p>
+
+              <a href="room-details.html?room=presidential-suite"" class="discover-button rect-btn">
+                    Discover More <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+
+              <div class="room-image">
+                <div class="image-overlay-text">
+                  <img
+                    src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'"
+                    alt="">
+                </div>
+              </div>
+            </section>
+
+          </section>
+        </div>
+      </div>
+
+
+      <!-- SLIDE 2 -->
+      <div class="room-slide">
+
+        <!-- room card 3 -->
+        <div class="roomscontainer">
+          <section class="room-section">
+            <section class="room-section">
+              <div class="room-content">
+                <h2 class="room-heading">EXECUTIVE SUITE WITH BALCONY & VIEW</h2>
+
+                <ul class="room-features">
+                  <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
+                </ul>
+
+                <p class="room-description">
+                  Luxury awaits in the Rohtang Panorama Room with balcony views. Lockers required for security, plus LED
+                  TV, WiFi, and climate control for comfort. Enjoy lavish amenities for an extraordinary stay.
+                </p>
+
+                <a href="#" class="discover-button rect-btn">
+                  Discover More <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+
+              <div class="room-image">
+                <div class="image-overlay-text">
+                  <img
+                    src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'"
+                    alt="">
+                </div>
+              </div>
+            </section>
+
+          </section>
+        </div>
+      </div>
+
+
+
+      <!-- SLIDE 4 -->
+      <div class="room-slide">
+
+        <div class="roomscontainer">
+          <section class="room-section rowreverse">
+            <section class="room-section rowreverse">
+              <div class="room-content">
+                <h2 class="room-heading">DELUXE ROOM WITH BALCONY & VIEW</h2>
+
+                <ul class="room-features">
+                  <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
+                </ul>
+
+                <p class="room-description">
+                  Luxury awaits in the Rohtang Panorama Room with balcony views. Lockers required for security, plus LED
+                  TV, WiFi, and climate control for comfort. Enjoy lavish amenities for an extraordinary stay.
+                </p>
+
+                <a href="#" class="discover-button rect-btn">
+                  Discover More <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+
+              <div class="room-image">
+                <div class="image-overlay-text">
+                  <img
+                    src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'"
+                    alt="">
+                </div>
+              </div>
+            </section>
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="slider-dots"></div>
+  </div>
+
 
   <!----------------------------------footer---------------------- -->
   <footer class="hf-footer">
