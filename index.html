@@ -28,45 +28,67 @@
 <body>
 
     <!-- navbar -->
-    <header class="site-header">
-        <div class="site-nav-wrap">
+<header class="site-header">
+  <div class="top-info">
+    <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
+    <div class="header-contact">
+    <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
+    <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+    </div>
+  </div>
 
-            <div class="site-logo">
-                <img src="/images/dhr_logo_full_white.png" alt="logo">
-            </div>
+  <nav class="navbar">
+    <ul class="nav-left">
+      <li><a href="index.html">THE RESORT</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="rooms.html">ROOMS</a></li>
 
-            <nav class="site-nav">
-                <span class="site-close-btn">&times;</span>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="rooms.html">Rooms</a></li>
+      <li class="nav-dropdown">
+        <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="destination-weeding.html"><i class="fa-solid fa-heart"></i> Destination Wedding</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-champagne-glasses"></i> Event Venues</a></li>
+        </ul>
+      </li>
+    </ul>
 
+    <div class="nav-logo">
+      <a href="index.html"><img src="/images/dhr_logo_full_white.png"></a>
+    </div>
 
-                    <li class="site-dropdown">
-                        <a href="#">Events</a>
-                        <ul class="site-dropdown-menu">
-                            <ol>
-                                <li><a href="destination-weeding.html">Destination Wedding</a></li>
-                                <li><a href="events.html">Event Venues</a></li>
-                            </ol>
-                        </ul>
-                    </li>
-                    <li> <a href="blog.html">Blog</a></li>
+    <div class="nav-right">
+      <!-- <a href="https://www.dhauladharheightsresort.com/" class="book-btn">BOOK A STAY</a> -->
+      <div class="menu-btn" id="menuOpen"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </nav>
+</header>
+<!-- OVERLAY MENU -->
+<div class="overlay-menu" id="overlayMenu">
+  <div class="overlay-left">
+    <p><strong>Dhauladhar Heights Resort</strong></p>
+    <p>Tea Garden Road, Kunal Pathri,<br>Dharamshala, Himachal Pradesh 176217</p>
+    <p><i class="fa-solid fa-phone"></i> +91 80915-08200</p>
+    <p><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</p>
+  </div>
 
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <div class="overlay-right">
+    <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
 
-            <div class="site-menu-toggle">&#9776;</div>
+    <ul class="overlay-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="rooms.html"> ROOMS</a></li>
+      <li><a href="destination-weeding.html">DESTINATION WEDDING</a></li>
+      <li><a href="events.html"> EVENT VENUES</a></li>
+      <li><a href="blog.html"> BLOG</a></li>
+      <li><a href="contact.html"> CONTACT</a></li>
+    </ul>
 
-                 <button class="site-cta rect-btn">
-                <a href="https://www.dhauladharheightsresort.com/">Book A Stay</a>
-                </button>
+    <a href="#" class="overlay-book ">BOOK YOUR STAY</a>
+  </div>
+</div>
 
-        </div>
-    </header>
-
+    <!-- hero slider -->
     <section class="luxury-slider" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
 
 
@@ -78,7 +100,7 @@
                     <h1>Experience Luxury & Comfort at Dhauladhar Heights</h1>
 
                     <button class="hero-btn"><a href="https://www.dhauladharheightsresort.com/">
-                      Book A Stay</a>
+                            Book A Stay</a>
                     </button>
                 </div>
             </div>
@@ -111,6 +133,76 @@
     </section>
 
 
+  <!-- ------------------Avaliablity section------------------- -->
+  <section class="availability">
+    <h2>CHECK AVAILABILITY</h2>
+
+    <div class="availability-box" data-aos="zoom-in">
+
+      <!-- Check In -->
+      <div class="field">
+        <label>Check In</label>
+        <input type="date">
+      </div>
+
+      <!-- Check Out -->
+      <div class="field">
+        <label>Check Out</label>
+        <input type="date">
+      </div>
+
+      <!-- Rooms -->
+      <div class="field dropdown" id="roomBox">
+        <label>Rooms</label>
+        <div class="value" onclick="toggleDropdown('roomsDrop')">
+          <span id="roomText">3 Room</span>
+          <span class="arrow">▾</span>
+        </div>
+
+        <div class="dropdown-menu" id="roomsDrop">
+          <span>Rooms</span>
+          <div class="counter">
+            <button onclick="changeCount('rooms',-1)">−</button>
+            <span id="rooms">3</span>
+            <button onclick="changeCount('rooms',1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guests -->
+      <div class="field dropdown" id="guestBox">
+        <label>Guests</label>
+        <div class="value" onclick="toggleDropdown('guestsDrop')">
+          <span id="guestText">1 Adult, 0 Child</span>
+          <span class="arrow">▾</span>
+        </div>
+
+        <div class="dropdown-menu" id="guestsDrop">
+          <div class="row">
+            <span>Adult</span>
+            <div class="counter">
+              <button onclick="changeCount('adult',-1)">−</button>
+              <span id="adult">1</span>
+              <button onclick="changeCount('adult',1)">+</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <span>Child</span>
+            <div class="counter">
+              <button onclick="changeCount('child',-1)">−</button>
+              <span id="child">0</span>
+              <button onclick="changeCount('child',1)">+</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="hero-btn cta-btn">Checkout Now</button>
+
+    </div>
+  </section>
 
     <!---------------------rooms section------------------ -->
     <section class="rooms-section">
@@ -129,7 +221,8 @@
 
             <h2 data-aos="fade-up" data-aos-duration="3000">Our Luxurious Rooms</h2>
             <p class="utilitesp" data-aos="fade-up" data-aos-duration="2000">
-             Relax in our spacious Deluxe King Room with a panoramic city view, high-speed Wi-Fi, and a king-sized bed. Perfect for both business and leisure travelers seeking comfort and luxury
+                Relax in our spacious Deluxe King Room with a panoramic city view, high-speed Wi-Fi, and a king-sized
+                bed. Perfect for both business and leisure travelers seeking comfort and luxury
             </p>
         </section>
 
@@ -221,8 +314,6 @@
 
         </div>
 
-
-
     </section>
 
     <!-- next ------------------------------------ -->
@@ -240,12 +331,14 @@
                 <span class="tag">LUXURY HOTEL AND RESORT</span>
 
                 <h2 class="title">
-                   Best Luxury Resort in Dhauladhar<br>
+                    Best Luxury Resort in Dhauladhar<br>
 
                 </h2>
 
                 <p class="description">
-                  Stay at the best resort in Dhauladhar offering spacious rooms, scenic surroundings, modern facilities, and exceptional hospitality. Perfect for families, couples, and solo travelers looking for a top-rated getaway.
+                    Stay at the best resort in Dhauladhar offering spacious rooms, scenic surroundings, modern
+                    facilities, and exceptional hospitality. Perfect for families, couples, and solo travelers looking
+                    for a top-rated getaway.
                 </p>
 
                 <div class="stats">
@@ -253,11 +346,11 @@
                         <h3>75+</h3>
                         <p>Rooms</p>
                     </div>
-
+                    <!-- 
                     <div class="stat-item">
                         <h3>4.9</h3>
                         <p>Customer Ratings</p>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="divider"></div>
@@ -285,7 +378,9 @@
 
             <h2 data-aos="fade-up" data-aos-duration="2000">Top Amenities at Our Luxury Hotel</h2>
             <p class="utilitesp" data-aos="fade-up" data-aos-duration="2000">
-             Stay relaxed and connected with our top amenities. From easy parking and attentive room service to a delicious restaurant, inviting swimming pool, and high-speed Wi-Fi, we have everything for an unforgettable stay.
+                Stay relaxed and connected with our top amenities. From easy parking and attentive room service to a
+                delicious restaurant, inviting swimming pool, and high-speed Wi-Fi, we have everything for an
+                unforgettable stay.
             </p>
         </section>
 
@@ -323,9 +418,9 @@
             </div>
 
             <div class="feature-box">
-             <i class="fa-solid fa-square-parking"></i>
+                <i class="fa-solid fa-square-parking"></i>
                 <h3>Parking</h3>
-                              <img class="hover-img" src="./images/DSC03083 copy.jpg" alt="roomservice">
+                <img class="hover-img" src="./images/DSC03083 copy.jpg" alt="roomservice">
 
         </section>
     </div>
@@ -346,13 +441,17 @@
                 <span class="tag">Luxury Stay in Dharamshala</span>
 
                 <h2 class="title">
-                 Dhauladhar Heights Resort – Himalayan Luxury Redefined
+                    Dhauladhar Heights Resort – Himalayan Luxury Redefined
                 </h2>
 
                 <p class="description">
-                    Wake up to stunning views of the Dhauladhar range at Dhauladhar Heights Resort, a premium luxury resort in Dharamshala. Designed for comfort and elegance, our resort offers peaceful surroundings, modern amenities, and warm hospitality for a truly relaxing mountain escape.
+                    Wake up to stunning views of the Dhauladhar range at Dhauladhar Heights Resort, a premium luxury
+                    resort in Dharamshala. Designed for comfort and elegance, our resort offers peaceful surroundings,
+                    modern amenities, and warm hospitality for a truly relaxing mountain escape.
                 </p>
-                <p class="description u">Located close to Dharamshala’s top attractions, Dhauladhar Heights Resort combines scenic beauty with convenience, making it an ideal choice for couples, families, and leisure travelers seeking a refined stay in the Himalayas.</p>
+                <p class="description u">Located close to Dharamshala’s top attractions, Dhauladhar Heights Resort
+                    combines scenic beauty with convenience, making it an ideal choice for couples, families, and
+                    leisure travelers seeking a refined stay in the Himalayas.</p>
 
                 <div class="stats">
                     <div class="stat-item">
@@ -385,9 +484,10 @@
             <h4 class="tag">Dining</h4>
             <h2 class="facility-title">Multi-Cuisine Restaurant Center</h2>
             <p class="facility-desc">
-               Enjoy a delightful dining experience at our in-house restaurant, serving carefully curated local and multi-cuisine dishes. Fresh ingredients, hygienic preparation, and warm hospitality define every meal.
+                Enjoy a delightful dining experience at our in-house restaurant, serving carefully curated local and
+                multi-cuisine dishes. Fresh ingredients, hygienic preparation, and warm hospitality define every meal.
             </p>
-            <a href="#" class="facility-link">→</a>
+            <!-- <a href="#" class="facility-link">→</a> -->
         </div>
     </div>
 
@@ -401,9 +501,10 @@
             <h4 class="tag">Wellness</h4>
             <h2 class="facility-title"> Luxury Swimming Pool</h2>
             <p class="facility-desc">
-                Relax and refresh in our beautifully designed swimming pool, offering a peaceful atmosphere with scenic surroundings. Perfect for leisure swims, family time, and unwinding after a long day of travel.
+                Relax and refresh in our beautifully designed swimming pool, offering a peaceful atmosphere with scenic
+                surroundings. Perfect for leisure swims, family time, and unwinding after a long day of travel.
             </p>
-            <a href="#" class="facility-link">→</a>
+            <!-- <a href="#" class="facility-link">→</a> -->
         </div>
     </div>
     <!-- card -3 -->
@@ -417,13 +518,14 @@
             </h4>
             <h2 class="facility-title">Premium Guest Comfort Services</h2>
             <p class="facility-desc">
-         Experience thoughtful hospitality with premium services focused on relaxation and convenience. From serene surroundings to personalized care, every detail is designed to enhance your stay.
+                Experience thoughtful hospitality with premium services focused on relaxation and convenience. From
+                serene surroundings to personalized care, every detail is designed to enhance your stay.
             </p>
-            <a href="#" class="facility-link">→</a>
+            <!-- <a href="#" class="facility-link">→</a> -->
         </div>
     </div>
 
-  
+
 
     <!--------------------------------- blog section---------------------------- -->
     <section class="blog-section">
@@ -442,7 +544,9 @@
 
             <h2 data-aos="fade-up" data-aos-duration="3000">LATEST POST FROM BLOG</h2>
             <p class="utilitesp" data-aos="fade-up" data-aos-duration="3000">
-               Stay at Dhauladhar Heights, one of the best hotels in Dharamshala, offering breathtaking mountain views, luxurious rooms, and premium facilities. Whether you’re visiting for relaxation, adventure, or a family getaway, our resort ensures a memorable and comfortable stay in the heart of Dharamshala.
+                Stay at Dhauladhar Heights, one of the best hotels in Dharamshala, offering breathtaking mountain views,
+                luxurious rooms, and premium facilities. Whether you’re visiting for relaxation, adventure, or a family
+                getaway, our resort ensures a memorable and comfortable stay in the heart of Dharamshala.
             </p>
         </section>
         <div class="blog-grid">
@@ -459,12 +563,12 @@
                     </div>
 
                     <h3>
-                       Indian Wedding In Malta
+                        Indian Wedding In Malta
                     </h3>
                 </div>
 
                 <div class="blog-footer">
-                   
+
                     <a href="blog-detail.html?slug=indian-wedding-malta">Read More</a>
                     <span class="tag"><a href="blog-detail.html?slug=indian-wedding-malta">→</a></span>
                 </div>
@@ -483,7 +587,7 @@
                     </div>
 
                     <h3>
-                      Indian Wedding Venues In Barcelona
+                        Indian Wedding Venues In Barcelona
                     </h3>
                 </div>
 
@@ -506,8 +610,8 @@
                     </div>
 
                     <h3>
-                      Indian Wedding In Switzerland
-                    
+                        Indian Wedding In Switzerland
+
                     </h3>
                 </div>
 
@@ -531,17 +635,44 @@
                 <h3>CONTACT INFO</h3>
 
                 <ul>
-                    <li><i class="fas fa-phone"></i> +980 (1234) 567 220</li>
-                    <li><i class="fas fa-envelope"></i> example@yahoo.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> 102/B New Elephant Rd<br>Dhaka - 1212</li>
+                    <li><i class="fas fa-phone"></i> +91 80915-08200 <br>+91 70188-41900</li>
+                    <li><i class="fas fa-envelope"></i> reservation@dhauladhar<br>heightsresort.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Dhauladhar Heights Resort
+
+                        Tea Garden Road, Kunal Pathri,
+                        Dharamshala, Himachal Pradesh 176217</li>
                 </ul>
 
                 <div class="hf-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/dhauladharheightsresort" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/dhauladhar_heights_resort" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@dhauladharheightsresort" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <!-- LinkedIn (optional – jab page bane tab link lagana) -->
+                    <!--
+  <a href="https://www.linkedin.com/company/yourcompany"
+     target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  -->
+
                 </div>
+
             </div>
 
             <!-- LINKS -->

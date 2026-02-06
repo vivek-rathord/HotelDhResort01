@@ -12,26 +12,45 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ------------------------------- NAV LOGIC -------------------------------
-  const header = document.querySelector(".site-header");
-  const menuBtn = document.querySelector(".site-menu-toggle");
-  const nav = document.querySelector(".site-nav");
-  const closeBtn = document.querySelector(".site-close-btn");
+  // const header = document.querySelector(".site-header");
+  // const menuBtn = document.querySelector(".site-menu-toggle");
+  // const nav = document.querySelector(".site-nav");
+  // const closeBtn = document.querySelector(".site-close-btn");
 
-  window.addEventListener("scroll", () => {
-    header.classList.toggle("is-scrolled", window.scrollY > 50);
-  });
+  // window.addEventListener("scroll", () => {
+  //   header.classList.toggle("is-scrolled", window.scrollY > 50);
+  // });
 
-  menuBtn.onclick = () => nav.classList.add("is-active");
-  closeBtn.onclick = () => nav.classList.remove("is-active");
+  // menuBtn.onclick = () => nav.classList.add("is-active");
+  // closeBtn.onclick = () => nav.classList.remove("is-active");
 
-  document.querySelectorAll(".site-dropdown > a").forEach(link => {
-    link.addEventListener("click", e => {
-      if (window.innerWidth <= 1024) {
-        e.preventDefault();
-        link.parentElement.classList.toggle("is-active");
-      }
-    });
-  });
+  // document.querySelectorAll(".site-dropdown > a").forEach(link => {
+  //   link.addEventListener("click", e => {
+  //     if (window.innerWidth <= 1024) {
+  //       e.preventDefault();
+  //       link.parentElement.classList.toggle("is-active");
+  //     }
+  //   });
+  // });
+
+  const overlay = document.getElementById("overlayMenu");
+const openBtn = document.getElementById("menuOpen");
+const closeBtn = document.getElementById("menuClose");
+const header = document.querySelector(".site-header");
+
+openBtn.onclick = () => {
+  overlay.classList.add("active");
+  document.body.style.overflow="hidden";
+};
+
+closeBtn.onclick = () => {
+  overlay.classList.remove("active");
+  document.body.style.overflow="auto";
+};
+
+window.addEventListener("scroll",()=>{
+  header.classList.toggle("is-scrolled",window.scrollY>50);
+});
 
   // ------------------------------- BOOK ONLINE DROPDOWN -------------------------------
   let rooms = 3, adult = 1, child = 0;

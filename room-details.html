@@ -31,45 +31,64 @@
 <body>
 
 
-  <!-- navbar -->
-  <header class="site-header">
-    <div class="site-nav-wrap">
+    <!-- navbar -->
+<header class="site-header">
+  <div class="top-info">
+    <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
+    <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
+    <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+  </div>
 
-      <div class="site-logo">
-        <img src="/images/dhr_logo_full_white.png" alt="logo">
-      </div>
+  <nav class="navbar">
+    <ul class="nav-left">
+      <li><a href="index.html">THE RESORT</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="rooms.html">ROOMS</a></li>
 
-      <nav class="site-nav">
-        <span class="site-close-btn">&times;</span>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="rooms.html">Rooms</a></li>
-
-
-          <li class="site-dropdown">
-            <a href="#">Events</a>
-            <ul class="site-dropdown-menu">
-              <ol>
-                <li><a href="destination-weeding.html">Destination Wedding</a></li>
-                <li><a href="events.html">Event Venues</a></li>
-              </ol>
-            </ul>
-          </li>
-          <li> <a href="blog.html">Blog</a></li>
-
-          <li><a href="/contact.html">Contact</a></li>
+      <li class="nav-dropdown">
+        <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="destination-weeding.html"><i class="fa-solid fa-heart"></i> Destination Wedding</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-champagne-glasses"></i> Event Venues</a></li>
         </ul>
-      </nav>
+      </li>
+    </ul>
 
-      <div class="site-menu-toggle">&#9776;</div>
-
-      <button class="site-cta rect-btn">
-        <a href="https://www.dhauladharheightsresort.com/">Book A Stay</a>
-      </button>
-
+    <div class="nav-logo">
+      <a href="index.html"><img src="/images/dhr_logo_full_white.png"></a>
     </div>
-  </header>
+
+    <div class="nav-right">
+      <!-- <a href="https://www.dhauladharheightsresort.com/" class="book-btn">BOOK A STAY</a> -->
+      <div class="menu-btn" id="menuOpen"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </nav>
+</header>
+<!-- OVERLAY MENU -->
+<div class="overlay-menu" id="overlayMenu">
+  <div class="overlay-left">
+    <p><strong>Dhauladhar Heights Resort</strong></p>
+    <p>Tea Garden Road, Kunal Pathri,<br>Dharamshala, Himachal Pradesh 176217</p>
+    <p><i class="fa-solid fa-phone"></i> +91 80915-08200</p>
+    <p><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</p>
+  </div>
+
+  <div class="overlay-right">
+    <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
+
+    <ul class="overlay-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="rooms.html"> ROOMS</a></li>
+      <li><a href="destination-weeding.html">DESTINATION WEDDING</a></li>
+      <li><a href="events.html"> EVENT VENUES</a></li>
+      <li><a href="blog.html"> BLOG</a></li>
+      <li><a href="contact.html"> CONTACT</a></li>
+    </ul>
+
+    <a href="#" class="overlay-book ">BOOK YOUR STAY</a>
+  </div>
+</div>
 
   <!-- room, weeding ,resort, boquet -->
 
@@ -302,74 +321,102 @@
 
 
   <!----------------------------------footer---------------------- -->
-  <footer class="hf-footer">
+    <footer class="hf-footer">
 
-    <!-- MAIN FOOTER -->
-    <div class="hf-main">
+        <!-- MAIN FOOTER -->
+        <div class="hf-main">
 
-      <!-- CONTACT -->
-      <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
+            <!-- CONTACT -->
+            <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
 
-        <h3>CONTACT INFO</h3>
+                <h3>CONTACT INFO</h3>
 
-        <ul>
-          <li><i class="fas fa-phone"></i> +980 (1234) 567 220</li>
-          <li><i class="fas fa-envelope"></i> example@yahoo.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> 102/B New Elephant Rd<br>Dhaka - 1212</li>
-        </ul>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +91 80915-08200 <br>+91 70188-41900</li>
+                    <li><i class="fas fa-envelope"></i> reservation@dhauladhar<br>heightsresort.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Dhauladhar Heights Resort
 
-        <div class="hf-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+Tea Garden Road, Kunal Pathri,
+Dharamshala, Himachal Pradesh 176217</li>
+                </ul>
+
+              <div class="hf-social">
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/dhauladharheightsresort"
+     target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/dhauladhar_heights_resort"
+     target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <!-- YouTube -->
+  <a href="https://www.youtube.com/@dhauladharheightsresort"
+     target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <!-- LinkedIn (optional – jab page bane tab link lagana) -->
+  <!--
+  <a href="https://www.linkedin.com/company/yourcompany"
+     target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  -->
+
+</div>
+
+            </div>
+
+            <!-- LINKS -->
+            <div class="hf-col hf-links" data-aos="fade-up" data-aos-delay="100">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a class="is-active" href="/about.html">About Hotel</a></li>
+                    <li><a href="/rooms.html">Rooms & Suites</a></li>
+                    <li><a href="contact.html">Reservations</a></li>
+                    <li><a href="./blog.html">News & Blogs</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- GALLERY -->
+            <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
+                <h3>GALLERY</h3>
+                <a href="gallery.html">
+                    <div class="hf-gallery-grid">
+
+                        <img src="./images/mehndi.jpeg" alt="gallery">
+                        <img src="./images/sangeet1.jpeg" alt="gallery">
+                        <img src="./images/lawns.jpg" alt="gallery">
+                        <img src="./images/weedingimg1.jpg" alt="gallery">
+                        <img src="./images/weedingimg2.jpg" alt="gallery">
+                        <img src="./images/proposals.jpg" alt="gallery">
+                    </div>
+                </a>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="hf-col hf-newsletter" data-aos="fade-left" data-aos-delay="300">
+                <h3>NEWSLETTER</h3>
+                <p>Subscribe our Newsletter</p>
+                <input type="email" placeholder="Enter Email">
+                <button>SUBSCRIBE NOW</button>
+            </div>
+
         </div>
-      </div>
 
-      <!-- LINKS -->
-      <div class="hf-col hf-links" data-aos="fade-up" data-aos-delay="100">
-        <h3>USEFUL LINKS</h3>
-        <ul>
-          <li><a class="is-active" href="/about.html">About Hotel</a></li>
-          <li><a href="/rooms.html">Rooms & Suites</a></li>
-          <li><a href="contact.html">Reservations</a></li>
-          <li><a href="./blog.html">News & Blogs</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
-        </ul>
-      </div>
+        <!-- COPYRIGHT -->
+        <div class="hf-bottom">
+            © 2026, Hotel Dhauladhar. All Rights Reserved.
+        </div>
 
-      <!-- GALLERY -->
-      <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
-        <h3>GALLERY</h3>
-        <a href="gallery.html">
-          <div class="hf-gallery-grid">
+    </footer>
 
-            <img src="./images/mehndi.jpeg" alt="gallery">
-            <img src="./images/sangeet1.jpeg" alt="gallery">
-            <img src="./images/lawns.jpg" alt="gallery">
-            <img src="./images/weedingimg1.jpg" alt="gallery">
-            <img src="./images/weedingimg2.jpg" alt="gallery">
-            <img src="./images/proposals.jpg" alt="gallery">
-          </div>
-        </a>
-      </div>
-
-      <!-- NEWSLETTER -->
-      <div class="hf-col hf-newsletter" data-aos="fade-left" data-aos-delay="300">
-        <h3>NEWSLETTER</h3>
-        <p>Subscribe our Newsletter</p>
-        <input type="email" placeholder="Enter Email">
-        <button>SUBSCRIBE NOW</button>
-      </div>
-
-    </div>
-
-    <!-- COPYRIGHT -->
-    <div class="hf-bottom">
-      © 2026, Hotel Dhauladhar. All Rights Reserved.
-    </div>
-
-  </footer>
 
   <!-- AOS JS  -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

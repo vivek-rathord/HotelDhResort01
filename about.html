@@ -29,45 +29,65 @@
 </head>
 
 <body>
-  <!-- navbar -->
-  <header class="site-header">
-    <div class="site-nav-wrap">
 
-      <div class="site-logo">
-        <img src="/images/dhr_logo_full_white.png" alt="logo">
-      </div>
+    <!-- navbar -->
+<header class="site-header">
+  <div class="top-info">
+    <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
+    <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
+    <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+  </div>
 
-      <nav class="site-nav">
-        <span class="site-close-btn">&times;</span>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="rooms.html">Rooms</a></li>
+  <nav class="navbar">
+    <ul class="nav-left">
+      <li><a href="index.html">THE RESORT</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="rooms.html">ROOMS</a></li>
 
-
-          <li class="site-dropdown">
-            <a href="#">Events</a>
-            <ul class="site-dropdown-menu">
-              <ol>
-                <li><a href="destination-weeding.html">Destination Wedding</a></li>
-                <li><a href="events.html">Event Venues</a></li>
-              </ol>
-            </ul>
-          </li>
-          <li> <a href="blog.html">Blog</a></li>
-
-          <li><a href="/contact.html">Contact</a></li>
+      <li class="nav-dropdown">
+        <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="destination-weeding.html"><i class="fa-solid fa-heart"></i> Destination Wedding</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-champagne-glasses"></i> Event Venues</a></li>
         </ul>
-      </nav>
+      </li>
+    </ul>
 
-      <div class="site-menu-toggle">&#9776;</div>
-
-      <button class="site-cta rect-btn">
-        <a href="https://www.dhauladharheightsresort.com/">Book A Stay</a>
-      </button>
-
+    <div class="nav-logo">
+      <a href="index.html"><img src="/images/dhr_logo_full_white.png"></a>
     </div>
-  </header>
+
+    <div class="nav-right">
+      <!-- <a href="https://www.dhauladharheightsresort.com/" class="book-btn">BOOK A STAY</a> -->
+      <div class="menu-btn" id="menuOpen"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </nav>
+</header>
+<!-- OVERLAY MENU -->
+<div class="overlay-menu" id="overlayMenu">
+  <div class="overlay-left">
+    <p><strong>Dhauladhar Heights Resort</strong></p>
+    <p>Tea Garden Road, Kunal Pathri,<br>Dharamshala, Himachal Pradesh 176217</p>
+    <p><i class="fa-solid fa-phone"></i> +91 80915-08200</p>
+    <p><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</p>
+  </div>
+
+  <div class="overlay-right">
+    <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
+
+    <ul class="overlay-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="rooms.html"> ROOMS</a></li>
+      <li><a href="destination-weeding.html">DESTINATION WEDDING</a></li>
+      <li><a href="events.html"> EVENT VENUES</a></li>
+      <li><a href="blog.html"> BLOG</a></li>
+      <li><a href="contact.html"> CONTACT</a></li>
+    </ul>
+
+    <a href="#" class="overlay-book ">BOOK YOUR STAY</a>
+  </div>
+</div>
   <!----------------------- hero section ---------------------->
   <div class="common-hero about-hero">
     <h1 data-aos="fade-down" data-aos-duration="1200">About Us</h1>
@@ -133,40 +153,41 @@
 
       <h2 data-aos="fade-up" data-aos-duration="2000">Message from the General Manager</h2>
       <p class="utilitesp" data-aos="fade-up" data-aos-duration="2000">
-       At our hotel, every guest experience matters. We are committed to delivering warm hospitality, exceptional service, and memorable stays for all our guests, ensuring that every visit feels special and truly welcoming.
+        At our hotel, every guest experience matters. We are committed to delivering warm hospitality, exceptional
+        service, and memorable stays for all our guests, ensuring that every visit feels special and truly welcoming.
       </p>
     </section>
-  
-<div class="roomscontainer">
-        <section class="room-section rowreverse">
-            <div class="room-content" data-aos="fade-up"  data-aos-delay="200">
-                <h2>Message from the General Manager
-</h2>
-                
-                
-                
-                <p class="room-description message">
-                    "Welcome to our hotel, where comfort meets elegance and every guest
-        experience is crafted with care. Our team is dedicated to delivering
-        warm hospitality, personalized service, and unforgettable moments
-        throughout your stay. We look forward to welcoming you and making
-        your visit truly memorable".
-                </p>
-                
-                <div class="designation">
-                  <span class="ownername">Lucky Nehria</span>
-                  <h3 class="post">General manager</h3>
-                </div>
-               
-            </div>
-            
-            <div class="room-image">
-                <div class="image-overlay-text">
-                    <img src="./images/member-2.jpg" alt="">
-                </div>
-            </div>
-        </section>
-        
+
+    <div class="roomscontainer">
+      <section class="room-section rowreverse">
+        <div class="room-content" data-aos="fade-up" data-aos-delay="200">
+          <h2>Message from the General Manager
+          </h2>
+
+
+
+          <p class="room-description message">
+            "Welcome to our hotel, where comfort meets elegance and every guest
+            experience is crafted with care. Our team is dedicated to delivering
+            warm hospitality, personalized service, and unforgettable moments
+            throughout your stay. We look forward to welcoming you and making
+            your visit truly memorable".
+          </p>
+
+          <div class="designation">
+            <span class="ownername">Lucky Nehria</span>
+            <h3 class="post">General manager</h3>
+          </div>
+
+        </div>
+
+        <div class="room-image">
+          <div class="image-overlay-text">
+            <img src="./images/member-2.jpg" alt="">
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
   </div>
@@ -372,17 +393,41 @@
         <h3>CONTACT INFO</h3>
 
         <ul>
-          <li><i class="fas fa-phone"></i> +980 (1234) 567 220</li>
-          <li><i class="fas fa-envelope"></i> example@yahoo.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> 102/B New Elephant Rd<br>Dhaka - 1212</li>
+          <li><i class="fas fa-phone"></i> +91 80915-08200 <br>+91 70188-41900</li>
+          <li><i class="fas fa-envelope"></i> reservation@dhauladhar<br>heightsresort.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Dhauladhar Heights Resort
+
+            Tea Garden Road, Kunal Pathri,
+            Dharamshala, Himachal Pradesh 176217</li>
         </ul>
 
         <div class="hf-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/dhauladharheightsresort" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/dhauladhar_heights_resort" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@dhauladharheightsresort" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
+          </a>
+
+          <!-- LinkedIn (optional – jab page bane tab link lagana) -->
+          <!--
+  <a href="https://www.linkedin.com/company/yourcompany"
+     target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  -->
+
         </div>
+
       </div>
 
       <!-- LINKS -->
@@ -429,6 +474,7 @@
     </div>
 
   </footer>
+
 
 
   <!-- AOS JS  -->

@@ -11,9 +11,7 @@
   --base-line-height: 1.4;
 }
 
-/* ======================
-   GLOBAL RESET
-   ====================== */
+/* ====================== GLOBAL RESET ====================== */
 * {
   margin: 0;
   padding: 0;
@@ -46,9 +44,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ======================
-   UNIVERSAL STYLES
-   ====================== */
+/* ====================== UNIVERSAL STYLES  ====================== */
 h2 {
   font-size: 2.4rem;
   font-weight: 700;
@@ -65,126 +61,233 @@ h2 {
   font-family: "Montserrat", sans-serif;
 }
 
-/* ======================
-   HEADER SECTION
-   ====================== */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  transition: 0.4s ease;
+
+/* ================= HEADER ================= */
+.site-header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+  transition:.3s;
+}
+.site-header.is-scrolled{
+  background:#0B162C;
 }
 
-.site-header.is-scrolled {
-  background: #0B162C;
+/* ================= TOP INFO ================= */
+.top-info{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 60px;
+  font-size:13px;
+  color:var(--white-color);
+  border-bottom:1px solid rgba(255,255,255,.3);
 }
-
-.site-nav-wrap {
-  margin: auto;
-  padding: 15px 30px;
+.top-info i{
+  margin-right:6px;
+}
+.header-contact{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.site-logo img {
-  height: 70px;
-}
-
-/* ======================
-   NAVIGATION
-   ====================== */
-.site-nav ul {
-  display: flex;
-  list-style: none;
   gap: 30px;
 }
-
-.site-nav a {
-  color: var(--white-color);
-  text-decoration: none;
-  font-size: 15px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+/* ================= NAVBAR ================= */
+.navbar{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:15px 60px;
 }
 
-/* CTA Button */
-.site-cta a {
-  padding: 12px 26px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
+/* ================= LEFT MENU ================= */
+.nav-left{
+  display:flex;
+  gap:26px;
+  list-style:none;
+  align-items:center;
 }
 
-/* ======================
-   DROPDOWN MENU
-   ====================== */
-.site-dropdown {
-  position: relative;
+.nav-left li{
+  display:flex;
+  align-items:center;
 }
 
-.site-dropdown>a::after {
-  content: " ▾";
-  font-size: 12px;
+.nav-left a{
+  display:inline-flex;
+  align-items:center;
+  color:var(--white-color);
+  text-decoration:none;
+  font-size:14px;
+  letter-spacing:1px;
+  line-height:1;
 }
 
-.site-dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 120%;
-  left: 0;
-  background: #fff;
-  min-width: 220px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: 0.3s ease;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+/* ================= DROPDOWN ================= */
+.nav-dropdown{
+  position:relative;
 }
 
-.site-dropdown:hover .site-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.nav-dropdown > a{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
 }
 
-.site-dropdown-menu li {
-  border-bottom: 1px solid #eee;
+.nav-dropdown i{
+  font-size:10px;
+  position:relative;
+  top:1px;
 }
 
-.site-dropdown-menu li:last-child {
-  border-bottom: none;
+.nav-dropdown-menu{
+  position:absolute;
+  top:130%;
+  left:0;
+  background:var(--white-color);
+  min-width:240px;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:.3s;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-.site-dropdown-menu a {
-  color: #000;
-  padding: 14px 18px;
-  display: block;
+.nav-dropdown-menu li{
+  border-bottom:1px solid var(--white-color);
 }
 
-.site-dropdown-menu a:hover {
-  background: #f5f5f5;
+.nav-dropdown-menu a{
+  display:flex;
+  gap:10px;
+  padding:14px 18px;
+  color:var(--tertiory-color);
+  font-size:14px;
 }
 
-/* ======================
-   MOBILE TOGGLE
-   ====================== */
-.site-menu-toggle {
-  display: none;
-  color: var(--white-color);
-  font-size: 28px;
-  cursor: pointer;
+.nav-dropdown:hover .nav-dropdown-menu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
 }
 
-.site-close-btn {
-  display: none;
+/* ================= LOGO ================= */
+.nav-logo img{
+  height:65px;
 }
 
-/* ======================
-   LUXURY SLIDER
-   ====================== */
+/* ================= RIGHT ================= */
+.nav-right{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:20px;
+}
+
+.book-btn{
+  padding:10px 24px;
+  border:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.menu-btn{
+  font-size:26px;
+  cursor:pointer;
+  color:#fff;
+}
+
+/* ================= OVERLAY MENU ================= */
+.overlay-menu{
+  position:fixed;
+  inset:0;
+  display:flex;
+  transform:translateX(100%);
+  transition:.5s;
+  z-index:9999;
+}
+.overlay-menu.active{
+  transform:translateX(0);
+}
+
+.overlay-left{
+  width:40%;
+  background:#fff;
+  padding:80px 60px;
+  font-size:15px;
+  line-height:1.8;
+}
+
+.overlay-left p{
+  margin-bottom:14px;
+}
+
+.overlay-right{
+  width:60%;
+  background:url("https://images.unsplash.com/photo-1501785888041-af3ef285b470") center/cover no-repeat;
+  padding:80px;
+  color:#fff;
+  position:relative;
+}
+
+.overlay-right::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.45);
+}
+
+.overlay-right *{
+  position:relative;
+}
+
+.close-btn{
+  position:absolute;
+  top:30px;
+  right:40px;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* ================= OVERLAY LINKS ================= */
+.overlay-links{
+  list-style:none;
+  margin-top:40px;
+}
+
+.overlay-links li{
+  margin-bottom:18px;
+}
+
+.overlay-links a{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-size:30px;
+  letter-spacing:2px;
+  color:#fff;
+  text-decoration:none;
+}
+
+.overlay-links i{
+  font-size:16px;
+  opacity:.8;
+}
+
+.overlay-book{
+  display:inline-block;
+  margin-top:40px;
+  padding:12px 28px;
+  color:var(--white-color);
+  border: 1px solid white;
+  font-size:14px;
+  letter-spacing:1px;
+  &:hover{
+    color: var(--white-color);
+  }
+}
+
+
+/* ====================== LUXURY SLIDER ====================== */
 .luxury-slider {
   position: relative;
   height: 80vh;
@@ -243,9 +346,7 @@ h2 {
   text-align: center;
 }
 
-/* ======================
-   SLIDER CONTROLS
-   ====================== */
+/* ====================== SLIDER CONTROLS====================== */
 .slider-controls {
   position: absolute;
   bottom: 40px;
@@ -267,9 +368,7 @@ h2 {
   background-color: var(--secondary-color);
 }
 
-/* ======================
-   RECTANGLE BUTTON
-   ====================== */
+/* ======================RECTANGLE BUTTON====================== */
 .rect-btn {
   text-transform: uppercase;
   position: relative;
@@ -303,9 +402,7 @@ h2 {
   color: var(--secondary-color);
 }
 
-/* ======================
-   HERO SECTIONS
-   ====================== */
+/* ======================HERO SECTIONS ====================== */
 .hero-container {
   width: 100%;
   min-height: 100svh;
@@ -537,7 +634,7 @@ h2 {
 }
 
 .room-heading {
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 20px;
@@ -620,7 +717,7 @@ h2 {
   position: relative;
 }
 
-.image-overlay-text {
+/* .image-overlay-text {
   position: relative;
   z-index: 2;
   color: var(--white-color);
@@ -638,7 +735,7 @@ h2 {
   font-size: 1.1rem;
   opacity: 0.9;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
+} */
 
 /* ======================
    TITLE SECTION
@@ -707,8 +804,7 @@ h2 {
 .utilitesp {
   max-width: 700px;
   margin: 0 auto;
-  font-size: 15px;
-  line-height: 1.6;
+  line-height: var(--base-line-height);
   padding: 0px 20px;
   color: var(--subheading-color);
 }
@@ -815,9 +911,7 @@ h2 {
   background: #ddd;
 }
 
-/* ======================
-   ROOM DETAILS
-   ====================== */
+/* ====================== ROOM DETAILS ====================== */
 .room-buttons {
   max-width: 1200px;
   width: 100%;
@@ -1006,9 +1100,7 @@ h2 {
   object-fit: cover;
 }
 
-/* ======================
-   REUSABLE SPLIT WRAPPER
-   ====================== */
+/* ======================  REUSABLE SPLIT WRAPPER  ====================== */
 .split-wrapper {
   max-width: 1400px;
   margin: 20px auto;
@@ -1064,7 +1156,7 @@ h2 {
 }
 
 .split-content .description {
-  line-height: 1.8;
+  line-height: var(--base-line-height);
   color: var(--paragraph-color);
   margin-bottom: 10px;
 }
@@ -1117,9 +1209,7 @@ h2 {
   margin-bottom: 25px;
 }
 
-/* ======================
-   FEATURES SECTION
-   ====================== */
+/* ====================== FEATURES SECTION ===================== */
 .features {
   max-width: 1600px;
   margin: auto;
@@ -1189,9 +1279,7 @@ h2 {
   right: 0;
 }
 
-/* ======================
-   FACILITY CARDS
-   ====================== */
+/* ======================  FACILITY CARDS ====================== */
 .facility-card {
   display: flex;
   width: 90%;
@@ -1225,7 +1313,7 @@ h2 {
 
 .facilitytitle button {
   border: 1px solid black;
-  color: #000;
+  color: var(--tertiory-color);
 }
 
 .facility-card .facility-image {
@@ -1250,16 +1338,17 @@ h2 {
 
 .facility-card .facility-number {
   font-size: 2.1rem;
-  font-weight: 500;
+  font-weight: 300;
   color: var(--secondary-color);
   position: absolute;
   left: 50%;
 }
 
 .facility-card .facility-title {
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
+  text-align: left;
   position: relative;
   text-align: center;
 }
@@ -1277,15 +1366,13 @@ h2 {
 }
 
 .facility-card .facility-link {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--secondary-color);
   text-decoration: none;
   margin-top: 50px;
 }
 
-/* ======================
-   SPECIAL OFFERS
-   ====================== */
+/* ====================== SPECIAL OFFERS ====================== */
 .specialOffers {
   background-color: rgb(248, 243, 243);
   height: 100vh;
@@ -1293,7 +1380,7 @@ h2 {
 }
 
 .specialOffers h2 {
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   width: 35%;
   padding: 10px 0px;
   padding-bottom: 60px;
@@ -1326,9 +1413,7 @@ h2 {
   background-color: var(--secondary-color);
 }
 
-/* ======================
-   BLOG SECTION
-   ====================== */
+/* ====================== BLOG SECTION ====================== */
 .blog-section {
   padding: 0px 20px;
   padding-bottom: 70px;
@@ -1420,9 +1505,7 @@ h2 {
   color: var(--secondary-color);
 }
 
-/* ======================
-   AVAILABILITY SECTION
-   ====================== */
+/* ====================== AVAILABILITY SECTION ====================== */
 .availability {
   background: var(--white-color);
   padding: clamp(40px, 6vw, 80px) 20px;
@@ -1430,7 +1513,7 @@ h2 {
 }
 
 .availability h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
   margin-bottom: 40px;
 }
 
@@ -1474,7 +1557,7 @@ h2 {
 }
 
 .arrow {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .dropdown-menu {
@@ -1512,7 +1595,7 @@ h2 {
   border: none;
   background: var(--secondary-color);
   color: var(--white-color);
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -1526,12 +1609,10 @@ h2 {
   text-align: center;
 }
 
-/* ======================
-   GALLERY SECTION
-   ====================== */
+/* ====================== GALLERY SECTION====================== */
 .editorial-gallery {
-  padding: 0px 80px;
-  padding-bottom: 20px;
+  padding: 30px 80px;
+  margin-bottom: 20px;
    max-width: 1600px;
   background: #F9F9F9;
 }
@@ -1652,9 +1733,7 @@ h2 {
   line-height: 1;
 }
 
-/* ======================
-   DESTINATION WEDDING SLIDER
-   ====================== */
+/* ====================== DESTINATION WEDDING SLIDER ====================== */
 .section {
   width: 100%;
   min-width: 1400px;
@@ -1685,7 +1764,7 @@ h2 {
   text-align: center;
   color: var(--secondary-color);
   letter-spacing: 1px;
-  line-height: 1.6;
+  line-height: var(--base-line-height);
 }
 
 .side-img {
@@ -1757,7 +1836,7 @@ h2 {
 .caption p {
   max-width: 500px;
   margin: auto;
-  line-height: 1.7;
+  line-height: var(--base-line-height);
 }
 
 .center-container {
@@ -1785,17 +1864,14 @@ h2 {
   cursor: pointer;
 }
 
-/* ======================
-   CORPORATE EVENT STYLES
-   ====================== */
+/* ====================== CORPORATE EVENT STYLES ====================== */
 .section-title {
   text-align: center;
   margin-bottom: 60px;
 }
 
 .section-title h2 {
-  font-size: 2.3rem;
-  font-weight: 600;
+  font-size: 2.4rem;
 }
 
 .section-title p {
@@ -1838,7 +1914,7 @@ h2 {
 
 .event-card p {
   color: #475569;
-  font-size: .95rem;
+  /* font-size: .95rem; */
 }
 
 .why-grid {
@@ -1861,7 +1937,7 @@ h2 {
 
 .why-box p {
   color: #475569;
-  font-size: .95rem;
+  /* font-size: .95rem; */
 }
 
 .gallery {
@@ -1891,7 +1967,7 @@ h2 {
 }
 
 .cta h2 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 15px;
 }
 
@@ -1941,9 +2017,7 @@ button[type="submit"]:hover {
   color: white;
 }
 
-/* ======================
-   USEFUL LINKS
-   ====================== */
+/* ======================USEFUL LINKS ====================== */
 .useful-links ul {
   padding: 0;
 }
@@ -1977,9 +2051,7 @@ button[type="submit"]:hover {
   opacity: 1;
 }
 
-/* ======================
-   FOOTER
-   ====================== */
+/* ====================== FOOTER ====================== */
 .hf-footer {
   display: block !important;
   background: var(--tertiory-color);
@@ -2014,6 +2086,7 @@ button[type="submit"]:hover {
   flex: 1 1 260px;
    min-width: 240px;
   text-align: start;
+ 
 }
 
 .hf-footer h3 {
@@ -2046,8 +2119,11 @@ button[type="submit"]:hover {
 .hf-contact li {
   margin-bottom: 5px;
   display: flex;
-  gap: 12px;
+  gap: 13px;
+  
+  line-height: var(--base-line-height);
 }
+
 
 .hf-social {
   margin-top: 40px;
@@ -2139,9 +2215,7 @@ button[type="submit"]:hover {
   padding: 30px;
 }
 
-/* ======================
-   CONTACT FORM
-   ====================== */
+/* ====================== CONTACT FORM ====================== */
 .contact-section {
   width: 90%;
   margin: 50px auto;
@@ -2183,7 +2257,7 @@ button[type="submit"]:hover {
 .info-box small {
   color: var(--paragraph-color);
   display: block;
-  font-size: 17px;
+  font-size: 18px;
   margin-bottom: 8px;
 }
 
@@ -2196,7 +2270,7 @@ button[type="submit"]:hover {
   color: var(--white-color);
   text-align: center;
   margin-bottom: 40px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .contact-form form {
@@ -2234,9 +2308,7 @@ select>option {
   transition: 0.3s;
 }
 
-/* ======================
-   MAP SECTION
-   ====================== */
+/* ======================MAP SECTION====================== */
 .map-wrapper {
   position: relative;
   width: 100%;
@@ -2252,9 +2324,7 @@ select>option {
   display: block;
 }
 
-/* ======================
-   FEEDBACK SECTION
-   ====================== */
+/* ====================== FEEDBACK SECTION ====================== */
 .feedback {
   background: #F9F9F9;
   padding: clamp(40px, 6vw, 80px) 20px;
@@ -2271,7 +2341,8 @@ select>option {
 }
 
 .feedback-header h2 {
-  font-size: clamp(28px, 4vw, 48px);
+  /* font-size: clamp(28px, 4vw, 48px); */
+  font-size: 1.6rem, 4vw, 2.4rem;
   margin-top: 10px;
 }
 
@@ -2311,7 +2382,7 @@ select>option {
 }
 
 .card-box p {
-  line-height: 1.7;
+  line-height: var(--base-line-height);
 }
 
 .card-box .arrow {
@@ -2348,9 +2419,7 @@ select>option {
   font-size: 14px;
 }
 
-/* ======================
-   VENUE SECTION
-   ====================== */
+/* ====================== VENUE SECTION ====================== */
 .venue-section {
   max-width: 1400px;
   margin: auto;
@@ -2421,12 +2490,10 @@ select>option {
 
 .enquire-btn:hover {
   background: #000;
-  color: #fff;
+  color: var(--white-color);
 }
 
-/* ======================
-   EVENT SLIDER
-   ====================== */
+/* ====================== EVENT SLIDER ====================== */
 .event-slider {
   position: relative;
   max-width: 1400px;
@@ -2462,7 +2529,6 @@ select>option {
 }
 
 .event-slide p {
-  font-size: 14px;
   color: var(--paragraph-color);
 }
 
@@ -2497,9 +2563,7 @@ select>option {
   margin-top: 25px;
 }
 
-/* ======================
-   EVENTS PAGE SLIDER
-   ====================== */
+/* ======================EVENTS PAGE SLIDER  ====================== */
 .container {
   width: 100%;
   height: 100vh;
@@ -2579,7 +2643,7 @@ select>option {
 .content button {
   padding: 10px 20px;
   border: none;
-  background: #fff;
+  background:var(--white-color);
   cursor: pointer;
   border-radius: 6px;
 }
@@ -2605,12 +2669,10 @@ select>option {
   margin: 60px 0px;
 }
 
-/* ======================
-   BLOG PAGE
-   ====================== */
+/* ====================== BLOG PAGE ====================== */
 .blog-cards {
   padding: clamp(40px, 6vw, 80px) 20px;
-  background: #faf7f2;
+background: #F9F9F9;
   margin-top: 80px;
 }
 
@@ -2720,9 +2782,7 @@ select>option {
   margin-bottom: 18px;
 }
 
-/* ======================
-   VENUE IMAGES (UPDATE BY SAHIL)
-   ====================== */
+/* ====================== VENUE IMAGES (UPDATE BY SAHIL) ====================== */
 .venue-images {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -2735,7 +2795,7 @@ select>option {
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: white;
+  background: #F9F9F9;
 }
 
 .venue-image-card:hover {
@@ -2777,25 +2837,17 @@ select>option {
 }
 
 .enquire-btn {
-  background: rgb(0, 174, 239);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  /* background:var(--secondary-color); */
+  color: var(--territary-color);
   width: 100%;
+  border: 1px solid black;
+  letter-spacing: 1px;
 }
 
-.enquire-btn:hover {
-  background: rgb(0, 174, 239);
-}
 
-/* ======================
-   DESKTOP / LAPTOP: NO WRAP
-   ====================== */
+/* ============================================
+   GLOBAL DESKTOP: NO WRAP FOR FLEX ITEMS
+============================================ */
 @media (min-width: 991px) {
   * {
     flex-wrap: nowrap !important;
@@ -2804,661 +2856,539 @@ select>option {
 
 /* ============================================
    MEDIA QUERIES
-   ============================================ */
+============================================ */
 
-/* Mobile Small: 0 - 448px */
-@media (max-width: 448px) {
-  .slider-controls {
+/* ============================================
+   NAVIGATION BREAKPOINTS
+============================================ */
+
+/* Tablet and below: Navigation changes */
+@media (max-width: 991px) {
+  .navbar {
+    grid-template-columns: auto 1fr auto;
+  }
+  
+  .nav-left {
     display: none;
   }
+  
+  .overlay-menu {
+    flex-direction: column;
+  }
+  
+  .overlay-left,
+  .overlay-right {
+    width: 100%;
+    padding: 50px 30px;
+  }
+  
+  .overlay-links a {
+    font-size: 24px;
+  }
+}
 
-  .blog-grid {
-    grid-template-columns: 1fr;
+/* Mobile Small: Navigation adjustments */
+@media (max-width: 575px) {
+  .top-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
   }
 
-  h3 {
+  .nav-logo img {
+    height: 50px;
+  }
+  
+  .overlay-links a {
     font-size: 20px;
   }
-
-  .availability-box {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-btn {
-    width: 100%;
-  }
-
-  .contact-section {
-    padding: 0px;
-    border: none;
-  }
-
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form {
-    padding: 40px;
-  }
-
-  .facility-number {
-    display: none;
-  }
-
-  .venue-cards {
-    flex-wrap: wrap;
-  }
-
-  .venue-card {
-    flex: 1 1 100%;
-  }
-
-  .left,
-  .right {
-    display: none;
-    border: none;
-  }
-
-  /* Mobile Navigation */
-  .site-menu-toggle {
-    display: block;
-  }
-
-  .site-cta {
-    display: none;
-  }
-
-  .site-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    transition: 0.4s;
-    padding: 60px 30px;
-  }
-
-  .site-nav.is-active {
-    right: 0;
-  }
-
-  .site-close-btn {
-    display: block;
-    color: #fff;
-    font-size: 30px;
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    cursor: pointer;
-  }
-
-  .site-nav ul {
+  .header-contact{
     flex-direction: column;
-    gap: 25px;
   }
+}
 
-  .site-dropdown-menu {
-    position: static;
-    background: #fff;
-    opacity: 0;
-    visibility: hidden;
-    max-height: 0;
-    overflow: hidden;
-    transform: none;
-    box-shadow: none;
-    transition: 0.3s;
-  }
-
-  .site-dropdown.is-active .site-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    max-height: 300px;
-  }
-
-  /* Slider controls on mobile */
+/* ============================================
+   MOBILE: 0 - 448px
+============================================ */
+@media (max-width: 448px) {
+  /* Slider controls */
   .slider-controls {
+    display: none;
     bottom: 20px;
     right: 20px;
     gap: 5px;
   }
-
+  
   .slider-btn {
     width: 40px;
     height: 40px;
     font-size: 18px;
   }
-
-  /* Event slider mobile */
+  
+  /* Blog grid */
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Typography */
+  h3 {
+    font-size: 20px;
+  }
+  
+  /* Availability box */
+  .availability-box {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Buttons */
+  .cta-btn {
+    width: 100%;
+  }
+  
+  /* Contact section */
+  .contact-section {
+    padding: 0px;
+    border: none;
+  }
+  
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form {
+    padding: 40px;
+  }
+  
+  /* Facility */
+  .facility-number {
+    display: none;
+  }
+  
+  /* Venue cards */
+  .venue-cards {
+    flex-wrap: wrap;
+  }
+  
+  .venue-card {
+    flex: 1 1 100%;
+  }
+  
+  /* Event slider */
   .event-slide {
     flex: 0 0 100%;
   }
-
-  .desktop-control {
-    display: none;
-  }
-
-  .event-mobile-controls {
-    display: flex;
-  }
-
+  
   .event-slide img {
     height: 300px;
   }
-
-  /* Destination wedding mobile */
+  
+  .desktop-control {
+    display: none;
+  }
+  
+  .event-mobile-controls {
+    display: flex;
+  }
+  
+  /* Destination wedding */
   .section {
     min-width: 100%;
     padding: 10px;
   }
-
+  
   .slider-wrap {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
+  
   .side {
     display: none;
   }
-
-  .desktop-title {
-    display: none !important;
-  }
-
-  .desktop-btn {
-    display: none !important;
-  }
-
-  .mobile-nav {
-    display: flex;
-  }
-
-  .mobile-btn {
-    display: block;
-  }
-
+  
   .slider {
     height: 300px;
   }
-
+  
+  /* Caption */
   .caption {
     margin-top: 20px;
   }
-
+  
   .caption h3 {
     display: none;
   }
-
+  
   .caption p {
     font-size: 0.9rem;
     line-height: 1.5;
     padding: 0 15px;
     margin-top: 10px;
   }
-
-  /* Events page mobile */
+  
+  /* Events page */
   .slide .item:nth-child(3),
   .slide .item:nth-child(4),
   .slide .item:nth-child(5) {
     display: none;
   }
-
+  
   .content {
     left: 5%;
     max-width: 90%;
   }
-
+  
   .content .description {
     font-size: 14px;
   }
-
-  /* Blog cards mobile */
+  
+  /* Blog cards */
   .card.offset {
     transform: translateY(0);
   }
-
-  /* Corporate events mobile */
+  
+  /* Corporate events */
   section {
     padding: 70px 6%;
   }
+  
+  /* Destination wedding visibility controls */
+  .desktop-title,
+  .desktop-btn {
+    display: none !important;
+  }
+  
+  .mobile-nav {
+    display: flex;
+  }
+  
+  .mobile-btn {
+    display: block;
+  }
+  
+  /* Legacy styles (if still needed) */
+  .left,
+  .right {
+    display: none;
+    border: none;
+  }
 }
 
-/* Mobile Medium: 449px - 567px */
-@media (min-width: 449px) and (max-width: 567px) {
+/* ============================================
+   MOBILE MEDIUM: 449px - 567.98px
+============================================ */
+@media (min-width: 449px) and (max-width: 567.98px) {
+  /* Slider controls */
   .slider-controls {
     display: none;
   }
-
+  
+  /* Blog grid */
   .blog-grid {
     grid-template-columns: 1fr;
   }
-
+  
+  /* Typography */
   h3 {
     font-size: 20px;
   }
-
+  
+  /* Availability box */
   .availability-box {
     grid-template-columns: 1fr;
   }
-
+  
+  /* Contact section */
   .contact-section {
     padding: 10px;
   }
-
+  
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
-
+  
   .contact-form {
     padding: 40px;
   }
-
+  
+  /* Facility */
   .facility-number {
     display: none;
   }
-
+  
+  /* Venue cards */
   .venue-cards {
     flex-wrap: wrap;
   }
-
+  
   .venue-card {
     flex: 1 1 100%;
-  }
-
-  /* Mobile Navigation */
-  .site-menu-toggle {
-    display: block;
-  }
-
-  .site-cta {
-    display: none;
-  }
-
-  .site-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    transition: 0.4s;
-    padding: 60px 30px;
-  }
-
-  .site-nav.is-active {
-    right: 0;
-  }
-
-  .site-close-btn {
-    display: block;
-    color: #fff;
-    font-size: 30px;
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    cursor: pointer;
-  }
-
-  .site-nav ul {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .site-dropdown-menu {
-    position: static;
-    background: #fff;
-    opacity: 0;
-    visibility: hidden;
-    max-height: 0;
-    overflow: hidden;
-    transform: none;
-    box-shadow: none;
-    transition: 0.3s;
-  }
-
-  .site-dropdown.is-active .site-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    max-height: 300px;
   }
 }
 
-/* Tablet Small: 568px - 767px */
-@media (min-width: 568px) and (max-width: 767px) {
+/* ============================================  TABLET SMALL: 568px - 767.98px============================================ */
+@media (min-width: 567.99px) and (max-width: 767.98px) {
+   /* nav top  header*/
+  .top-info{
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+    .header-contact{
+    flex-direction: column;
+  }
+  /* Venue cards */
   .venue-cards {
     flex-wrap: wrap;
   }
-
+  /* Venue cards */
+  .venue-cards {
+    flex-wrap: wrap;
+  }
+  
   .venue-card {
     flex: 1 1 100%;
   }
-
+  
+  /* Slider controls */
   .slider-controls {
     display: none;
   }
-
+  
+  /* Blog grid */
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  
+  /* Availability box */
   .availability-box {
     grid-template-columns: 2fr;
   }
-
+  
+  /* Contact section */
   .contact-section {
     padding: 30px;
   }
-
+  
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
-
+  
   .contact-form {
     padding: 40px;
   }
-
+  
+  /* Facility */
   .facility-number {
     display: none;
   }
-
-  /* Event slider tablet */
+  
+  /* Event slider */
   .event-slide {
     flex: 0 0 100%;
   }
-
-  .desktop-control {
-    display: none;
-  }
-
-  .event-mobile-controls {
-    display: flex;
-  }
-
+  
   .event-slide img {
     height: 300px;
   }
+  
+  .desktop-control {
+    display: none;
+  }
+  
+  .event-mobile-controls {
+    display: flex;
+  }
 }
 
-/* Tablet Large: 768px - 991px */
-@media (min-width: 768px) and (max-width: 991px) {
+/* ============================================ TABLET LARGE: 768px - 991.98px============================================ */
+@media (min-width: 767.99px) and (max-width: 991.98px) {
+  /* nav top  header*/
+  .top-info{
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  /* Venue cards */
   .venue-cards {
     flex-wrap: wrap;
   }
-
+  
   .venue-card {
     flex: 1 1 100%;
   }
-
+  
+  /* Slider controls */
   .slider-controls {
     display: none;
   }
-
+  
+  /* Split wrapper */
   .split-wrapper {
     grid-template-columns: 1fr;
   }
-
+  
   .stats {
     gap: 30px;
   }
-
+  
   .split-content .title {
     font-size: 34px;
   }
-
+  
+  /* Availability box */
   .availability-box {
     grid-template-columns: repeat(3, 1fr);
   }
-
+  
   .cta-btn {
     grid-column: span 3;
   }
-
+  
+  /* Contact section */
   .contact-section {
     padding: 30px;
   }
-
+  
+  /* Facility */
   .facility-number {
     display: none;
   }
-
-  /* Destination wedding tablet */
+  
+  /* Destination wedding */
   .section {
     min-width: 100%;
   }
-
+  
   .slider-wrap {
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
   }
-
+  
   .slider {
     height: 350px;
   }
-
+  
   .side {
     height: 450px;
   }
-
+  
+  /* Destination wedding visibility controls */
   .desktop-btn {
     display: none !important;
   }
-
+  
   .mobile-nav {
     display: flex;
     margin-top: 20px;
   }
-
+  
   .mobile-btn {
     display: block;
   }
-
+  
   .desktop-title {
     display: block;
   }
-
-  /* Mobile Navigation for tablet */
-  .site-menu-toggle {
-    display: block;
-  }
-
-  .site-cta {
-    display: none;
-  }
-
-  .site-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    transition: 0.4s;
-    padding: 60px 30px;
-  }
-
-  .site-nav.is-active {
-    right: 0;
-  }
-
-  .site-close-btn {
-    display: block;
-    color: #fff;
-    font-size: 30px;
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    cursor: pointer;
-  }
-
-  .site-nav ul {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .site-dropdown-menu {
-    position: static;
-    background: #fff;
-    opacity: 0;
-    visibility: hidden;
-    max-height: 0;
-    overflow: hidden;
-    transform: none;
-    box-shadow: none;
-    transition: 0.3s;
-  }
-
-  .site-dropdown.is-active .site-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    max-height: 300px;
-  }
 }
 
-/* Desktop Small: 992px - 1199px */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* ============================================DESKTOP SMALL: 992px - 1199.98px============================================ */
+@media (min-width: 991.99px) and (max-width: 1199.98px) {
+  /* Venue cards */
   .venue-cards {
     flex-wrap: wrap;
   }
-
+  
   .venue-card {
     flex: 1 1 100%;
   }
-
+  
+  /* Filter bar */
   .filter-bar {
     grid-template-columns: 1fr;
   }
-
+  
+  /* Blog grid */
   .blog-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
+  
+  /* Availability box */
   .availability-box {
     grid-template-columns: repeat(5, 1fr);
   }
-
+  
+  /* Buttons */
   .cta-btn {
     width: 180px;
   }
-
+  
+  /* Facility card */
   .facility-card .facility-number {
     font-size: 1.5rem;
     left: 50%;
   }
-
-  /* .hf-col {
-    flex: 1;
-    text-align: start;
-  }
-
-  .hf-main {
-    flex-wrap: nowrap;
-  } */
-
-  /* Mobile Navigation hidden on desktop */
-  .site-menu-toggle {
-    display: none;
-  }
-
-  .site-cta {
-    display: block;
-  }
-
-  .site-nav {
-    position: static;
-    height: auto;
-    background: transparent;
-    padding: 0;
-  }
-
-  .site-nav ul {
-    flex-direction: row;
-  }
-
-  .site-close-btn {
-    display: none;
-  }
-
-  /* Destination wedding desktop */
+  
+  /* Destination wedding visibility controls */
   .mobile-nav {
     display: none !important;
   }
-
+  
   .mobile-btn {
     display: none !important;
   }
-
+  
   .desktop-btn {
     display: block !important;
   }
-
+  
   .desktop-title {
     display: block;
   }
 }
 
-/* Desktop Large: 1200px and above */
+/* ============================================
+   DESKTOP LARGE: 1200px AND ABOVE
+============================================ */
 @media (min-width: 1200px) {
+  /* Header/Footer main */
   .hf-main {
     flex-wrap: nowrap;
   }
-
+  
   .hf-col {
     flex: 1;
   }
-
-  /* Mobile Navigation hidden on desktop */
-  .site-menu-toggle {
-    display: none;
-  }
-
-  .site-cta {
-    display: block;
-  }
-
-  .site-nav {
-    position: static;
-    height: auto;
-    background: transparent;
-    padding: 0;
-  }
-
-  .site-nav ul {
-    flex-direction: row;
-  }
-
-  .site-close-btn {
-    display: none;
-  }
-
-  /* Destination wedding desktop */
+  
+  /* Destination wedding visibility controls */
   .mobile-nav {
     display: none !important;
   }
-
+  
   .mobile-btn {
     display: none !important;
   }
-
+  
   .desktop-btn {
     display: block !important;
   }
-
+  
   .desktop-title {
     display: block;
   }
 }
-@media (min-width: 992px) and (max-width: 1112px) {
 
+/* ============================================
+   SPECIAL CASE: 992px - 1112px
+============================================ */
+@media (min-width: 991.99px) and (max-width: 1112px) {
   .hf-main {
     display: flex;
     flex-wrap: nowrap !important;
     gap: 20px;
   }
-
+  
   .hf-col {
     flex: 1 1 0 !important;
     min-width: 0 !important;
   }
-
 }
-
