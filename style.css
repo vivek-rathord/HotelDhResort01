@@ -2845,22 +2845,167 @@ background: #F9F9F9;
 }
 
 
-/* ============================================
-   GLOBAL DESKTOP: NO WRAP FOR FLEX ITEMS
-============================================ */
+/* faq stated */
+.faq-section{
+  max-width:1000px;
+  margin:80px auto;
+  padding:0 20px;
+}
+
+.faq-section h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+  color:#2c2c2c;
+}
+
+.faq-item{
+  background:#fff;
+  border-radius:14px;
+  margin-bottom:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  overflow:hidden;
+  transition:transform 0.3s ease;
+}
+
+.faq-item:hover{
+  transform:translateY(-3px);
+}
+
+.faq-question{
+  width:100%;
+  background:transparent;
+  border:none;
+  padding:22px 24px;
+  font-size:17px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  cursor:pointer;
+  color:var(--primary-color);
+}
+
+.faq-question span{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#f3f4f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  transition:0.3s ease;
+}
+
+.faq-question.active span{
+  transform:rotate(45deg);
+  background:var(--primary-color);
+  color:#fff;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease;
+}
+
+.faq-answer p{
+  padding:0 24px 24px;
+  line-height:var(--base-line-height);
+  color:var(--paragraph-color);
+}
+ /* .faq-section{
+  max-width:1100px;
+  margin:100px auto;
+  padding:0 20px;
+}
+
+.faq-section h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:50px;
+  letter-spacing:0.5px;
+  color:#1f2937;
+}
+
+.faq-item{
+  position:relative;
+  margin-bottom:22px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+  overflow:hidden;
+}
+
+.faq-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:1px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#e7d9b6,#bfa76a,#e7d9b6);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+
+.faq-question{
+  width:100%;
+  background:transparent;
+  border:none;
+  padding:26px 28px;
+  font-size:18px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  cursor:pointer;
+  color:#111827;
+  position:relative;
+  z-index:1;
+}
+
+.faq-question span{
+  font-size:22px;
+  transition:0.35s ease;
+  color:#bfa76a;
+}
+
+.faq-question.active span{
+  transform:rotate(45deg);
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.45s ease;
+  position:relative;
+  z-index:1;
+}
+
+.faq-answer p{
+  padding:0 28px 28px;
+  font-size:16px;
+  line-height:1.8;
+  color:#374151;
+} */
+
+
+/* ============================================ GLOBAL DESKTOP: NO WRAP FOR FLEX ITEMS============================================ */
 @media (min-width: 991px) {
   * {
     flex-wrap: nowrap !important;
   }
 }
 
-/* ============================================
-   MEDIA QUERIES
-============================================ */
+/* ============================================ MEDIA QUERIES============================================ */
 
-/* ============================================
-   NAVIGATION BREAKPOINTS
-============================================ */
+/* ============================================NAVIGATION BREAKPOINTS============================================ */
 
 /* Tablet and below: Navigation changes */
 @media (max-width: 991px) {
@@ -2904,6 +3049,7 @@ background: #F9F9F9;
   }
   .header-contact{
     flex-direction: column;
+    gap: 0px;
   }
 }
 
@@ -3073,9 +3219,7 @@ background: #F9F9F9;
   }
 }
 
-/* ============================================
-   MOBILE MEDIUM: 449px - 567.98px
-============================================ */
+/* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
 @media (min-width: 449px) and (max-width: 567.98px) {
   /* Slider controls */
   .slider-controls {
@@ -3135,6 +3279,7 @@ background: #F9F9F9;
   }
     .header-contact{
     flex-direction: column;
+    gap: 0px;
   }
   /* Venue cards */
   .venue-cards {
@@ -3377,9 +3522,7 @@ background: #F9F9F9;
   }
 }
 
-/* ============================================
-   SPECIAL CASE: 992px - 1112px
-============================================ */
+/* ============================================SPECIAL CASE: 992px - 1112px============================================ */
 @media (min-width: 991.99px) and (max-width: 1112px) {
   .hf-main {
     display: flex;

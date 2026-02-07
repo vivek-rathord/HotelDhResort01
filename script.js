@@ -920,3 +920,13 @@ document.addEventListener("DOMContentLoaded", function () {
   loadSelectedRoomSlider(defaultRoom);
 
 });
+
+
+// faq
+document.querySelectorAll(".faq-question").forEach(q=>{
+  q.addEventListener("click",()=>{
+    q.classList.toggle("active");
+    const a=q.nextElementSibling;
+    a.style.maxHeight ? a.style.maxHeight=null : a.style.maxHeight=a.scrollHeight+"px";
+  });
+});
