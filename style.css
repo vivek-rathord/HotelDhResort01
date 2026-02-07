@@ -223,7 +223,7 @@ h2 {
 
 .overlay-right{
   width:60%;
-  background:url("https://images.unsplash.com/photo-1501785888041-af3ef285b470") center/cover no-repeat;
+  background:url("./images/aboutbanner.jpg") center/cover no-repeat;
   padding:80px;
   color:#fff;
   position:relative;
