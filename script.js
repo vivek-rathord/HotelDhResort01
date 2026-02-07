@@ -33,24 +33,40 @@ document.addEventListener("DOMContentLoaded", () => {
   //   });
   // });
 
-  const overlay = document.getElementById("overlayMenu");
+const overlay = document.getElementById("overlayMenu");
 const openBtn = document.getElementById("menuOpen");
 const closeBtn = document.getElementById("menuClose");
 const header = document.querySelector(".site-header");
 
+// Open menu
 openBtn.onclick = () => {
   overlay.classList.add("active");
-  document.body.style.overflow="hidden";
+  document.body.style.overflow = "hidden";
 };
 
+// Close menu
 closeBtn.onclick = () => {
-  overlay.classList.remove("active");
-  document.body.style.overflow="auto";
+  closeOverlay();
 };
 
-window.addEventListener("scroll",()=>{
-  header.classList.toggle("is-scrolled",window.scrollY>50);
+// Reusable close function
+function closeOverlay() {
+  overlay.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
+// Header scroll effect
+window.addEventListener("scroll", () => {
+  header.classList.toggle("is-scrolled", window.scrollY > 50);
 });
+
+// ✅ AUTO CLOSE WHEN SCREEN BECOMES LARGE
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 768) {   // desktop breakpoint
+    closeOverlay();
+  }
+});
+
 
   // ------------------------------- BOOK ONLINE DROPDOWN -------------------------------
   let rooms = 3, adult = 1, child = 0;

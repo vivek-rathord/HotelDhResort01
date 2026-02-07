@@ -28,46 +28,65 @@
 
        <!-- navbar -->
 <header class="site-header">
+
+  <!-- TOP INFO -->
   <div class="top-info">
     <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
-    <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
-    <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+
+    <div class="header-contact">
+      <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
+      <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+    </div>
   </div>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
+
+    <!-- LEFT LINKS (3) -->
     <ul class="nav-left">
       <li><a href="index.html">THE RESORT</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="rooms.html">ROOMS</a></li>
+    </ul>
 
+    <!-- CENTER LOGO -->
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="/images/dhr_logo_full_white.png" alt="Logo">
+      </a>
+    </div>
+
+    <!-- RIGHT LINKS (3) -->
+    <ul class="nav-right">
       <li class="nav-dropdown">
         <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
         <ul class="nav-dropdown-menu">
-          <li><a href="destination-weeding.html"><i class="fa-solid fa-heart"></i> Destination Wedding</a></li>
-          <li><a href="events.html"><i class="fa-solid fa-champagne-glasses"></i> Event Venues</a></li>
+          <li>
+            <a href="destination-weeding.html">
+              <i class="fa-solid fa-heart"></i> Destination Wedding
+            </a>
+          </li>
+          <li>
+            <a href="events.html">
+              <i class="fa-solid fa-champagne-glasses"></i> Event Venues
+            </a>
+          </li>
         </ul>
       </li>
+
+      <li><a href="blog.html">BLOG</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
     </ul>
 
-    <div class="nav-logo">
-      <a href="index.html"><img src="/images/dhr_logo_full_white.png"></a>
+    <!-- MOBILE MENU -->
+    <div class="menu-btn" id="menuOpen">
+      <i class="fa-solid fa-bars"></i>
     </div>
 
-    <div class="nav-right">
-      <!-- <a href="https://www.dhauladharheightsresort.com/" class="book-btn">BOOK A STAY</a> -->
-      <div class="menu-btn" id="menuOpen"><i class="fa-solid fa-bars"></i></div>
-    </div>
   </nav>
 </header>
-<!-- OVERLAY MENU -->
-<div class="overlay-menu" id="overlayMenu">
-  <div class="overlay-left">
-    <p><strong>Dhauladhar Heights Resort</strong></p>
-    <p>Tea Garden Road, Kunal Pathri,<br>Dharamshala, Himachal Pradesh 176217</p>
-    <p><i class="fa-solid fa-phone"></i> +91 80915-08200</p>
-    <p><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</p>
-  </div>
 
+<div class="overlay-menu" id="overlayMenu">
   <div class="overlay-right">
     <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
 
@@ -81,7 +100,7 @@
       <li><a href="contact.html"> CONTACT</a></li>
     </ul>
 
-    <a href="#" class="overlay-book ">BOOK YOUR STAY</a>
+    <!-- <a href="#" class="overlay-book">BOOK YOUR STAY</a> -->
   </div>
 </div>
 
