@@ -68,6 +68,27 @@ window.addEventListener("resize", () => {
 });
 
 
+// // counter for 75
+// const counter = document.getElementById("counter"); // select h3
+//   const target = 75;  // number where counting should stop
+//   let count = 0;      // starting number
+
+//   const speed = 30;   // speed of counting (smaller = faster)
+
+//   function updateCounter() {
+//     if (count < target) {
+//       count++; // increase number by 1
+//       counter.innerText = count + "+"; // show number with +
+//       setTimeout(updateCounter, speed); // repeat function
+//     } else {
+//       counter.innerText = target + "+"; // ensure it ends at 75+
+//     }
+//   }
+
+//   updateCounter(); // start counting
+
+
+
   // ------------------------------- BOOK ONLINE DROPDOWN -------------------------------
   let rooms = 3, adult = 1, child = 0;
   window.toggleDropdown = function (id) {

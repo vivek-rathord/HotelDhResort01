@@ -756,7 +756,15 @@ h2 {
 .eventbtn {
   margin-top: 20px
 }
-
+.image-overlay-text {
+  width: 100%;
+  height: 100%;
+}
+.image-overlay-text img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .room-image {
   flex: 1 1 500px;
   height: 400px;
@@ -845,8 +853,9 @@ h2 {
   margin: auto;
   margin-bottom: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  padding: 0px 20px;
   padding-bottom: 30px;
 }
 
@@ -1161,10 +1170,16 @@ h2 {
 
 .split-image {
   flex: 1 1 400px;
+   height: 520px;              /* control height here */
+  position: relative;
+  overflow: hidden;
 }
 
 .split-image img {
   width: 100%;
+  width: 100%;
+  height: 100%;               /* IMPORTANT */
+  object-fit: cover;
 }
 
 .split-content {
@@ -1338,10 +1353,9 @@ h2 {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* FIXED */
   gap: clamp(22px, 3vw, 34px);
 }
-
 
 /* ================= CARD ================= */
 .amenity-box {
@@ -1429,14 +1443,16 @@ h2 {
 
 .facility-card .facility-image {
   flex: 1 1 400px;
+   height: 420px;         
+  overflow: hidden;
+  position: relative;
 }
 
 .facility-card .facility-image img {
-  width: 100%;
-  height: auto;
-  display: block;
+ width: 100%;
+  height: 100%;
   object-fit: cover;
-  position: relative;
+  display: block;
 }
 
 .facility-card .facility-content {
@@ -1990,6 +2006,7 @@ h2 {
   justify-content: center;
   gap: 28px;
   margin-bottom: 60px;
+  flex-wrap: wrap;
 }
 
 .editorial-filters button {
@@ -2677,7 +2694,7 @@ select>option {
 }
 
 /* ======================MAP SECTION====================== */
-.map-wrapper {
+/* .map-wrapper {
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -2690,6 +2707,134 @@ select>option {
   height: clamp(260px, 40vw, 420px);
   border: 0;
   display: block;
+} */
+ .map-container{
+  width:1400px;
+  margin:auto;
+  padding:clamp(16px,4vw,32px);
+}
+
+/* ================== HEADER ================== */
+.map-header{
+  text-align:center;
+  margin-bottom:clamp(20px,5vw,40px);
+}
+
+.map-header h2{
+  font-size:clamp(1.6rem,4vw,2.6rem);
+  color:var(--primary-color);
+  position:relative;
+  display:inline-block;
+}
+
+.map-header p{
+  margin-top:16px;
+  /* font-size:clamp(0.95rem,2.5vw,1.1rem); */
+  color:var(--paragraph-color);
+  line-height:var(--base-line-height);
+}
+
+/* ================== MAP ================== */
+.map-wrapper{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+ background: #F9F9F9;
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.hotel-map{
+  width:100%;
+  aspect-ratio:16 / 9;
+  border:none;
+}
+
+/* ================== OVERLAY ================== */
+.map-overlay{
+  position:absolute;
+  bottom:20px;
+  right:20px;
+  max-width:min(90%,320px);
+  background: #F9F9F9;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.map-overlay h3{
+  font-size:1.2rem;
+  color:var(--primary-color);
+}
+
+.map-overlay p{
+  color:var(--paragraph-color);
+}
+
+.map-overlay i{
+  color:var(--secondary-color);
+  margin-right:8px;
+}
+
+/* ================== BUTTON ================== */
+.directions-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:14px;
+  padding:12px 16px;
+  border: 1px solid black;
+  color:var(--tertiory-color);
+  font-size:14px;
+}
+
+.directions-btn:hover{
+  transform:translateY(-2px);
+color: var(--white-color);
+i{
+  color: var(--white-color);
+}
+}
+
+/* ================== FEATURES ================== */
+.map-features{
+  margin-top:clamp(30px,6vw,50px);
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:clamp(20px,4vw,30px);
+  background: #F9F9F9;
+  padding:clamp(20px,5vw,40px);
+  border-radius:20px;
+}
+
+.feature{
+  text-align:center;
+}
+
+.feature i{
+  font-size:2.5rem;
+  color:var(--secondary-color);
+  margin-bottom:14px;
+}
+
+.feature h4{
+  color:var(--primary-color);
+  font-size:1.15rem;
+  margin-bottom:8px;
+}
+
+.feature p{
+  color:var(--paragraph-color);
+}
+
+/* ================== FOOTER ================== */
+.map-footer{
+  text-align:center;
+  margin-top:30px;
+  font-size:0.9rem;
+  color:var(--paragraph-color);
 }
 
 /* ====================== FEEDBACK SECTION ====================== */
@@ -3540,6 +3685,21 @@ background: #F9F9F9;
     display: none;
     border: none;
   }
+   /* rooms 3 cards */
+    .roomCardGrid {
+      grid-template-columns: 1fr;
+  }
+  /* amenities 4 cards */
+    .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+   .split-image,
+  .room-image {
+    height: 280px;
+  }
+   .facility-card .facility-image {
+    height: 280px;
+  }
 }
 
 /* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
@@ -3590,6 +3750,21 @@ background: #F9F9F9;
   .venue-card {
     flex: 1 1 100%;
   }
+   /* rooms 3 cards */
+    .roomCardGrid {
+      grid-template-columns: 1fr;
+  }
+   .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+    .split-image,
+    .room-image {
+    height: 280px;
+  }
+   .facility-card .facility-image {
+    height: 280px;
+  }
+  
 }
 
 /* ============================================  TABLET SMALL: 568px - 767.98px============================================ */
@@ -3693,6 +3868,20 @@ background: #F9F9F9;
   
   .event-mobile-controls {
     display: flex;
+  }
+  /* rooms 3 cards */
+    .roomCardGrid {
+      grid-template-columns: 1fr;
+  }
+   .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+    .split-image,
+    .room-image {
+    height: 360px;
+  }
+   .facility-card .facility-image {
+    height: 360px;
   }
 }
 
@@ -3817,6 +4006,17 @@ background: #F9F9F9;
   .amenities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* rooms 3 cards */
+    .roomCardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+   .amenities-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  /* contact page form */
+  .contact-information{
+    padding: 0px 20px;
+  }
 }
 
 /* ============================================DESKTOP SMALL: 992px - 1199.98px============================================ */
@@ -3872,6 +4072,7 @@ background: #F9F9F9;
   .desktop-title {
     display: block;
   }
+
 }
 
 /* ============================================
@@ -3903,6 +4104,7 @@ background: #F9F9F9;
   .desktop-title {
     display: block;
   }
+  
 }
 
 /* ============================================SPECIAL CASE: 992px - 1112px============================================ */
