@@ -967,3 +967,5 @@ document.querySelectorAll(".faq-question").forEach(q=>{
     a.style.maxHeight ? a.style.maxHeight=null : a.style.maxHeight=a.scrollHeight+"px";
   });
 });
+
+

@@ -2709,9 +2709,8 @@ select>option {
   display: block;
 } */
  .map-container{
-  width:1400px;
+  /* width:1400px; */
   margin:auto;
-  padding:clamp(16px,4vw,32px);
 }
 
 /* ================== HEADER ================== */
@@ -2756,21 +2755,20 @@ select>option {
   right:20px;
   max-width:min(90%,320px);
   background: #F9F9F9;
-  padding:40px;
+  padding:30px;
   border-radius:16px;
   box-shadow:0 8px 20px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
 }
 
 .map-overlay h3{
   font-size:1.2rem;
   color:var(--primary-color);
+  margin-bottom:10px;
 }
 
 .map-overlay p{
   color:var(--paragraph-color);
+  margin-bottom:6px;
 }
 
 .map-overlay i{
@@ -2784,18 +2782,17 @@ select>option {
   align-items:center;
   gap:8px;
   margin-top:14px;
-  padding:12px 16px;
-  border: 1px solid black;
-  color:var(--tertiory-color);
+  padding:12px 22px;
+  background:var(--secondary-color);
+  color:var(--white-color);
+  font-weight:600;
   font-size:14px;
+  transition:.3s;
 }
 
 .directions-btn:hover{
   transform:translateY(-2px);
 color: var(--white-color);
-i{
-  color: var(--white-color);
-}
 }
 
 /* ================== FEATURES ================== */
@@ -2835,6 +2832,7 @@ i{
   margin-top:30px;
   font-size:0.9rem;
   color:var(--paragraph-color);
+  padding-bottom: 40px;
 }
 
 /* ====================== FEEDBACK SECTION ====================== */
@@ -3827,7 +3825,7 @@ background: #F9F9F9;
   
   /* Blog grid */
   .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:1fr;
   }
   
   /* Availability box */
@@ -4072,12 +4070,12 @@ background: #F9F9F9;
   .desktop-title {
     display: block;
   }
-
+.contact-section{
+      padding: 33px 19px; 
+}
 }
 
-/* ============================================
-   DESKTOP LARGE: 1200px AND ABOVE
-============================================ */
+/* ============================================DESKTOP LARGE: 1200px AND ABOVE============================================ */
 @media (min-width: 1200px) {
   /* Header/Footer main */
   .hf-main {
