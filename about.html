@@ -30,83 +30,83 @@
 
 <body>
 
-    <!-- navbar -->
-<header class="site-header">
+  <!-- navbar -->
+  <header class="site-header">
 
-  <!-- TOP INFO -->
-  <div class="top-info">
-    <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
+    <!-- TOP INFO -->
+    <div class="top-info">
+      <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
 
-    <div class="header-contact">
-      <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
-      <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+      <div class="header-contact">
+        <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
+        <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+      <!-- LEFT LINKS (3) -->
+      <ul class="nav-left">
+        <li><a href="index.html">THE RESORT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="rooms.html">ROOMS</a></li>
+      </ul>
+
+      <!-- CENTER LOGO -->
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="/images/dhr_logo_full_white.png" alt="Logo">
+        </a>
+      </div>
+
+      <!-- RIGHT LINKS (3) -->
+      <ul class="nav-right">
+        <li class="nav-dropdown">
+          <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li>
+              <a href="destination-weeding.html">
+                <i class="fa-solid fa-heart"></i> Destination Wedding
+              </a>
+            </li>
+            <li>
+              <a href="events.html">
+                <i class="fa-solid fa-champagne-glasses"></i> Event Venues
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+
+      <!-- MOBILE MENU -->
+      <div class="menu-btn" id="menuOpen">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    </nav>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <div class="overlay-right">
+      <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
+
+      <ul class="overlay-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="rooms.html"> ROOMS</a></li>
+        <li><a href="destination-weeding.html">DESTINATION WEDDING</a></li>
+        <li><a href="events.html"> EVENT VENUES</a></li>
+        <li><a href="blog.html"> BLOG</a></li>
+        <li><a href="contact.html"> CONTACT</a></li>
+      </ul>
+
+      <!-- <a href="#" class="overlay-book">BOOK YOUR STAY</a> -->
     </div>
   </div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-
-    <!-- LEFT LINKS (3) -->
-    <ul class="nav-left">
-      <li><a href="index.html">THE RESORT</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="rooms.html">ROOMS</a></li>
-    </ul>
-
-    <!-- CENTER LOGO -->
-    <div class="nav-logo">
-      <a href="index.html">
-        <img src="/images/dhr_logo_full_white.png" alt="Logo">
-      </a>
-    </div>
-
-    <!-- RIGHT LINKS (3) -->
-    <ul class="nav-right">
-      <li class="nav-dropdown">
-        <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
-        <ul class="nav-dropdown-menu">
-          <li>
-            <a href="destination-weeding.html">
-              <i class="fa-solid fa-heart"></i> Destination Wedding
-            </a>
-          </li>
-          <li>
-            <a href="events.html">
-              <i class="fa-solid fa-champagne-glasses"></i> Event Venues
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li><a href="blog.html">BLOG</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-
-    <!-- MOBILE MENU -->
-    <div class="menu-btn" id="menuOpen">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-
-  </nav>
-</header>
-
-<div class="overlay-menu" id="overlayMenu">
-  <div class="overlay-right">
-    <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
-
-    <ul class="overlay-links">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="rooms.html"> ROOMS</a></li>
-      <li><a href="destination-weeding.html">DESTINATION WEDDING</a></li>
-      <li><a href="events.html"> EVENT VENUES</a></li>
-      <li><a href="blog.html"> BLOG</a></li>
-      <li><a href="contact.html"> CONTACT</a></li>
-    </ul>
-
-    <!-- <a href="#" class="overlay-book">BOOK YOUR STAY</a> -->
-  </div>
-</div>
   <!----------------------- hero section ---------------------->
   <div class="common-hero about-hero">
     <h1 data-aos="fade-down" data-aos-duration="1200">About Us</h1>
@@ -200,7 +200,7 @@
 
         </div>
 
-        <div class="room-image">
+        <div class="room-image gm-image">
           <div class="image-overlay-text">
             <img src="./images/member-2.jpg" alt="">
           </div>
@@ -216,9 +216,9 @@
   <section class="feedback">
     <div class="feedback-header" data-aos="zoom-out-up">
       <div>
-      <span class="tag">LUXURY FEEDBACK</span>
-      <h2>DH CLIENTS FEEDBACK<br>ABOUT SERVICES</h2>
-</div>
+        <span class="tag">LUXURY FEEDBACK</span>
+        <h2>DH CLIENTS FEEDBACK<br>ABOUT SERVICES</h2>
+      </div>
       <!-- <div class="nav-btns">
       <button class="feedback-prev rect-btn">&larr;</button>
   <button class="feedback-next rect-btn">&rarr;</button>
@@ -276,7 +276,7 @@
         </div>
       </div>
 
-         <!-- Card -->
+      <!-- Card -->
       <!-- <div class="feedback-card">
         <div class="card-box">
           <div class="stars"> <i class="fa-solid fa-star"></i>
@@ -300,7 +300,7 @@
           </div>
         </div>
       </div> -->
-         <!-- Card -->
+      <!-- Card -->
       <!-- <div class="feedback-card">
         <div class="card-box">
           <div class="stars"> <i class="fa-solid fa-star"></i>
@@ -487,13 +487,12 @@
             <i class="fab fa-youtube"></i>
           </a>
 
-          <!-- LinkedIn (optional – jab page bane tab link lagana) -->
-          <!--
-  <a href="https://www.linkedin.com/company/yourcompany"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  -->
+          <!-- LinkedIn -->
+
+          <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
 
         </div>
 

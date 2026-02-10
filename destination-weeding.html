@@ -28,83 +28,83 @@
 </head>
 
 <body>
-    <!-- navbar -->
-<header class="site-header">
+  <!-- navbar -->
+  <header class="site-header">
 
-  <!-- TOP INFO -->
-  <div class="top-info">
-    <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
+    <!-- TOP INFO -->
+    <div class="top-info">
+      <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
 
-    <div class="header-contact">
-      <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
-      <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+      <div class="header-contact">
+        <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
+        <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+      <!-- LEFT LINKS (3) -->
+      <ul class="nav-left">
+        <li><a href="index.html">THE RESORT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="rooms.html">ROOMS</a></li>
+      </ul>
+
+      <!-- CENTER LOGO -->
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="/images/dhr_logo_full_white.png" alt="Logo">
+        </a>
+      </div>
+
+      <!-- RIGHT LINKS (3) -->
+      <ul class="nav-right">
+        <li class="nav-dropdown">
+          <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li>
+              <a href="destination-weeding.html">
+                <i class="fa-solid fa-heart"></i> Destination Wedding
+              </a>
+            </li>
+            <li>
+              <a href="events.html">
+                <i class="fa-solid fa-champagne-glasses"></i> Event Venues
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+
+      <!-- MOBILE MENU -->
+      <div class="menu-btn" id="menuOpen">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    </nav>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <div class="overlay-right">
+      <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
+
+      <ul class="overlay-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="rooms.html"> ROOMS</a></li>
+        <li><a href="destination-weeding.html">DESTINATION WEDDING</a></li>
+        <li><a href="events.html"> EVENT VENUES</a></li>
+        <li><a href="blog.html"> BLOG</a></li>
+        <li><a href="contact.html"> CONTACT</a></li>
+      </ul>
+
+      <!-- <a href="#" class="overlay-book">BOOK YOUR STAY</a> -->
     </div>
   </div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-
-    <!-- LEFT LINKS (3) -->
-    <ul class="nav-left">
-      <li><a href="index.html">THE RESORT</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="rooms.html">ROOMS</a></li>
-    </ul>
-
-    <!-- CENTER LOGO -->
-    <div class="nav-logo">
-      <a href="index.html">
-        <img src="/images/dhr_logo_full_white.png" alt="Logo">
-      </a>
-    </div>
-
-    <!-- RIGHT LINKS (3) -->
-    <ul class="nav-right">
-      <li class="nav-dropdown">
-        <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
-        <ul class="nav-dropdown-menu">
-          <li>
-            <a href="destination-weeding.html">
-              <i class="fa-solid fa-heart"></i> Destination Wedding
-            </a>
-          </li>
-          <li>
-            <a href="events.html">
-              <i class="fa-solid fa-champagne-glasses"></i> Event Venues
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li><a href="blog.html">BLOG</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-
-    <!-- MOBILE MENU -->
-    <div class="menu-btn" id="menuOpen">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-
-  </nav>
-</header>
-
-<div class="overlay-menu" id="overlayMenu">
-  <div class="overlay-right">
-    <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
-
-    <ul class="overlay-links">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="rooms.html"> ROOMS</a></li>
-      <li><a href="destination-weeding.html">DESTINATION WEDDING</a></li>
-      <li><a href="events.html"> EVENT VENUES</a></li>
-      <li><a href="blog.html"> BLOG</a></li>
-      <li><a href="contact.html"> CONTACT</a></li>
-    </ul>
-
-    <!-- <a href="#" class="overlay-book">BOOK YOUR STAY</a> -->
-  </div>
-</div>
 
 
   <!----------------------- hero section ---------------------->
@@ -140,360 +140,365 @@
   </section>
 
 
-   <!-- -----------------------------------slider-------------------------------------- -->
-<div class="slider-wrap" data-aos="fade-up" data-aos-duration="1000">
+  <!-- -----------------------------------slider-------------------------------------- -->
+  <div class="slider-wrap" data-aos="fade-up" data-aos-duration="1000">
 
-  <!-- LEFT -->
-  <div class="side left">
-    <div class="side-img"></div>
-    <div class="side-text" id="leftText"></div>
-    <!-- Desktop button -->
-    <button class="btn desktop-btn" onclick="prev()">‹</button>
-  </div>
-
-  <!-- CENTER -->
-  <div class="center-container">
-    <div class="slider">
-      <img class="slide" id="current">
-      <img class="slide" id="next">
+    <!-- LEFT -->
+    <div class="side left">
+      <div class="side-img"></div>
+      <div class="side-text" id="leftText"></div>
+      <!-- Desktop button -->
+      <button class="btn desktop-btn" onclick="prev()">‹</button>
     </div>
 
-    <div class="caption">
-      <!-- Title will be hidden on mobile -->
-      <h3 id="title" class="desktop-title"></h3>
-      <p id="desc"></p>
-    </div>
-    
-    <!-- Mobile Navigation Buttons -->
-    <div class="mobile-nav">
-      <button class="btn mobile-btn" onclick="prev()">‹</button>
-      <button class="btn mobile-btn" onclick="next()">›</button>
-    </div>
-  </div>
+    <!-- CENTER -->
+    <div class="center-container">
+      <div class="slider">
+        <img class="slide" id="current">
+        <img class="slide" id="next">
+      </div>
 
-  <!-- RIGHT -->
-  <div class="side right">
-    <div class="side-img"></div>
-    <div class="side-text" id="rightText"></div>
-    <!-- Desktop button -->
-    <button class="btn desktop-btn" onclick="next()">›</button>
-  </div>
+      <div class="caption">
+        <!-- Title will be hidden on mobile -->
+        <h3 id="title" class="desktop-title"></h3>
+        <p id="desc"></p>
+      </div>
 
-</div>
-
-
-
-
-    <!-- --------------------------------Weesing Festivals------------------------- -->
-    <div class="weddingfestivalcontainer">
-      <section class="title-section">
-        <!-- <div class="bg-logo"></div> -->
-
-        <div class="title-wrapper">
-          <span class="line" data-aos="fade-up" data-aos-duration="2000"></span>
-
-          <div class="logo-circle" data-aos="fade-up" data-aos-duration="2000">
-            <img src="/images/dhr_logo_icon.png" alt="logo">
-          </div>
-          <span class="line" data-aos="fade-up" data-aos-duration="2000"></span>
-        </div>
-
-        <h2 data-aos="fade-up" data-aos-duration="3000">Wedding Festivities </h2>
-        <p class="utilitesp" data-aos="fade-up" data-aos-duration="2000">
-          Unfold a tapestry of love and celebrations with intimate gatherings or grand receptions. From bridal showers
-          and
-          haldi ceremonies to mehndi and glitzy cocktail soirées, begin your journey of joy with Hotel Dh.
-        </p>
-      </section>
-
-      <div class="container" data-aos="zoom-out-right">
-        <div class="slide">
-          <div class="item"
-            style="background:  url('https://www.stroudsmoorweddings.com/wp-content/uploads/2025/03/Terraview_Ceremony-overlay.jpg'); background-size: cover; background-position: center top;">
-            <div class="content">
-              <div class="name">Honeymoons</div>
-              <div class="description">Ignite warmth and love with dream-like honeymoon experiences such as moon lit
-                beach
-                strolls, candle dinners, starry nights.</div>
-            </div>
-          </div>
-
-          <div class="item"
-            style="background: url('./images/weeding.jpg'); background-size: cover; background-position: center top;">
-            <div class="content">
-              <div class="name">Bridal Shower</div>
-              <div class="description">Embrace joy with your loved ones at our thoughtfully designed venues for an
-                unforgettable and personalised bridal shower.</div>
-            </div>
-          </div>
-
-          <div class="item"
-            style="background: url('./images/mehndi.JPG'); background-size: cover; background-position: center;">
-            <div class="content">
-              <div class="name">Mehndi</div>
-              <div class="description">Indulge in lively mehndi celebrations replete with vibrant colours, love, joyful
-                music, laughter and the intricate art of henna.</div>
-            </div>
-          </div>
-
-          <div class="item"
-            style="background: url('/images/slide1.webp'); background-size: cover; background-position: center top;">
-            <div class="content">
-              <div class="name">Haldi</div>
-              <div class="description">Bask in the golden glow of joy and blessings amid fragrant blooms and colourful
-                settings during your memorable haldi ceremony.</div>
-            </div>
-          </div>
-
-          <div class="item"
-            style="background: url('/images/sangeet1.jpeg'); background-size: cover; background-position: center;">
-            <div class="content">
-              <div class="name">Sangeet</div>
-              <div class="description">Dance to the rhythm of love in an evening filled with enchanting melodies,
-                graceful
-                moves and sparkling festivities for your sange.</div>
-            </div>
-          </div>
-
-          <div class="item"
-            style="background: url('/images/proposals.jpg'); background-size: cover; background-position:center;">
-            <div class="content">
-              <div class="name">Proposals</div>
-              <div class="description">Craft a bespoke proposal with us, from sweeping romantic gestures to private
-                moments and set the stage for a lifetime of togethern.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="button">
-          <button class="prev" id-><i class="fa-solid fa-arrow-left"></i></button>
-          <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+      <!-- Mobile Navigation Buttons -->
+      <div class="mobile-nav">
+        <button class="btn mobile-btn" onclick="prev()">‹</button>
+        <button class="btn mobile-btn" onclick="next()">›</button>
       </div>
     </div>
 
-    <!-- --------------------------Destination weeding places------------------------------ -->
+    <!-- RIGHT -->
+    <div class="side right">
+      <div class="side-img"></div>
+      <div class="side-text" id="rightText"></div>
+      <!-- Desktop button -->
+      <button class="btn desktop-btn" onclick="next()">›</button>
+    </div>
 
-    <div class="weedingplaces">
-<section class="title-section">
-        <!-- <div class="bg-logo"></div> -->
+  </div>
 
-        <div class="title-wrapper">
-          <span class="line" data-aos="fade-up" data-aos-duration="2000"></span>
 
-          <div class="logo-circle" data-aos="fade-up" data-aos-duration="2000">
-            <img src="/images/dhr_logo_icon.png" alt="logo">
+
+
+  <!-- --------------------------------Weesing Festivals------------------------- -->
+  <div class="weddingfestivalcontainer">
+    <section class="title-section">
+      <!-- <div class="bg-logo"></div> -->
+
+      <div class="title-wrapper">
+        <span class="line" data-aos="fade-up" data-aos-duration="2000"></span>
+
+        <div class="logo-circle" data-aos="fade-up" data-aos-duration="2000">
+          <img src="/images/dhr_logo_icon.png" alt="logo">
+        </div>
+        <span class="line" data-aos="fade-up" data-aos-duration="2000"></span>
+      </div>
+
+      <h2 data-aos="fade-up" data-aos-duration="3000">Wedding Festivities </h2>
+      <p class="utilitesp" data-aos="fade-up" data-aos-duration="2000">
+        Unfold a tapestry of love and celebrations with intimate gatherings or grand receptions. From bridal showers
+        and
+        haldi ceremonies to mehndi and glitzy cocktail soirées, begin your journey of joy with Hotel Dh.
+      </p>
+    </section>
+
+    <div class="container" data-aos="zoom-out-right">
+      <div class="slide">
+        <div class="item"
+          style="background:  url('https://www.stroudsmoorweddings.com/wp-content/uploads/2025/03/Terraview_Ceremony-overlay.jpg'); background-size: cover; background-position: center top;">
+          <div class="content">
+            <div class="name">Honeymoons</div>
+            <div class="description">Ignite warmth and love with dream-like honeymoon experiences such as moon lit
+              beach
+              strolls, candle dinners, starry nights.</div>
           </div>
-          <span class="line" data-aos="fade-up" data-aos-duration="2000"></span>
         </div>
 
-        <h2 data-aos="fade-up" data-aos-duration="3000">Destination Wedding in Dharamshala</h2>
-        <p class="utilitesp" data-aos="fade-up" data-aos-duration="2000">
-        Dharamshala is fast becoming a favorite destination wedding location for couples who desire elegance, tranquility, and scenic beauty. With luxury accommodations, stunning venues, and a calm Himalayan backdrop, it offers the perfect blend of romance and celebration.
-        </p>
-      </section>
-
-
-     <div class="blog-grid">
-            <!-- CARD 1-->
-            <article class="blog-card" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
-                <div class="blog-img">
-                    <img src="./images/DSC09810.jpg" alt="blog-1">
-                </div>
-
-                <div class="blog-content">
-                    <div class="meta">
-                        <span>August 10, 2023</span>
-                        <span>Interior</span>
-                    </div>
-
-                    <h3>
-                       Indian Wedding In Malta
-                    </h3>
-                </div>
-
-                <div class="blog-footer">
-                   
-                    <a href="blog-detail.html?slug=indian-wedding-malta">Read More</a>
-                    <span><a href="blog-detail.html?slug=indian-wedding-malta">→</a></span>
-                </div>
-            </article>
-
-            <!-- CARD 2-->
-            <article class="blog-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
-                <div class="blog-img">
-                    <img src="./images/DSC00496-HDR-Enhanced-NR-Edit.jpg" alt="blog-1">
-                </div>
-
-                <div class="blog-content">
-                    <div class="meta">
-                        <span>August 10, 2023</span>
-                        <span>Interior</span>
-                    </div>
-
-                    <h3>
-                      Indian Wedding Venues In Barcelona
-                    </h3>
-                </div>
-
-                <div class="blog-footer active">
-                    <a href="blog-detail.html?slug=indian-wedding-barcelona">Read More</a>
-                    <span><a href="blog-detail.html?slug=indian-wedding-barcelona">→</a></span>
-                </div>
-            </article>
-
-            <!-- CARD 3-->
-            <article class="blog-card" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
-                <div class="blog-img">
-                    <img src="./images/hs.jpg" alt="blog-1">
-                </div>
-
-                <div class="blog-content">
-                    <div class="meta">
-                        <span>August 10, 2023</span>
-                        <span>Interior</span>
-                    </div>
-
-                    <h3>
-                      Indian Wedding In Switzerland
-                    
-                    </h3>
-                </div>
-
-                <div class="blog-footer">
-                    <a href="blog-detail.html?slug=indian-wedding-switzerland">Read More</a>
-                    <span><a href="blog-detail.html?slug=indian-wedding-switzerland">→</a></span>
-                </div>
-            </article>
-
+        <div class="item"
+          style="background: url('./images/weeding.jpg'); background-size: cover; background-position: center top;">
+          <div class="content">
+            <div class="name">Bridal Shower</div>
+            <div class="description">Embrace joy with your loved ones at our thoughtfully designed venues for an
+              unforgettable and personalised bridal shower.</div>
+          </div>
         </div>
+
+        <div class="item"
+          style="background: url('./images/mehndi.JPG'); background-size: cover; background-position: center;">
+          <div class="content">
+            <div class="name">Mehndi</div>
+            <div class="description">Indulge in lively mehndi celebrations replete with vibrant colours, love, joyful
+              music, laughter and the intricate art of henna.</div>
+          </div>
+        </div>
+
+        <div class="item"
+          style="background: url('/images/slide1.webp'); background-size: cover; background-position: center top;">
+          <div class="content">
+            <div class="name">Haldi</div>
+            <div class="description">Bask in the golden glow of joy and blessings amid fragrant blooms and colourful
+              settings during your memorable haldi ceremony.</div>
+          </div>
+        </div>
+
+        <div class="item"
+          style="background: url('/images/sangeet1.jpeg'); background-size: cover; background-position: center;">
+          <div class="content">
+            <div class="name">Sangeet</div>
+            <div class="description">Dance to the rhythm of love in an evening filled with enchanting melodies,
+              graceful
+              moves and sparkling festivities for your sange.</div>
+          </div>
+        </div>
+
+        <div class="item"
+          style="background: url('/images/proposals.jpg'); background-size: cover; background-position:center;">
+          <div class="content">
+            <div class="name">Proposals</div>
+            <div class="description">Craft a bespoke proposal with us, from sweeping romantic gestures to private
+              moments and set the stage for a lifetime of togethern.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <button class="prev" id-><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------------------------Destination weeding places------------------------------ -->
+
+  <div class="weedingplaces">
+    <section class="title-section">
+      <!-- <div class="bg-logo"></div> -->
+
+      <div class="title-wrapper">
+        <span class="line" data-aos="fade-up" data-aos-duration="2000"></span>
+
+        <div class="logo-circle" data-aos="fade-up" data-aos-duration="2000">
+          <img src="/images/dhr_logo_icon.png" alt="logo">
+        </div>
+        <span class="line" data-aos="fade-up" data-aos-duration="2000"></span>
+      </div>
+
+      <h2 data-aos="fade-up" data-aos-duration="3000">Destination Wedding in Dharamshala</h2>
+      <p class="utilitesp" data-aos="fade-up" data-aos-duration="2000">
+        Dharamshala is fast becoming a favorite destination wedding location for couples who desire elegance,
+        tranquility, and scenic beauty. With luxury accommodations, stunning venues, and a calm Himalayan backdrop, it
+        offers the perfect blend of romance and celebration.
+      </p>
+    </section>
+
+
+    <div class="blog-grid">
+      <!-- CARD 1-->
+      <article class="blog-card" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+        <div class="blog-img">
+          <img src="./images/DSC09810.jpg" alt="blog-1">
+        </div>
+
+        <div class="blog-content">
+          <div class="meta">
+            <span>August 10, 2023</span>
+            <span>Interior</span>
+          </div>
+
+          <h3>
+            Indian Wedding In Malta
+          </h3>
+        </div>
+
+        <div class="blog-footer">
+
+          <a href="blog-detail.html?slug=indian-wedding-malta">Read More</a>
+          <span><a href="blog-detail.html?slug=indian-wedding-malta">→</a></span>
+        </div>
+      </article>
+
+      <!-- CARD 2-->
+      <article class="blog-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+        <div class="blog-img">
+          <img src="./images/DSC00496-HDR-Enhanced-NR-Edit.jpg" alt="blog-1">
+        </div>
+
+        <div class="blog-content">
+          <div class="meta">
+            <span>August 10, 2023</span>
+            <span>Interior</span>
+          </div>
+
+          <h3>
+            Indian Wedding Venues In Barcelona
+          </h3>
+        </div>
+
+        <div class="blog-footer active">
+          <a href="blog-detail.html?slug=indian-wedding-barcelona">Read More</a>
+          <span><a href="blog-detail.html?slug=indian-wedding-barcelona">→</a></span>
+        </div>
+      </article>
+
+      <!-- CARD 3-->
+      <article class="blog-card" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+        <div class="blog-img">
+          <img src="./images/hs.jpg" alt="blog-1">
+        </div>
+
+        <div class="blog-content">
+          <div class="meta">
+            <span>August 10, 2023</span>
+            <span>Interior</span>
+          </div>
+
+          <h3>
+            Indian Wedding In Switzerland
+
+          </h3>
+        </div>
+
+        <div class="blog-footer">
+          <a href="blog-detail.html?slug=indian-wedding-switzerland">Read More</a>
+          <span><a href="blog-detail.html?slug=indian-wedding-switzerland">→</a></span>
+        </div>
+      </article>
 
     </div>
-    
 
-    <!-- faq -->
-     <section class="faq-section">
-<h2>Destination Wedding – FAQs</h2>
+  </div>
 
-<div class="faq-item">
-<button class="faq-question">Is Dharamshala Heights & Resort suitable for destination weddings?<span>+</span></button>
-<div class="faq-answer"><p>Yes, it is a perfect destination wedding resort in Dharamshala with scenic views.</p></div>
-</div>
 
-<div class="faq-item">
-<button class="faq-question">Do you provide wedding planning services?<span>+</span></button>
-<div class="faq-answer"><p>We assist with decoration, catering, accommodation, and event coordination.</p></div>
-</div>
+  <!-- faq -->
+  <section class="faq-section">
+    <h2>Destination Wedding – FAQs</h2>
 
-<div class="faq-item">
-<button class="faq-question">What is the best season for a wedding in Dharamshala?<span>+</span></button>
-<div class="faq-answer"><p>March to June and September to November are ideal for destination weddings.</p></div>
-</div>
+    <div class="faq-item">
+      <button class="faq-question">Is Dharamshala Heights & Resort suitable for destination
+        weddings?<span>+</span></button>
+      <div class="faq-answer">
+        <p>Yes, it is a perfect destination wedding resort in Dharamshala with scenic views.</p>
+      </div>
+    </div>
 
-</section>
+    <div class="faq-item">
+      <button class="faq-question">Do you provide wedding planning services?<span>+</span></button>
+      <div class="faq-answer">
+        <p>We assist with decoration, catering, accommodation, and event coordination.</p>
+      </div>
+    </div>
 
-    <!----------------------------------footer---------------------- -->
-    <footer class="hf-footer">
+    <div class="faq-item">
+      <button class="faq-question">What is the best season for a wedding in Dharamshala?<span>+</span></button>
+      <div class="faq-answer">
+        <p>March to June and September to November are ideal for destination weddings.</p>
+      </div>
+    </div>
 
-        <!-- MAIN FOOTER -->
-        <div class="hf-main">
+  </section>
 
-            <!-- CONTACT -->
-            <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
+  <!----------------------------------footer---------------------- -->
+  <footer class="hf-footer">
 
-                <h3>CONTACT INFO</h3>
+    <!-- MAIN FOOTER -->
+    <div class="hf-main">
 
-                <ul>
-                    <li><i class="fas fa-phone"></i> +91 80915-08200 <br>+91 70188-41900</li>
-                    <li><i class="fas fa-envelope"></i> reservation@dhauladhar<br>heightsresort.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Dhauladhar Heights Resort
+      <!-- CONTACT -->
+      <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
 
-Tea Garden Road, Kunal Pathri,
-Dharamshala, Himachal Pradesh 176217</li>
-                </ul>
+        <h3>CONTACT INFO</h3>
 
-              <div class="hf-social">
+        <ul>
+          <li><i class="fas fa-phone"></i> +91 80915-08200 <br>+91 70188-41900</li>
+          <li><i class="fas fa-envelope"></i> reservation@dhauladhar<br>heightsresort.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Dhauladhar Heights Resort
 
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/dhauladharheightsresort"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-facebook-f"></i>
-  </a>
+            Tea Garden Road, Kunal Pathri,
+            Dharamshala, Himachal Pradesh 176217</li>
+        </ul>
 
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/dhauladhar_heights_resort"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-instagram"></i>
-  </a>
+        <div class="hf-social">
 
-  <!-- YouTube -->
-  <a href="https://www.youtube.com/@dhauladharheightsresort"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-youtube"></i>
-  </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/dhauladharheightsresort" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
 
-  <!-- LinkedIn (optional – jab page bane tab link lagana) -->
-  <!--
-  <a href="https://www.linkedin.com/company/yourcompany"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  -->
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/dhauladhar_heights_resort" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
 
-</div>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@dhauladharheightsresort" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
+          </a>
 
-            </div>
+          <!-- LinkedIn  -->
 
-            <!-- LINKS -->
-            <div class="hf-col hf-links" data-aos="fade-up" data-aos-delay="100">
-                <h3>USEFUL LINKS</h3>
-                <ul>
-                    <li><a class="is-active" href="/about.html">About Hotel</a></li>
-                    <li><a href="/rooms.html">Rooms & Suites</a></li>
-                    <li><a href="contact.html">Reservations</a></li>
-                    <li><a href="./blog.html">News & Blogs</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
-                </ul>
-            </div>
+          <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
 
-            <!-- GALLERY -->
-            <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
-                <h3>GALLERY</h3>
-                <a href="gallery.html">
-                    <div class="hf-gallery-grid">
-
-                        <img src="./images/mehndi.jpeg" alt="gallery">
-                        <img src="./images/sangeet1.jpeg" alt="gallery">
-                        <img src="./images/lawns.jpg" alt="gallery">
-                        <img src="./images/weedingimg1.jpg" alt="gallery">
-                        <img src="./images/weedingimg2.jpg" alt="gallery">
-                        <img src="./images/proposals.jpg" alt="gallery">
-                    </div>
-                </a>
-            </div>
-
-            <!-- NEWSLETTER -->
-            <div class="hf-col hf-newsletter" data-aos="fade-left" data-aos-delay="300">
-                <h3>NEWSLETTER</h3>
-                <p>Subscribe our Newsletter</p>
-                <input type="email" placeholder="Enter Email">
-                <button>SUBSCRIBE NOW</button>
-            </div>
 
         </div>
 
-        <!-- COPYRIGHT -->
-        <div class="hf-bottom">
-            © 2026, Hotel Dhauladhar. All Rights Reserved.
-        </div>
+      </div>
 
-    </footer>
+      <!-- LINKS -->
+      <div class="hf-col hf-links" data-aos="fade-up" data-aos-delay="100">
+        <h3>USEFUL LINKS</h3>
+        <ul>
+          <li><a class="is-active" href="/about.html">About Hotel</a></li>
+          <li><a href="/rooms.html">Rooms & Suites</a></li>
+          <li><a href="contact.html">Reservations</a></li>
+          <li><a href="./blog.html">News & Blogs</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
+        <h3>GALLERY</h3>
+        <a href="gallery.html">
+          <div class="hf-gallery-grid">
+
+            <img src="./images/mehndi.jpeg" alt="gallery">
+            <img src="./images/sangeet1.jpeg" alt="gallery">
+            <img src="./images/lawns.jpg" alt="gallery">
+            <img src="./images/weedingimg1.jpg" alt="gallery">
+            <img src="./images/weedingimg2.jpg" alt="gallery">
+            <img src="./images/proposals.jpg" alt="gallery">
+          </div>
+        </a>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="hf-col hf-newsletter" data-aos="fade-left" data-aos-delay="300">
+        <h3>NEWSLETTER</h3>
+        <p>Subscribe our Newsletter</p>
+        <input type="email" placeholder="Enter Email">
+        <button>SUBSCRIBE NOW</button>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="hf-bottom">
+      © 2026, Hotel Dhauladhar. All Rights Reserved.
+    </div>
+
+  </footer>
 
 
 
-    <!-- AOS JS  -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+  <!-- AOS JS  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

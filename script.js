@@ -12,82 +12,39 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ------------------------------- NAV LOGIC -------------------------------
-  // const header = document.querySelector(".site-header");
-  // const menuBtn = document.querySelector(".site-menu-toggle");
-  // const nav = document.querySelector(".site-nav");
-  // const closeBtn = document.querySelector(".site-close-btn");
+  const overlay = document.getElementById("overlayMenu");
+  const openBtn = document.getElementById("menuOpen");
+  const closeBtn = document.getElementById("menuClose");
+  const header = document.querySelector(".site-header");
 
-  // window.addEventListener("scroll", () => {
-  //   header.classList.toggle("is-scrolled", window.scrollY > 50);
-  // });
+  // Open menu
+  openBtn.onclick = () => {
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
 
-  // menuBtn.onclick = () => nav.classList.add("is-active");
-  // closeBtn.onclick = () => nav.classList.remove("is-active");
-
-  // document.querySelectorAll(".site-dropdown > a").forEach(link => {
-  //   link.addEventListener("click", e => {
-  //     if (window.innerWidth <= 1024) {
-  //       e.preventDefault();
-  //       link.parentElement.classList.toggle("is-active");
-  //     }
-  //   });
-  // });
-
-const overlay = document.getElementById("overlayMenu");
-const openBtn = document.getElementById("menuOpen");
-const closeBtn = document.getElementById("menuClose");
-const header = document.querySelector(".site-header");
-
-// Open menu
-openBtn.onclick = () => {
-  overlay.classList.add("active");
-  document.body.style.overflow = "hidden";
-};
-
-// Close menu
-closeBtn.onclick = () => {
-  closeOverlay();
-};
-
-// Reusable close function
-function closeOverlay() {
-  overlay.classList.remove("active");
-  document.body.style.overflow = "auto";
-}
-
-// Header scroll effect
-window.addEventListener("scroll", () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 50);
-});
-
-// ✅ AUTO CLOSE WHEN SCREEN BECOMES LARGE
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 768) {   // desktop breakpoint
+  // Close menu
+  closeBtn.onclick = () => {
     closeOverlay();
+  };
+
+  // Reusable close function
+  function closeOverlay() {
+    overlay.classList.remove("active");
+    document.body.style.overflow = "auto";
   }
-});
 
+  // Header scroll effect
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 50);
+  });
 
-// // counter for 75
-// const counter = document.getElementById("counter"); // select h3
-//   const target = 75;  // number where counting should stop
-//   let count = 0;      // starting number
-
-//   const speed = 30;   // speed of counting (smaller = faster)
-
-//   function updateCounter() {
-//     if (count < target) {
-//       count++; // increase number by 1
-//       counter.innerText = count + "+"; // show number with +
-//       setTimeout(updateCounter, speed); // repeat function
-//     } else {
-//       counter.innerText = target + "+"; // ensure it ends at 75+
-//     }
-//   }
-
-//   updateCounter(); // start counting
-
-
+  //  AUTO CLOSE WHEN SCREEN BECOMES LARGE
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {   // desktop breakpoint
+      closeOverlay();
+    }
+  });
 
   // ------------------------------- BOOK ONLINE DROPDOWN -------------------------------
   let rooms = 3, adult = 1, child = 0;
@@ -281,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // venuue
 // code   by sahil
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const eventType = document.getElementById('eventType');
   const capacity = document.getElementById('capacity');
   const venueCards = document.querySelectorAll('.venue-image-card');
@@ -329,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listener for Enquire buttons
     enquireBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function () {
         const venueName = this.closest('.venue-image-card').querySelector('h3').textContent;
         alert(`Enquiry sent for: ${venueName}\nWe will contact you shortly!`);
       });
@@ -645,34 +602,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // room booking
- document.addEventListener("DOMContentLoaded", () => {
-    const checkIn = document.getElementById("checkin");
-    const checkOut = document.getElementById("checkout");
+document.addEventListener("DOMContentLoaded", () => {
+  const checkIn = document.getElementById("checkin");
+  const checkOut = document.getElementById("checkout");
 
-    const today = new Date().toISOString().split("T")[0];
+  const today = new Date().toISOString().split("T")[0];
 
-    // Set minimum date for both
-    checkIn.min = today;
-    checkOut.min = today;
+  // Set minimum date for both
+  checkIn.min = today;
+  checkOut.min = today;
 
-    // When check-in changes
-    checkIn.addEventListener("change", () => {
-      checkOut.min = checkIn.value;
+  // When check-in changes
+  checkIn.addEventListener("change", () => {
+    checkOut.min = checkIn.value;
 
-      // Auto-fix checkout if earlier than check-in
-      if (checkOut.value && checkOut.value < checkIn.value) {
-        checkOut.value = checkIn.value;
-      }
-    });
-
-    // Optional: validate on checkout change
-    checkOut.addEventListener("change", () => {
-      if (checkOut.value < checkIn.value) {
-        alert("Check-out date cannot be before Check-in date");
-        checkOut.value = "";
-      }
-    });
+    // Auto-fix checkout if earlier than check-in
+    if (checkOut.value && checkOut.value < checkIn.value) {
+      checkOut.value = checkIn.value;
+    }
   });
+
+  // Optional: validate on checkout change
+  checkOut.addEventListener("change", () => {
+    if (checkOut.value < checkIn.value) {
+      alert("Check-out date cannot be before Check-in date");
+      checkOut.value = "";
+    }
+  });
+});
 // ================= GALLERY PAGE (SAFE) =================
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -960,11 +917,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // faq
-document.querySelectorAll(".faq-question").forEach(q=>{
-  q.addEventListener("click",()=>{
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => {
     q.classList.toggle("active");
-    const a=q.nextElementSibling;
-    a.style.maxHeight ? a.style.maxHeight=null : a.style.maxHeight=a.scrollHeight+"px";
+    const a = q.nextElementSibling;
+    a.style.maxHeight ? a.style.maxHeight = null : a.style.maxHeight = a.scrollHeight + "px";
   });
 });
 

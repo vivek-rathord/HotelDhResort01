@@ -31,85 +31,85 @@
 <body>
 
 
-    <!-- navbar -->
-<header class="site-header">
+  <!-- navbar -->
+  <header class="site-header">
 
-  <!-- TOP INFO -->
-  <div class="top-info">
-    <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
+    <!-- TOP INFO -->
+    <div class="top-info">
+      <span><i class="fa-solid fa-location-dot"></i> Tea Garden Road, Kunal Pathri, Dharamshala</span>
 
-    <div class="header-contact">
-      <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
-      <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+      <div class="header-contact">
+        <span><i class="fa-solid fa-phone"></i> +91 80915-08200</span>
+        <span><i class="fa-solid fa-envelope"></i> reservation@dhauladharheightsresort.com</span>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+      <!-- LEFT LINKS (3) -->
+      <ul class="nav-left">
+        <li><a href="index.html">THE RESORT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="rooms.html">ROOMS</a></li>
+      </ul>
+
+      <!-- CENTER LOGO -->
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="/images/dhr_logo_full_white.png" alt="Logo">
+        </a>
+      </div>
+
+      <!-- RIGHT LINKS (3) -->
+      <ul class="nav-right">
+        <li class="nav-dropdown">
+          <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li>
+              <a href="destination-weeding.html">
+                <i class="fa-solid fa-heart"></i> Destination Wedding
+              </a>
+            </li>
+            <li>
+              <a href="events.html">
+                <i class="fa-solid fa-champagne-glasses"></i> Event Venues
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+
+      <!-- MOBILE MENU -->
+      <div class="menu-btn" id="menuOpen">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    </nav>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <div class="overlay-right">
+      <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
+
+      <ul class="overlay-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="rooms.html"> ROOMS</a></li>
+        <li><a href="destination-weeding.html">DESTINATION WEDDING</a></li>
+        <li><a href="events.html"> EVENT VENUES</a></li>
+        <li><a href="blog.html"> BLOG</a></li>
+        <li><a href="contact.html"> CONTACT</a></li>
+      </ul>
+
+      <!-- <a href="#" class="overlay-book">BOOK YOUR STAY</a> -->
     </div>
   </div>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
 
-    <!-- LEFT LINKS (3) -->
-    <ul class="nav-left">
-      <li><a href="index.html">THE RESORT</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="rooms.html">ROOMS</a></li>
-    </ul>
-
-    <!-- CENTER LOGO -->
-    <div class="nav-logo">
-      <a href="index.html">
-        <img src="/images/dhr_logo_full_white.png" alt="Logo">
-      </a>
-    </div>
-
-    <!-- RIGHT LINKS (3) -->
-    <ul class="nav-right">
-      <li class="nav-dropdown">
-        <a href="#">EVENTS <i class="fa-solid fa-chevron-down"></i></a>
-        <ul class="nav-dropdown-menu">
-          <li>
-            <a href="destination-weeding.html">
-              <i class="fa-solid fa-heart"></i> Destination Wedding
-            </a>
-          </li>
-          <li>
-            <a href="events.html">
-              <i class="fa-solid fa-champagne-glasses"></i> Event Venues
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li><a href="blog.html">BLOG</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-
-    <!-- MOBILE MENU -->
-    <div class="menu-btn" id="menuOpen">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-
-  </nav>
-</header>
-
-<div class="overlay-menu" id="overlayMenu">
-  <div class="overlay-right">
-    <span class="close-btn" id="menuClose"><i class="fa-solid fa-xmark"></i></span>
-
-    <ul class="overlay-links">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="rooms.html"> ROOMS</a></li>
-      <li><a href="destination-weeding.html">DESTINATION WEDDING</a></li>
-      <li><a href="events.html"> EVENT VENUES</a></li>
-      <li><a href="blog.html"> BLOG</a></li>
-      <li><a href="contact.html"> CONTACT</a></li>
-    </ul>
-
-    <!-- <a href="#" class="overlay-book">BOOK YOUR STAY</a> -->
-  </div>
-</div>
-
-  <!-- room, weeding ,resort, boquet -->
 
 
   <!----------------------- hero section ---------------------->
@@ -147,63 +147,61 @@
 
   <!-- ROOMS BTNS -->
   <div class="room-buttons">
-      <div class="room-button rect-btn" data-room="executive-room"> <a href="room-details.html?room=executive-room">Executive Room</a></div>
-  <div class="room-button rect-btn" data-room="executive-suite"> <a href="room-details.html?room=executive-suite">Executive Suite</a></div>
-  <div class="room-button rect-btn" data-room="presidential-suite">    <a href="room-details.html?room=presidential-suite">Presidential Suite</a></div>
-  <div class="room-button rect-btn" data-room="twin-bed"> <a href="room-details.html?room=twin-bed">Twin Bed</a></div>
-  <div class="room-button rect-btn" data-room="deluxe-room"><a href="room-details.html?room=deluxe-room">Deluxe Room</a></div>
+    <div class="room-button rect-btn" data-room="executive-room"> <a
+        href="room-details.html?room=executive-room">Executive Room</a></div>
+    <div class="room-button rect-btn" data-room="executive-suite"> <a
+        href="room-details.html?room=executive-suite">Executive Suite</a></div>
+    <div class="room-button rect-btn" data-room="presidential-suite"> <a
+        href="room-details.html?room=presidential-suite">Presidential Suite</a></div>
+    <div class="room-button rect-btn" data-room="twin-bed"> <a href="room-details.html?room=twin-bed">Twin Bed</a></div>
+    <div class="room-button rect-btn" data-room="deluxe-room"><a href="room-details.html?room=deluxe-room">Deluxe
+        Room</a></div>
   </div>
 
 
   <!-- selected rooms -->
-   <div class="roomscontainer">
-  <section class="room-section" id="roomDetails">
-  </section>
-</div>
-
-  
-
-   <!--room aminities -->
-   <section class="roomaminities">
-  <div class="roomaminities-wrapper">
-
-    <!-- LEFT CONTENT -->
-    <div class="roomaminities-content">
-      <span class="roomaminities-subtitle">AMENITIES</span>
-      <h2 class="roomaminities-title">
-        What's <br /> Included
-      </h2>
-
-      <ul class="roomaminities-list">
-        <li>Free Wi-Fi</li>
-        <li>LED / Smart TV with cable channels</li>
-        <li>Wardrobe</li>
-        <li>Mountain / Garden View</li>
-        <li>Safety locker</li>
-        <li>Cubical Shower</li>
-      </ul>
-    </div>
-
-
-    <!-- i want to add the exact div here which user clicks -->
-
-
-    
-    <!-- RIGHT IMAGE -->
-    <div class="roomaminities-image">
-      <img src="./images/DSC00176-Edit.jpg"alt="Room Interior">
-    </div>
-
+  <div class="roomscontainer">
+    <section class="room-section" id="roomDetails">
+    </section>
   </div>
-</section>
 
 
-<!-- selected room slides -->
- <!-- ROOM IMAGE SLIDER -->
-<div class="selectedroomslider">
-  <div class="slides"></div>
-  <div class="slider-dots"></div>
-</div>
+
+  <!--room aminities -->
+  <section class="roomaminities">
+    <div class="roomaminities-wrapper">
+
+      <!-- LEFT CONTENT -->
+      <div class="roomaminities-content">
+        <span class="roomaminities-subtitle">AMENITIES</span>
+        <h2 class="roomaminities-title">
+          What's  Included
+        </h2>
+
+        <ul class="roomaminities-list">
+          <li>Free Wi-Fi</li>
+          <li>LED / Smart TV with cable channels</li>
+          <li>Wardrobe</li>
+          <li>Mountain / Garden View</li>
+          <li>Cubical Shower</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="roomaminities-image">
+        <img src="./images/DSC00176-Edit.jpg" alt="Room Interior">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- selected room slides -->
+  <!-- ROOM IMAGE SLIDER -->
+  <div class="selectedroomslider">
+    <div class="slides"></div>
+    <div class="slider-dots"></div>
+  </div>
 
 
   <!--------------- rooms slider------------- -->
@@ -212,62 +210,67 @@
 
       <!-- SLIDE 1 -->
       <div class="room-slide active">
-       <div class="roomscontainer">
-        <section class="room-section rowreverse">
+        <div class="roomscontainer">
+          <section class="room-section rowreverse">
             <div class="room-content" data-aos="fade-left">
-                <h2 class="room-heading">Executive Room with Modern Comforts</h2>
-                
-                <ul class="room-features">
-                    <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
-                </ul>
-                
-                <p class="room-description">
-                  A perfect blend of comfort and functionality, our Executive Rooms are ideal for business and leisure travelers. Enjoy modern interiors, premium amenities, and a relaxing atmosphere after a day exploring Dharamshala.
-                </p>
-                
-                <a href="room-details.html?room=executive-room" class="discover-button rect-btn">
-                    Discover More <i class="fas fa-arrow-right"></i>
-                </a>
+              <h2 class="room-heading">Executive Room with Modern Comforts</h2>
+
+              <ul class="room-features">
+                <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
+              </ul>
+
+              <p class="room-description">
+                A perfect blend of comfort and functionality, our Executive Rooms are ideal for business and leisure
+                travelers. Enjoy modern interiors, premium amenities, and a relaxing atmosphere after a day exploring
+                Dharamshala.
+              </p>
+
+              <a href="room-details.html?room=executive-room" class="discover-button rect-btn">
+                Discover More <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            
+
             <div class="room-image">
-                <div class="image-overlay-text">
-                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'" alt="Executive Room">
-                </div>
+              <div class="image-overlay-text">
+                <img
+                  src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'"
+                  alt="Executive Room">
+              </div>
             </div>
-        </section>
-        
-    </div>
+          </section>
+
+        </div>
       </div>
 
       <!-- SLIDE 2 -->
       <div class="room-slide">
-     <div class="roomscontainer">
-        <section class="room-section rowreverse">
-            <div class="room-content"  data-aos="fade-left">
-                <h2 class="room-heading">Executive Suite with Spacious Living Area</h2>
-                
-                <ul class="room-features">
-                    <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
-                </ul>
-                
-                <p class="room-description">
-                  Designed for those who prefer extra space and luxury, the Executive Suite offers a separate living area, elegant décor, and scenic views, making your stay both comfortable and memorable.
-                </p>
-                
-                <a href="room-details.html?room=executive-suite" class="discover-button rect-btn">
-                    Discover More <i class="fas fa-arrow-right"></i>
-                </a>
+        <div class="roomscontainer">
+          <section class="room-section rowreverse">
+            <div class="room-content" data-aos="fade-left">
+              <h2 class="room-heading">Executive Suite with Spacious Living Area</h2>
+
+              <ul class="room-features">
+                <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
+              </ul>
+
+              <p class="room-description">
+                Designed for those who prefer extra space and luxury, the Executive Suite offers a separate living area,
+                elegant décor, and scenic views, making your stay both comfortable and memorable.
+              </p>
+
+              <a href="room-details.html?room=executive-suite" class="discover-button rect-btn">
+                Discover More <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            
+
             <div class="room-image">
-                <div class="image-overlay-text">
-                    <img src="./images/DSC00176-Edit.jpg" alt="Executive Suite">
-                </div>
+              <div class="image-overlay-text">
+                <img src="./images/DSC00176-Edit.jpg" alt="Executive Suite">
+              </div>
             </div>
-        </section>
-        
-    </div>
+          </section>
+
+        </div>
       </div>
 
 
@@ -275,62 +278,65 @@
       <div class="room-slide">
 
         <!-- room card 3 -->
-       <div class="roomscontainer">
-        <section class="room-section rowreverse">
+        <div class="roomscontainer">
+          <section class="room-section rowreverse">
             <div class="room-content" data-aos="fade-left">
-                <h2 class="room-heading">Presidential Suite Offering Ultimate Luxury Stay</h2>
-                
-                <ul class="room-features">
-                    <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
-                </ul>
-                
-                <p class="room-description">
-                 Experience the finest luxury in Dharamshala with our Presidential Suite. Featuring spacious living areas, premium furnishings, and unmatched comfort, it’s perfect for guests seeking an exclusive and indulgent stay.
-                </p>
-                <a href="room-details.html?room=presidential-suite" class="discover-button rect-btn">
-                    Discover More <i class="fas fa-arrow-right"></i>
-                </a>
+              <h2 class="room-heading">Presidential Suite Offering Ultimate Luxury Stay</h2>
+
+              <ul class="room-features">
+                <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
+              </ul>
+
+              <p class="room-description">
+                Experience the finest luxury in Dharamshala with our Presidential Suite. Featuring spacious living
+                areas, premium furnishings, and unmatched comfort, it’s perfect for guests seeking an exclusive and
+                indulgent stay.
+              </p>
+              <a href="room-details.html?room=presidential-suite" class="discover-button rect-btn">
+                Discover More <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            
+
             <div class="room-image">
-                <div class="image-overlay-text">
-                    <img src="./images/luxuryRoom.jpg" alt="Presidential Suite">
-                </div>
+              <div class="image-overlay-text">
+                <img src="./images/luxuryRoom.jpg" alt="Presidential Suite">
+              </div>
             </div>
-        </section>        
-    </div>
+          </section>
+        </div>
       </div>
 
 
 
       <!-- SLIDE 4 -->
       <div class="room-slide">
-<div class="roomscontainer">
-        <section class="room-section rowreverse">
-            <div class="room-content"  data-aos="fade-left">
-                <h2 class="room-heading">Twin Bedded Room for Comfortable Shared Stay</h2>
-                
-                <ul class="room-features">
-                    <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
-                </ul>
-                
-                <p class="room-description">
-                  Our Twin Bedded Rooms are ideal for friends or colleagues traveling together. With two comfortable beds, modern amenities, and a peaceful ambiance, these rooms ensure a restful stay.
-                </p>
-                
-                <a href="room-details.html?room=twin-bed" class="discover-button rect-btn">
-                    Discover More <i class="fas fa-arrow-right"></i>
-                </a>
+        <div class="roomscontainer">
+          <section class="room-section rowreverse">
+            <div class="room-content" data-aos="fade-left">
+              <h2 class="room-heading">Twin Bedded Room for Comfortable Shared Stay</h2>
+
+              <ul class="room-features">
+                <li>28 ROOMS / 1 BEDROOM / 3 GUESTS</li>
+              </ul>
+
+              <p class="room-description">
+                Our Twin Bedded Rooms are ideal for friends or colleagues traveling together. With two comfortable beds,
+                modern amenities, and a peaceful ambiance, these rooms ensure a restful stay.
+              </p>
+
+              <a href="room-details.html?room=twin-bed" class="discover-button rect-btn">
+                Discover More <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            
+
             <div class="room-image">
-                <div class="image-overlay-text">
-                    <img src="./images/DSC03083 copy.jpg" alt="twin beded rooms">
-                </div>
+              <div class="image-overlay-text">
+                <img src="./images/DSC03083 copy.jpg" alt="twin beded rooms">
+              </div>
             </div>
-        </section>
-        
-    </div>
+          </section>
+
+        </div>
       </div>
     </div>
 
@@ -340,122 +346,124 @@
 
 
   <!-- faq -->
-   <section class="faq-section">
-<h2>Room Information – FAQs</h2>
+  <section class="faq-section">
+    <h2>Room Information – FAQs</h2>
 
-<div class="faq-item">
-<button class="faq-question">How many guests can stay in this room?<span>+</span></button>
-<div class="faq-answer"><p>This room is ideal for couples and small families. Extra bed may be available.</p></div>
-</div>
+    <div class="faq-item">
+      <button class="faq-question">How many guests can stay in this room?<span>+</span></button>
+      <div class="faq-answer">
+        <p>This room is ideal for couples and small families. Extra bed may be available.</p>
+      </div>
+    </div>
 
-<div class="faq-item">
-<button class="faq-question">What amenities are included?<span>+</span></button>
-<div class="faq-answer"><p>The room includes Wi-Fi, TV, attached bathroom, room service, and comfortable bedding.</p></div>
-</div>
+    <div class="faq-item">
+      <button class="faq-question">What amenities are included?<span>+</span></button>
+      <div class="faq-answer">
+        <p>The room includes Wi-Fi, TV, attached bathroom, room service, and comfortable bedding.</p>
+      </div>
+    </div>
 
-<div class="faq-item">
-<button class="faq-question">What are check-in and check-out times?<span>+</span></button>
-<div class="faq-answer"><p>Check-in is from 2 PM and check-out is by 11 AM.</p></div>
-</div>
+    <div class="faq-item">
+      <button class="faq-question">What are check-in and check-out times?<span>+</span></button>
+      <div class="faq-answer">
+        <p>Check-in is from 2 PM and check-out is by 11 AM.</p>
+      </div>
+    </div>
 
-</section>
+  </section>
 
   <!----------------------------------footer---------------------- -->
-    <footer class="hf-footer">
+  <footer class="hf-footer">
 
-        <!-- MAIN FOOTER -->
-        <div class="hf-main">
+    <!-- MAIN FOOTER -->
+    <div class="hf-main">
 
-            <!-- CONTACT -->
-            <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
+      <!-- CONTACT -->
+      <div class="hf-col hf-contact hf-overlay" data-aos="fade-up" data-aos-delay="0">
 
-                <h3>CONTACT INFO</h3>
+        <h3>CONTACT INFO</h3>
 
-                <ul>
-                    <li><i class="fas fa-phone"></i> +91 80915-08200 <br>+91 70188-41900</li>
-                    <li><i class="fas fa-envelope"></i> reservation@dhauladhar<br>heightsresort.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Dhauladhar Heights Resort
+        <ul>
+          <li><i class="fas fa-phone"></i> +91 80915-08200 <br>+91 70188-41900</li>
+          <li><i class="fas fa-envelope"></i> reservation@dhauladhar<br>heightsresort.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Dhauladhar Heights Resort
 
-Tea Garden Road, Kunal Pathri,
-Dharamshala, Himachal Pradesh 176217</li>
-                </ul>
+            Tea Garden Road, Kunal Pathri,
+            Dharamshala, Himachal Pradesh 176217</li>
+        </ul>
 
-              <div class="hf-social">
+        <div class="hf-social">
 
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/dhauladharheightsresort"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-facebook-f"></i>
-  </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/dhauladharheightsresort" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
 
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/dhauladhar_heights_resort"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-instagram"></i>
-  </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/dhauladhar_heights_resort" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
 
-  <!-- YouTube -->
-  <a href="https://www.youtube.com/@dhauladharheightsresort"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-youtube"></i>
-  </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@dhauladharheightsresort" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
+          </a>
 
-  <!-- LinkedIn (optional – jab page bane tab link lagana) -->
-  <!--
-  <a href="https://www.linkedin.com/company/yourcompany"
-     target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  -->
+          <!-- LinkedIn -->
 
-</div>
+          <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
 
-            </div>
-
-            <!-- LINKS -->
-            <div class="hf-col hf-links" data-aos="fade-up" data-aos-delay="100">
-                <h3>USEFUL LINKS</h3>
-                <ul>
-                    <li><a class="is-active" href="/about.html">About Hotel</a></li>
-                    <li><a href="/rooms.html">Rooms & Suites</a></li>
-                    <li><a href="contact.html">Reservations</a></li>
-                    <li><a href="./blog.html">News & Blogs</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- GALLERY -->
-            <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
-                <h3>GALLERY</h3>
-                <a href="gallery.html">
-                    <div class="hf-gallery-grid">
-
-                        <img src="./images/mehndi.jpeg" alt="gallery">
-                        <img src="./images/sangeet1.jpeg" alt="gallery">
-                        <img src="./images/lawns.jpg" alt="gallery">
-                        <img src="./images/weedingimg1.jpg" alt="gallery">
-                        <img src="./images/weedingimg2.jpg" alt="gallery">
-                        <img src="./images/proposals.jpg" alt="gallery">
-                    </div>
-                </a>
-            </div>
-
-            <!-- NEWSLETTER -->
-            <div class="hf-col hf-newsletter" data-aos="fade-left" data-aos-delay="300">
-                <h3>NEWSLETTER</h3>
-                <p>Subscribe our Newsletter</p>
-                <input type="email" placeholder="Enter Email">
-                <button>SUBSCRIBE NOW</button>
-            </div>
 
         </div>
 
-        <!-- COPYRIGHT -->
-        <div class="hf-bottom">
-            © 2026, Hotel Dhauladhar. All Rights Reserved.
-        </div>
+      </div>
 
-    </footer>
+      <!-- LINKS -->
+      <div class="hf-col hf-links" data-aos="fade-up" data-aos-delay="100">
+        <h3>USEFUL LINKS</h3>
+        <ul>
+          <li><a class="is-active" href="/about.html">About Hotel</a></li>
+          <li><a href="/rooms.html">Rooms & Suites</a></li>
+          <li><a href="contact.html">Reservations</a></li>
+          <li><a href="./blog.html">News & Blogs</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="hf-col hf-gallery" data-aos="zoom-in" data-aos-delay="200">
+        <h3>GALLERY</h3>
+        <a href="gallery.html">
+          <div class="hf-gallery-grid">
+
+            <img src="./images/mehndi.jpeg" alt="gallery">
+            <img src="./images/sangeet1.jpeg" alt="gallery">
+            <img src="./images/lawns.jpg" alt="gallery">
+            <img src="./images/weedingimg1.jpg" alt="gallery">
+            <img src="./images/weedingimg2.jpg" alt="gallery">
+            <img src="./images/proposals.jpg" alt="gallery">
+          </div>
+        </a>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="hf-col hf-newsletter" data-aos="fade-left" data-aos-delay="300">
+        <h3>NEWSLETTER</h3>
+        <p>Subscribe our Newsletter</p>
+        <input type="email" placeholder="Enter Email">
+        <button>SUBSCRIBE NOW</button>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="hf-bottom">
+      © 2026, Hotel Dhauladhar. All Rights Reserved.
+    </div>
+
+  </footer>
 
 
   <!-- AOS JS  -->
