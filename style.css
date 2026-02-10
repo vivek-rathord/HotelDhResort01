@@ -718,7 +718,9 @@ h2 {
 .message {
   font-style: italic;
 }
-
+.image-overlay-text img {
+  max-width: 600px;
+}
 .discover-button {
   display: inline-flex;
   align-items: center;
