@@ -121,8 +121,6 @@
 
   <!-- ------------------Avaliablity section------------------- -->
   <section class="availability">
-    <h2>CHECK AVAILABILITY</h2>
-
     <div class="availability-box" data-aos="zoom-in">
 
       <!-- Check In -->
@@ -135,54 +133,6 @@
       <div class="field">
         <label>Check Out</label>
         <input type="date">
-      </div>
-
-      <!-- Rooms -->
-      <div class="field dropdown" id="roomBox">
-        <label>Rooms</label>
-        <div class="value" onclick="toggleDropdown('roomsDrop')">
-          <span id="roomText">3 Room</span>
-          <span class="arrow">▾</span>
-        </div>
-
-        <div class="dropdown-menu" id="roomsDrop">
-          <span>Rooms</span>
-          <div class="counter">
-            <button onclick="changeCount('rooms',-1)">−</button>
-            <span id="rooms">3</span>
-            <button onclick="changeCount('rooms',1)">+</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Guests -->
-      <div class="field dropdown" id="guestBox">
-        <label>Guests</label>
-        <div class="value" onclick="toggleDropdown('guestsDrop')">
-          <span id="guestText">1 Adult, 0 Child</span>
-          <span class="arrow">▾</span>
-        </div>
-
-        <div class="dropdown-menu" id="guestsDrop">
-          <div class="row">
-            <span>Adult</span>
-            <div class="counter">
-              <button onclick="changeCount('adult',-1)">−</button>
-              <span id="adult">1</span>
-              <button onclick="changeCount('adult',1)">+</button>
-            </div>
-          </div>
-
-          <div class="row">
-            <span>Child</span>
-            <div class="counter">
-              <button onclick="changeCount('child',-1)">−</button>
-              <span id="child">0</span>
-              <button onclick="changeCount('child',1)">+</button>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <button class="hero-btn cta-btn">Checkout Now</button>
