@@ -1519,51 +1519,31 @@ h2 {
 .blog-footer.active span {
   color: var(--secondary-color);
 }
-
 /* ====================== AVAILABILITY SECTION ====================== */
 .availability {
   position: relative;
-    margin-top: -100px;
+  margin-top: -100px;
   bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  width: 600px;
-}
-
-
-.availability h2 {
-  font-size: clamp(1.8rem, 4.5vw, 2.2rem);
-  margin-bottom: 50px;
-  color: var(--text-color);
-  position: relative;
-  display: inline-block;
-  font-weight: 600;
-  padding-top: 30px;
+  z-index: 9999;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .availability-box {
-   background: rgba(255, 255, 255, 0.1); 
+    position: relative;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
-  padding: 0px 30px;
-  display: grid;
-  grid-template-columns: repeat(3, 180px);
-  gap: 15px;
-  align-items: center;
+  padding: 20px 30px;
   border-radius: 10px;
-}
-
-
-.field {
-  text-align: left;
-  position: relative;
-  padding: 20px 0;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.field:hover {
-  background: rgba(0, 0, 0, 0.02);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  align-items: end;
+  width: 100%;
+  max-width: 600px;
 }
 
 .field label {
@@ -1583,172 +1563,49 @@ h2 {
   color: var(--text-color);
   background: var(--white-color);
   padding: 8px 10px;
-  border-radius: 0px;
   border: 1px solid black;
   transition: border-color 0.3s ease;
 }
 
 .field input:focus {
-  border-bottom-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 .field input[type="date"] {
   cursor: pointer;
 }
 
-.field input[type="date"]::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.field input[type="date"]::-webkit-calendar-picker-indicator:hover {
-  opacity: 1;
-}
-
-.value {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text-color);
-    padding: 8px 10px;
-  border: 1px solid black;
-  background: var(--white-color);
-  transition: all 0.3s ease;
-}
-
-.value:hover {
-  border-bottom-color: var(--secondary-color);
-}
-
-.arrow {
-  font-size: 16px;
-  color: var(--tertiory-color);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.value:hover .arrow {
-  color: var(--secondary-color);
-}
-
-.dropdown {
-  position: relative;
-  z-index: 100;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: calc(100% + 5px); 
-  left: 0;
-  width: 280px;
-  background: var(--white-color);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  padding: 25px;
-  display: none;
-  z-index: 1000; /* Increased z-index */
-  border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  animation: dropdownFade 0.3s ease forwards;
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-@keyframes dropdownFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.dropdown-menu::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: 30px;
-  width: 16px;
-  height: 16px;
-  background: var(--white-color);
-  transform: rotate(45deg);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-menu span {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text-color);
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.row:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.counter {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.counter button {
-  width: 36px;
-  height: 36px;
-  border: none;
-  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-  color: var(--white-color);
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.counter button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.counter button:active {
-  transform: translateY(0);
-}
-
-.counter span {
-  min-width: 40px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-color);
-}
-
+/* Button */
 .cta-btn {
   color: var(--white-color);
-   padding: 10px 8px;
-  width: 150px;
+  padding: 12px 8px;
+  width: 100%;
   cursor: pointer;
   text-align: center;
   font-size: 12px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
   margin-top: 30px;
+  background: var(--secondary-color);
+  border: none;
+  transition: 0.3s ease;
 }
 
+/* .disabled-btn {
+  background: gray;
+  opacity: 0.6;
+  cursor: not-allowed;
+} */
+/* .cta-btn:disabled {
+  pointer-events: none;
+} */
+
+.cta-btn:disabled {
+  background: gray;
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: auto; /* This allows the button to still receive click events for validation */
+}
 
 
 /* ====================== GALLERY SECTION====================== */
@@ -3299,14 +3156,11 @@ background: #F9F9F9;
   }
   
   /* Availability box */
-  .availability-box {
+  /* .availability-box {
     grid-template-columns: 1fr;
   }
-  
-  /* Buttons */
-  .cta-btn {
-    width: 100%;
-  }
+   
+
   
   /* Contact section */
   .contact-section {
@@ -3479,9 +3333,9 @@ max-width: 100%;
   
 
   /* Availability box */
-  .availability-box {
+  /* .availability-box {
     grid-template-columns: 1fr;
-  }
+  } */
   
   /* Contact section */
   .contact-section {
@@ -3595,10 +3449,10 @@ max-width: 100%;
     grid-template-columns:1fr;
   }
   
-  /* Availability box */
+  /* Availability box
   .availability-box {
     grid-template-columns: 2fr;
-  }
+  } */
   
   /* Contact section */
   .contact-section {
@@ -3722,13 +3576,13 @@ max-width: 100%;
   }
   
   /* Availability box */
-  .availability-box {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  /* .availability-box {
+    grid-template-columns: repeat(2, 150px);
+  } */
   
-  .cta-btn {
+  /* .cta-btn {
     grid-column: span 3;
-  }
+  } */
   
   /* Contact section */
   .contact-section {

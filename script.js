@@ -46,38 +46,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ------------------------------- BOOK ONLINE DROPDOWN -------------------------------
-  let rooms = 3, adult = 1, child = 0;
-  window.toggleDropdown = function (id) {
-    document.querySelectorAll('.dropdown-menu').forEach(d => {
-      if (d.id !== id) d.style.display = 'none';
-    });
-    const el = document.getElementById(id);
-    if (el) el.style.display = el.style.display === 'block' ? 'none' : 'block';
+// ------------------------------- BOOK ONLINE DROPDOWN -------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+
+  const checkIn = document.getElementById("checkIn");
+  const checkOut = document.getElementById("checkOut");
+  const bookBtn = document.getElementById("bookBtn");
+
+  function validateForm() {
+    if (checkIn.value !== "" && checkOut.value !== "") {
+      bookBtn.disabled = false;
+      bookBtn.classList.remove("disabled-btn");
+    } else {
+      bookBtn.disabled = true;
+      bookBtn.classList.add("disabled-btn");
+    }
   }
 
-  window.changeCount = function (type, value) {
-    if (type === 'rooms') {
-      rooms = Math.max(1, rooms + value);
-      document.getElementById('rooms').innerText = rooms;
-      document.getElementById('roomText').innerText = `${rooms} Room`;
-    }
-    if (type === 'adult') {
-      adult = Math.max(1, adult + value);
-      document.getElementById('adult').innerText = adult;
-    }
-    if (type === 'child') {
-      child = Math.max(0, child + value);
-      document.getElementById('child').innerText = child;
-    }
-    document.getElementById('guestText').innerText = `${adult} Adult, ${child} Child`;
-  }
+  checkIn.addEventListener("change", validateForm);
+  checkOut.addEventListener("change", validateForm);
 
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown-menu').forEach(d => d.style.display = 'none');
+  bookBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    
+    // Even with disabled attribute, we still validate
+    if (checkIn.value === "" || checkOut.value === "") {
+      alert("Please fill both dates!");
+      return;
     }
+
+    if (checkOut.value <= checkIn.value) {
+      alert("Check-Out must be after Check-In!");
+      return;
+    }
+
+    // Redirect to google.com when valid
+    window.location.href = "https://www.google.com";
   });
+
+  // Initial validation on page load
+  validateForm();
+
+});
+
+
 
   // ------------------------------- CONTACT FORM -------------------------------
   if (window.emailjs) {
@@ -519,14 +531,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// ROOM DETAILS
-// ================= ROOM DETAILS (SAFE VERSION) =================
+
+// ================= ROOM DETAILS =================
 document.addEventListener("DOMContentLoaded", () => {
 
   const roomTitle = document.getElementById("roomTitle");
   const slideImage = document.getElementById("slideImage");
 
-  // ❗ Agar room-details page nahi hai → exit
+  //  Agar room-details page nahi hai → exit
   if (!roomTitle || !slideImage) return;
 
   const roomsData = {
@@ -567,7 +579,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const roomSlug = params.get("room");
 
-  // ❗ slug check
+  // slug check
   if (!roomSlug || !roomsData[roomSlug]) {
     roomTitle.innerText = "Room not found";
     return;
@@ -601,35 +613,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// room booking
-document.addEventListener("DOMContentLoaded", () => {
-  const checkIn = document.getElementById("checkin");
-  const checkOut = document.getElementById("checkout");
+// // room booking
+// document.addEventListener("DOMContentLoaded", () => {
+//   const checkIn = document.getElementById("checkin");
+//   const checkOut = document.getElementById("checkout");
 
-  const today = new Date().toISOString().split("T")[0];
+//   const today = new Date().toISOString().split("T")[0];
 
-  // Set minimum date for both
-  checkIn.min = today;
-  checkOut.min = today;
+//   // Set minimum date for both
+//   checkIn.min = today;
+//   checkOut.min = today;
 
-  // When check-in changes
-  checkIn.addEventListener("change", () => {
-    checkOut.min = checkIn.value;
+//   // When check-in changes
+//   checkIn.addEventListener("change", () => {
+//     checkOut.min = checkIn.value;
 
-    // Auto-fix checkout if earlier than check-in
-    if (checkOut.value && checkOut.value < checkIn.value) {
-      checkOut.value = checkIn.value;
-    }
-  });
+//     // Auto-fix checkout if earlier than check-in
+//     if (checkOut.value && checkOut.value < checkIn.value) {
+//       checkOut.value = checkIn.value;
+//     }
+//   });
 
-  // Optional: validate on checkout change
-  checkOut.addEventListener("change", () => {
-    if (checkOut.value < checkIn.value) {
-      alert("Check-out date cannot be before Check-in date");
-      checkOut.value = "";
-    }
-  });
-});
+//   // Optional: validate on checkout change
+//   checkOut.addEventListener("change", () => {
+//     if (checkOut.value < checkIn.value) {
+//       alert("Check-out date cannot be before Check-in date");
+//       checkOut.value = "";
+//     }
+//   });
+// });
 // ================= GALLERY PAGE (SAFE) =================
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -788,8 +800,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       <p class="room-description">${room.desc}</p>
 
-      <a href="rooms.html" class="discover-button rect-btn">
-        Back to Rooms
+      <a href="contact.html" class="discover-button rect-btn">
+        BOOK now
       </a>
     </div>
 
