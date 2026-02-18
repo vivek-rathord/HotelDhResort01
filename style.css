@@ -1537,7 +1537,7 @@ h2 {
   position: relative;
   margin-top: -100px;
   bottom: 40px;
-  z-index: 9999;
+  /* z-index: 9999; */
   width: 100%;
   padding: 20px;
   display: flex;
@@ -1546,7 +1546,7 @@ h2 {
 
 .availability-box {
   position: relative;
-  z-index: 9999;
+  /* z-index: 9999; */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
   padding: 20px 30px;

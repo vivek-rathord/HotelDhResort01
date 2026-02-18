@@ -748,7 +748,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //  selected rooms
 document.addEventListener("DOMContentLoaded", function () {
-
   const roomData = {
     "executive-room": {
       title: "Executive Room with Modern Comforts",
@@ -764,7 +763,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     "presidential-suite": {
       title: "Presidential Suite Offering Ultimate Luxury Stay",
-      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      features: "18 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Experience the finest luxury in Dharamshala with our Presidential Suite. Featuring spacious living areas, premium furnishings, and unmatched comfort, it’s perfect for guests seeking an exclusive and indulgent stay.",
       image: "./images/luxuryRoom.jpg"
     },
@@ -814,69 +813,74 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // if user select btns for rooms
 document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("room-btn")) {
-    const roomKey = e.target.dataset.room;
+  const btn = e.target.closest(".room-button");
+  if (btn) {
+    const roomKey = btn.dataset.room;
     window.location.href = `room-details.html?room=${roomKey}`;
   }
 });
 
-// selected room images slides
+
+// // selected room images slides
 document.addEventListener("DOMContentLoaded", function () {
 
   let slideIndex = 0;
   let autoplayInterval;
 
-  /* ROOM IMAGES DATA */
+  /* ================= ROOM IMAGES DATA ================= */
   const roomImages = {
     "executive-room": [
-      // 1600 × 900 px image size
       "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
     ],
     "executive-suite": [
-      "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f",
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+      "https://images.unslash.com/photo-1501117716987-c8e1ecb2101f",
+      "https://images.usplash.com/photo-1505691938895-1758d7feb511",
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
     ],
     "presidential-suite": [
-      "https://images.unsplash.com/photo-1505691723518-36a5ac3b2b8f",
+      "https://imags.nsplash.com/photo-1505691723518-36a5ac3b2b8f",
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-      "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f"
+      "https://images.unspash.com/photo-1501117716987-c8e1ecb2101f"
     ],
     "twin-bed": [
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      "https://imagsunsplash.com/photo-1505693416388-ac5ce068fe85",
       "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f",
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+      "https://images.unsplash.com/poto-1505691938895-1758d7feb511"
     ],
     "deluxe-room": [
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://imags.unsplsh.com/photo-1522708323590-d24dbb6b0267",
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
-      "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f"
+      "https://images.unsplah.com/photo-1501117716987-c8e1ecb2101f"
     ]
   };
 
-  /* LOAD SLIDER */
+  /* ================= LOAD SLIDER ================= */
   function loadSelectedRoomSlider(roomKey) {
+
     const slider = document.querySelector(".selectedroomslider");
     if (!slider) return;
 
     const slidesEl = slider.querySelector(".slides");
     const dotsEl = slider.querySelector(".slider-dots");
 
+    if (!roomImages[roomKey]) {
+      roomKey = "executive-room";
+    }
+
     slidesEl.innerHTML = "";
     dotsEl.innerHTML = "";
 
-    roomImages[roomKey].forEach(() => {
-      dotsEl.innerHTML += `<span></span>`;
-    });
+    roomImages[roomKey].forEach((img, index) => {
 
-    roomImages[roomKey].forEach(img => {
       slidesEl.innerHTML += `
         <div class="slide">
-          <img src="${img}" alt="">
+          <img src="${img}" alt="Room Image ${index + 1}">
         </div>
       `;
+
+      dotsEl.innerHTML += `<span class="${index === 0 ? "active" : ""}"></span>`;
     });
 
     slideIndex = 0;
@@ -884,46 +888,44 @@ document.addEventListener("DOMContentLoaded", function () {
     startAutoplay();
   }
 
-  /* UPDATE SLIDER */
+  /* ================= UPDATE SLIDER ================= */
   function updateSlider() {
     const slides = document.querySelector(".selectedroomslider .slides");
     const dots = document.querySelectorAll(".selectedroomslider .slider-dots span");
 
+    if (!slides) return;
+
     slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-    dots.forEach((dot, i) => dot.classList.toggle("active", i === slideIndex));
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === slideIndex);
+    });
   }
 
-  /* AUTOPLAY */
+  /* ================= AUTOPLAY ================= */
   function startAutoplay() {
+
     clearInterval(autoplayInterval);
+
     autoplayInterval = setInterval(() => {
+
       const totalSlides = document.querySelectorAll(".selectedroomslider .slide").length;
+
+      if (totalSlides === 0) return;
+
       slideIndex = (slideIndex + 1) % totalSlides;
+
       updateSlider();
+
     }, 3000);
   }
 
-  /* ROOM BUTTON CLICK EVENT */
-  document.querySelectorAll(".room-btn").forEach(btn => {
-    btn.addEventListener("click", function () {
+  /* ================= LOAD BASED ON URL ================= */
 
-      document
-        .querySelectorAll(".room-btn")
-        .forEach(b => b.classList.remove("selectedroom"));
+  const params = new URLSearchParams(window.location.search);
+  const roomKeyFromURL = params.get("room") || "executive-room";
 
-      this.classList.add("selectedroom");
-
-      const roomKey = this.dataset.room;
-      loadSelectedRoomSlider(roomKey);
-    });
-  });
-
-  /* INITIAL LOAD */
-  const defaultRoom =
-    document.querySelector(".room-btn.selectedroom")?.dataset.room ||
-    "executive-room";
-
-  loadSelectedRoomSlider(defaultRoom);
+  loadSelectedRoomSlider(roomKeyFromURL);
 
 });
 
