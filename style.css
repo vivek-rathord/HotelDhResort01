@@ -578,7 +578,7 @@ h2 {
 .common-hero.blog {
   height: 50vh;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("./images/_DSC8969.JPG") center/cover no-repeat;
+    url("./images/_DSC8969\ -\ Copy.JPG") center/cover no-repeat;
   background-position: center 90%;
   align-items: center;
   padding-top: 60px;
@@ -588,7 +588,7 @@ h2 {
 .common-hero {
   width: 100%;
   min-height: 550px;
-  background-image: url('./images/breadcumb.jpg');
+  background-image: url('./images/DSC00176-Edit.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -618,12 +618,12 @@ h2 {
 }
 
 .contact-hero {
-  background-image: url(./images/Copy\ of\ DSC09939.jpg);
+  background-image: url(./images/DSC09132.jpg);
 }
 
 .about-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url("./images/aboutbanner.jpg") center/cover no-repeat;
+    url("./images/aboutbanner\ -\ Copy.jpg") center/cover no-repeat;
   margin-bottom: 70px;
 }
 
@@ -645,6 +645,9 @@ h2 {
 }
 
 /* ====================== ROOMS SECTION ====================== */
+.romm-detail{
+  padding: 40px 0px;
+}
 .roomscontainer {
   width: 100%;
   max-width: 1400px;
@@ -785,7 +788,7 @@ h2 {
   text-align: center;
   overflow: hidden;
   /* padding: 60px 0px; */
-  padding: 0px 0px 60px 0px;
+  padding:20px 0px 60px 0px;
 }
 
 .bg-logo {
@@ -1268,10 +1271,6 @@ h2 {
 }
 
 
-
-
-
-
 .amenity-box:hover {
   transform: translateY(-12px);
   box-shadow: 0 28px 15px rgba(0, 0, 0, 0.15);
@@ -1279,7 +1278,7 @@ h2 {
 
 /* ================= ICON ================= */
 .amenity-box i {
-  font-size: clamp(36px, 5vw, 50px);
+  font-size:40px;
   color: var(--secondary-color);
   margin-bottom: 20px;
   transition: transform 0.4s ease;
@@ -3149,7 +3148,7 @@ select>option {
 /* ============================================ MOBILE: 0 - 448px============================================ */
 @media (max-width: 448px) {
   .availability {
-    top: -150px;
+    top: -100px;
   }
   #bookBtn {
     grid-column: 1 / -1;   /* take full row */
@@ -3157,8 +3156,6 @@ select>option {
     width: 60%;            /* optional: reduce width */
     margin-top: 15px;
   }
-
-
 
   /* Slider controls */
   .slider-controls {
@@ -3183,7 +3180,9 @@ select>option {
   h3 {
     font-size: 20px;
   }
-
+.roomTitle{
+  font-size: 28px;
+}
 
 
   /* Contact section */
@@ -3342,12 +3341,16 @@ select>option {
   .room-content {
     padding: 30px 0px;
   }
+  .title-section{
+  padding:0px 0px 60px 0px;
+
+  }
 }
 
 /* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
 @media (min-width: 449px) and (max-width: 567.98px) {
   .availability {
-    top: -150px;
+    top: -100px;
   }
   
 
