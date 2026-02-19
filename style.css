@@ -1748,6 +1748,38 @@ h2 {
 }
 
 /* ====================== DESTINATION WEDDING SLIDER ====================== */
+.weddingcontact-form{
+  background: linear-gradient(to right, #8ddef5, #9ed5e6);
+  max-width: 1200px;
+  margin:20px auto;
+  text-align: center;
+  padding: 40px 0px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+}
+.weddingcontact-form h2{
+  font-size: 25px;
+}
+.weddingcontactdetails {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr);  */
+  padding: 4px 5px;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Make inputs and button same height */
+.weddingcontactdetails input,
+.weddingcontactdetails button {
+  padding: 14px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: var(--white-color);
+}
+.weddingcontactdetails button:hover{
+  color:var(--white-color);
+}
+
 .section {
   width: 100%;
   min-width: 1400px;
@@ -3343,7 +3375,13 @@ select>option {
   }
   .title-section{
   padding:0px 0px 60px 0px;
-
+  }
+  /* destination contact */
+  .weddingcontactdetails{
+    padding: 0px 20px;
+  }
+  .editorial-gallery{
+    padding: 20px 18px;
   }
 }
 
@@ -3353,6 +3391,14 @@ select>option {
     top: -100px;
   }
   
+.slider-wrap {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .side {
+    display: none;
+  }
 
   /* Slider controls */
   .slider-controls {
@@ -3427,17 +3473,44 @@ select>option {
     right: 0px;
     max-width: 100%;
   }
+   /* Destination wedding visibility controls */
+  .desktop-title,
+  .desktop-btn {
+    display: none !important;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .mobile-btn {
+    display: block;
+  }
+ /* destination contact */
+  .weddingcontactdetails{
+    padding: 0px 20px;
+  }
+   .editorial-gallery{
+    padding: 20px 18px;
+  }
 }
 
 /* ============================================  TABLET SMALL: 568px - 767.98px============================================ */
 @media (min-width: 567.99px) and (max-width: 767.98px) {
-
-  /* new nav */
-  /* hide desktop menus */
-  .nav-left,
-  .nav-right {
-    display: none;
+ /* Destination wedding visibility controls */
+  .desktop-title,
+  .desktop-btn {
+    display: none !important;
   }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .mobile-btn {
+    display: block;
+  }
+
 
   /* navbar layout */
   .navbar {
@@ -3536,7 +3609,10 @@ select>option {
   .event-mobile-controls {
     display: flex;
   }
-
+ /* Destination wedding visibility controls */
+  .desktop-btn {
+    display: none !important;
+  }
   /* rooms 3 cards */
   .roomCardGrid {
     grid-template-columns: 1fr;
@@ -3561,6 +3637,13 @@ select>option {
     top: 20px;
     right: 0px;
     max-width: 100%;
+  }
+   /* destination contact */
+  .weddingcontactdetails{
+    padding: 0px 20px;
+  }
+   .editorial-gallery{
+    padding: 20px 18px;
   }
 }
 
@@ -3703,6 +3786,9 @@ select>option {
   .contact-information {
     padding: 0px 20px;
   }
+   .editorial-gallery{
+    padding: 20px 18px;
+  }
 }
 
 /* ============================================DESKTOP SMALL: 992px - 1199.98px============================================ */
@@ -3763,6 +3849,9 @@ select>option {
   .contact-section {
     padding: 33px 19px;
   }
+   .editorial-gallery{
+    padding: 20px 18px;
+  }
 }
 
 /* ============================================DESKTOP LARGE: 1200px AND ABOVE============================================ */
@@ -3807,5 +3896,8 @@ select>option {
   .hf-col {
     flex: 1 1 0 !important;
     min-width: 0 !important;
+  }
+   .editorial-gallery{
+    padding: 20px 18px;
   }
 }

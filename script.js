@@ -845,7 +845,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://images.unspash.com/photo-1501117716987-c8e1ecb2101f"
     ],
     "twin-bed": [
-      "https://imagsunsplash.com/photo-1505693416388-ac5ce068fe85",
+      "./images/DSC_4130.JPG",
       "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f",
       "https://images.unsplash.com/poto-1505691938895-1758d7feb511"
     ],
