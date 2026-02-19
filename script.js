@@ -297,12 +297,12 @@ document.addEventListener("DOMContentLoaded", () => {
     capacity.addEventListener('change', filterVenues);
 
     // Event listener for Enquire buttons
-    enquireBtns.forEach(btn => {
-      btn.addEventListener('click', function () {
-        const venueName = this.closest('.venue-image-card').querySelector('h3').textContent;
-        alert(`Enquiry sent for: ${venueName}\nWe will contact you shortly!`);
-      });
-    });
+    // enquireBtns.forEach(btn => {
+    //   btn.addEventListener('click', function () {
+    //     const venueName = this.closest('.venue-image-card').querySelector('h3').textContent;
+    //     alert(`Please fill the contact form for: ${venueName}\nWe will contact you shortly!`);
+    //   });
+    // });
 
     // Initial filter
     filterVenues();

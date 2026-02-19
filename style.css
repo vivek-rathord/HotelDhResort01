@@ -270,7 +270,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, .45);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .overlay-right * {
@@ -323,14 +323,6 @@ h2 {
     color: var(--white-color);
   }
 }
-
-/* .positionabsoluteHero{
-    position: absolute;
-  left: 50%;
-  bottom: 150px;
-  transform: translateX(-50%);
-  z-index: 10;
-} */
 
 /* ====================== LUXURY SLIDER ====================== */
 .luxury-slider {
@@ -3090,7 +3082,6 @@ select>option {
   }
 }
 
-/* ============================================ MEDIA QUERIES============================================ */
 
 /* ============================================NAVIGATION BREAKPOINTS============================================ */
 
