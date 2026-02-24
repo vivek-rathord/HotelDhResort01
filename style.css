@@ -43,10 +43,14 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+P{
+  font-size: 14px;
+}
 
 /* ====================== UNIVERSAL STYLES  ====================== */
 h2 {
-  font-size: 2.4rem;
+  /* font-size: 2.4rem; */
+  font-size: 25px;
   font-weight: 700;
   font-family: "Cormorant Garamond", serif;
   color: var(--primary-color);
@@ -1366,10 +1370,8 @@ h2 {
 .facility-card .facility-title {
   font-size: 2.4rem;
   font-weight: 700;
-  /* padding-bottom: 30px; */
   text-align: left;
   position: relative;
-  text-align: center;
 }
 
 .facility-btn {
@@ -1471,7 +1473,7 @@ h2 {
 }
 
 .blog-content {
-  padding: 24px;
+  padding: 15px;
 }
 
 .meta {
@@ -1485,7 +1487,7 @@ h2 {
 }
 
 .blog-content h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   line-height: var(--base-line-height);
   color: var(--primary-color);
@@ -1956,8 +1958,7 @@ h2 {
 }
 
 .event-card p {
-  color: #475569;
-  /* font-size: .95rem; */
+  color: var(--paragraph-color);
 }
 
 .why-grid {
@@ -2674,7 +2675,7 @@ select>option {
 
 .event-slide img {
   width: 100%;
-  height: 420px;
+  max-height: 380px;
   object-fit: cover;
 }
 
@@ -2722,7 +2723,7 @@ select>option {
 /* ======================EVENTS PAGE SLIDER  ====================== */
 .container {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   overflow: hidden;
 }
@@ -2836,7 +2837,7 @@ select>option {
   max-width: 1300px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
 }
 
@@ -2878,12 +2879,12 @@ select>option {
 
 .card img {
   width: 100%;
-  height: 240px;
+  height: 200px;
   object-fit: cover;
 }
 
 .card-content {
-  padding: 25px;
+  padding: 10px;
 }
 
 .card-content h3 {
@@ -3374,6 +3375,9 @@ select>option {
   .editorial-gallery{
     padding: 20px 18px;
   }
+  .room-btn{
+    width: 20px;
+  }
 }
 
 /* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
@@ -3405,7 +3409,22 @@ select>option {
   h3 {
     font-size: 20px;
   }
+ /* Event slider */
+  .event-slide {
+    flex: 0 0 100%;
+  }
 
+  .event-slide img {
+    height: 300px;
+  }
+
+  .desktop-control {
+    display: none;
+  }
+
+  .event-mobile-controls {
+    display: flex;
+  }
 
   /* Availability box */
   /* .availability-box {
@@ -3780,6 +3799,10 @@ select>option {
    .editorial-gallery{
     padding: 20px 18px;
   }
+   /* event slider */
+ .event-slide img {
+    height: 270px;
+  } 
 }
 
 /* ============================================DESKTOP SMALL: 992px - 1199.98px============================================ */
@@ -3842,6 +3865,11 @@ select>option {
   }
    .editorial-gallery{
     padding: 20px 18px;
+  }
+
+  /* event slider */
+  .event-slide img {
+    height: 300px;
   }
 }
 
