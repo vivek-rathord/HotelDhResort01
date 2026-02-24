@@ -107,9 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ------------------------------- DESTINATION WEDDING SLIDER -------------------------------
   const weddingSlidesData = [
-    { img: "./images/weedingimg1.jpg", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
-    { img: "./images/weedingimg2.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
-    { img: "./images/DSC09132.jpg", title: "MOUNTAIN WEDDING ", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
+    { img: "./images/PHOTO-2024-01-20-20-04-52.jpg", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
+    { img: "./images/PHOTO-2024-01-20-20-04-51.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
+    { img: "./images/IMG_3835-scaled.jpg", title: "MOUNTAIN WEDDING ", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
   ];
 
   let index = 0;
@@ -545,7 +545,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "double-suite-room": {
       title: "Double Suite Room",
       images: [
-        "./images/DSC03289.jpg",
+        "./images/DSC00821-HDR-2-1-scaled.jpg",
         "./images/DSC00176-Edit.jpg",
         "./images/DSC03083 copy.jpg"
       ],
@@ -556,7 +556,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "delux-family-room": {
       title: "Delux Family Room",
       images: [
-        "./images/DSC00176-Edit.jpg",
+        "./images/deluxemain.jpg",
         "./images/DSC03289.jpg",
         "./images/DSC03289.jpg"
       ],
@@ -753,31 +753,31 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Executive Room with Modern Comforts",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "A perfect blend of comfort and functionality, our Executive Rooms are ideal for business and leisure travelers. Enjoy modern interiors, premium amenities, and a relaxing atmosphere after a day exploring Dharamshala.",
-      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+      image: "./images/executiveelite.jpg"
     },
     "executive-suite": {
       title: "Executive Suite with Spacious Living Area",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Designed for those who prefer extra space and luxury, the Executive Suite offers a separate living area, elegant décor, and scenic views, making your stay both comfortable and memorable.",
-      image: "./images/DSC00176-Edit.jpg"
+      image: "./images/executivesuite.jpg"
     },
     "presidential-suite": {
       title: "Presidential Suite Offering Ultimate Luxury Stay",
       features: "18 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Experience the finest luxury in Dharamshala with our Presidential Suite. Featuring spacious living areas, premium furnishings, and unmatched comfort, it’s perfect for guests seeking an exclusive and indulgent stay.",
-      image: "./images/luxuryRoom.jpg"
+      image: "./images/presidentialmain.jpg"
     },
     "twin-bed": {
       title: "Twin Bedded Room for Comfortable Shared Stay",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Our Twin Bedded Rooms are ideal for friends or colleagues traveling together. With two comfortable beds, modern amenities, and a peaceful ambiance, these rooms ensure a restful stay.",
-      image: "./images/DSC03083 copy.jpg"
+      image: "./images/DSC00821-HDR-2-1-scaled.jpg"
     },
     "deluxe-room": {
       title: "Deluxe Room with Elegant Interior Design",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Relax in style in our Deluxe Rooms, thoughtfully designed with warm interiors and modern comforts. Perfect for couples and families, these rooms offer a cozy retreat with beautiful surroundings.",
-      image: "./images/DSC03289.jpg"
+      image: "./images/deluxemain.jpg"
     }
   };
 
@@ -830,7 +830,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ================= ROOM IMAGES DATA ================= */
   const roomImages = {
     "executive-room": [
-      "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+      "",
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
     ],

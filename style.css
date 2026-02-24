@@ -547,7 +547,7 @@ h2 {
       rgba(255, 255, 255, 0) 35%),
     linear-gradient(rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)),
-    url("./Images/weeding.jpg") center / cover no-repeat;
+    url("./Images/DSC09149-scaled.jpg") center / cover no-repeat;
   align-items: center;
   padding-top: 60px;
 }
@@ -568,7 +568,7 @@ h2 {
 .common-hero.roomshero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)),
-    url("./images/DSC00176-Edit.jpg");
+    url("./images/executivesuite2.jpg");
 }
 
 .common-hero.blog {
@@ -584,7 +584,7 @@ h2 {
 .common-hero {
   width: 100%;
   min-height: 550px;
-  background-image: url('./images/DSC00176-Edit.jpg');
+  background-image: url('./images/executivesuite2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -619,7 +619,7 @@ h2 {
 
 .about-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url("./images/aboutbanner\ -\ Copy.jpg") center/cover no-repeat;
+    url("./images/DJI_0158-1-scaled3.jpg") center/cover no-repeat;
   margin-bottom: 70px;
 }
 
