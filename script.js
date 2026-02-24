@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const weddingSlidesData = [
     { img: "./images/weedingimg1.jpg", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
     { img: "./images/weedingimg2.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
-    { img: "./images/DSC09132.jpg", title: "MOUNTAIN WEDDING VOWS", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
+    { img: "./images/DSC09132.jpg", title: "MOUNTAIN WEDDING ", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
   ];
 
   let index = 0;

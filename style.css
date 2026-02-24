@@ -331,7 +331,7 @@ h2 {
 /* ====================== LUXURY SLIDER ====================== */
 .luxury-slider {
   position: relative;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   padding-bottom: 160px;
 }
@@ -1298,8 +1298,6 @@ h2 {
   line-height: var(--base-line-height);
 }
 
-/*  */
-
 /* ======================  FACILITY CARDS ====================== */
 .facility-card {
   display: flex;
@@ -1328,6 +1326,7 @@ h2 {
 }
 
 .facilitytitle h2 {
+  font-size: 33px;
   padding-top: 10px;
   width: 60%;
 }
@@ -1743,7 +1742,11 @@ h2 {
 
 /* ====================== DESTINATION WEDDING SLIDER ====================== */
 .weddingcontact-form{
-  background: linear-gradient(to right, #8ddef5, #9ed5e6);
+    background: radial-gradient(
+    circle at top right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
   max-width: 1200px;
   margin:20px auto;
   text-align: center;
@@ -1752,6 +1755,7 @@ h2 {
   box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
 }
 .weddingcontact-form h2{
+  color: var(--white-color);
   font-size: 25px;
 }
 .weddingcontactdetails {
@@ -1808,7 +1812,7 @@ h2 {
   color: var(--secondary-color);
   letter-spacing: 1px;
   line-height: var(--base-line-height);
-
+  margin:80px;
 }
 
 .side-img {
@@ -1840,6 +1844,7 @@ h2 {
   cursor: pointer;
   z-index: 3;
   display: block;
+
 }
 
 .left .desktop-btn {
@@ -3503,6 +3508,13 @@ select>option {
    .editorial-gallery{
     padding: 20px 18px;
   }
+    /* Events page */
+  .slide .item:nth-child(3),
+  .slide .item:nth-child(4),
+  .slide .item:nth-child(5) {
+    display: none;
+  }
+
 }
 
 /* ============================================  TABLET SMALL: 568px - 767.98px============================================ */
@@ -3520,7 +3532,10 @@ select>option {
   .mobile-btn {
     display: block;
   }
-
+.nav-left,
+  .nav-right {
+    display: none;
+  }
 
   /* navbar layout */
   .navbar {
@@ -3571,9 +3586,9 @@ select>option {
   }
 
   /* Slider controls */
-  .slider-controls {
+  /* .slider-controls {
     display: none;
-  }
+  } */
 
   /* Blog grid */
   .blog-grid {
@@ -3604,7 +3619,7 @@ select>option {
   }
 
   /* Event slider */
-  .event-slide {
+  /* .event-slide {
     flex: 0 0 100%;
   }
 
@@ -3618,8 +3633,28 @@ select>option {
 
   .event-mobile-controls {
     display: flex;
+  } */
+   .slider-wrap {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .side {
+    display: none;
+  }
+
+  /* Slider controls */
+  .slider-controls {
+    display: none;
   }
  /* Destination wedding visibility controls */
+   /* Events page */
+  .slide .item:nth-child(3),
+  .slide .item:nth-child(4),
+  .slide .item:nth-child(5) {
+    display: none;
+  }
+
   .desktop-btn {
     display: none !important;
   }
@@ -3762,6 +3797,12 @@ select>option {
   }
 
   /* Destination wedding visibility controls */
+     /* Events page */
+  .slide .item:nth-child(3),
+  .slide .item:nth-child(4),
+  .slide .item:nth-child(5) {
+    display: none;
+  }
   .desktop-btn {
     display: none !important;
   }
@@ -3824,7 +3865,7 @@ select>option {
 
   /* Blog grid */
   .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* Availability box */
@@ -3854,6 +3895,8 @@ select>option {
 
   .desktop-btn {
     display: block !important;
+    width: 40px;
+    height: 40px;
   }
 
   .desktop-title {
