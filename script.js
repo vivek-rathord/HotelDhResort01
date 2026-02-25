@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ------------------------------- DESTINATION WEDDING SLIDER -------------------------------
   const weddingSlidesData = [
     { img: "./images/PHOTO-2024-01-20-20-04-52.jpg", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
-    { img: "./images/PHOTO-2024-01-20-20-04-51.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
+    { img: "./images/DSC09631-scaled.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
     { img: "./images/IMG_3835-scaled.jpg", title: "MOUNTAIN WEDDING ", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
   ];
 
@@ -750,13 +750,13 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
   const roomData = {
     "executive-room": {
-      title: "Executive Room with Modern Comforts",
+      title: "Executive Elite with Modern Comforts",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "A perfect blend of comfort and functionality, our Executive Rooms are ideal for business and leisure travelers. Enjoy modern interiors, premium amenities, and a relaxing atmosphere after a day exploring Dharamshala.",
       image: "./images/executiveelite.jpg"
     },
     "executive-suite": {
-      title: "Executive Suite with Spacious Living Area",
+      title: "Executive Room with Spacious Living Area",
       features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Designed for those who prefer extra space and luxury, the Executive Suite offers a separate living area, elegant décor, and scenic views, making your stay both comfortable and memorable.",
       image: "./images/executivesuite.jpg"
@@ -788,7 +788,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!room) return;
 
   const roomDetails = document.getElementById("roomDetails");
-
+const roomHero = document.getElementById("roomHero");
+roomHero.style.backgroundImage = `url(${room.image})`;
   roomDetails.innerHTML = `
     <div class="room-content" data-aos="fade-up">
       <h2 class="room-heading">${room.title}</h2>
@@ -830,29 +831,30 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ================= ROOM IMAGES DATA ================= */
   const roomImages = {
     "executive-room": [
-      "",
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+      "images/DSC01369-Edit-1-scaled.jpg",
+      "/images/executiveelite.jpg",
+      "/images/DSC03083-copy-scaled.jpg"
     ],
+    // images/DSC01369-Edit-1-scaled.png
     "executive-suite": [
-      "https://images.unslash.com/photo-1501117716987-c8e1ecb2101f",
-      "https://images.usplash.com/photo-1505691938895-1758d7feb511",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+      "/images/executivesuite2.jpg",
+      "/images/executivesuite1.jpg",
+      "/images/DSC00496-HDR-Enhanced-NR-Edit-1-scaled.jpg"
     ],
     "presidential-suite": [
-      "https://imags.nsplash.com/photo-1505691723518-36a5ac3b2b8f",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-      "https://images.unspash.com/photo-1501117716987-c8e1ecb2101f"
+      "/images/presidentialmain1.jpg",
+      "/images/presidentialmain3.jpg",
+      "/images/DSC01195-HDR-scaled.jpg"
     ],
     "twin-bed": [
-      "./images/DSC_4130.JPG",
-      "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f",
-      "https://images.unsplash.com/poto-1505691938895-1758d7feb511"
+      "/images/DSC00511-HDR-2-scaled.jpg",
+      "./images/Twinbeddedmain2.jpg",
+      "/images/twinbebbed.jpg"
     ],
     "deluxe-room": [
-      "https://imags.unsplsh.com/photo-1522708323590-d24dbb6b0267",
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
-      "https://images.unsplah.com/photo-1501117716987-c8e1ecb2101f"
+      "/images/deluxemain1.jpg",
+      "/images/deluxemain2.jpg",
+      "/images/deluxemain.jpg"
     ]
   };
 

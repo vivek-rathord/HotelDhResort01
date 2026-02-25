@@ -560,7 +560,7 @@ h2 {
       rgba(255, 255, 255, 0) 35%),
     linear-gradient(rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)),
-    url("./Images/planevents.jpg") center / cover no-repeat;
+    url("./Images/WhatsApp-Image-2026-02-19-at-11.34.58-AM-2.jpeg") center / cover no-repeat;
   align-items: center;
   padding-top: 60px;
 }
@@ -574,7 +574,7 @@ h2 {
 .common-hero.blog {
   height: 50vh;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("./images/_DSC8969\ -\ Copy.JPG") center/cover no-repeat;
+    url("./images/PANO_0001-Pano-2-1-scaled.jpg") center/cover no-repeat;
   background-position: center 90%;
   align-items: center;
   padding-top: 60px;
@@ -584,7 +584,7 @@ h2 {
 .common-hero {
   width: 100%;
   min-height: 550px;
-  background-image: url('./images/executivesuite2.jpg');
+  /* background-image: url('./images/executivesuite2.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -593,15 +593,25 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+#roomHero {
+  background:
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    url('./images/executivesuite2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .common-hero h1 {
   font-size: clamp(1.75rem, 4vw, 3rem);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
   font-weight: 600;
   color: var(--white-color);
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 10px;
   text-align: center;
+  
 }
 
 .common-hero .hero-links {
@@ -614,12 +624,12 @@ h2 {
 }
 
 .contact-hero {
-  background-image: url(./images/DSC09132.jpg);
+  background-image: url(./images/DSC00197-Edit-scaled.jpg);
 }
 
 .about-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url("./images/DJI_0158-1-scaled3.jpg") center/cover no-repeat;
+    url("./images/aboutbanner\ -\ Copy.jpg") center/cover no-repeat;
   margin-bottom: 70px;
 }
 
@@ -742,6 +752,7 @@ h2 {
 }
 
 .discover-button i {
+  
   margin-left: 10px;
   transition: transform 0.3s ease;
 }
@@ -908,7 +919,10 @@ h2 {
   transform: translateX(-100%);
   transition: 0.5s ease;
 }
-
+.roomViewBtn i{
+  font-size: 10px;
+  margin-left: 5px;
+}
 .roomCard:hover .roomViewBtn {
   transform: translateX(18px);
 }
@@ -1028,6 +1042,7 @@ h2 {
   width: 30px;
   height: 3px;
   background: #ccc;
+  
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1040,9 +1055,10 @@ h2 {
 .selectedroomslider {
   position: relative;
   width: 100%;
-  height: 420px;
+  /* height: 420px; */
   overflow: hidden;
   margin-top: 30px;
+  border-radius: 10px;
 }
 
 .selectedroomslider .slides {
@@ -1064,7 +1080,7 @@ h2 {
 
 .selectedroomslider .slider-dots {
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -1075,7 +1091,7 @@ h2 {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
+  background:var(--paragraph-color);
 }
 
 .selectedroomslider .slider-dots span.active {
@@ -1530,7 +1546,6 @@ h2 {
   position: relative;
   margin-top: -100px;
   bottom: 40px;
-  /* z-index: 9999; */
   width: 100%;
   padding: 20px;
   display: flex;
@@ -1539,7 +1554,6 @@ h2 {
 
 .availability-box {
   position: relative;
-  /* z-index: 9999; */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
   padding: 20px 30px;
@@ -1596,15 +1610,6 @@ h2 {
   border: none;
   transition: 0.3s ease;
 }
-
-/* .disabled-btn {
-  background: gray;
-  opacity: 0.6;
-  cursor: not-allowed;
-} */
-/* .cta-btn:disabled {
-  pointer-events: none;
-} */
 
 .cta-btn:disabled {
   background: gray;
@@ -2728,7 +2733,7 @@ select>option {
 /* ======================EVENTS PAGE SLIDER  ====================== */
 .container {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   position: relative;
   overflow: hidden;
 }
@@ -3041,6 +3046,7 @@ select>option {
   padding: 22px 24px;
   font-size: 17px;
   font-weight: 600;
+  text-align: left;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3176,6 +3182,9 @@ select>option {
 
 /* ============================================ MOBILE: 0 - 448px============================================ */
 @media (max-width: 448px) {
+  .availability-box{
+        padding: 6px 13px;
+  }
   .availability {
     top: -100px;
   }
@@ -3380,17 +3389,39 @@ select>option {
   .editorial-gallery{
     padding: 20px 18px;
   }
+  .editorial-filters{
+    flex-wrap: nowrap;
+  }
+  .editorial-filters button{
+    padding: 10px;
+  }
   .room-btn{
     width: 20px;
   }
+
+
 }
 
 /* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
 @media (min-width: 449px) and (max-width: 567.98px) {
-  .availability {
+  /* .availability {
     top: -100px;
   }
-  
+   */
+     .availability-box{
+        padding: 7px 22px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+  }
+  .availability {
+    top: -90px;
+  }
+  #bookBtn {
+    grid-column: 1 / -1;   /* take full row */
+    justify-self: center;  /* center inside grid */
+    width: 60%;            /* optional: reduce width */
+    margin-top: 15px;
+  }
 .slider-wrap {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -3513,6 +3544,9 @@ select>option {
   .slide .item:nth-child(4),
   .slide .item:nth-child(5) {
     display: none;
+  }
+  .editorial-filters{
+    flex-wrap: nowrap;
   }
 
 }
