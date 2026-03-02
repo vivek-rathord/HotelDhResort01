@@ -1,7 +1,5 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  // ------------------------------- AOS INIT -------------------------------
   if (window.AOS) {
     AOS.init({
       once: true,
@@ -39,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     header.classList.toggle("is-scrolled", window.scrollY > 50);
   });
 
-  //  AUTO CLOSE WHEN SCREEN BECOMES LARGE
+  //  AUTO CLOSE
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 768) {   // desktop breakpoint
       closeOverlay();
@@ -47,53 +45,53 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 // ------------------------------- BOOK ONLINE DROPDOWN -------------------------------
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-  const checkIn = document.getElementById("checkIn");
-  const checkOut = document.getElementById("checkOut");
-  const bookBtn = document.getElementById("bookBtn");
+//   const checkIn = document.getElementById("checkIn");
+//   const checkOut = document.getElementById("checkOut");
+//   const bookBtn = document.getElementById("bookBtn");
 
-  function validateForm() {
-    if (checkIn.value !== "" && checkOut.value !== "") {
-      bookBtn.disabled = false;
-      bookBtn.classList.remove("disabled-btn");
-    } else {
-      bookBtn.disabled = true;
-      bookBtn.classList.add("disabled-btn");
-    }
-  }
+//   function validateForm() {
+//     if (checkIn.value !== "" && checkOut.value !== "") {
+//       bookBtn.disabled = false;
+//       bookBtn.classList.remove("disabled-btn");
+//     } else {
+//       bookBtn.disabled = true;
+//       bookBtn.classList.add("disabled-btn");
+//     }
+//   }
 
-  checkIn.addEventListener("change", validateForm);
-  checkOut.addEventListener("change", validateForm);
+//   checkIn.addEventListener("change", validateForm);
+//   checkOut.addEventListener("change", validateForm);
 
-  bookBtn.addEventListener("click", function (e) {
-    e.preventDefault();
+//   bookBtn.addEventListener("click", function (e) {
+//     e.preventDefault();
     
-    // Even with disabled attribute, we still validate
-    if (checkIn.value === "" || checkOut.value === "") {
-      alert("Please fill both dates!");
-      return;
-    }
+//     // Even with disabled attribute, we still validate
+//     if (checkIn.value === "" || checkOut.value === "") {
+//       alert("Please fill both dates!");
+//       return;
+//     }
 
-    if (checkOut.value <= checkIn.value) {
-      alert("Check-Out must be after Check-In!");
-      return;
-    }
+//     if (checkOut.value <= checkIn.value) {
+//       alert("Check-Out must be after Check-In!");
+//       return;
+//     }
 
-    // Redirect to google.com when valid
-    window.location.href = "https://www.google.com";
-  });
+//     // Redirect to google.com when valid
+//     window.location.href = "https://www.google.com";
+//   });
 
-  // Initial validation on page load
-  validateForm();
+//   // Initial validation on page load
+//   validateForm();
 
-});
+// });
 
 
 
   // ------------------------------- CONTACT FORM -------------------------------
   if (window.emailjs) {
-    emailjs.init("YOUR_PUBLIC_KEY"); // replace with your key
+    emailjs.init("YOUR_PUBLIC_KEY"); 
     const form = document.getElementById("contactForm");
     if (form) {
       form.addEventListener("submit", function (e) {
@@ -188,7 +186,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-}); // end of DOMContentLoaded
+}); 
+
 /* ================= HERO SLIDER ================= */
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -232,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
     startSlider(); // 
   }
 
-  /* ================= AOS FIX ================= */
   if (window.AOS) {
     AOS.init({
       once: true,
@@ -295,16 +293,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event listeners for filters
     eventType.addEventListener('change', filterVenues);
     capacity.addEventListener('change', filterVenues);
-
-    // Event listener for Enquire buttons
-    // enquireBtns.forEach(btn => {
-    //   btn.addEventListener('click', function () {
-    //     const venueName = this.closest('.venue-image-card').querySelector('h3').textContent;
-    //     alert(`Please fill the contact form for: ${venueName}\nWe will contact you shortly!`);
-    //   });
-    // });
-
-    // Initial filter
     filterVenues();
   }
 });
@@ -348,7 +336,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// event slider// ================= EVENT SLIDER (NO CONFLICT) =================
+// ================= EVENT SLIDER =================
 document.addEventListener("DOMContentLoaded", () => {
 
   const slider = document.querySelector(".event-slider");
@@ -538,7 +526,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const roomTitle = document.getElementById("roomTitle");
   const slideImage = document.getElementById("slideImage");
 
-  //  Agar room-details page nahi hai → exit
+  // if room detail is not present then exit
   if (!roomTitle || !slideImage) return;
 
   const roomsData = {
@@ -579,7 +567,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const roomSlug = params.get("room");
 
-  // slug check
+ 
   if (!roomSlug || !roomsData[roomSlug]) {
     roomTitle.innerText = "Room not found";
     return;
@@ -612,37 +600,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-// // room booking
-// document.addEventListener("DOMContentLoaded", () => {
-//   const checkIn = document.getElementById("checkin");
-//   const checkOut = document.getElementById("checkout");
-
-//   const today = new Date().toISOString().split("T")[0];
-
-//   // Set minimum date for both
-//   checkIn.min = today;
-//   checkOut.min = today;
-
-//   // When check-in changes
-//   checkIn.addEventListener("change", () => {
-//     checkOut.min = checkIn.value;
-
-//     // Auto-fix checkout if earlier than check-in
-//     if (checkOut.value && checkOut.value < checkIn.value) {
-//       checkOut.value = checkIn.value;
-//     }
-//   });
-
-//   // Optional: validate on checkout change
-//   checkOut.addEventListener("change", () => {
-//     if (checkOut.value < checkIn.value) {
-//       alert("Check-out date cannot be before Check-in date");
-//       checkOut.value = "";
-//     }
-//   });
-// });
-// ================= GALLERY PAGE (SAFE) =================
+// ================= GALLERY PAGE =================
 document.addEventListener("DOMContentLoaded", () => {
 
   const buttons = document.querySelectorAll(".editorial-filters button");
@@ -703,7 +661,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentSlide = 0;
   let slideInterval;
 
-  // Create dots
+  //btns
   slides.forEach((_, index) => {
     const dot = document.createElement("span");
     if (index === 0) dot.classList.add("active");
@@ -835,7 +793,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "/images/executiveelite.jpg",
       "/images/DSC03083-copy-scaled.jpg"
     ],
-    // images/DSC01369-Edit-1-scaled.png
     "executive-suite": [
       "/images/executivesuite2.jpg",
       "/images/executivesuite1.jpg",
