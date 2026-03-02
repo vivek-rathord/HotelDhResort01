@@ -3162,7 +3162,9 @@ select>option {
 @media (max-width: 448px) {
   .title-wrapper{
       padding: 8px;
-
+  }
+  .filter-bar{
+  grid-template-columns: repeat(2, 1fr);
   }
   .availability-box{
         padding: 6px 13px;
@@ -3386,6 +3388,9 @@ select>option {
 
 /* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
 @media (min-width: 449px) and (max-width: 567.98px) {
+   .filter-bar{
+  grid-template-columns: repeat(2, 1fr);
+  }
      .availability-box{
         padding: 7px 22px;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -3527,6 +3532,9 @@ select>option {
 
 /* ============================================  TABLET SMALL: 568px - 767.98px============================================ */
 @media (min-width: 567.99px) and (max-width: 767.98px) {
+   .filter-bar{
+  grid-template-columns: repeat(2, 1fr);
+  }
  /* Destination wedding visibility controls */
   .desktop-title,
   .desktop-btn {
@@ -3677,6 +3685,9 @@ select>option {
 }
 
 @media (min-width: 767.99px) and (max-width: 991.98px) {
+   .filter-bar{
+  grid-template-columns: repeat(2, 1fr);
+  }
   /* hide desktop menus */
   .nav-left,
   .nav-right {
