@@ -39,55 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //  AUTO CLOSE
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {   // desktop breakpoint
+    if (window.innerWidth >= 768) {  
       closeOverlay();
     }
   });
-
-// ------------------------------- BOOK ONLINE DROPDOWN -------------------------------
-// document.addEventListener("DOMContentLoaded", function () {
-
-//   const checkIn = document.getElementById("checkIn");
-//   const checkOut = document.getElementById("checkOut");
-//   const bookBtn = document.getElementById("bookBtn");
-
-//   function validateForm() {
-//     if (checkIn.value !== "" && checkOut.value !== "") {
-//       bookBtn.disabled = false;
-//       bookBtn.classList.remove("disabled-btn");
-//     } else {
-//       bookBtn.disabled = true;
-//       bookBtn.classList.add("disabled-btn");
-//     }
-//   }
-
-//   checkIn.addEventListener("change", validateForm);
-//   checkOut.addEventListener("change", validateForm);
-
-//   bookBtn.addEventListener("click", function (e) {
-//     e.preventDefault();
-    
-//     // Even with disabled attribute, we still validate
-//     if (checkIn.value === "" || checkOut.value === "") {
-//       alert("Please fill both dates!");
-//       return;
-//     }
-
-//     if (checkOut.value <= checkIn.value) {
-//       alert("Check-Out must be after Check-In!");
-//       return;
-//     }
-
-//     // Redirect to google.com when valid
-//     window.location.href = "https://www.google.com";
-//   });
-
-//   // Initial validation on page load
-//   validateForm();
-
-// });
-
-
 
   // ------------------------------- CONTACT FORM -------------------------------
   if (window.emailjs) {
@@ -247,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // venuue
-// code   by sahil
 document.addEventListener("DOMContentLoaded", () => {
   const eventType = document.getElementById('eventType');
   const capacity = document.getElementById('capacity');
@@ -898,4 +852,13 @@ document.querySelectorAll(".faq-question").forEach(q => {
   });
 });
 
+
+$('.destination-main-slider').slick({
+slidesToShow:3,
+centerMode:true,
+centerPadding:'0px',
+arrows:true,
+speed:600
+
+});
 
