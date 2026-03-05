@@ -853,12 +853,41 @@ document.querySelectorAll(".faq-question").forEach(q => {
 });
 
 
+// destionation weeding new slider added
 $('.destination-main-slider').slick({
-slidesToShow:3,
-centerMode:true,
-centerPadding:'0px',
-arrows:true,
-speed:600
+  centerMode: true,
+  centerPadding: '0px',
+  slidesToShow: 3,
+  slidesToScroll: 1,
 
+  infinite: true,
+  speed: 750,
+  cssEase: 'ease',
+  arrows: true,
+  dots: false,
+
+  lazyLoad: 'progressive',
+  waitForAnimate: false,
+
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '0px'
+      }
+    }
+  ]
 });
 
+/* BUTTON CONTROL */
+
+$('.slider-prev').click(function(){
+$('.destination-main-slider').slick('slickPrev');
+});
+
+$('.slider-next').click(function(){
+$('.destination-main-slider').slick('slickNext');
+});

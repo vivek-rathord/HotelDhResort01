@@ -1736,14 +1736,16 @@ h2 {
 }
 
 
-/*  */
+/* WRAPPER */
+
 .destination-wrapper{
 width:95%;
 margin:auto;
-padding:80px 0;
+padding:20px 0 10px;
+position:relative;
 }
 
-/* slide */
+/* SLIDE */
 
 .destination-slide{
 position:relative;
@@ -1765,11 +1767,14 @@ position:absolute;
 bottom:0;
 left:0;
 width:100%;
-padding:30px;
+padding:35px;
 color:white;
-background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+background:rgba(0,0,0,0.55);
 opacity:0;
 transition:0.4s;
+h2{
+  color: var(--white-color);
+}
 }
 
 .slick-center .destination-slide-text{
@@ -1779,10 +1784,10 @@ opacity:1;
 /* SCALE EFFECT */
 
 .destination-main-slider .slick-slide{
-margin:0 3px;
+margin:0 8px;
 transform:scale(.75);
-transition:all .4s ease;
-opacity:1;
+transition:0.35s;
+opacity:.8;
 }
 
 .destination-main-slider .slick-center{
@@ -1791,26 +1796,73 @@ opacity:1;
 z-index:2;
 }
 
-/* ARROWS */
-
-.slick-prev,
-.slick-next{
-z-index:1000;
+.slick-track{
+display:flex !important;
+align-items:center;
 }
 
-.slick-prev{
-left:80px;
+/* BUTTONS */
+
+.slider-btn{
+position:absolute;
+top:45%;
+transform:translateY(-50%);
+width:50px;
+height:50px;
+border-radius:50%;
+background:white;
+border:1px solid var(--secondary-color);
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+font-size:18px;
+transition:.3s;
+z-index:10;
 }
 
-.slick-next{
-right:80px;
+
+
+.slider-prev{
+left:10%;
 }
 
-.slick-prev:before,
-.slick-next:before{
-color:#000;
-font-size:32px;
+.slider-next{
+right:10%;
 }
+
+/* MOBILE */
+
+@media(max-width:768px){
+.destination-slide img{
+height:420px;
+}
+
+.destination-main-slider .slick-slide{
+transform:scale(.9);
+}
+
+.destination-main-slider .slick-center{
+transform:scale(1);
+}
+
+.slider-btn{
+top:auto;
+bottom:20px;
+transform:none;
+}
+
+.slider-prev{
+left:40%;
+margin-left: 20px;
+}
+
+.slider-next{
+right:40%;
+}
+
+}
+
 /* ====================== DESTINATION WEDDING SLIDER ====================== */
 .weddingcontact-form{
     background: radial-gradient(
@@ -3467,6 +3519,20 @@ select>option {
   }
 
 
+/* new slider */
+
+/*  */
+.destination-wrapper{
+  padding: 60px 0px;
+}
+.slider-prev{
+left:33%;
+margin-left: 20px;
+}
+
+.slider-next{
+right:37%;
+}
 }
 
 /* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
@@ -3610,7 +3676,18 @@ select>option {
   .editorial-filters{
     flex-wrap: nowrap;
   }
+/*  */
+.destination-main-slider{
+  padding-bottom: 60px;
+}
+.slider-prev{
+left:33%;
+margin-left: 20px;
+}
 
+.slider-next{
+right:33%;
+}
 }
 
 /* ============================================  TABLET SMALL: 568px - 767.98px============================================ */
@@ -3782,6 +3859,18 @@ select>option {
    .editorial-gallery{
     padding: 20px 18px;
   }
+/*  */
+.destination-main-slider{
+  padding-bottom: 60px;
+}
+.slider-prev{
+left:35%;
+margin-left: 20px;
+}
+
+.slider-next{
+right:40%;
+}
 }
 
 @media (min-width: 767.99px) and (max-width: 991.98px) {
