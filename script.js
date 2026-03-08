@@ -59,66 +59,66 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ------------------------------- DESTINATION WEDDING SLIDER -------------------------------
-  const weddingSlidesData = [
-    { img: "./images/PHOTO-2024-01-20-20-04-52.jpg", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
-    { img: "./images/DSC09631-scaled.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
-    { img: "./images/IMG_3835-scaled.jpg", title: "MOUNTAIN WEDDING ", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
-  ];
+  // const weddingSlidesData = [
+  //   { img: "./images/PHOTO-2024-01-20-20-04-52.jpg", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
+  //   { img: "./images/DSC09631-scaled.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
+  //   { img: "./images/IMG_3835-scaled.jpg", title: "MOUNTAIN WEDDING ", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
+  // ];
 
-  let index = 0;
-  const current = document.getElementById("current");
-  const nextImg = document.getElementById("next");
-  const title = document.getElementById("title");
-  const desc = document.getElementById("desc");
-  const leftText = document.getElementById("leftText");
-  const rightText = document.getElementById("rightText");
-  const leftSide = document.querySelector(".left");
-  const rightSide = document.querySelector(".right");
-  const leftImg = leftSide.querySelector(".side-img");
-  const rightImg = rightSide.querySelector(".side-img");
+  // let index = 0;
+  // const current = document.getElementById("current");
+  // const nextImg = document.getElementById("next");
+  // const title = document.getElementById("title");
+  // const desc = document.getElementById("desc");
+  // const leftText = document.getElementById("leftText");
+  // const rightText = document.getElementById("rightText");
+  // const leftSide = document.querySelector(".left");
+  // const rightSide = document.querySelector(".right");
+  // const leftImg = leftSide.querySelector(".side-img");
+  // const rightImg = rightSide.querySelector(".side-img");
 
-  function loadContent(i) {
-    if (current) {
-      current.src = weddingSlidesData[i].img;
-      title.innerHTML = weddingSlidesData[i].title;
-      desc.innerHTML = weddingSlidesData[i].desc;
-      leftText.innerHTML = weddingSlidesData[i].left;
-      rightText.innerHTML = weddingSlidesData[i].right;
-    }
-  }
-  loadContent(index);
+  // function loadContent(i) {
+  //   if (current) {
+  //     current.src = weddingSlidesData[i].img;
+  //     title.innerHTML = weddingSlidesData[i].title;
+  //     desc.innerHTML = weddingSlidesData[i].desc;
+  //     leftText.innerHTML = weddingSlidesData[i].left;
+  //     rightText.innerHTML = weddingSlidesData[i].right;
+  //   }
+  // }
+  // loadContent(index);
 
-  window.next = function () {
-    const newIndex = (index + 1) % weddingSlidesData.length;
-    rightImg.style.backgroundImage = `url(${weddingSlidesData[index].img})`;
-    rightSide.classList.add("show");
-    nextImg.src = weddingSlidesData[newIndex].img;
-    current.style.transform = "translateX(-100%)";
-    nextImg.style.transform = "translateX(100%)";
-    setTimeout(() => nextImg.style.transform = "translateX(0)", 20);
-    setTimeout(() => {
-      index = newIndex;
-      loadContent(index);
-      current.style.transform = "translateX(0)";
-      rightSide.classList.remove("show");
-    }, 700);
-  }
+  // window.next = function () {
+  //   const newIndex = (index + 1) % weddingSlidesData.length;
+  //   rightImg.style.backgroundImage = `url(${weddingSlidesData[index].img})`;
+  //   rightSide.classList.add("show");
+  //   nextImg.src = weddingSlidesData[newIndex].img;
+  //   current.style.transform = "translateX(-100%)";
+  //   nextImg.style.transform = "translateX(100%)";
+  //   setTimeout(() => nextImg.style.transform = "translateX(0)", 20);
+  //   setTimeout(() => {
+  //     index = newIndex;
+  //     loadContent(index);
+  //     current.style.transform = "translateX(0)";
+  //     rightSide.classList.remove("show");
+  //   }, 700);
+  // }
 
-  window.prev = function () {
-    const newIndex = (index - 1 + weddingSlidesData.length) % weddingSlidesData.length;
-    leftImg.style.backgroundImage = `url(${weddingSlidesData[index].img})`;
-    leftSide.classList.add("show");
-    nextImg.src = weddingSlidesData[newIndex].img;
-    current.style.transform = "translateX(100%)";
-    nextImg.style.transform = "translateX(-100%)";
-    setTimeout(() => nextImg.style.transform = "translateX(0)", 20);
-    setTimeout(() => {
-      index = newIndex;
-      loadContent(index);
-      current.style.transform = "translateX(0)";
-      leftSide.classList.remove("show");
-    }, 700);
-  }
+  // window.prev = function () {
+  //   const newIndex = (index - 1 + weddingSlidesData.length) % weddingSlidesData.length;
+  //   leftImg.style.backgroundImage = `url(${weddingSlidesData[index].img})`;
+  //   leftSide.classList.add("show");
+  //   nextImg.src = weddingSlidesData[newIndex].img;
+  //   current.style.transform = "translateX(100%)";
+  //   nextImg.style.transform = "translateX(-100%)";
+  //   setTimeout(() => nextImg.style.transform = "translateX(0)", 20);
+  //   setTimeout(() => {
+  //     index = newIndex;
+  //     loadContent(index);
+  //     current.style.transform = "translateX(0)";
+  //     leftSide.classList.remove("show");
+  //   }, 700);
+  // }
 
   // ------------------------------- DESTINATION WEDDING EVENT PAGE SLIDER -------------------------------
   const eventContainer = document.querySelector(".container");
@@ -283,9 +283,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  eventType.addEventListener("change", filterVenues);
-  seatingStyle.addEventListener("change", filterVenues);
-  capacity.addEventListener("change", filterVenues);
+  // eventType.addEventListener("change", filterVenues);
+  // seatingStyle.addEventListener("change", filterVenues);
+  // capacity.addEventListener("change", filterVenues);
+  if (eventType) eventType.addEventListener("change", filterVenues);
+if (seatingStyle) seatingStyle.addEventListener("change", filterVenues);
+if (capacity) capacity.addEventListener("change", filterVenues);
 });
 
 
@@ -852,8 +855,10 @@ document.querySelectorAll(".faq-question").forEach(q => {
   });
 });
 
+$(document).ready(function(){
 
-// destionation weeding new slider added
+/* ================================  DESTINATION WEDDING SLIDER================================ */
+
 $('.destination-main-slider').slick({
   centerMode: true,
   centerPadding: '0px',
@@ -861,17 +866,22 @@ $('.destination-main-slider').slick({
   slidesToScroll: 1,
 
   infinite: true,
-  speed: 750,
-  cssEase: 'ease',
-  arrows: true,
+  loop: true,
+
+  speed: 600,
+  cssEase: 'ease-in-out',
+
+  arrows: false,
   dots: false,
 
-  lazyLoad: 'progressive',
-  waitForAnimate: false,
+  autoplay: false,
+  autoplaySpeed: 3000,
+
+  pauseOnHover: true,
 
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 992,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -882,12 +892,26 @@ $('.destination-main-slider').slick({
   ]
 });
 
-/* BUTTON CONTROL */
 
-$('.slider-prev').click(function(){
-$('.destination-main-slider').slick('slickPrev');
+/* ====DESKTOP BUTTON CONTROLS===*/
+
+$('.slider-prev').on('click', function(){
+  $('.destination-main-slider').slick('slickPrev');
 });
 
-$('.slider-next').click(function(){
-$('.destination-main-slider').slick('slickNext');
+$('.slider-next').on('click', function(){
+  $('.destination-main-slider').slick('slickNext');
+});
+
+
+/* ===MOBILE BUTTON CONTROLS====*/
+
+$('.mobile-prev').on('click', function(){
+  $('.destination-main-slider').slick('slickPrev');
+});
+
+$('.mobile-next').on('click', function(){
+  $('.destination-main-slider').slick('slickNext');
+});
+
 });
