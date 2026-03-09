@@ -3336,6 +3336,7 @@ select>option {
 
   /* Blog grid */
   .blog-grid {
+    padding: 0px 20px;
     grid-template-columns: 1fr;
   }
 
@@ -3519,12 +3520,14 @@ select>option {
   }
   .editorial-filters{
     flex-wrap: nowrap;
+    gap: 10px;
   }
   .editorial-filters button{
     padding: 10px;
   }
   .room-btn{
-    width: 20px;
+    width: 8px;
+   
   }
 
 
