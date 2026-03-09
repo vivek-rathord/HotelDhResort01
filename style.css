@@ -1811,7 +1811,7 @@ align-items:center;
 
 .slider-btn{
 position:absolute;
-top:45%;
+top:50%;
 transform:translateY(-50%);
 width:50px;
 height:50px;
@@ -1828,11 +1828,11 @@ color: var(--secondary-color);
 }
 
 .slider-prev{
-left:10%;
+left:5%;
 }
 
 .slider-next{
-right:10%;
+right:5%;
 }
 
 /* MOBILE NAV BUTTONS */
