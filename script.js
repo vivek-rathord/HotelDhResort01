@@ -143,6 +143,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
 }); 
 
+// event main slider
+document.addEventListener("DOMContentLoaded", function(){
+
+const banners = document.querySelectorAll(".banneritem");
+const controls = document.querySelectorAll(".bannercontrol");
+
+let bannerIndex = 0;
+let autoSlider;
+
+/* SHOW BANNER */
+
+function showBanner(i){
+
+banners.forEach(item => item.classList.remove("activebanner"));
+controls.forEach(ctrl => ctrl.classList.remove("activecontrol"));
+
+banners[i].classList.add("activebanner");
+controls[i].classList.add("activecontrol");
+
+}
+
+/* AUTO SLIDE FUNCTION */
+
+function startAutoSlide(){
+
+autoSlider = setInterval(function(){
+
+bannerIndex++;
+
+if(bannerIndex >= banners.length){
+bannerIndex = 0;
+}
+
+showBanner(bannerIndex);
+
+},5000);
+
+}
+
+/* CLICK CHANGE */
+
+controls.forEach((control,i)=>{
+
+control.addEventListener("click",function(){
+
+bannerIndex = i;
+
+showBanner(bannerIndex);
+
+/* reset autoplay */
+
+clearInterval(autoSlider);
+startAutoSlide();
+
+});
+
+});
+
+/* START AUTOPLAY */
+
+startAutoSlide();
+
+});
+
 /* ================= HERO SLIDER ================= */
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -283,9 +347,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // eventType.addEventListener("change", filterVenues);
-  // seatingStyle.addEventListener("change", filterVenues);
-  // capacity.addEventListener("change", filterVenues);
   if (eventType) eventType.addEventListener("change", filterVenues);
 if (seatingStyle) seatingStyle.addEventListener("change", filterVenues);
 if (capacity) capacity.addEventListener("change", filterVenues);
@@ -893,7 +954,7 @@ $('.destination-main-slider').slick({
 });
 
 
-/* ====DESKTOP BUTTON CONTROLS===*/
+/* --DESKTOP BUTTON CONTROLS---*/
 
 $('.slider-prev').on('click', function(){
   $('.destination-main-slider').slick('slickPrev');
@@ -904,7 +965,7 @@ $('.slider-next').on('click', function(){
 });
 
 
-/* ===MOBILE BUTTON CONTROLS====*/
+/* --MOBILE BUTTON CONTROLS--*/
 
 $('.mobile-prev').on('click', function(){
   $('.destination-main-slider').slick('slickPrev');
@@ -915,3 +976,6 @@ $('.mobile-next').on('click', function(){
 });
 
 });
+
+
+
