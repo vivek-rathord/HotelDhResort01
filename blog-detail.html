@@ -140,23 +140,73 @@
     </div>
   </div>
 
-  <!-- blod cards  -->
   <section class="blog-detail">
-    <div class="blog-detail-container">
 
-      <h1 id="blogTitle"></h1>
+  <div class="blog-layout">
 
-      <div class="blog-meta">
-        <span id="blogDate"></span>
+    <!-- LEFT CONTENT -->
+    <div class="blog-left">
+      <div class="blog-detail-container">
+
+        <h1 id="blogTitle"></h1>
+
+        <div class="blog-meta">
+          <span id="blogDate"></span>
+        </div>
+
+        <img id="blogImage" src="" alt="">
+
+        <div id="blogContent"></div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- SEARCH -->
+      <div class="search-box">
+        <input type="text" placeholder="Search blogs...">
+        <i class="fa fa-search"></i>
       </div>
 
-      <img id="blogImage" src="" alt="">
+      <!-- RECENT POSTS -->
+      <div class="sidebar-card">
+        <h3>Recent Posts</h3>
 
-      <div id="blogContent"></div>
+        <div class="post">
+          <img src="./images/DSC09810.jpg">
+          <div>
+            <p>Indian Wedding In Malta</p>
+            <span>August 10, 2023</span>
+          </div>
+        </div>
 
-    </div>
-  </section>
+        <div class="post">
+          <img src="./images/DSC00496-HDR-Enhanced-NR-Edit.jpg">
+          <div>
+            <p>Wedding In Barcelona</p>
+            <span>October 10, 2023</span>
+          </div>
+        </div>
 
+      </div>
+
+      <!-- CATEGORY -->
+      <div class="sidebar-card">
+        <h3>Categories</h3>
+        <ul class="category">
+          <li>Destination Wedding <span>(12)</span></li>
+          <li>Luxury Venues <span>(08)</span></li>
+          <li>Beach Wedding <span>(10)</span></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
   <!-- faq -->
   <section class="faq-section">
     <h2>Travel FAQs</h2>
