@@ -434,7 +434,7 @@ const blogs = {
   "indian-wedding-malta": {
     title: "Indian Wedding In Malta",
     date: "March 12, 2026",
-    image: "./images/DSC09810.jpg",
+    image: "./images/IMG_8932.jpg",
     content: `
       <p>Malta is one of the most beautiful destinations for Indian weddings.</p>
       <p>Luxury venues, sea views, and heritage locations make it unforgettable.</p>
@@ -444,7 +444,7 @@ const blogs = {
   "indian-wedding-barcelona": {
     title: "Indian Wedding Venues In Barcelona",
     date: "March 18, 2026",
-    image: "/images/DSC00496-HDR-Enhanced-NR-Edit.jpg",
+    image: "/images/IMG_8331.jpg",
     content: `
       <p>Barcelona offers a blend of modern architecture and rich traditions.</p>
       <p>Indian weddings here are vibrant and colorful.</p>
@@ -454,7 +454,7 @@ const blogs = {
   "indian-wedding-switzerland": {
     title: "Indian Wedding In Switzerland",
     date: "March 25, 2026",
-    image: "./images/hs.jpg",
+    image: "./images/PHOTO-2024-01-20-20-04-47-2.jpg",
     content: `
       <p>Switzerland offers snow-clad mountains and fairy-tale venues.</p>
       <p>Perfect for luxury Indian destination weddings.</p>
