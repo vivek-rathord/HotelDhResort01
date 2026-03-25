@@ -726,32 +726,32 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
   const roomData = {
     "executive-room": {
-      title: "Executive Elite with Modern Comforts",
-      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      title: "Executive Room with Modern Comforts",
+      features: "40 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "A perfect blend of comfort and functionality, our Executive Rooms are ideal for business and leisure travelers. Enjoy modern interiors, premium amenities, and a relaxing atmosphere after a day exploring Dharamshala.",
-      image: "./images/executiveelite.jpg"
+      image: "./images/DSC00963.jpg"
     },
     "executive-suite": {
-      title: "Executive Room with Spacious Living Area",
-      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      title: "Executive Suite with Spacious Living Area",
+      features: "24 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Designed for those who prefer extra space and luxury, the Executive Suite offers a separate living area, elegant décor, and scenic views, making your stay both comfortable and memorable.",
       image: "./images/executivesuite.jpg"
     },
     "presidential-suite": {
       title: "Presidential Suite Offering Ultimate Luxury Stay",
-      features: "18 ROOMS / 1 BEDROOM / 3 GUESTS",
+      features: "2 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Experience the finest luxury in Dharamshala with our Presidential Suite. Featuring spacious living areas, premium furnishings, and unmatched comfort, it’s perfect for guests seeking an exclusive and indulgent stay.",
       image: "./images/presidentialmain.jpg"
     },
     "twin-bed": {
       title: "Twin Bedded Room for Comfortable Shared Stay",
-      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      features: "4 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Our Twin Bedded Rooms are ideal for friends or colleagues traveling together. With two comfortable beds, modern amenities, and a peaceful ambiance, these rooms ensure a restful stay.",
       image: "./images/DSC00821-HDR-2-1-scaled.jpg"
     },
     "deluxe-room": {
       title: "Deluxe Room with Elegant Interior Design",
-      features: "28 ROOMS / 1 BEDROOM / 3 GUESTS",
+      features: "3 ROOMS / 1 BEDROOM / 3 GUESTS",
       desc: "Relax in style in our Deluxe Rooms, thoughtfully designed with warm interiors and modern comforts. Perfect for couples and families, these rooms offer a cozy retreat with beautiful surroundings.",
       image: "./images/deluxemain.jpg"
     }
@@ -807,9 +807,9 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ================= ROOM IMAGES DATA ================= */
   const roomImages = {
     "executive-room": [
-      "images/DSC01369-Edit-1-scaled.jpg",
-      "/images/executiveelite.jpg",
-      "/images/DSC03083-copy-scaled.jpg"
+      "images/Executive Room (2).jpg",
+      "/images/Executive Room 1.jpg",
+      "/images/DSC01054 (1).jpg"
     ],
     "executive-suite": [
       "/images/executivesuite2.jpg",
@@ -817,13 +817,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "/images/DSC00496-HDR-Enhanced-NR-Edit-1-scaled.jpg"
     ],
     "presidential-suite": [
-      "/images/presidentialmain1.jpg",
+      "/images/Presidential Suite Living room.jpg.jpg",
       "/images/presidentialmain3.jpg",
       "/images/DSC01195-HDR-scaled.jpg"
     ],
     "twin-bed": [
       "/images/DSC00511-HDR-2-scaled.jpg",
-      "./images/Twinbeddedmain2.jpg",
+      "./images/Executive Twin Bedroom.jpg",
       "/images/twinbebbed.jpg"
     ],
     "deluxe-room": [
