@@ -17,7 +17,6 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  /* overflow-x: hidden; */
 }
 
 img {
@@ -577,7 +576,7 @@ h2 {
   background-position: center 90%;
   align-items: center;
   padding-top: 60px;
-  max-width: 2560px;
+  /* max-width: 2560px; */
 }
 
 .common-hero {
@@ -1008,6 +1007,16 @@ h2 {
   color: var(--white-color);
 }
 
+
+/*  */
+
+.selectedroomslider {
+  position: relative;
+  width: 100%;
+  height: 400px; /* IMPORTANT */
+  overflow: hidden;
+  border-radius: 10px;
+}
 /* Room Slider */
 .rooms-slider {
   position: relative;
@@ -1048,7 +1057,7 @@ h2 {
 .slider-dots span {
   width: 30px;
   height: 3px;
-  background: #ccc;
+  background: #9f0000;
 
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1085,19 +1094,20 @@ h2 {
 }
 
 .selectedroomslider .slider-dots {
-  position: absolute;
-  bottom: 25px;
+    position:absolute;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
+  /* z-index: 10; */
 }
 
 .selectedroomslider .slider-dots span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--paragraph-color);
+  background: var(--secondary-color);
 }
 
 .selectedroomslider .slider-dots span.active {
@@ -3808,6 +3818,10 @@ select>option {
   .venue-image-card img {
     padding: 0px 20px;
   }
+
+     .selectedroomslider .slider-dots {
+  top:200px;
+}
 }
 
 /* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
@@ -3821,6 +3835,7 @@ select>option {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 
   }
+
 
   .availability {
     top: -90px;
@@ -3970,6 +3985,9 @@ select>option {
   .feature i {
     font-size: 27px;
   }
+  .selectedroomslider .slider-dots {
+  top:200px;
+}
 }
 
 /* ============================================  TABLET SMALL: 568px - 767.98px============================================ */
@@ -4153,6 +4171,9 @@ select>option {
   .destination-main-slider {
     padding-bottom: 60px;
   }
+  .selectedroomslider .slider-dots {
+  bottom:100px;
+}
 }
 
 @media (min-width: 767.99px) and (max-width: 991.98px) {
@@ -4324,6 +4345,9 @@ select>option {
   .destination-slide-text {
     text-align: center;
   }
+  .selectedroomslider .slider-dots {
+  bottom:50px;
+}
 }
 
 @media (min-width: 991.99px) and (max-width: 1199.98px) {
