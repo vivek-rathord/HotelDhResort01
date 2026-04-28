@@ -58,68 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ------------------------------- DESTINATION WEDDING SLIDER -------------------------------
-  // const weddingSlidesData = [
-  //   { img: "./images/PHOTO-2024-01-20-20-04-52.jpg", title: "VOWS ON THE BEACH", desc: "Let the pristine sands, azure waters, breath-taking sunsets and our immaculate hospitality be the perfect companion for your dream wedding.", left: "ICONIC CITY<br>WEDDINGS", right: "MOUNTAIN<br>WEDDING VOWS" },
-  //   { img: "./images/DSC09631-scaled.jpg", title: "ROYAL PALACE WEDDINGS", desc: "Experience regal celebrations amidst heritage palaces, timeless architecture and royal grandeur.", left: "BEACH<br>WEDDINGS", right: "ICONIC CITY<br>WEDDINGS" },
-  //   { img: "./images/IMG_3835-scaled.jpg", title: "MOUNTAIN WEDDING ", desc: "Exchange vows amidst serene mountains, misty valleys and breathtaking natural beauty.", left: "ROYAL PALACE<br>WEDDINGS", right: "BEACH<br>WEDDINGS" }
-  // ];
-
-  // let index = 0;
-  // const current = document.getElementById("current");
-  // const nextImg = document.getElementById("next");
-  // const title = document.getElementById("title");
-  // const desc = document.getElementById("desc");
-  // const leftText = document.getElementById("leftText");
-  // const rightText = document.getElementById("rightText");
-  // const leftSide = document.querySelector(".left");
-  // const rightSide = document.querySelector(".right");
-  // const leftImg = leftSide.querySelector(".side-img");
-  // const rightImg = rightSide.querySelector(".side-img");
-
-  // function loadContent(i) {
-  //   if (current) {
-  //     current.src = weddingSlidesData[i].img;
-  //     title.innerHTML = weddingSlidesData[i].title;
-  //     desc.innerHTML = weddingSlidesData[i].desc;
-  //     leftText.innerHTML = weddingSlidesData[i].left;
-  //     rightText.innerHTML = weddingSlidesData[i].right;
-  //   }
-  // }
-  // loadContent(index);
-
-  // window.next = function () {
-  //   const newIndex = (index + 1) % weddingSlidesData.length;
-  //   rightImg.style.backgroundImage = `url(${weddingSlidesData[index].img})`;
-  //   rightSide.classList.add("show");
-  //   nextImg.src = weddingSlidesData[newIndex].img;
-  //   current.style.transform = "translateX(-100%)";
-  //   nextImg.style.transform = "translateX(100%)";
-  //   setTimeout(() => nextImg.style.transform = "translateX(0)", 20);
-  //   setTimeout(() => {
-  //     index = newIndex;
-  //     loadContent(index);
-  //     current.style.transform = "translateX(0)";
-  //     rightSide.classList.remove("show");
-  //   }, 700);
-  // }
-
-  // window.prev = function () {
-  //   const newIndex = (index - 1 + weddingSlidesData.length) % weddingSlidesData.length;
-  //   leftImg.style.backgroundImage = `url(${weddingSlidesData[index].img})`;
-  //   leftSide.classList.add("show");
-  //   nextImg.src = weddingSlidesData[newIndex].img;
-  //   current.style.transform = "translateX(100%)";
-  //   nextImg.style.transform = "translateX(-100%)";
-  //   setTimeout(() => nextImg.style.transform = "translateX(0)", 20);
-  //   setTimeout(() => {
-  //     index = newIndex;
-  //     loadContent(index);
-  //     current.style.transform = "translateX(0)";
-  //     leftSide.classList.remove("show");
-  //   }, 700);
-  // }
-
   // ------------------------------- DESTINATION WEDDING EVENT PAGE SLIDER -------------------------------
   const eventContainer = document.querySelector(".container");
 
@@ -266,91 +204,91 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // venuue
-document.addEventListener("DOMContentLoaded", () => {
-  const eventType = document.getElementById('eventType');
-  const capacity = document.getElementById('capacity');
-  const venueCards = document.querySelectorAll('.venue-image-card');
-  const enquireBtns = document.querySelectorAll('.enquire-btn');
+// document.addEventListener("DOMContentLoaded", () => {
+//   const eventType = document.getElementById('eventType');
+//   const capacity = document.getElementById('capacity');
+//   const venueCards = document.querySelectorAll('.venue-image-card');
+//   const enquireBtns = document.querySelectorAll('.enquire-btn');
 
-  if (eventType && capacity && venueCards.length) {
+//   if (eventType && capacity && venueCards.length) {
 
-    function filterVenues() {
-      const eventValue = eventType.value;
-      const capacityValue = capacity.value ? Number(capacity.value) : null;
+//     function filterVenues() {
+//       const eventValue = eventType.value;
+//       const capacityValue = capacity.value ? Number(capacity.value) : null;
 
-      venueCards.forEach(card => {
-        const cardEvents = card.dataset.event.split(' ');
-        const cardCapacity = Number(card.dataset.capacity);
+//       venueCards.forEach(card => {
+//         const cardEvents = card.dataset.event.split(' ');
+//         const cardCapacity = Number(card.dataset.capacity);
 
-        let eventMatch = true;
-        let capacityMatch = true;
+//         let eventMatch = true;
+//         let capacityMatch = true;
 
-        // Event filter (can have multiple events)
-        if (eventValue && !cardEvents.includes(eventValue)) {
-          eventMatch = false;
-        }
+//         // Event filter (can have multiple events)
+//         if (eventValue && !cardEvents.includes(eventValue)) {
+//           eventMatch = false;
+//         }
 
-        // Capacity filter (less than or equal to selected capacity)
-        if (capacityValue && cardCapacity > capacityValue) {
-          capacityMatch = false;
-        }
+//         // Capacity filter (less than or equal to selected capacity)
+//         if (capacityValue && cardCapacity > capacityValue) {
+//           capacityMatch = false;
+//         }
 
-        // Show/hide card based on both filters
-        if (eventMatch && capacityMatch) {
-          card.style.display = "block";
-          setTimeout(() => {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-          }, 10);
-        } else {
-          card.style.display = "none";
-        }
-      });
-    }
+//         // Show/hide card based on both filters
+//         if (eventMatch && capacityMatch) {
+//           card.style.display = "block";
+//           setTimeout(() => {
+//             card.style.opacity = "1";
+//             card.style.transform = "translateY(0)";
+//           }, 10);
+//         } else {
+//           card.style.display = "none";
+//         }
+//       });
+//     }
 
-    // Event listeners for filters
-    eventType.addEventListener('change', filterVenues);
-    capacity.addEventListener('change', filterVenues);
-    filterVenues();
-  }
-});
+//     // Event listeners for filters
+//     eventType.addEventListener('change', filterVenues);
+//     capacity.addEventListener('change', filterVenues);
+//     filterVenues();
+//   }
+// });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const eventType = document.getElementById("eventType");
-  const seatingStyle = document.getElementById("seatingStyle");
-  const capacity = document.getElementById("capacity");
-  const cards = document.querySelectorAll(".venue-card");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const eventType = document.getElementById("eventType");
+//   const seatingStyle = document.getElementById("seatingStyle");
+//   const capacity = document.getElementById("capacity");
+//   const cards = document.querySelectorAll(".venue-card");
 
-  function filterVenues() {
-    const eventVal = eventType.value;
-    const seatingVal = seatingStyle.value;
-    const capacityVal = capacity.value;
+//   function filterVenues() {
+//     const eventVal = eventType.value;
+//     const seatingVal = seatingStyle.value;
+//     const capacityVal = capacity.value;
 
-    cards.forEach(card => {
-      const cardEvent = card.dataset.event;
-      const cardSeating = card.dataset.seating;
-      const cardCapacity = Number(card.dataset.capacity);
+//     cards.forEach(card => {
+//       const cardEvent = card.dataset.event;
+//       const cardSeating = card.dataset.seating;
+//       const cardCapacity = Number(card.dataset.capacity);
 
-      let match = true;
+//       let match = true;
 
-      if (eventVal && cardEvent !== eventVal) match = false;
-      if (seatingVal && cardSeating !== seatingVal) match = false;
+//       if (eventVal && cardEvent !== eventVal) match = false;
+//       if (seatingVal && cardSeating !== seatingVal) match = false;
 
-      if (capacityVal) {
-        if (capacityVal === "50" && cardCapacity > 50) match = false;
-        if (capacityVal === "100" && (cardCapacity < 50 || cardCapacity > 100)) match = false;
-        if (capacityVal === "300" && (cardCapacity < 100 || cardCapacity > 300)) match = false;
-        if (capacityVal === "500" && cardCapacity < 300) match = false;
-      }
+//       if (capacityVal) {
+//         if (capacityVal === "50" && cardCapacity > 50) match = false;
+//         if (capacityVal === "100" && (cardCapacity < 50 || cardCapacity > 100)) match = false;
+//         if (capacityVal === "300" && (cardCapacity < 100 || cardCapacity > 300)) match = false;
+//         if (capacityVal === "500" && cardCapacity < 300) match = false;
+//       }
 
-      card.classList.toggle("hide", !match);
-    });
-  }
+//       card.classList.toggle("hide", !match);
+//     });
+//   }
 
-  if (eventType) eventType.addEventListener("change", filterVenues);
-if (seatingStyle) seatingStyle.addEventListener("change", filterVenues);
-if (capacity) capacity.addEventListener("change", filterVenues);
-});
+//   if (eventType) eventType.addEventListener("change", filterVenues);
+// if (seatingStyle) seatingStyle.addEventListener("change", filterVenues);
+// if (capacity) capacity.addEventListener("change", filterVenues);
+// });
 
 
 
@@ -673,54 +611,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // rooms detail auto play slider 
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".room-slide");
-  const dotsContainer = document.querySelector(".slider-dots");
-  let currentSlide = 0;
-  let slideInterval;
+// document.addEventListener("DOMContentLoaded", () => {
+//   const slides = document.querySelectorAll(".room-slide");
+//   const dotsContainer = document.querySelector(".slider-dots");
+//   let currentSlide = 0;
+//   let slideInterval;
 
-  //btns
-  slides.forEach((_, index) => {
-    const dot = document.createElement("span");
-    if (index === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => {
-      goToSlide(index);
-      resetAutoplay();
-    });
-    dotsContainer.appendChild(dot);
-  });
+//   //btns
+//   slides.forEach((_, index) => {
+//     const dot = document.createElement("span");
+//     if (index === 0) dot.classList.add("active");
+//     dot.addEventListener("click", () => {
+//       goToSlide(index);
+//       resetAutoplay();
+//     });
+//     dotsContainer.appendChild(dot);
+//   });
 
-  const dots = document.querySelectorAll(".slider-dots span");
+//   const dots = document.querySelectorAll(".slider-dots span");
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+//   function showSlide(index) {
+//     slides.forEach(slide => slide.classList.remove("active"));
+//     dots.forEach(dot => dot.classList.remove("active"));
 
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
-  }
+//     slides[index].classList.add("active");
+//     dots[index].classList.add("active");
+//   }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+//   function nextSlide() {
+//     currentSlide = (currentSlide + 1) % slides.length;
+//     showSlide(currentSlide);
+//   }
 
-  function goToSlide(index) {
-    currentSlide = index;
-    showSlide(currentSlide);
-  }
+//   function goToSlide(index) {
+//     currentSlide = index;
+//     showSlide(currentSlide);
+//   }
 
-  function startAutoplay() {
-    slideInterval = setInterval(nextSlide, 4000);
-  }
+//   function startAutoplay() {
+//     slideInterval = setInterval(nextSlide, 4000);
+//   }
 
-  function resetAutoplay() {
-    clearInterval(slideInterval);
-    startAutoplay();
-  }
+//   function resetAutoplay() {
+//     clearInterval(slideInterval);
+//     startAutoplay();
+//   }
 
-  startAutoplay();
-});
+//   startAutoplay();
+// });
 
 //  selected rooms
 document.addEventListener("DOMContentLoaded", function () {
@@ -906,13 +844,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-// faq
+// FAQ LOGIC
 document.querySelectorAll(".faq-question").forEach(q => {
   q.addEventListener("click", () => {
+
+    const currentlyActive = document.querySelector(".faq-question.active");
+
+    // Close already open FAQ (if it's not the one clicked)
+    if (currentlyActive && currentlyActive !== q) {
+      currentlyActive.classList.remove("active");
+      currentlyActive.nextElementSibling.style.maxHeight = null;
+    }
+
+    // Toggle current FAQ
     q.classList.toggle("active");
-    const a = q.nextElementSibling;
-    a.style.maxHeight ? a.style.maxHeight = null : a.style.maxHeight = a.scrollHeight + "px";
+    const answer = q.nextElementSibling;
+
+    if (q.classList.contains("active")) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = null;
+    }
   });
 });
 

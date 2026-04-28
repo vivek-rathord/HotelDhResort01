@@ -42,7 +42,7 @@ a {
 html,
 body {
   width: 100%;
-  overflow-x:hidden;
+  overflow-x: hidden !important;
 }
 
 P {
@@ -537,7 +537,7 @@ h2 {
   background-position: top center;
 }
 
-.common-hero.Weedinghero {
+.common-hero.weddinghero {
   height: 80vh;
   background: linear-gradient(to top,
       rgba(208, 205, 205, 0.95) 0%,
@@ -548,6 +548,28 @@ h2 {
     url("./Images/DSC00899.jpg") center / cover no-repeat;
   align-items: center;
   padding-top: 60px;
+}
+
+.weddinghero h1 {
+  font-family: "Aurella-Script";
+  letter-spacing: 10px !important;
+  text-transform: capitalize !important;
+  /* font-size: 4rem !important; */
+  font-size: clamp(4rem, 3vw, 2rem) !important;
+
+}
+
+.weddinghero h2 {
+  font-family: "Aurella-Script";
+  color: var(--white-color);
+  padding-bottom: 10px;
+}
+
+.weddinghero h3 {
+  color: var(--white-color);
+  text-align: center;
+  font-size: clamp(16px, 4vw, 1rem) !important;
+
 }
 
 .common-hero.eventshero {
@@ -608,7 +630,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 10px;
-  text-align: center;
+  text-align: center !important;
 
 }
 
@@ -789,6 +811,12 @@ h2 {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+}
+
+.gm-image .image-overlay-text img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 /* ====================== TITLE SECTION====================== */
@@ -1013,10 +1041,12 @@ h2 {
 .selectedroomslider {
   position: relative;
   width: 100%;
-  height: 400px; /* IMPORTANT */
+  height: 400px;
+  /* IMPORTANT */
   overflow: hidden;
   border-radius: 10px;
 }
+
 /* Room Slider */
 .rooms-slider {
   position: relative;
@@ -1071,14 +1101,14 @@ h2 {
 .selectedroomslider {
   position: relative;
   width: 100%;
-  overflow: hidden;
   margin-top: 30px;
   border-radius: 10px;
+  background-color: #000;
 }
 
 .selectedroomslider .slides {
   display: flex;
-  height: 100%;
+  /* height: 100%; */
   transition: transform 0.6s ease;
 }
 
@@ -1091,16 +1121,16 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 
 .selectedroomslider .slider-dots {
-    position:absolute;
+  position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
-  /* z-index: 10; */
 }
 
 .selectedroomslider .slider-dots span {
@@ -2464,6 +2494,7 @@ button[type="submit"]:hover {
   color: var(--white-color);
   position: relative;
   padding: 0px 30px;
+  overflow: hidden;
 }
 
 .hf-brand-bar {
@@ -2627,105 +2658,215 @@ button[type="submit"]:hover {
 }
 
 /* ====================== CONTACT FORM ====================== */
+/* SECTION */
 .contact-section {
   max-width: 1320px;
   margin: 50px auto;
-  border: 1px solid rgb(213, 207, 207);
-  padding: 80px 80px;
-  text-transform: capitalize;
+  border: 1px solid #d5cfcf;
+  padding: 60px;
+  background: #fff;
 }
 
+/* GRID */
 .contact-wrapper {
-  max-width: 1200px;
-  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  padding: 0px 20px;
+  gap: 40px;
+  align-items: stretch;
+  min-height: 520px;
 }
 
-.contact-information h2 {
-  margin: 14px 0;
+/* IMAGE */
+.contactimage {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-.contact-information p {
-  color: var(--tertiory-color);
-  line-height: var(--base-line-height);
-  margin-bottom: 47px;
+.contactimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    transition: transform 0.6s ease;
 }
-
-.info-box {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 30px 0;
-  border-bottom: 1px solid #ddd;
-  text-transform: lowercase;
+.contactimage:hover img {
+  transform: scale(1.08); 
 }
-
-.info-box span {
-  color: var(--secondary-color);
-}
-
-.info-box small {
-  font-size: 22px;
-  font-weight: 700;
-  font-family: "Cormorant Garamond", serif;
-  color: var(--primary-color);
-  display: block;
-  margin-bottom: 8px;
-}
-.location{
-  text-transform: capitalize;
-}
-
+/* FORM BOX */
 .contact-form {
-  background: var(--tertiory-color);
-  padding: 50px;
+  padding: 40px 50px; 
+  border: 1px solid #eee;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-end;       
+  background: #fafafa;
 }
 
+/* HEADING */
 .contact-form h3 {
-  color: var(--white-color);
-  text-align: center;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+  color: var(--subheading-color);
+  margin-bottom: 30px;
+  font-size: 24px;
+  width: 100%;
+  text-align: left; 
 }
 
+/* FORM */
 .contact-form form {
+  width: 100%;              
+  max-width: 520px;  
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  background: transparent;
-  border: 1px solid var(--paragraph-color);
-  padding: 15px;
-  color: var(--white-color);
+/* INPUT GROUP */
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+/* INPUTS */
+.input-group input,
+.input-group textarea {
+  min-width: 100%;
+  padding: 16px; 
+  border: 1px solid #ccc;
+  border-radius: 6px;
   outline: none;
-}
-
-select>option {
-  color: var(--tertiory-color);
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: none;
-}
-
-.contact-form button {
-  background: var(--paragraph-color);
-  border: none;
-  padding: 16px;
-  color: var(--white-color);
-  cursor: pointer;
-  letter-spacing: 1px;
+  font-size: 15px;
+  background: transparent;
   transition: 0.3s;
 }
 
+/* TEXTAREA */
+.input-group textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+/* LABEL */
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  background: #fafafa;
+  padding: 0 6px;
+  font-size: 14px;
+  color: var(--paragraph-color);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* TEXTAREA LABEL FIX */
+.input-group textarea + label {
+  top: 20px;
+  transform: none;
+}
+
+/* FOCUS */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: var(--subheading-color);
+}
+
+/* FLOAT LABEL */
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -8px;
+  font-size: 12px;
+  color:black;
+}
+
+/* BUTTON */
+.contact-form button {
+  width: 100%; 
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+
+
+/* MAIN WRAPPER */
+.dh-contact-area{
+  max-width:1320px;
+  margin:80px auto;
+  padding:0 20px;
+  text-align:center;
+}
+
+/* TOP CONTENT */
+.dh-contact-top small{
+  color:var(--secondary-color);
+  letter-spacing:1px;
+  font-size:15px;
+}
+
+.dh-contact-top h2{
+  font-size:2.3rem;
+  color:var(--subheading-color);
+  margin:10px 0;
+  font-weight: 700;
+}
+
+
+
+.dh-contact-top p{
+  color:var(--paragraph-color);
+  max-width:700px;
+  margin:15px auto 50px;
+  line-height:var(--base-line-height);
+}
+
+/* GRID */
+.dh-box-wrapper{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+/* CARD */
+.dh-contact-card{
+  background:#95dcf014;
+  padding:40px 30px;
+  border-radius:18px;
+  transition:0.4s ease;
+  border:1px solid var(--secondary-color);
+}
+
+.dh-contact-card:hover{
+  transform:translateY(-8px) scale(1.02);
+}
+
+/* ICON */
+.dh-icon{
+  font-size:34px;
+  color:var(--secondary-color);
+  margin-bottom:15px;
+}
+
+/* TITLE */
+.dh-contact-card h3{
+  margin-bottom:10px;
+}
+
+/* TEXT */
+.dh-contact-card p{
+  color:var(--paragraph-color);
+  line-height:var(--base-line-height);
+}
 
 .map-container {
   margin: auto;
@@ -2823,6 +2964,7 @@ select>option {
 }
 
 /* ====================== FEEDBACK SECTION ====================== */
+
 .feedback {
   background: #F9F9F9;
   padding: clamp(40px, 6vw, 80px) 20px;
@@ -2835,6 +2977,7 @@ select>option {
   max-width: 1400px;
   margin-bottom: 60px;
   margin: auto;
+  text-align: center;
   padding: 0px 10px;
 }
 
@@ -2921,7 +3064,7 @@ select>option {
 .venue-section {
   max-width: 1320px;
   margin: auto;
-  padding: 60px 10px;
+  padding: 0px 10px;
 }
 
 .filter-bar {
@@ -2989,6 +3132,11 @@ select>option {
 .enquire-btn:hover {
   background: #000;
   color: var(--white-color);
+}
+
+.factsheetsection {
+  background-color: transparent !important;
+  padding: 60px 0px;
 }
 
 /* ====================== EVENT SLIDER ====================== */
@@ -3075,6 +3223,7 @@ select>option {
   width: 100%;
   height: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
 .slide .item {
@@ -3167,7 +3316,7 @@ select>option {
 
 }
 
-.weedingplaces {
+.weddingplaces {
   margin: 60px 0px;
 }
 
@@ -3468,6 +3617,130 @@ select>option {
   color: var(--primary-color);
 }
 
+/* FLOATING CONTAINER */
+.floating-btns {
+  position: fixed;
+  right: 50px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 9999;
+  animation: floatUp 0.8s ease forwards;
+}
+
+/* ENTRY ANIMATION */
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BUTTON BASE */
+.float-btn {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+/* FLOAT EFFECT */
+@keyframes gentleFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* HOVER EFFECT */
+.float-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* ICON */
+.float-btn i {
+  font-size: 20px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* WHATSAPP (PULSE EFFECT) */
+.whatsapp-btn {
+  background: #25D366;
+  animation: pulse 2s infinite, gentleFloat 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* CALL (GLOW EFFECT) */
+.call-btn {
+  background: #007bff;
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
+}
+
+/* CLICK RIPPLE EFFECT */
+.float-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.float-btn:active::after {
+  transform: scale(1.5);
+  opacity: 1;
+  transition: 0.4s;
+}
+
 
 /* ============================================ GLOBAL DESKTOP: NO WRAP ============================================ */
 @media (min-width: 991px) {
@@ -3505,6 +3778,25 @@ select>option {
     font-size: 24px;
   }
 
+  .floating-btns {
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .float-btn {
+    width: 55px;
+    height: 55px;
+  }
+    .dh-box-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .dh-contact-top h2{
+    font-size:32px;
+  }
+  .contact-form h3 {
+  text-align: center; 
+}
 }
 
 @media (max-width: 575px) {
@@ -3819,9 +4111,13 @@ select>option {
     padding: 0px 20px;
   }
 
-     .selectedroomslider .slider-dots {
-  top:200px;
-}
+  .selectedroomslider .slider-dots {
+    top: 150px;
+  }
+
+  .blog-grid-3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
@@ -3985,9 +4281,14 @@ select>option {
   .feature i {
     font-size: 27px;
   }
+
   .selectedroomslider .slider-dots {
-  top:200px;
-}
+    top: 200px;
+  }
+
+  .blog-grid-3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================  TABLET SMALL: 568px - 767.98px============================================ */
@@ -4171,9 +4472,14 @@ select>option {
   .destination-main-slider {
     padding-bottom: 60px;
   }
+
   .selectedroomslider .slider-dots {
-  bottom:100px;
-}
+    bottom: 100px;
+  }
+
+  .blog-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 767.99px) and (max-width: 991.98px) {
@@ -4345,9 +4651,14 @@ select>option {
   .destination-slide-text {
     text-align: center;
   }
+
   .selectedroomslider .slider-dots {
-  bottom:50px;
-}
+    bottom: 50px;
+  }
+
+  .blog-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 991.99px) and (max-width: 1199.98px) {
