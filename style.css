@@ -4118,6 +4118,11 @@ button[type="submit"]:hover {
   .blog-grid-3 {
     grid-template-columns: 1fr;
   }
+  .blog-card{
+    h3{
+      font-size: 15px;
+    }
+  }
 }
 
 /* ============================================MOBILE MEDIUM: 449px - 567.98px============================================ */
@@ -4288,6 +4293,11 @@ button[type="submit"]:hover {
 
   .blog-grid-3 {
     grid-template-columns: 1fr;
+  }
+  .blog-card{
+    h3{
+      font-size: 15px;
+    }
   }
 }
 
@@ -4479,6 +4489,11 @@ button[type="submit"]:hover {
 
   .blog-grid-3 {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .blog-card{
+    h3{
+      font-size: 18px;
+    }
   }
 }
 
