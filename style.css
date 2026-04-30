@@ -569,6 +569,7 @@ h2 {
   color: var(--white-color);
   text-align: center;
   font-size: clamp(16px, 4vw, 1rem) !important;
+  letter-spacing: 3px;
 
 }
 
@@ -769,15 +770,14 @@ h2 {
   background: transparent;
   border: 1px solid black;
   color: var(--territary-color);
-  text-decoration: none;
   padding: 12px 26px;
   font-size: 14px;
   width: fit-content;
   transition: all 0.3s ease;
+  letter-spacing: 1px;
 }
 
 .discover-button i {
-
   margin-left: 10px;
   transition: transform 0.3s ease;
 }
